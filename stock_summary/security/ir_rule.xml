@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="show_location_assigned_rule" model="ir.rule">
+        <field name="name">Show only location assigned</field>
+        <field name="model_id" ref="stock_summary.model_stock_summary" />
+        <field name="domain_force">[
+            ('report_location_id', 'in', user.stock_location_ids.ids)
+        ]</field>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <record id="show_location_dest_rule" model="ir.rule">
+        <field name="name">Show only location asigned in</field>
+        <field name="model_id" ref="stock_summary.model_stock_summary_in" />
+        <field name="domain_force">[
+            ('location_dest_id', 'in', user.stock_location_ids.ids)
+        ]</field>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <record id="show_location_rule" model="ir.rule">
+        <field name="name">Show only location asigned out</field>
+        <field name="model_id" ref="stock_summary.model_stock_summary_out" />
+        <field name="domain_force">[
+            ('location_id', 'in', user.stock_location_ids.ids)
+        ]</field>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+</odoo>

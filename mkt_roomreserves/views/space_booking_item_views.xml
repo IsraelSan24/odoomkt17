@@ -1,0 +1,25 @@
+<odoo>
+    <record id="view_space_item_tree" model="ir.ui.view">
+        <field name="model">space.booking.item</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" string="Name"/>
+                <field name="stock" string="Stock"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_space_item_form" model="ir.ui.view">
+        <field name="model">space.booking.item</field>
+        <field name="arch" type="xml">
+            <form string="Item Details">
+                <sheet>
+                    <group>
+                        <field name="name" string="Name"/>
+                        <field name="stock" string="Stock"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

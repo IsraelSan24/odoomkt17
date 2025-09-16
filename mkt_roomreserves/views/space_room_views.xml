@@ -1,0 +1,53 @@
+<odoo>
+    <record id="view_space_room_tree" model="ir.ui.view">
+        <field name="model">space.room</field>
+        <field name="arch" type="xml">
+            <tree decoration-bf="active == False">
+                <field name="name" string="Room"/>
+                <field name="floor" string="Floor"/>
+                <field name="capacity" string="Capacity"/>
+                <field name="active" string="Active" widget="boolean_toggle"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_space_room_form" model="ir.ui.view">
+        <field name="model">space.room</field>
+        <field name="arch" type="xml">
+            <form string="Room Details">
+                <sheet>
+                    <group>
+                        <field name="name" string="Room"/>
+                        <field name="description" string="Description" widget="text"/>
+                        <field name="floor" string="Floor"/>
+                        <field name="capacity" string="Capacity"/>
+                        <field name="active" string="Active" widget="boolean_toggle"/>
+                    </group>
+
+                    <!-- Agregar los ítems disponibles para la sala -->
+                    <group>
+                        <field name="item_ids">
+                            <tree editable="bottom">
+                                <field name="name" string="Item"/>
+                            </tree>
+                        </field>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_space_room_search" model="ir.ui.view">
+        <field name="name">space.room.search</field>
+        <field name="model">space.room</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="floor"/>
+                <filter name="archived" string="Archivados" domain="[('active', '=', False)]"/>
+                <filter name="active" string="Activos" domain="[('active', '=', True)]"/>
+            </search>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,56 @@
+<odoo>
+    <record id="account_journal_group_inherit_form_view" model="ir.ui.view">
+        <field name="name">account.journal.group.inherit.view.form</field>
+        <field name="model">account.journal.group</field>
+        <field name="inherit_id" ref="account.view_account_journal_group_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="code"/>
+                <field name="child_journal_ids" widget="many2many_tags"/>
+            </xpath>
+            <xpath expr="//field[@name='company_id']" position="after">
+                <button name="button_open_form" type="object" string="Configuración"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="account_journal_group_view_form" model="ir.ui.view">
+        <field name="name">account.journal.group.view.form</field>
+        <field name="model">account.journal.group</field>
+        <field name="arch" type="xml">
+            <form string="Journal Group">
+                <sheet>
+                    <group>
+                        <field name="company_id" invisible="1"/>
+                        <field name="name"></field>
+                        <field name="code"></field>
+                        <field name="child_journal_ids" widget="many2many_tags"></field>
+                    </group>
+                    <notebook>
+                        <page name="sequence" string="Número de entrada">
+                            <group>
+                                <group string="Sequence">
+                                    <field name="sequence_number_next"/>
+                                    <field name="sequence_id" required="0" readonly="1"/>
+                                    <button
+                                        name="create_journal_sequence" 
+                                        string="Crear sequencia"
+                                        type="object"
+                                        class="oe_highlight"
+                                        invisible="sequence_id != False"/>
+                                </group>
+                            </group>
+                            <!--<group>
+                                
+                                <group string="Configuración">
+                                    <button name="restart_seat_numbers" string="Reiniciar correlativos" type="object"
+                                            attrs="{'invisible': [('sequence_id','!=',False)]}"/>
+                                </group>
+                                
+                            </group>-->
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

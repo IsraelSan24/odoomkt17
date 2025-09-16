@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_stock_summary_tree" model="ir.ui.view">
+        <field name="name">stock.summary.tree</field>
+        <field name="model">stock.summary</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="report_product_template"/>
+                <field name="report_product_default_code"/>
+                <field name="report_lot" optional="show"/>
+                <field name="report_usage_status" optional="show" widget="badge"
+                    decoration-success="report_usage_status == 'new'"
+                    decoration-warning="report_usage_status == 'used'"/>
+                <button name="button_show_image" type="object" icon="fa-camera-retro" readonly="1"/>
+                <field name="report_photo_loaded" optional="hide"/>
+                <field name="report_category" string="Line" optional="hide"/>
+                <field name="report_product_type" optional="hide"/>
+                <field name="report_location"/>
+                <field name="report_incoming_qty"/>
+                <field name="report_outgoing_qty"/>
+                <field name="report_stock"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_stock_summary_search" model="ir.ui.view">
+        <field name="name">stock.summary.search</field>
+        <field name="model">stock.summary</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="report_product_template"/>
+                <field name="report_lot"/>
+                <field name="report_category" string="Line"/>
+                <field name="report_location"/>
+                <field name="report_incoming_qty"/>
+                <field name="report_outgoing_qty"/>
+                <field name="report_stock"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_stock_summary_action" model="ir.actions.act_window">
+        <field name="name">Stock Summary</field>
+        <field name="res_model">stock.summary</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record id="view_product_template_image_modal_form" model="ir.ui.view">
+        <field name="name">product.template.image.modal.form</field>
+        <field name="model">product.template</field>
+        <field name="priority" eval="20"/>
+        <field name="arch" type="xml">
+            <form string="Product Image Modal">
+                <sheet>
+                    <group>
+                        <h1>
+                            <field name="name" readonly="1" groups="mkt_supervision.group_supervision_admin"/>
+                        </h1>
+                    </group>
+                    <group>
+                        <field name="create_uid" widget="many2one_avatar_user" readonly="1" groups="mkt_supervision.group_supervision_admin"/>
+                        <field name="date" invisible="1"/>
+                        <field name="image_1920" string="Photo" widget="image" attrs="{'readonly':[('id','!=',False)]}" groups="mkt_supervision.group_supervision_admin"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="button_show_image" model="ir.actions.act_window">
+        <field name="name">Product Image</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="stock_summary.view_product_template_image_modal_form"/>
+        <field name="target">new</field>
+        <field name="context">{}</field>
+    </record>
+</odoo>

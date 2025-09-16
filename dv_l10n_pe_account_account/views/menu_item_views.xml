@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem name="Contactos"
+        id="contacts.res_partner_menu_contacts"
+        parent="contacts.menu_contacts"
+        sequence="2"/>
+    <menuitem id="all_menu_act" name="Todos" parent="contacts.res_partner_menu_contacts" action="contacts.action_contacts" sequence="1"/>
+    <menuitem id="clients_menu_act" name="Clientes" parent="contacts.res_partner_menu_contacts" action="account.res_partner_action_customer" sequence="2"/>
+    <menuitem id="suppliers_menu_act" name="Proveedores" parent="contacts.res_partner_menu_contacts" action="account.res_partner_action_supplier" sequence="3"/>
+    <menuitem id="bank_account_menu_categ" name="Banco" parent="contacts.menu_contacts" sequence="3"/>
+    <menuitem id="res_bank_menu_act" name="Bancos" parent="bank_account_menu_categ" action="base.action_res_bank_form" sequence="1"/>
+    <menuitem id="res_partner_bank_menu_act" name="Cuentas bancarias" parent="bank_account_menu_categ" action="base.action_res_partner_bank_account_form" sequence="2"/>
+    <menuitem id="l10n_latam_identification_type_menu_categ" name="Tipos de identificacion" parent="contacts.menu_contacts" action="l10n_latam_base.action_l10n_latam_identification_type" sequence="3"/>
+    <menuitem id="contacts.res_partner_menu_config"
+        name="Configuración"
+        parent="contacts.menu_contacts"
+        groups="base.group_system"
+        sequence="9"/>
+    <menuitem id="menu_hr_expense_account_employee_expenses" name="Gastos" sequence="22" parent="account.menu_finance_payables" groups="account.group_account_invoice" action="l10n_pe_invoice_product"/>
+</odoo>

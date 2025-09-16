@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_stock_summary,access.stock.summary,model_stock_summary,,1,0,0,0
+access_stock_summary_in,access.stock.summary.in,model_stock_summary_in,,1,0,0,0
+access_stock_summary_out,access.stock.summary.out,model_stock_summary_out,,1,0,0,0
+access_stock_summary_report,access.stock.summary.report,model_stock_summary_report,,1,1,1,1

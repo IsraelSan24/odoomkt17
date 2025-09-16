@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="reservation_form" model="website.page">
+            <field name="name">Reservation Form</field>
+            <field name="type">qweb</field>
+            <field name="url">/reservation</field>
+            <field name="website_published">True</field>
+            <field name="key">mkt_roomreserves.reservation_form</field>
+            <field name="arch" type="xml">
+                <t name="Reservation Form" t-name="mkt_roomreserves.reservation_form">
+                    <t t-call="website.layout">
+                        <meta charset="UTF-8"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                        <link rel="stylesheet" type="text/css" href="/mkt_roomreserves/static/description/src/css/form.css"/>
+                        <script type="text/javascript" src="/mkt_roomreserves/static/description/src/js/dni.js"></script>
+
+                        <div id="wrap">
+                            <div class="container mt-5">
+                                <div class="row justify-content-center rounded-5 p-3 bg-white shadow box-area">
+                                    <div class="col-md-4 rounded-4 d-flex justify-content-center align-items-stretch left-box border border-primary p-0" style="background:#A1C877">
+                                        <div class="row justify-content-center align-content-center">
+                                            <div class="col">
+                                                <h2 class="text-center text-white">Reserve a Space</h2>
+                                                <img src="/mkt_roomreserves/static/description/src/img/logos.png" class="img-fluid rounded-start-4" style="width: 250px;height: 250px"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card shadow-sm">
+                                            <div class="card-body">
+                                                <form id="reservation_form" role="form" action="/reservation/submit" method="POST" enctype="multipart/form-data">
+                                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                                                    <div class="input-group mb-2">
+                                                        <input type="text" name="dni" id="dni" class="form-control form-control-lg bg-light fs-6" placeholder="DNI" required="True"/>
+                                                        <button type="button" class="btn btn-secondary custom-button ml-1" onclick="consultarDNI()">
+                                                            <i class="fa fa-search"></i>
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="first_name">Your Name</label>
+                                                        <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Your name" readonly="True"/>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="last_name">Your Surname</label>
+                                                        <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Your surname" readonly="True"/>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="room_id">Select Room</label>
+                                                        <select name="room_id" id="room_id" class="form-control" required="True">
+                                                            <option value="">Choose a room...</option>
+                                                            <t t-foreach="rooms or []" t-as="room">
+                                                                <option t-att-value="room.id">
+                                                                    <t t-esc="room.name"/>
+                                                                </option>
+                                                            </t>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="note_id">Write Notes</label>
+                                                        <textarea name="notes" id="note_id" class="form-control" rows="4" placeholder="Write your notes here..."></textarea>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="reservation_datetime">Reservation Datetime</label>
+                                                        <input type="datetime-local" name="reservation_datetime" id="reservation_datetime" class="form-control" required="True"/>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="duration">Duration (in hours)</label>
+                                                        <input type="number" name="duration" id="duration" class="form-control" value="1" min="0.5" step="0.5" required="True"/>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="contact">Contact info</label>
+                                                        <input type="text" name="contact" id="contact" class="form-control" placeholder="Leave a phone number or email for communication purposes."/>
+                                                    </div>
+
+                                                    <div class="clearfix">
+                                                        <button type="submit" class="btn btn-lg float-left" id="submit-button" style="background:#A1C877">Submit Reservation</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+
+        <record id="reservation_success" model="website.page">
+            <field name="name">Reservation Requested</field>
+            <field name="type">qweb</field>
+            <field name="url">/spacebooking/success</field>
+            <field name="website_published">True</field>
+            <field name="key">mkt_roomreserves.reservation_success</field>
+            <field name="arch" type="xml">
+                <t name="Reservation Requested" t-name="mkt_roomreserves.reservation_success">
+                    <t t-call="website.layout">
+                        <div id="wrap">
+                            <div class="container mt-5">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-8">
+                                        <div class="card shadow-sm">
+                                            <div class="card-body">
+                                                <h2 class="text-center">Reservation Requested</h2>
+                                                <p class="text-center">Your reservation has been submitted and is pending confirmation from reception.</p>
+                                                <div class="text-center">
+                                                    <a href="/spacebooking" class="btn btn-primary">Back to Home</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+    </data>
+</odoo>

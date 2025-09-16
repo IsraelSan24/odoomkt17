@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="stock_inventory_supervision" name="Inventory" parent="mkt_supervision.menu_mkt_supervision_root" sequence="1"/>
+        <menuitem id="stock_summary" name="Stock Summary" parent="stock_inventory_supervision" sequence="1"/>
+            <menuitem id="stock_summary_menu" name="Report View" action="view_stock_summary_action" parent="stock_summary" sequence="0"/>
+            <menuitem id="stock_summary_in_menu" name="In" action="view_stock_summary_in_action" parent="stock_summary" sequence="1"/>
+            <menuitem id="stock_summary_out_menu" name="Out" action="view_stock_summary_out_action" parent="stock_summary" sequence="2"/>
+            <menuitem id="stock_summary_report_menu" name="Report" parent="stock_inventory_supervision" sequence="3"/>
+                <menuitem id="stock_report_submenu" name="Report" action="action_stock_summary_report_view" parent="stock_summary_report_menu" sequence="0"/>
+
+        <record model='ir.actions.act_url' id="action_to_portal">
+            <field name="name">Portal</field>
+            <field name="url">https://odoo.marketing-alterno.com/</field>
+        </record>
+        <menuitem id="menu_stock_to_portal" name="Portal" action="action_to_portal" parent="mkt_supervision.menu_mkt_supervision_root" sequence="6"/>
+
+</odoo>

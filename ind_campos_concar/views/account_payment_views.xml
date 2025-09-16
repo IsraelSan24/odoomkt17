@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_account_payment_form_inherit" model="ir.ui.view">
+        <field name="name">account.payment.view.form.inherit.ind_campos_concar</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_bank_id']" position="after">
+                <field name="num_transferencia"/>
+                <field name="tipo_documento"/>
+                <field name="factura_pagar"/>
+                <field name="fecha_documento"/>
+                <field name="fecha_vencimiento"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

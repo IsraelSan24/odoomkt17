@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_employee_form_inherit" model="ir.ui.view">
+        <field name="name">hr.employee.form.inherited</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='personal_information']//group" position="inside">
+                <group string='Abono de Haberes' name="payment of assets">
+                    <field name="assets_payment"/>
+                    <field name="bank_account_assets_true" invisible="assets_payment == 'no'"/>
+                    <field name="account_number_true" invisible="assets_payment == 'no'"/>
+                    <field name="interbank_account_number_true" invisible="assets_payment == 'no'"/>
+                    <field name="currency_type_assets_true" invisible="assets_payment == 'no'"/>
+                    <field name="bank_account_assets_false" invisible="assets_payment == 'si'"/>
+                    <field name="currency_type_assets_false" invisible="assets_payment == 'si'"/>
+                </group>
+                <group string='Depósito de CTS' name="cts_deposit">
+                    <field name="bank_account_cts"/>
+                    <field name="currency_type_cts"/>
+                </group>
+                <group string='Datos Personales de Tallas de EPPs' name="personal_size_data">
+                    <field name="leather_shoe_size"/>
+                    <field name="rubber_boot_size"/>
+                    <field name="romper_size"/>
+                    <field name="pants_size"/>
+                    <field name="tshirt_size"/>
+                    <field name="shirt_size"/>
+                    <field name="measuring_lenses"/>
+                </group>
+                <group string='Datos de Ingreso' name="entrance_data">
+                    <field name="test_selector" invisible="1"/>
+                    <field name="expiration_days_medical_test" invisible="1"/>
+                    <field name="expiration_medical_test"/>
+                    <field name="remaining_medical_test"/>
+                    <field name="expiration_isem"/>
+                </group>
+                <group string='Datos de Licencias' name="entrance_data">
+                    <field name="driver_license"/>
+                    <field name="expiration_license"/>
+                    <field name="license_number"/>
+                    <field name="expiration_license_inter"/>
+                    <field name="driving_course_expiration"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

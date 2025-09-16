@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_print_report_ind_purchase_request" model="ir.actions.report">
+        <field name="name">Purchase Request</field>
+        <field name="model">purchase.request</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ind_purchase_request.report_purchase_request_document</field>
+        <field name="report_file">ind_purchase_request.report_purchase_request_document</field>
+        <field name="print_report_name">(object.state in ('draft', 'approved', 'to_approve', 'done') and 'RFQ - %s' % (object.name))</field>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- imprimir -->
+    <record id="action_report_purchase_request_line_xlsx" model="ir.actions.report">
+        <field name="name">Reporte RFQ</field>
+        <field name="model">purchase.request.line</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">ind_purchase_request.report_rfq_line</field>
+        <field name="report_file">ind_purchase_request.reporte_lineas_requerimiento</field>
+        <field name="binding_model_id" ref="ind_purchase_request.model_purchase_request_line"/>
+        <field name="binding_type">report</field>
+        <field name="attachment_use" eval="False"/>
+    </record>
+    <!-- imprimir -->
+    <record id="report_realizados_xlsx" model="ir.actions.report">
+        <field name="name">Reporte Realizados</field>
+        <field name="model">purchase.request.line</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">ind_purchase_request.report_rfq_realizados</field>
+        <field name="report_file">ind_purchase_request.reporte_lineas_requerimiento_realizadas</field>
+        <field name="binding_model_id" ref="ind_purchase_request.model_purchase_request_line"/>
+        <field name="binding_type">report</field>
+        <field name="attachment_use" eval="False"/>
+        <field name="groups_id" eval="[(4, ref('ind_purchase_request.res_group_reporte_logistica'))]"/>
+    </record>
+
+</odoo>

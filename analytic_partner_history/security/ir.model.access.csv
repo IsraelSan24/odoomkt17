@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_account_analytic_partner_history_user,access_account_analytic_partner_history_user,model_account_analytic_account_partner_history,analytic_partner_history.group_partner_history_manager,1,0,0,0

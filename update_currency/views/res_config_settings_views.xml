@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_inherit_ind_update_currency" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.ind_update_currency</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='recaptcha']" position="after">
+            <div class="col-12 col-lg-6 o_setting_box" id="api_integration">
+                <div class="o_setting_right_pane">
+                 <span class="o_form_label">Token API.net</span>
+                    <div class="content-group">
+                        <div class="text-muted mb8">
+                            Consiga un token de acceso para obtener consultas RUC, DNI y TC.
+                        </div>
+                        <label for="api_token" string="Token"/>
+                        <field name="api_token" on_change="1" password="True" style="margin-left: 8px;"/>
+                        <div class="text-rigth" style="position:relative;">
+                            <a class="oe_link" href="https://apis.net.pe/" target="_blank">
+                                <i class="fa fa-arrow-right"/>
+                                Obtener token
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

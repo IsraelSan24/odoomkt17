@@ -1,0 +1,413 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_summary
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0-20230620\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-11 17:32+0000\n"
+"PO-Revision-Date: 2024-10-11 17:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_summary
+#: model:ir.actions.act_window,name:stock_summary.action_stock_summary_report_view
+msgid " Stock Summary Report"
+msgstr "Reporte del stock actual"
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_in__assigned_location_ids
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_out__assigned_location_ids
+msgid "Assigned Location"
+msgstr "Ubicaciones asignadas"
+
+#. module: stock_summary
+#: model:ir.model.fields.selection,name:stock_summary.selection__stock_summary_in__state__assigned
+#: model:ir.model.fields.selection,name:stock_summary.selection__stock_summary_out__state__assigned
+msgid "Available"
+msgstr "Disponible"
+
+#. module: stock_summary
+#: code:addons/stock_summary/wizard/stock_summary_report.py:0
+#, python-format
+msgid "CATEGORY"
+msgstr ""
+
+#. module: stock_summary
+#: model_terms:ir.ui.view,arch_db:stock_summary.view_stock_summary_report_wiz_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: stock_summary
+#: model:ir.model.fields.selection,name:stock_summary.selection__stock_summary_in__state__cancel
+#: model:ir.model.fields.selection,name:stock_summary.selection__stock_summary_out__state__cancel
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary__report_category
+msgid "Category"
+msgstr "Categoría"
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_report__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_report__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: stock_summary
+#: code:addons/stock_summary/wizard/stock_summary_report.py:0
+#, python-format
+msgid "DEPARTURES"
+msgstr ""
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_in__date_done
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_out__date_done
+msgid "Date"
+msgstr "Fecha"
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_in__product_uom_qty
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_out__product_uom_qty
+msgid "Demand"
+msgstr "Cantidad"
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_in__location_dest
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_out__location_dest
+msgid "Destination Location"
+msgstr "Para"
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary__display_name
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_in__display_name
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_out__display_name
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_report__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: stock_summary
+#: model:ir.model.fields.selection,name:stock_summary.selection__stock_summary_in__state__done
+#: model:ir.model.fields.selection,name:stock_summary.selection__stock_summary_out__state__done
+msgid "Done"
+msgstr "Realizado"
+
+#. module: stock_summary
+#: code:addons/stock_summary/wizard/stock_summary_report.py:0
+#, python-format
+msgid "ENTRIES"
+msgstr ""
+
+#. module: stock_summary
+#: code:addons/stock_summary/wizard/stock_summary_report.py:0
+#, python-format
+msgid "EXPIRATION DATE"
+msgstr "Fecha de caducidad"
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_report__from_object
+msgid "From Object"
+msgstr ""
+
+#. module: stock_summary
+#: model_terms:ir.ui.view,arch_db:stock_summary.view_stock_summary_report_wiz_form
+msgid "Generate Stock Report"
+msgstr "Generar Reporte del Stock Actual"
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary__id
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_in__id
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_out__id
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_report__id
+msgid "ID"
+msgstr ""
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary__report_photo_loaded
+msgid "Image?"
+msgstr "Imagen?"
+
+#. module: stock_summary
+#: model:ir.ui.menu,name:stock_summary.stock_summary_in_menu
+msgid "In"
+msgstr "Entradas"
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary__report_incoming_qty
+msgid "Incoming"
+msgstr "Entradas"
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary____last_update
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_in____last_update
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_out____last_update
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_report____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_report__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_report__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: stock_summary
+#: model_terms:ir.ui.view,arch_db:stock_summary.view_stock_summary_search
+#: model_terms:ir.ui.view,arch_db:stock_summary.view_stock_summary_tree
+msgid "Line"
+msgstr "Línea"
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary__report_location
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: stock_summary
+#: model_terms:ir.ui.view,arch_db:stock_summary.view_stock_summary_in_search
+#: model_terms:ir.ui.view,arch_db:stock_summary.view_stock_summary_out_search
+msgid "Location destiny"
+msgstr "Ubicación de destino"
+
+#. module: stock_summary
+#: model_terms:ir.ui.view,arch_db:stock_summary.view_stock_summary_in_search
+#: model_terms:ir.ui.view,arch_db:stock_summary.view_stock_summary_out_search
+msgid "Location origin"
+msgstr "Ubicación de origen"
+
+#. module: stock_summary
+#: code:addons/stock_summary/wizard/stock_summary_report.py:0
+#, python-format
+msgid "Locations: "
+msgstr "Ubicaciones: "
+
+#. module: stock_summary
+#: model:ir.model.fields.selection,name:stock_summary.selection__stock_summary__report_usage_status__new
+#: model:ir.model.fields.selection,name:stock_summary.selection__stock_summary_in__state__draft
+#: model:ir.model.fields.selection,name:stock_summary.selection__stock_summary_out__state__draft
+msgid "New"
+msgstr "Nuevo"
+
+#. module: stock_summary
+#: model:ir.ui.menu,name:stock_summary.stock_summary_out_menu
+msgid "Out"
+msgstr "Salidas"
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary__report_outgoing_qty
+msgid "Outgoing"
+msgstr "Salidas"
+
+#. module: stock_summary
+#: code:addons/stock_summary/wizard/stock_summary_report.py:0
+#, python-format
+msgid "PRODUCT"
+msgstr ""
+
+#. module: stock_summary
+#: model:ir.model.fields.selection,name:stock_summary.selection__stock_summary_in__state__partially_available
+#: model:ir.model.fields.selection,name:stock_summary.selection__stock_summary_out__state__partially_available
+msgid "Partially Available"
+msgstr "Parcialmente disponible"
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_report__stock_location_ids
+msgid "Partner"
+msgstr ""
+
+#. module: stock_summary
+#: model:ir.actions.act_url,name:stock_summary.action_to_portal
+#: model:ir.ui.menu,name:stock_summary.menu_stock_to_portal
+msgid "Portal"
+msgstr ""
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary__report_product_id
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary__report_product_template
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_in__product
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_out__product
+msgid "Product"
+msgstr "Producto"
+
+#. module: stock_summary
+#: code:addons/stock_summary/models/stock_summary.py:0
+#: model:ir.actions.act_window,name:stock_summary.button_show_image
+#, python-format
+msgid "Product Image"
+msgstr "Imagen del Producto"
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_in__reference
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_out__reference
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: stock_summary
+#: model:ir.ui.menu,name:stock_summary.stock_report_submenu
+#: model:ir.ui.menu,name:stock_summary.stock_summary_report_menu
+msgid "Report"
+msgstr "Reporte"
+
+#. module: stock_summary
+#: model:ir.ui.menu,name:stock_summary.stock_summary_menu
+msgid "Report View"
+msgstr "Vista de Reporte"
+
+#. module: stock_summary
+#: code:addons/stock_summary/wizard/stock_summary_report.py:0
+#, python-format
+msgid "SERIE N°"
+msgstr ""
+
+#. module: stock_summary
+#: code:addons/stock_summary/wizard/stock_summary_report.py:0
+#, python-format
+msgid "STOCK"
+msgstr ""
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary__report_lot
+msgid "Series"
+msgstr "Serie"
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_out__location
+msgid "Source Locatio"
+msgstr "Desde"
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_in__location
+msgid "Source Location"
+msgstr "Desde"
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary__report_usage_status
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_in__state
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_out__state
+msgid "Status"
+msgstr "Estado"
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary__report_stock
+msgid "Stock"
+msgstr ""
+
+#. module: stock_summary
+#: code:addons/stock_summary/wizard/stock_summary_report.py:0
+#: code:addons/stock_summary/wizard/stock_summary_report.py:0
+#: model:ir.actions.act_window,name:stock_summary.view_stock_summary_action
+#: model:ir.ui.menu,name:stock_summary.stock_summary_root
+#, python-format
+msgid "Stock Summary"
+msgstr "Stock Actual"
+
+#. module: stock_summary
+#: model:ir.actions.act_window,name:stock_summary.view_stock_summary_in_action
+msgid "Stock Summary In"
+msgstr "Ingresos del inventario Actual"
+
+#. module: stock_summary
+#: model:ir.actions.act_window,name:stock_summary.view_stock_summary_out_action
+msgid "Stock Summary Out"
+msgstr "Salidas del inventario Actual"
+
+#. module: stock_summary
+#: model:ir.model,name:stock_summary.model_stock_summary_report
+msgid "Stock Summary Report"
+msgstr "Reporte del Inventario Actual"
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary__report_location_id
+msgid "Stock location"
+msgstr ""
+
+#. module: stock_summary
+#: model:ir.model,name:stock_summary.model_stock_summary
+msgid "Stock summary"
+msgstr "Inventario Actual"
+
+#. module: stock_summary
+#: model_terms:ir.ui.view,arch_db:stock_summary.view_stock_summary_report_wiz_form
+msgid "Stock summary Report"
+msgstr "Reporte de inventario actual"
+
+#. module: stock_summary
+#: model:ir.model,name:stock_summary.model_stock_summary_in
+msgid "Stock summary in"
+msgstr "Ingresos del inventario Actual"
+
+#. module: stock_summary
+#: model:ir.model,name:stock_summary.model_stock_summary_out
+msgid "Stock summary out"
+msgstr "Salidas del inventario Actual"
+
+#. module: stock_summary
+#: code:addons/stock_summary/wizard/stock_summary_report.py:0
+#, python-format
+msgid "TYPE"
+msgstr ""
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary__report_product_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: stock_summary
+#: code:addons/stock_summary/wizard/stock_summary_report.py:0
+#, python-format
+msgid "UBICATION"
+msgstr ""
+
+#. module: stock_summary
+#: model:ir.model.fields.selection,name:stock_summary.selection__stock_summary__report_usage_status__used
+msgid "Used"
+msgstr "Usado"
+
+#. module: stock_summary
+#: model:ir.model.fields.selection,name:stock_summary.selection__stock_summary_in__state__waiting
+#: model:ir.model.fields.selection,name:stock_summary.selection__stock_summary_out__state__waiting
+msgid "Waiting Another Move"
+msgstr "Esperando otro movimiento"
+
+#. module: stock_summary
+#: model:ir.model.fields.selection,name:stock_summary.selection__stock_summary_in__state__confirmed
+#: model:ir.model.fields.selection,name:stock_summary.selection__stock_summary_out__state__confirmed
+msgid "Waiting Availability"
+msgstr "Esperando disponibilidad"
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_in__location_dest_id
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_out__location_dest_id
+msgid "location_dest_id"
+msgstr ""
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_in__location_id
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_out__location_id
+msgid "location_id"
+msgstr ""
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_in__product_id
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_out__product_id
+msgid "product_id"
+msgstr ""
+
+#. module: stock_summary
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_in__product_uom
+#: model:ir.model.fields,field_description:stock_summary.field_stock_summary_out__product_uom
+msgid "product_uom"
+msgstr ""

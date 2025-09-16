@@ -1,0 +1,24 @@
+<odoo>
+    <record id="action_space_room" model="ir.actions.act_window">
+        <field name="name">Spaces</field>
+        <field name="res_model">space.room</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <record id="action_space_booking" model="ir.actions.act_window">
+        <field name="name">Reservations</field>
+        <field name="res_model">space.booking</field>
+        <field name="view_mode">calendar,tree,form</field>
+    </record>
+
+    <record id="action_space_item" model="ir.actions.act_window">
+        <field name="name">Aditional Items</field>
+        <field name="res_model">space.booking.item</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_space_root" name="Spaces reservations" parent="mkt_supervision.menu_mkt_supervision_root" sequence="4"/>
+    <menuitem id="menu_space_rooms" name="Spaces" parent="menu_space_root" action="action_space_room" groups="mkt_roomreserves.group_superuser_booking"/>
+    <menuitem id="menu_space_bookings" name="Reservations" parent="menu_space_root" action="action_space_booking"/>
+    <menuitem id="menu_space_items" name="Aditional Items" parent="menu_space_root" action="action_space_item" groups="mkt_roomreserves.group_superuser_booking"/>
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <!-- Grupo para ver precio promedio del producto -->
+    <record id="group_product_price" model="res.groups">
+        <field name="name">Ver costo promedio producto [C]</field>
+        <field name="comment">Grupo que permite ver los costo en productos</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+    
+</odoo>

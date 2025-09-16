@@ -1,0 +1,11 @@
+<odoo>
+    <!-- Grupo para Usuarios -->
+    <record id="group_service_order_user" model="res.groups">
+        <field name="name">Usuario de Órdenes de Trabajo</field>
+        <field name="category_id" ref="base.module_category_services"/>
+    </record>
+    <record id="group_service_order_manager" model="res.groups">
+        <field name="name">Aprobador de Órdenes de Trabajo</field>
+        <field name="category_id" ref="base.module_category_services"/>
+    </record>
+</odoo>

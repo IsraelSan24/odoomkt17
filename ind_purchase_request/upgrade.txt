@@ -1,0 +1,25 @@
+=====================================
+Guía de actualización del módulo
+=====================================
+
+-----Models in module 'ind_purchase_request'-----
+DEL MODEL res.users                              
+DEL MODEL res.currency
+-------------------------------------------------
+
+--------------------Fields in module 'ind_purchase_request'--------------------
+UPD FIELD purchase.request / analytic_account_id -> analytic_distribution
+DEL FIELD purchase.request / planning
+DEL FIELD purchase.request / document_file_name
+DEL FIELD purchase.request / approved_by
+
+UPD FIELD purchase.request.line / costo_promedio -> average_cost
+DEL FIELD purchase.request.line / planning
+
+UPD FIELD purchase.order / view_notes -> print_notes
+UPD FIELD purchase.order / purchase_request_arelated -> purchase_request_ids
+UPD FIELD purchase.order / costo_promedio_totl -> average_total_cost
+UPD FIELD purchase.order / inverse_rate -> exchange_rate
+UPD FIELD purchase.order / rfq_related_count -> count_purchase_request
+DEL FIELD purchase.order / fake_inverse_rate
+-------------------------------------------------------------------------------

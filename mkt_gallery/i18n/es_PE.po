@@ -1,0 +1,143 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mkt_gallery
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0-20230620\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-21 20:12+0000\n"
+"PO-Revision-Date: 2023-07-21 20:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mkt_gallery
+#: code:addons/mkt_gallery/models/gallery.py:0
+#, python-format
+msgid ""
+"\n"
+"                                    The selected product has already been registered. Review: %s \n"
+"\n"
+"                                    Please, choose a diferent product and verify that it is not in use.\n"
+"\n"
+"                                    If you don't want to choose another product, leave the product field empty.\n"
+"                                "
+msgstr ""
+"\n"
+"                                    El producto seleccionado ya está registrado. Revisar: %s \n"
+"\n"
+"                                    Por favor, selecciona un producto diferente y verifica que no esté en uso.\n"
+"\n"
+"                                    Si no deseas seleccionar otro producto, deja el campo de producto vacío.\n"
+"                                "
+
+#. module: mkt_gallery
+#: model:res.groups,name:mkt_gallery.res_groups_admin
+msgid "Admin"
+msgstr "Administrador"
+
+#. module: mkt_gallery
+#: model:ir.model.fields,field_description:mkt_gallery.field_gallery__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: mkt_gallery
+#: model:ir.model.fields,field_description:mkt_gallery.field_gallery__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: mkt_gallery
+#: model:ir.model.fields,field_description:mkt_gallery.field_gallery__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: mkt_gallery
+#: model:ir.model.fields,field_description:mkt_gallery.field_gallery__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: mkt_gallery
+#: code:addons/mkt_gallery/models/gallery.py:0
+#, python-format
+msgid "Everything's fine!"
+msgstr "Todo está bien!"
+
+#. module: mkt_gallery
+#: model:ir.module.category,name:mkt_gallery.module_category_gallery
+msgid "Gallery"
+msgstr "Galería"
+
+#. module: mkt_gallery
+#: model:ir.model.fields,field_description:mkt_gallery.field_gallery__id
+msgid "ID"
+msgstr ""
+
+#. module: mkt_gallery
+#: model:ir.model.fields,field_description:mkt_gallery.field_gallery____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: mkt_gallery
+#: model:ir.model.fields,field_description:mkt_gallery.field_gallery__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: mkt_gallery
+#: model:ir.model.fields,field_description:mkt_gallery.field_gallery__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: mkt_gallery
+#: model:ir.model.fields,field_description:mkt_gallery.field_gallery__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: mkt_gallery
+#: code:addons/mkt_gallery/models/gallery.py:0
+#: code:addons/mkt_gallery/models/gallery.py:0
+#: code:addons/mkt_gallery/models/gallery.py:0
+#: code:addons/mkt_gallery/models/gallery.py:0
+#, python-format
+msgid "New"
+msgstr "Nuevo"
+
+#. module: mkt_gallery
+#: model:ir.model.fields,field_description:mkt_gallery.field_gallery__product_image
+msgid "Photo"
+msgstr "Foto"
+
+#. module: mkt_gallery
+#: model:ir.model,name:mkt_gallery.model_gallery
+#: model:ir.ui.menu,name:mkt_gallery.gallery_root
+msgid "Photo Gallery"
+msgstr "Galería de Fotos"
+
+#. module: mkt_gallery
+#: model:ir.model.fields,field_description:mkt_gallery.field_gallery__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: mkt_gallery
+#: model:ir.actions.act_window,name:mkt_gallery.action_view_gallery
+#: model:ir.ui.menu,name:mkt_gallery.gallery_gallery
+msgid "Product Gallery"
+msgstr "Galería de Productos"
+
+#. module: mkt_gallery
+#: model:ir.model.fields,field_description:mkt_gallery.field_gallery__user_id
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: mkt_gallery
+#: model:res.groups,name:mkt_gallery.res_groups_user
+msgid "User"
+msgstr "Usuario"
+
+#. module: mkt_gallery
+#: model_terms:ir.ui.view,arch_db:mkt_gallery.view_gallery_form
+msgid "Verify Duplicates"
+msgstr "Verificar duplicados"

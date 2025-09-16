@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_edited_barcode" inherit_id="stock.report_generic_barcode" >
+        <xpath expr="//span[@t-field='o.barcode']" position="replace">
+            <span
+                t-if="o.barcode"
+                t-field="o.barcode"
+                style="padding:0"
+                t-options="{'widget': 'barcode', 'humanreadable':0, 'img_style': 'width:400;height:100'}"
+            >
+            1234567890
+            </span>
+        </xpath>
+
+        <!-- Change the number of columns to 1 -->
+        <xpath expr="//t[@t-set='nCols']" position="attributes">
+            <attribute name="t-value">1</attribute>
+        </xpath>
+
+        <!-- Change the number of rows to 10 -->
+        <xpath expr="//t[@t-set='nRows']" position="attributes">
+            <attribute name="t-value">10</attribute>
+        </xpath>
+
+    </template>
+
+    <template id="ind_stockpicking_report" inherit_id="stock.report_picking" >
+        <xpath expr="//div/div[2]" position="after">
+            <div class="row mt48 mb32">
+                <div class="col-auto" name="div_guia">
+                    <strong>Guía:</strong>
+                    <t t-if="o.guia">
+                        <p t-field="o.guia"/>
+                    </t>
+                </div>
+                <div style="margin-left: 147px;"  class="col-auto" name="div_factura">
+                    <strong>Factura:</strong>
+                    <t t-if="o.factura">
+                        <p t-field="o.factura"/>
+                    </t>
+                </div>
+                <div style="margin-left: 147px;" class="col-auto" name="div_solicitante">
+                    <strong>Solicitante:</strong>
+                    <t t-if="o.requester_id">
+                        <p t-field="o.requester_id"/>
+                    </t>
+                </div>
+            </div>
+        </xpath>
+        <xpath expr="//table//thead//tr//th[1]" position="after">
+            <th>
+                <strong>Centro de costo</strong>
+            </th>
+        </xpath>
+        <xpath expr="//table//tbody//tr//td[1]" position="after">
+            <td>
+                <span t-field="ml.move_id.analytic_names"></span>
+            </td>
+        </xpath>
+        <xpath expr="//div[@name='div_sched_date']" position="replace">
+            <div t-if="o.date_done" class="col-auto">
+                <strong>Fecha efectiva:</strong>
+                <p t-field="o.date_done"/>
+            </div> 
+            <div t-else="" class="col-auto">
+                <strong>Fecha prevista:</strong>
+                <p t-field="o.scheduled_date"/>
+            </div>
+        </xpath>
+    </template>
+    
+</odoo>

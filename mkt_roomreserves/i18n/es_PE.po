@@ -1,0 +1,605 @@
+ # Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mkt_roomreserves
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-11 13:58+0000\n"
+"PO-Revision-Date: 2025-02-11 13:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__message_needaction
+msgid "Action Needed"
+msgstr "Acción necesaria"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_room__is_active
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_room_form
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_room_tree
+msgid "Active"
+msgstr "Activa"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_form
+msgid "Add any additional information here..."
+msgstr "Agregar información adicional aquí..."
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__item_ids
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_form
+msgid "Additional Items"
+msgstr "Ítems adicionales"
+
+#. module: mkt_roomreserves
+#: model:ir.actions.act_window,name:mkt_roomreserves.action_space_item
+#: model:ir.ui.menu,name:mkt_roomreserves.menu_space_items
+msgid "Aditional Items"
+msgstr "Ítems adicionales"
+
+#. module: mkt_roomreserves
+#: model:res.groups,name:mkt_roomreserves.group_superuser_booking
+msgid "Administrator"
+msgstr "Administrador"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__message_attachment_count
+msgid "Attachment Count"
+msgstr "Contador de adjuntos"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_room__item_ids
+msgid "Available Items"
+msgstr "Ítems disponibles"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.reservation_success_ir_ui_view
+#: model_terms:website.page,arch_db:mkt_roomreserves.reservation_success
+msgid "Back to Home"
+msgstr "Regresar al inicio"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_form
+msgid "Booked By"
+msgstr "Reservador por"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_form
+msgid "Booking Details"
+msgstr "Detalles de la reserva"
+
+#. module: mkt_roomreserves
+#: model:ir.module.category,name:mkt_roomreserves.module_mkt_roomreserves
+msgid "Booking Groups"
+msgstr "Grupos de reservas"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields.selection,name:mkt_roomreserves.selection__space_booking__state__cancelled
+msgid "Cancelled"
+msgstr "Cancelada"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_room__capacity
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_room_form
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_room_tree
+msgid "Capacity"
+msgstr "Capacidad"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_room_kanban
+msgid "Capacity:"
+msgstr "Capacidad"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.reservation_form_ir_ui_view
+#: model_terms:website.page,arch_db:mkt_roomreserves.reservation_form
+msgid "Choose a room..."
+msgstr "Escoge una sala..."
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_form
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields.selection,name:mkt_roomreserves.selection__space_booking__state__confirmed
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_search
+msgid "Confirmed"
+msgstr "Confirmada"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__create_uid
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking_item__create_uid
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_room__create_uid
+msgid "Created by"
+msgstr "Creada por"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__create_date
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking_item__create_date
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_room__create_date
+msgid "Created on"
+msgstr "Creada en"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.reservation_form_ir_ui_view
+#: model_terms:website.page,arch_db:mkt_roomreserves.reservation_form
+msgid "DNI"
+msgstr "DNI"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_room__description
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_room_form
+msgid "Description"
+msgstr "Descripción"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__display_name
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking_item__display_name
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_room__display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields.selection,name:mkt_roomreserves.selection__space_booking__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__duration
+msgid "Duration (Hours)"
+msgstr "Duración (horas)"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_form
+msgid "Duration (hours)"
+msgstr "Duración (horas)"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_tree
+msgid "Duration (hrs)"
+msgstr "Duración (horas)"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.reservation_form_ir_ui_view
+#: model_terms:website.page,arch_db:mkt_roomreserves.reservation_form
+msgid "Duration (in hours)"
+msgstr "Duración (horas)"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__end_datetime
+msgid "End"
+msgstr "Fin"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__first_name
+msgid "First Name"
+msgstr "Nombres"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__floor
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_room__floor
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_floor_kanban
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_room_form
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_room_tree
+msgid "Floor"
+msgstr "Piso"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__full_name
+msgid "Full Name"
+msgstr "Nombre completo"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_form
+msgid "Full name"
+msgstr "Nombre completo"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__has_message
+msgid "Has Message"
+msgstr "Tiene un mensaje"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__id
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking_item__id
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_room__id
+msgid "ID"
+msgstr "ID"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,help:mkt_roomreserves.field_space_booking__message_needaction
+#: model:ir.model.fields,help:mkt_roomreserves.field_space_booking__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "De revisarse, nuevos mensajes requieren su atención."
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,help:mkt_roomreserves.field_space_booking__message_has_error
+#: model:ir.model.fields,help:mkt_roomreserves.field_space_booking__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "De revisarse, algunos mensajes tienen error de envío."
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__message_is_follower
+msgid "Is Follower"
+msgstr "Es seguidor"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking_item__name
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_form
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_room_form
+msgid "Item"
+msgstr "Ítem"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_item_form
+msgid "Item Details"
+msgstr "Detalles del ítem"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking____last_update
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking_item____last_update
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_room____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__last_name
+msgid "Last Name"
+msgstr "Apellidos"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__write_uid
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking_item__write_uid
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_room__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__write_date
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking_item__write_date
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_room__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjunto principal"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de envío de mensaje"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_search
+msgid "My reservations"
+msgstr "Mis reservas"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_room__name
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_tree
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_item_form
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_item_tree
+msgid "Name"
+msgstr "Nombre"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__notes
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_form
+msgid "Notes"
+msgstr "Notas"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,help:mkt_roomreserves.field_space_booking__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,help:mkt_roomreserves.field_space_booking__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de envío"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,help:mkt_roomreserves.field_space_booking__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes no leídos"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields.selection,name:mkt_roomreserves.selection__space_booking__state__pending
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_search
+msgid "Pending"
+msgstr "Pendientes"
+
+#. module: mkt_roomreserves
+#: model:res.groups,name:mkt_roomreserves.group_receptionist
+msgid "Recepcionist"
+msgstr "Recepcionista"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_form
+msgid "Request"
+msgstr "Solicitud"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__name
+msgid "Reservation"
+msgstr "Reserva"
+
+#. module: mkt_roomreserves
+#: code:addons/mkt_roomreserves/models/space_booking.py:0
+#, python-format
+msgid "Reservation #%sir.sequence"
+msgstr "Reserva #%sir.sequence"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.reservation_form_ir_ui_view
+#: model_terms:website.page,arch_db:mkt_roomreserves.reservation_form
+msgid "Reservation Datetime"
+msgstr "Fecha y hora de reserva"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.reservation_success_ir_ui_view
+#: model_terms:website.page,arch_db:mkt_roomreserves.reservation_success
+msgid "Reservation Requested"
+msgstr "Reserva solicitada"
+
+#. module: mkt_roomreserves
+#: model:ir.actions.act_window,name:mkt_roomreserves.action_space_booking
+#: model:ir.ui.menu,name:mkt_roomreserves.menu_space_bookings
+msgid "Reservations"
+msgstr "Reservas"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_calendar
+msgid "Reservations Calendar"
+msgstr "Calendario de reservas"
+
+#. module: mkt_roomreserves
+#: model:ir.model,name:mkt_roomreserves.model_space_booking_item
+msgid "Reserve Item"
+msgstr "Ítem reservado"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.reservation_form_ir_ui_view
+#: model_terms:website.page,arch_db:mkt_roomreserves.reservation_form
+msgid "Reserve a Space"
+msgstr "Reservas un espacio"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_form
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_search
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_tree
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_room_form
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_room_tree
+msgid "Room"
+msgstr "Sala"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__room_capacity
+msgid "Room Capacity"
+msgstr "Capacidad de la sala"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_room_form
+msgid "Room Details"
+msgstr "Detalles de la sala"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__room_name
+msgid "Room name"
+msgstr "Nombre de la sala"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking_item__room_ids
+msgid "Rooms"
+msgstr "Salas"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error de envío de SMS"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_search
+msgid "Search reservations"
+msgstr "Buscar reservas"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.reservation_form_ir_ui_view
+#: model_terms:website.page,arch_db:mkt_roomreserves.reservation_form
+msgid "Select Room"
+msgstr "Escoger Sala"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_search
+msgid "Sort by..."
+msgstr "Ordenar por..."
+
+#. module: mkt_roomreserves
+#: model:ir.model,name:mkt_roomreserves.model_space_room
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__room_id
+msgid "Space"
+msgstr "Espacio"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_form
+msgid "Space Booking"
+msgstr "Reserva"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_tree
+msgid "Space Bookings"
+msgstr "Reservas"
+
+#. module: mkt_roomreserves
+#: model:ir.model,name:mkt_roomreserves.model_space_booking
+msgid "Space reservation"
+msgstr "Reserva de espacios"
+
+#. module: mkt_roomreserves
+#: model:ir.actions.act_window,name:mkt_roomreserves.action_space_room
+#: model:ir.ui.menu,name:mkt_roomreserves.menu_space_rooms
+msgid "Spaces"
+msgstr "Espacios"
+
+#. module: mkt_roomreserves
+#: model:ir.ui.menu,name:mkt_roomreserves.menu_space_root
+msgid "Spaces reservations"
+msgstr "Reserva de espacios"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__start_datetime
+msgid "Start"
+msgstr "Comienzo"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_tree
+msgid "Start Date"
+msgstr "Fecha de inicio"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_form
+msgid "Start Datetime"
+msgstr "Fecha y hora de inicio"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__state
+msgid "State"
+msgstr "Estado"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_booking_tree
+msgid "Status"
+msgstr "Estado"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking_item__stock
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_item_form
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_item_tree
+msgid "Stock"
+msgstr "Stock"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.reservation_form_ir_ui_view
+#: model_terms:website.page,arch_db:mkt_roomreserves.reservation_form
+msgid "Submit Reservation"
+msgstr "Solicitar reserva"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__message_unread
+msgid "Unread Messages"
+msgstr "Mensajes no leídos"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensajes no leídos"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__user_id
+#: model:res.groups,name:mkt_roomreserves.group_user_booking
+msgid "User"
+msgstr "Usuario"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_room_kanban
+msgid "View Reservations"
+msgstr "Ver restricciones"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.view_space_floor_kanban
+msgid "View Rooms"
+msgstr "Ver Salas"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,field_description:mkt_roomreserves.field_space_booking__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del sitio web"
+
+#. module: mkt_roomreserves
+#: model:ir.model.fields,help:mkt_roomreserves.field_space_booking__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicación del sitio web"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.reservation_form_ir_ui_view
+#: model_terms:website.page,arch_db:mkt_roomreserves.reservation_form
+msgid "Write Notes"
+msgstr "Escribir notas"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.reservation_form_ir_ui_view
+#: model_terms:website.page,arch_db:mkt_roomreserves.reservation_form
+msgid "Write your notes here..."
+msgstr "Escribe tus notas aquí..."
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.reservation_form_ir_ui_view
+#: model_terms:website.page,arch_db:mkt_roomreserves.reservation_form
+msgid "Your Name"
+msgstr "Tus nombres"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.reservation_form_ir_ui_view
+#: model_terms:website.page,arch_db:mkt_roomreserves.reservation_form
+msgid "Your Surname"
+msgstr "Tus apellidos"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.reservation_form_ir_ui_view
+#: model_terms:website.page,arch_db:mkt_roomreserves.reservation_form
+msgid "Your name"
+msgstr "Tus nombres"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.reservation_success_ir_ui_view
+#: model_terms:website.page,arch_db:mkt_roomreserves.reservation_success
+msgid ""
+"Your reservation has been submitted and is pending confirmation from "
+"reception."
+msgstr "Tu reserva ha sido enviada a recepción y se encuentra pendiente de confirmación"
+
+#. module: mkt_roomreserves
+#: model_terms:ir.ui.view,arch_db:mkt_roomreserves.reservation_form_ir_ui_view
+#: model_terms:website.page,arch_db:mkt_roomreserves.reservation_form
+msgid "Your surname"
+msgstr "Tus apellidos"

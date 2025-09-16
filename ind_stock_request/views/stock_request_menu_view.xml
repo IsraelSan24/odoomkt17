@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<odoo>
+    <menuitem id="parent_menu_stock_request" 
+              name="Solicitud de Stock" 
+              sequence="22"
+              web_icon="ind_stock_request,static/description/icon.png"
+              groups="group_stock_request_user,group_stock_request_manager,group_stock_request_warehouse"
+    />
+</odoo>

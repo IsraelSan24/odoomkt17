@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="paperformat_print_service_order" model="report.paperformat">
+        <field name="name">Órden de trabajo</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">10</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_left">10</field>
+        <field name="margin_right">10</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">15</field>
+        <field name="dpi">90</field>
+    </record>
+    
+    <record id="paperformat_print_conformity_order" model="report.paperformat">
+        <field name="name">conformidad del servicio</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">10</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_left">10</field>
+        <field name="margin_right">10</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">15</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <record id="report_service_order" model="ir.actions.report">
+        <field name="name">Órden de trabajo</field>
+        <field name="model">service.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ind_service_order.report_service_order_document</field>
+        <field name="report_file">ind_service_order.report_service_order_document</field>
+        <field name="print_report_name">object.name or 'OT'</field>
+        <field name="paperformat_id" ref="ind_service_order.paperformat_print_service_order"/>
+        <field name="binding_model_id" ref="model_service_order"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="report_service_conformity" model="ir.actions.report">
+        <field name="name">Conformidad del servicio</field>
+        <field name="model">service.conformity</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ind_service_order.report_service_conformity_document</field>
+        <field name="report_file">ind_service_order.report_service_conformity_document</field>
+        <field name="print_report_name">object.name or 'CON'</field>
+        <field name="paperformat_id" ref="ind_service_order.paperformat_print_conformity_order"/>
+        <field name="binding_model_id" ref="model_service_conformity"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

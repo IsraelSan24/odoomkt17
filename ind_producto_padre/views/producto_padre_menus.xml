@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_view_padre_hijo" model="ir.actions.act_window">
+        <field name="name">Tabla de Referencias</field>
+        <field name="res_model">producto.padre</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_padrehijo_inventory"
+        name="Tabla de Referencias"
+        parent="stock.menu_stock_inventory_control"
+        action="ind_producto_padre.action_view_padre_hijo"
+        sequence="20"
+    />
+    <menuitem
+        id="menu_padrehijo_purchase"
+        name="Tabla de Referencias"
+        parent="purchase.menu_purchase_products"
+        action="ind_producto_padre.action_view_padre_hijo"
+        sequence="20"
+    />
+
+</odoo>

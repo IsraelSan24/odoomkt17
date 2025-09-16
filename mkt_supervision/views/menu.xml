@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="stock_request_form_action" model="ir.actions.act_window">
+        <field name="name">Solicitudes de Stock</field>
+        <field name="res_model">stock.request</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids" eval="[(5,0,0), (0,0,{'view_mode':'tree', 'view_id': ref('view_stock_request_tree')}), (0,0,{'view_mode':'form', 'view_id': ref('view_stock_request_form')})]"/>
+        <field name="groups_id" eval="[(6, 0, [ref('mkt_supervision.group_stock_request_warehouse'), ref('mkt_supervision.group_stock_request_user'), ref('mkt_supervision.group_stock_request_manager')])]"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click para crear una nueva solicitud de stock
+            </p>
+            <p>
+            Una solicitud de stock envía una instrucción al área de almacén para
+            poder realizar las salidas de acuerdo a los productos y fechas programadas.
+            </p>
+        </field>
+    </record>
+    
+    <record id="stock_request_line_form_action" model="ir.actions.act_window">
+        <field name="name">Líneas de Solicitud de Stock</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">stock.request.line</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    <record
+        id="action_stock_request_line_product_tree"
+        model="ir.actions.act_window"
+    >
+        <field name="context">
+            {'search_default_product_id': [active_id], 'default_product_id': active_id}
+        </field>
+        <field name="name">Stock Requests</field>
+        <field name="res_model">stock.request.line</field>
+        <field name="binding_model_id" ref="product.model_product_product" />
+        <field
+            name="groups_id"
+            eval="[(4, ref('mkt_supervision.group_stock_request_user')),(4, ref('mkt_supervision.group_stock_request_manager')),(4, ref('mkt_supervision.group_stock_request_warehouse'))]"
+        />
+    </record>
+    <record
+        id="stock_request_line_form_action_tree"
+        model="ir.actions.act_window.view"
+    >
+        <field eval="1" name="sequence" />
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="stock_request_line_tree" />
+        <field name="act_window_id" ref="stock_request_line_form_action" />
+    </record>
+    <record id="stock_request_line_form_action_form2" model="ir.actions.act_window.view">
+        <field eval="2" name="sequence" />
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="stock_request_line_form" />
+        <field name="act_window_id" ref="stock_request_line_form_action" />
+    </record>
+    <record id="action_employee_under_supervision" model="ir.actions.act_window">
+        <field name="name">Mis Empleados</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">['|', ('parent_id.user_id', '=', uid), ('user_id', '=', uid)]</field>
+    </record>
+    <record id="action_attendance_under_supervision" model="ir.actions.act_window">
+        <field name="name">Asistencias Equipo</field>
+        <field name="res_model">hr.attendance</field>
+        <field name="view_mode">tree,form,kanban,graph</field>
+        <field name="domain">['|', ('employee_id.parent_id.user_id', '=', uid), ('employee_id.user_id', '=', uid)]</field>
+    </record>
+    <record id="action_leave_under_supervision" model="ir.actions.act_window">
+        <field name="name">Ausencias Equipo</field>
+        <field name="res_model">hr.leave</field>
+        <field name="view_mode">tree,form,kanban,graph</field>
+        <field name="domain">
+            ['|',
+                ('employee_id.parent_id.user_id', '=', uid),
+                ('employee_id.user_id', '=', uid)
+            ]
+        </field>
+        <field name="groups_id" eval="[
+            (4, ref('mkt_supervision.group_supervision_admin')),
+            (4, ref('mkt_supervision.group_supervision_supervisor'))
+        ]"/>
+    </record>
+    <record id="view_attendance_absence_report_wizard_form" model="ir.ui.view">
+        <field name="name">attendance.absence.report.wizard.form</field>
+        <field name="model">attendance.absence.report</field>
+        <field name="arch" type="xml">
+            <form string="Reporte Asistencia y Ausencias">
+                <group>
+                    <field name="month"/>
+                    <field name="year"/>
+                </group>
+                <footer>
+                    <button string="Generar XLSX"
+                            name="action_print_xlsx"
+                            type="object"
+                            class="btn-primary"/>
+                    <button string="Cancelar" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_attendance_absence_report_wizard" model="ir.actions.act_window">
+        <field name="name">Reporte Asistencia Ausencia</field>
+        <field name="res_model">attendance.absence.report</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+    <record id="rule_supervision_employee_access" model="ir.rule">
+        <field name="name">Ver empleados supervisados</field>
+        <field name="model_id" ref="hr.model_hr_employee"/>
+        <field name="domain_force">['|', ('parent_id.user_id', '=', user.id), ('user_id', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('mkt_supervision.group_supervision_admin')), (4, ref('mkt_supervision.group_supervision_supervisor'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+    <record id="rule_supervision_attendance_access" model="ir.rule">
+        <field name="name">Ver asistencias del equipo</field>
+        <field name="model_id" ref="hr_attendance.model_hr_attendance"/>
+        <field name="domain_force">['|', ('employee_id.user_id', '=', user.id), ('employee_id.parent_id.user_id', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('mkt_supervision.group_supervision_admin')), (4, ref('mkt_supervision.group_supervision_supervisor'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+    <record id="rule_supervision_leave_access" model="ir.rule">
+        <field name="name">Ver ausencias del equipo</field>
+        <field name="model_id" ref="hr_holidays.model_hr_leave"/>
+        <field name="domain_force">
+            ['|',
+                ('employee_id.user_id', '=', user.id),
+                ('employee_id.parent_id.user_id', '=', user.id)
+            ]
+        </field>
+        <field name="groups" eval="[
+            (4, ref('mkt_supervision.group_supervision_admin')),
+            (4, ref('mkt_supervision.group_supervision_supervisor'))
+        ]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <menuitem id="menu_mkt_supervision_root" name="Supervisión" web_icon="mkt_supervision,static/description/icon.png" groups="mkt_supervision.group_supervision_supervisor,mkt_supervision.group_supervision_admin"/>
+        
+        <menuitem id="menu_mkt_supervision_reports" name="Empleados" parent="menu_mkt_supervision_root" sequence="1"/>
+            <menuitem id="menu_action_employee_supervision" name="Empleados Equipo" parent="menu_mkt_supervision_reports" action="action_employee_under_supervision" sequence="1"/>
+            <menuitem id="menu_action_attendance_supervision" name="Asistencia" parent="menu_mkt_supervision_reports" action="action_attendance_under_supervision" sequence="2"/>
+            <menuitem id="menu_action_attendance_report" name="Reporte de Asistencia" parent="menu_mkt_supervision_reports" action="action_attendance_report_wizard" sequence="3"/>
+            <menuitem id="menu_action_leave_supervision" name="Ausencias Equipo" parent="menu_mkt_supervision_reports" action="action_leave_under_supervision" sequence="4"/>
+            <menuitem id="menu_tareo_asistencia" name="Tareo de Asistencia" parent="menu_mkt_supervision_reports" action="action_attendance_absence_report_wizard" sequence="5"/>
+        
+        <menuitem id="menu_supervision_stock_request" name="Solicitud de Stock" parent="stock_summary.stock_inventory_supervision" groups="group_stock_request_user,group_stock_request_manager,group_stock_request_warehouse" sequence="2"/>
+            <menuitem id="menu_stock_request" name="Solicitudes de Stock" parent="menu_supervision_stock_request" groups="group_stock_request_user,group_stock_request_manager,group_stock_request_warehouse" action="stock_request_form_action" sequence="1"/>
+            <menuitem id="menu_stock_request_line" name="Líneas de Solicitudes de Stock" parent="menu_supervision_stock_request" action="stock_request_line_form_action" groups="group_stock_request_user,group_stock_request_manager,group_stock_request_warehouse" sequence="2"/>
+        
+        <menuitem id="configuration_menu" name="Configuration" parent="menu_mkt_supervision_root" sequence="3" groups="mkt_supervision.group_supervision_admin"/>
+</odoo>

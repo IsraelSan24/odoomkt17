@@ -1,0 +1,248 @@
+<?xml version="1.0" ?>
+<odoo>
+
+    <record id="ind_view_stock_request_form" model="ir.ui.view">
+        <field name="name">ind.stock.request.form</field>
+        <field name="model">stock.request</field>
+        <field name="arch" type="xml">
+            <form string="SOLICITUD DE SALIDA">
+                <header>
+                    <button
+                        name="button_draft"
+                        invisible="not state in ['to_approve', 'approved', 'rejected', 'done']"
+                        string="Reiniciar"
+                        type="object"
+                        groups="ind_stock_request.group_stock_request_manager"
+                    />
+                    <button
+                        name="button_to_approve"
+                        invisible="not state in 'draft'"
+                        string="Solicitar Aprobación"
+                        type="object"
+                        class="oe_highlight"
+                        groups="ind_stock_request.group_stock_request_manager,ind_stock_request.group_stock_request_user"
+                    />
+                    <button
+                        name="button_approved"
+                        invisible="not state in 'to_approve'"
+                        string="Aprobar"
+                        type="object"
+                        class="oe_highlight"
+                        groups="ind_stock_request.group_stock_request_manager"
+                    />
+                    <button
+                        name="button_done"
+                        invisible="not state in 'approved'"
+                        string="Realizado"
+                        type="object"
+                        class="oe_highlight"
+                        groups="ind_stock_request.group_stock_request_warehouse"
+                    />
+                    
+                    <button
+                        name="button_rejected"
+                        invisible="not state in ['to_approve', 'approved']"
+                        string="Rechazar"
+                        type="object"
+                        groups="ind_stock_request.group_stock_request_manager"
+                    />
+                    <button 
+                        name="create_stock_picking" 
+                        invisible="not state in 'approved'"
+                        string="Crear Salida" 
+                        type="object" 
+                        class="oe_highlight" 
+                        groups="ind_stock_request.group_stock_request_warehouse"
+                    />
+                    <field
+                        name="state"
+                        widget="statusbar"
+                        statusbar_visible="draft,to_approve,approved,done,rejected"
+                    />
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button
+                            type="object"
+                            name="action_view_stock_request_line"
+                            class="oe_stat_button"
+                            invisible = "[('line_count', '=', 0)]"
+                            icon="fa-list"
+                        >
+                            <field name="line_count" widget="statinfo" string="Lineas" />
+                        </button>
+                        <button
+                            type="object"
+                            name="action_view_stock_picking"
+                            class="oe_stat_button"
+                            invisible = "[('picking_count', '=', 0)]"
+                            icon="fa-truck"
+                            groups="ind_stock_request.group_stock_request_warehouse,ind_stock_request.group_stock_request_user"
+                        >
+                            <field name="picking_count" widget="statinfo" string="Transferencias" />
+                        </button>
+                    </div>
+
+                    <div class="oe_edit_only">
+                        <label for="name" class="oe_inline" />
+                    </div>
+
+                    <h1>
+                        <field name="is_editable" invisible = "1" />
+                        <field name="is_name_editable" invisible="1" />
+                        <field
+                            name="name"
+                            class="oe_inline"
+                            readonly="not is_editable"
+                        />
+                    </h1>
+
+                    <group>
+                    <field name="is_editable" invisible="1"/>
+                        <group>
+                            <field
+                                name="requested_by"
+                                readonly="not is_editable"
+                            />
+                            <field
+                                name="assigned_to"
+                                readonly="not is_editable"
+                            />
+                        </group>
+                        <group>
+                            <field
+                                name="origin"
+                                class="oe_inline"
+                                readonly="not is_editable"
+                            />
+                            <field
+                                name="description"
+                                readonly="not is_editable"
+                            />
+                        </group>
+                        <group>
+                            <field
+                                name="date_start"
+                                readonly="not is_editable"
+                            />
+                            <field
+                                name="picking_type_id"
+                                readonly="not is_editable"
+                            />
+                            <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                                widget="selection"
+                                readonly="not is_editable"
+                            />
+                        </group>
+                        <group>
+                            <field
+                                name="date_required"
+                                readonly="not is_editable"
+                            />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Productos">
+                            <field name="line_ids">
+                                <tree
+                                    decoration-muted="cancelled == True"
+                                    editable="bottom"
+                                >
+                                    <field name="product_id" />
+                                    <field name="name" />
+                                    <field name="product_qty" />
+                                    <field
+                                        name="product_uom_category_id"
+                                        invisible="1"
+                                    />
+                                    <field
+                                        name="product_uom_id"
+                                        groups="uom.group_uom"
+                                    />
+                                    <field
+                                        name="analytic_account_id"
+                                        groups="analytic.group_analytic_accounting"
+                                    />
+                                    <field name="date_required" />
+                                    <field
+                                        name="company_id"
+                                        groups="base.group_multi_company"
+                                        widget="selection"
+                                    />
+                                    <field name="cancelled" column_invisible="1" />
+                                    <field name="is_editable" column_invisible="1" />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="ind_view_stock_request_tree" model="ir.ui.view">
+        <field name="name">ind.stock.request.tree</field>
+        <field name="model">stock.request</field>
+        <field name="arch" type="xml">
+            <tree
+                decoration-bf="message_needaction==True"
+                decoration-info="state in ('draft','to_approve')"
+                decoration-muted="state in ('rejected')"
+                name="Stock Request"
+            >
+                <field name="message_needaction" invisible="1" />
+                <field name="name" />
+                <field name="date_start" />
+                <field name="requested_by" widget="many2one_avatar_user" />
+                <field
+                    name="company_id"
+                    groups="base.group_multi_company"
+                    widget="selection"
+                />
+                <field name="origin" />
+                <field
+                    name="state"
+                    widget="badge"
+                    decoration-success="state in ('done', 'approved')"
+                    decoration-muted="state == 'draft'"
+                    decoration-warning="state == 'to_approve'"
+                    decoration-danger="state == 'rejected'"
+                />
+            </tree>
+        </field>
+    </record>
+    
+    <record  id="stock_request_form_action" model="ir.actions.act_window">
+        <field name="name">Solicitudes de Stock</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">stock.request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click para crear una nueva solicitud de stock
+            </p>
+            <p>
+               Una solicitud de stock envia una instrucción al área de almacén para
+               poder realizar las salidas de acuerdo a los productos y fechas programadas
+            </p>
+        </field>
+    </record>
+
+    <!-- Submenú de Solicitudes de Requerimiento -->
+    <menuitem
+        id="menu_stock_request"
+        name="Solicitudes de Stock"
+        parent="parent_menu_stock_request"
+        groups="group_stock_request_user,group_stock_request_manager,group_stock_request_warehouse"
+        action="stock_request_form_action"
+        sequence="1"
+    />
+
+</odoo>

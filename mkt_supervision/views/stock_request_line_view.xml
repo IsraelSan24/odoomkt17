@@ -1,0 +1,141 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="stock_request_line_form" model="ir.ui.view">
+        <field name="name">stock.request.line.form</field>
+        <field name="model">stock.request.line</field>
+        <field name="arch" type="xml">
+            <form string="Línea de Solicitud de Stock" create="false" duplicate="false">
+                <header>
+                    <field name="request_state" widget="statusbar" />
+                </header>
+                <sheet>
+                    <h1>
+                        <field name="request_id" />
+                    </h1>
+                    <group name="main">
+                        <group name="info">
+                            <field
+                                name="origin"
+                                attrs="{'readonly': [('is_editable','=', False)]}"
+                            />
+                            <field
+                                name="requested_by"
+                                attrs="{'readonly': [('is_editable','=', False)]}"
+                            />
+                            <field
+                                name="assigned_to"
+                                attrs="{'readonly': [('is_editable','=', False)]}"
+                            />
+                            <field
+                                name="description"
+                                attrs="{'readonly': [('is_editable','=', False)]}"
+                            />
+                            <field
+                                name="date_start"
+                                attrs="{'readonly': [('is_editable','=', False)]}"
+                            />
+                            <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                                widget="selection"
+                                attrs="{'readonly': [('is_editable','=', False)]}"
+                            />
+                            <field name="is_editable" attrs="{'invisible': True}" />
+                        </group>
+                        <group name="settings">
+                            <field
+                                name="product_id"
+                                attrs="{'readonly': [('is_editable','=', False)]}"
+                            />
+                            <field
+                                name="name"
+                                attrs="{'readonly': [('is_editable','=', False)]}"
+                            />
+                            <label for="product_qty" />
+                            <div>
+                                <field
+                                    name="product_qty"
+                                    class="oe_inline"
+                                    attrs="{'readonly': [('is_editable','=', False)]}"
+                                />
+                                <field name="product_uom_category_id" invisible="1" />
+                                <field
+                                    name="product_uom_id"
+                                    groups="uom.group_uom"
+                                    class="oe_inline"
+                                    attrs="{'readonly': [('is_editable','=', False)]}"
+                                />
+                            </div>
+                            <field
+                                name="analytic_account_id"
+                                groups="analytic.group_analytic_accounting"
+                                attrs="{'readonly': [('is_editable','=', False)]}"
+                            />
+                            <field
+                                name="date_required"
+                                attrs="{'readonly': [('is_editable','=', False)]}"
+                            />
+                            <field name="cancelled" />
+                        </group>
+                    </group>
+                    <group name="specifications">
+                        <separator string="Especificaciones"/>
+                        <newline />
+                        <field
+                            name="specifications"
+                            nolabel="1"
+                            attrs="{'readonly': [('is_editable','=', False)]}"
+                        />
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="activity_ids" widget="mail_activity" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="stock_request_line_tree" model="ir.ui.view">
+        <field name="name">stock.request.line.tree</field>
+        <field name="model">stock.request.line</field>
+        <field name="arch" type="xml">
+            <tree
+                name="Stock Request Lines"
+                create="false"
+                decoration-muted="cancelled == True"
+                decoration-info="request_state in ('draft', 'to_approve')"
+            >
+                <field name="request_id" />
+                <field
+                    name="request_state"
+                    widget="badge"
+                    decoration-success="request_state in ('done', 'approved')"
+                    decoration-info="request_state in ('draft', 'to_approve')"
+                    decoration-danger="request_state == 'rejected'"
+                />
+                <field name="requested_by" widget="many2one_avatar_user" />
+                <field name="assigned_to" widget="many2one_avatar_user" />
+                <field name="date_required" />
+                <field name="product_id" />
+                <field name="name" />
+                <field name="product_qty" />
+                <field name="product_uom_category_id" invisible="1" />
+                <field name="product_uom_id" groups="uom.group_uom" />
+                <field
+                    name="analytic_account_id"
+                    groups="analytic.group_analytic_accounting"
+                />
+                <field
+                    name="company_id"
+                    groups="base.group_multi_company"
+                    widget="selection"
+                />
+                <field name="cancelled" invisible="1" />
+            </tree>
+        </field>
+    </record>
+</odoo>
+
+

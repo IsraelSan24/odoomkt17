@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="ind_view_purchase_request_form" model="ir.ui.view">
+        <field name="name">purchase.request.view.form.inherit.ind_purchase_request</field>
+        <field name="model">purchase.request</field>
+        <field name="inherit_id" ref="purchase_request.view_purchase_request_form" />
+        <field name="arch" type="xml">
+
+            <!-- Agregar los nuevos campos -->
+            <xpath expr="//button[@name='button_approved']" position="attributes">
+                <attribute name="groups">
+                    purchase_request.group_purchase_request_manager,
+                    ind_purchase_request.group_purchase_request_manager_personal,
+                    ind_purchase_request.group_purchase_request_manager_department
+                </attribute>
+            </xpath>
+            <xpath expr="//button[@name='button_done']" position="attributes">
+                <attribute name="groups">
+                    purchase_request.group_purchase_request_manager,
+                    ind_purchase_request.group_purchase_request_manager_personal,
+                    ind_purchase_request.group_purchase_request_manager_department
+                </attribute>
+            </xpath>
+            <xpath expr="//button[@name='button_rejected']" position="attributes">
+                <attribute name="groups">
+                    purchase_request.group_purchase_request_manager,
+                    ind_purchase_request.group_purchase_request_manager_personal,
+                    ind_purchase_request.group_purchase_request_manager_department
+                </attribute>
+            </xpath>
+            <xpath expr="//button[@name='button_rejected']" position="after">
+                <button
+                    name="print_report_purchase_request"
+                    string="Imprimir RFQ"
+                    type="object"
+                    state="to_approve,approved,rejected,done"
+                />
+            </xpath>
+            <xpath expr="//field[@name='line_ids']" position="attributes">
+                <attribute name="readonly">state not in ('draft', 'to_approve')</attribute>                
+            </xpath>
+            <xpath expr="//field[@name='product_id']" position="attributes">
+                <attribute name="required">1</attribute>
+            </xpath>
+            <xpath expr="//notebook//page//field//tree//field[@name='name']" position="attributes">
+                <attribute name="optional">hide</attribute>
+            </xpath> 
+            <xpath expr="//sheet//group" position="inside">
+                <group>
+                    <field name="request_type" />
+                </group>
+            </xpath>
+            <xpath expr="//form/sheet/group/group[3]" position="after">
+                <group>
+                    
+                    <!-- Se agrega la clase y la ubicacion -->
+                    <field name="classification_rfq" readonly="is_editable == False"/>
+                    <field name="location_id" readonly="is_editable == False"/>
+                    <field name="planning" invisible="1"/>
+                    
+                    <field name="request_type" readonly="is_editable == False"/>
+                    <field name="approved_by"/>
+                    <field name="date_approved"/>
+                </group>
+            </xpath>
+
+            <!-- Hacer opcionales algunos campos de las lineas -->
+            <xpath expr="//sheet//notebook//field[@name='estimated_cost']" position="attributes">
+                <attribute name="optional">show</attribute>
+            </xpath>
+            
+            <xpath expr="//sheet//notebook//field[@name='name']" position="attributes">
+                <attribute name="optional">show</attribute>
+            </xpath>
+
+            <!-- <xpath expr="//sheet//notebook//field[@name='analytic_distribution']" position="attributes">
+                <attribute name="required">1</attribute>
+            </xpath> -->
+
+            <xpath expr="//sheet//notebook//field[@name='purchased_qty']" position="after">
+                <field
+                    name="request_state"
+                    widget="badge"
+                    optional="show"
+                    decoration-success="request_state in ('done', 'approved')"
+                    decoration-info="request_state in ('draft', 'to_approve')"
+                    decoration-danger="request_state == 'rejected'"
+                />
+            </xpath>
+
+            <!-- Agregar una nueva pagina para observaciones y el documento adjunto -->
+            <xpath expr="//notebook" position="inside">
+                <page string="Observaciones">
+                    <group name="observations">
+                        <field name="observations" placeholder="Escriba sus comentarios aquí..." />
+                        <field name="document_file" widget="file" />
+                    </group>
+                </page>
+            </xpath>
+
+            <!-- Hacer estos campos de solo lectura -->
+            <xpath expr="//sheet//h1//field[@name='name']" position="attributes">
+                <attribute name="readonly">True</attribute>
+            </xpath>
+            <xpath expr="//sheet//field[@name='date_start']" position="attributes">
+                <attribute name="readonly">True</attribute>
+            </xpath>
+
+            <!-- Agregar el costo promedio total en el footer -->
+            <xpath expr="//sheet//notebook//page//group//field[@name='estimated_cost']"
+                position="after">
+                <div class="oe_subtotal_footer_separator oe_inline">
+                    <label for="costo_promedio_total" />
+                </div>
+                <field
+                    name="costo_promedio_total"
+                    nolabel="1"
+                    class="oe_subtotal_footer_separator"
+                    widget="monetary"
+                    options="{'currency_field': 'currency_id'}"
+                />
+            </xpath>
+            <xpath expr="//sheet//tree//field[@name='estimated_cost']" position="after">
+                <field name="costo_promedio" widget="monetary" optional="show" />
+            </xpath>
+
+            <xpath expr="//notebook//page//field//tree//field[@name='product_uom_id']" position="before">
+                <field name="location_id"/>
+            </xpath>
+
+            <xpath expr="//notebook//page//field//tree//field[@name='analytic_distribution']" position="attributes">
+                <attribute name="widget">location_analytic_distribution</attribute>
+            </xpath>
+
+            <xpath expr="//notebook//page//field//tree/field[@name='product_id']" position="before">
+                <field name="product_classification_domain" invisible="True" />
+            </xpath>
+
+            <xpath expr="//notebook//page//field//tree/field[@name='product_id']" position="attributes">
+                <attribute name="domain">product_classification_domain</attribute>
+            </xpath>
+
+            
+        </field>
+    </record>
+
+    <record id="ind_view_purchase_request_tree" model="ir.ui.view">
+        <field name="name">purchase.request.view.tree.inherit.ind_purchase_request</field>
+        <field name="model">purchase.request</field>
+        <field name="inherit_id" ref="purchase_request.view_purchase_request_tree" />
+        <field name="arch" type="xml">
+
+            <!-- Agregar los nuevos campos -->
+            <xpath expr="//tree//field[@name='activity_ids']" position="replace">
+                <field name="description" optional="show" />
+            </xpath>
+
+            <xpath expr="//tree//field[@name='requested_by']" position="after">
+                <field
+                    name="request_type"
+                    optional="show"
+                    widget="badge"
+                    decoration-success="request_type == 'programmed'"
+                    decoration-warning="request_type == 'non_programmed'"
+                    decoration-danger="request_type == 'consumable'"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="ind_view_purchase_request_search" model="ir.ui.view">
+        <field name="name">purchase.request.view.search.inherit.ind_purchase_request</field>
+        <field name="model">purchase.request</field>
+        <field name="inherit_id" ref="purchase_request.view_purchase_request_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='my_requests']" position="after">
+                <filter
+                    name="approved_by_me"
+                    domain="[('approved_by','=', uid)]"
+                    help="Mis RFQs Aprobadas"
+                />
+            </xpath>
+            <xpath expr="//filter[@name='assigned_to']" position="after">
+                <filter
+                    name="approved_by"
+                    string="Aprobado por"
+                    icon="fa-user"
+                    domain="[]"
+                    context="{'group_by':'approved_by'}"
+                />
+                <filter
+                    name="rfq_type"
+                    string="Tipo de RFQ"
+                    icon="fa-user"
+                    domain="[]"
+                    context="{'group_by':'request_type'}"
+                />
+            </xpath>
+            <xpath expr="//filter[@name='start_date']" position="after">
+                <filter
+                    name="date_approved"
+                    string="Fecha de Aprobación"
+                    icon="fa-calendar"
+                    domain="[]"
+                    context="{'group_by':'date_approved'}"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_purchase_request_form_inherit" model="ir.ui.view">
+        <field name="name">purchase.request.form.inherit</field>
+        <field name="model">purchase.request</field>
+        <field name="inherit_id" ref="purchase_request.view_purchase_request_form"/>
+        <field name="arch" type="xml">
+            <!-- Ocultar el botón Done -->
+            <xpath expr="//button[@name='button_done']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//button[@name='button_draft']" position="attributes">
+                <attribute name="groups">ind_purchase_request.group_purchase_request_reset</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

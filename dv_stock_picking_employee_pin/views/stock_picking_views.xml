@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_picking_form_inherit" model="ir.ui.view">
+        <field name="name">stock.picking.form.inherited</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='origin']" position="after">
+                <field name="requester_id" readonly="is_form_validate != False"/>
+                <field name="requester_pin" invisible="is_form_validate != False" password="True"/>
+                <field name="is_form_validate" invisible="is_form_validate == False"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

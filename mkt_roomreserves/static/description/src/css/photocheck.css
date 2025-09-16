@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "Kartika";
+  src: url(../../fonts/Kartika/Kartika.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Kartika";
+  src: url(../../fonts/Kartika/kartika-bold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kartika";
+}
+.content {
+  margin-top: -46px;
+  overflow: hidden;
+}
+.info {
+  z-index: 10;
+}
+.img1 { 
+  width: 5.88em;
+  margin-left: -15px;
+}
+
+.derecho {
+  overflow: hidden;
+}
+
+.derecho .photo-content {
+  height: 167px;
+  width: 145px;
+}
+
+.pho_photo {
+  max-height: 165px;
+  max-width: 145px;
+  margin-left: -11px;
+  margin-top: 8px;
+}
+.texto {
+  padding-left: 7px;
+  margin-top: 1px;
+  font-family: "kartika";
+  line-height: 18px;
+  margin-bottom: 2px;
+  white-space: nowrap;
+}
+.pho_name {
+  font-size: 1.4em;
+  font-weight: 900;
+  display: inline-block;
+  letter-spacing: -1px;
+}
+.pho_last_name {
+  font-size: 0.65em;
+  font-weight: 900;
+  display: inline-block;
+  letter-spacing: -0.05em;
+  word-spacing: -0.6px;
+}
+.pho_job_id {
+  font-size: 0.7em;
+  font-style: italic;
+  font-weight: 900;
+  text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: -0.02em;
+  word-spacing: -3px;
+}
+.pho_dni {
+  font-size: 0.8em;
+  font-weight: 900;
+}
+.clearfix {
+  height: 17px;
+}
+.logos {
+  padding-left: 7px;
+  width: 150px;
+  height: 100px;
+  max-height: 100px;
+}
+.img_logo {
+  width: auto;
+  max-width: 80%;
+  margin-top: 5px;
+}
+.flex_logo_2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 4px;
+}
+.img_logo2 {
+  width: auto;
+  max-width: 90%;
+  height: auto;
+  max-height: 50px;
+  row-gap: 4px;
+  margin-top: 5px;
+}
+.img_logo3 {
+  width: 80%;
+}
+.pho_web {
+  width: 145px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 0.56em;
+  letter-spacing: 0.063em;
+}

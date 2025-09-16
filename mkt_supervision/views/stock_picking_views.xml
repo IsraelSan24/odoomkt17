@@ -1,0 +1,21 @@
+<odoo>
+    <record id="view_picking_form_inherit_stock_request" model="ir.ui.view">
+        <field name="name">stock.picking.form.inherit.stock.request</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button
+                    type="object"
+                    name="action_view_stock_requests"
+                    class="oe_stat_button"
+                    attrs="{'invisible':[('request_count', '=', 0)]}"
+                    icon="fa-folder-open-o"
+                    groups="mkt_supervision.group_stock_request_warehouse,mkt_supervision.group_stock_request_user"
+                >
+                    <field name="request_count" widget="statinfo" string="SS" />
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

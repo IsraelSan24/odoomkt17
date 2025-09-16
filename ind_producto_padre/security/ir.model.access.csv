@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+model_access_padre_hijo,model.access.padre.hijo,ind_producto_padre.model_producto_padre,base.group_system,1,1,1,1
+model_access_padre_hijo_admin_inventory,model.access.padre.hijo.admin.inventory,ind_producto_padre.model_producto_padre,ind_producto_padre.res_group_admin_inventory,1,1,1,1
+model_access_padre_hijo_userinterno,model.access.padre.hijo.userinterno,ind_producto_padre.model_producto_padre,base.group_user,1,0,0,0

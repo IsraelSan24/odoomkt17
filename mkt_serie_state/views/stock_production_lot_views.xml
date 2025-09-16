@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_stock_production_lot_usage_status_tree" model="ir.ui.view">
+        <field name="name">stock.production.lot.usage.status.tree</field>
+        <field name="model">stock.production.lot</field>
+        <field name="inherit_id" ref="stock.view_production_lot_tree"/>
+        <field name="arch" type="xml">
+            <field name="ref" position="before">
+                <field name="usage_status" widget="badge"
+                    decoration-success="usage_status == 'new'"
+                    decoration-warning="usage_status == 'used'"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_stock_production_lot_usage_status_form" model="ir.ui.view">
+        <field name="name">stock.production.lot.usage.status.form</field>
+        <field name="model">stock.production.lot</field>
+        <field name="inherit_id" ref="stock.view_production_lot_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/group[@name='main_group']/group[position()=2]" position="inside">
+                <group>
+                    <field name="usage_status" widget="radio" options="{'horizontal': true}"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

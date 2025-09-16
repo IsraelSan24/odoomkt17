@@ -1,0 +1,106 @@
+<odoo>
+    <record id="view_space_booking_tree" model="ir.ui.view">
+        <field name="model">space.booking</field>
+        <field name="arch" type="xml">
+            <tree string="Space Bookings" default_order="start_datetime desc" decoration-success="state == 'confirmed'" decoration-danger="state == 'canceled'">
+                <field name="full_name" readonly="1" string="Name"/>
+                <field name="room_id" string="Room"/>
+                <field name="start_datetime" string="Start Date"/>
+                <field name="duration" string="Duration (hrs)"/>
+                <field name="state" string="Status"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_space_booking_form" model="ir.ui.view">
+        <field name="model">space.booking</field>
+        <field name="arch" type="xml">
+            <form string="Space Booking" class="o_form_stylish">
+                <header>
+                    <button name="action_request" type="object" string="Request" 
+                        class="btn btn-primary" states="draft"
+                        groups="mkt_roomreserves.group_user_booking"/>
+
+                    <button name="action_confirm" type="object" string="Confirm" 
+                        class="btn btn-primary" states="pending"
+                        groups="mkt_roomreserves.group_receptionist"/>
+
+                    <button name="action_cancel" type="object" string="Cancel" 
+                        class="btn btn-danger" states="pending,confirmed"
+                        groups="mkt_roomreserves.group_receptionist"/>
+                    
+                    <field name="state" readonly="1" widget="statusbar" statusbar_visible="pending,confirmed,canceled"/>
+                </header>
+                <sheet>
+                    <group col="4" string="Booking Details">
+                        <field name="is_receptionist" invisible="1"/>
+                        <field name="user_id" readonly="1" string="Booked By"/>
+                        <field name="full_name" string="Full name" attrs="{'readonly': [('is_receptionist', '=', False)]}"/>
+                        <field name="room_id" string="Room"/>
+                        <field name="start_datetime" string="Start Datetime"/>
+                        <field name="duration" string="Duration (hours)"/>
+                        <field name="contact" string="Contact" readonly="1"/>
+                    </group>
+
+                    <notebook>
+                        <page string="Additional Items">
+                            <field name="item_ids" readonly="1">
+                                <tree>
+                                    <field name="name" string="Item"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page string="Notes">
+                            <field name="notes" placeholder="Add any additional information here..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_space_booking_search" model="ir.ui.view">
+        <field name="name">space_booking.search</field>
+        <field name="model">space.booking</field>
+        <field name="arch" type="xml">
+            <search string="Search reservations">
+                <filter 
+                    name="reserved_by_me"
+                    domain="[('user_id','=', uid)]"
+                    help="My reservations"
+                />
+                <filter 
+                    name="confirmed"
+                    domain="[('state','=', 'confirmed')]"
+                    help="Confirmed"
+                />
+                <filter 
+                    name="pending"
+                    domain="[('state','=', 'pending')]"
+                    help="Pending"
+                />
+                <group expand="0" string="Sort by...">
+                    <filter name="room_id" string="Room" context="{'group_by':'room_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+    <data noupdate="1">
+        <record id="ir_cron_auto_finish_reservations" model="ir.cron">
+            <field name="name">Auto-Finish Reservations</field>
+            <field name="model_id" ref="model_space_booking"/>
+            <field name="state">code</field>
+            <field name="code">model._cron_auto_finish_reservations()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="active" eval="True"/>
+        </record>
+    </data>
+</odoo>

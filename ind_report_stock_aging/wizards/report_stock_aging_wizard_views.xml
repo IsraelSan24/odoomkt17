@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="report_stock_aging_wizard_view_form" model="ir.ui.view">
+        <field name="name">report.stock.aging.wizard.view.form</field>
+        <field name="model">report.stock.aging.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Generar Reporte de Anticuamiento de Inventario">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="company_id" />
+                        </group>
+                        <footer>
+                            <button string="Generar Reporte" name="action_generate_report" type="object" class="btn-primary" />
+                            <button string="Cancelar" special="cancel" class="btn-secondary"/>
+                        </footer>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_report_stock_aging_wizard" model="ir.actions.act_window">
+        <field name="name">Reporte de Anticuamiento</field>
+        <field name="res_model">report.stock.aging.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="model_name_menu"
+        name="Reporte de Anticuamiento"
+        action="action_report_stock_aging_wizard"
+        parent="stock.menu_warehouse_report"
+        sequence="15"/>
+
+</odoo>

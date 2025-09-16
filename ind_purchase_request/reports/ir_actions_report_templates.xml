@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_purchase_request_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="oe_structure" />
+                        <h2> REQUISICIÓN DE COMPRA <span t-field="o.name" />
+                        </h2>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4">
+                                    <strong>SOLICITADO POR:</strong>
+                                    <span t-field="o.requested_by" />
+                                </div>
+                                <div class="col-4">
+                                    <strong>ASIGNADO A:</strong>
+                                    <span t-field="o.assigned_to" />
+                                </div>
+                                <div class="col-4">
+                                    <strong>APROBADO POR:</strong>
+                                    <t t-if="o.approved_by">
+                                        <span t-field="o.approved_by" />
+                                    </t>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <strong>TIPO DE RFQ:</strong>
+                                    <span t-field="o.request_type" />
+                                </div>
+                                <div class="col-4">
+                                    <strong>ESTADO DE RFQ:</strong>
+                                    <span t-field="o.state" />
+                                </div>
+                                <div class="col-4">
+                                    <strong>COMPAÑÍA:</strong>
+                                    <span t-field="o.company_id" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <strong>DOCUMENTO ORIGEN:</strong>
+                                    <span t-field="o.origin" />
+                                </div>
+                                <div class="col-4">
+                                    <strong>DESCRIPCIÓN:</strong>
+                                    <span t-field="o.description" />
+                                </div>
+                                <div class="col-4">
+                                    <strong>TIPO DE ENTREGA:</strong>
+                                    <span t-field="o.picking_type_id" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <strong>FECHA DE CREACIÓN:</strong>
+                                    <span t-field="o.date_start" />
+                                </div>
+                                <div class="col-4">
+                                    <strong>FECHA DE APROBACIÓN:</strong>
+                                    <t t-if="o.date_approved">
+                                        <span t-field="o.date_approved" />
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <t t-if="o.line_ids">
+                                <h3>PRODUCTOS</h3>
+                                <table class="table table-sm o_main_table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <strong>PRODUCTO</strong>
+                                            </th>
+                                            <th>
+                                                <strong>DESCRIPCIÓN</strong>
+                                            </th>
+                                            <th class="text-center"
+                                                groups="analytic.group_analytic_accounting">
+                                                <strong>CENTRO DE COSTO</strong>
+                                            </th>
+                                            <th class="text-center">
+                                                <strong>CANTIDAD</strong>
+                                            </th>
+                                            <th class="text-center" groups="uom.group_uom">
+                                                <strong>UNIDAD DE MEDIDA</strong>
+                                            </th>
+                                            <th class="text-center">
+                                                <strong>COSTO ESTIMADO</strong>
+                                            </th>
+                                            <th class="text-right">
+                                                <strong>FECHA DE SOLICITUD</strong>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr t-foreach="o.line_ids" t-as="line_ids">
+                                            <td>
+                                                <span t-field="line_ids.product_id" />
+                                            </td>
+                                            <td>
+                                                <span t-field="line_ids.name" />
+                                            </td>
+                                            <td class="text-center"
+                                                groups="analytic.group_analytic_accounting">
+                                                <span t-out="N/A" />
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-field="line_ids.product_qty" />
+                                            </td>
+                                            <t>
+                                                <td class="text-center" groups="uom.group_uom">
+                                                    <span t-field="line_ids.product_uom_id.name" />
+                                                </td>
+                                            </t>
+                                            <td class="text-center">
+                                                <span t-field="line_ids.estimated_cost" />
+                                            </td>
+                                            <td class="text-right">
+                                                <span t-field="line_ids.date_required" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </t>
+                        </div>
+                        <div class="oe_structure" />
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <template
+        id="report_purchaseorder_document"
+        inherit_id="purchase.report_purchaseorder_document"
+    >
+        <xpath expr="//p[@t-field='o.notes']" position="replace">
+            <t t-if="o.view_notes">
+                <span t-field="o.notes" />
+            </t>
+            <div class="mt16" style="font-size: 12px;">
+                <strong>RECEPCIÓN DE FACTURAS:</strong>
+                <ul style="margin-top: 10px; line-height: 1.4;">
+                    <li>
+                        Las Facturas deberán enviarse al correo 
+                        <t t-if="o.company_id.name == 'INDOMIN S.A.C.'">
+                            <strong>facturacion@indomin.net</strong>
+                        </t>
+                        <t t-elif="o.company_id.name == 'MECAPARTS S.A.C.'">
+                            <strong>facturacion@mecaparts-int.com</strong>
+                        </t>
+                        <t t-else="">
+                            <strong>facturacion@indomin.net</strong>
+                        </t>,
+                        en PDF con los archivos CDR y XML;
+                        caso contrario no será considerado como recepcionado y no entrará a la programación de pagos.
+                    </li>
+                    <li>
+                        Se deberá consignar obligatoriamente en la factura, el número de nuestra orden de compra
+                        y el N° de Guía Remisión Remitente.
+                    </li>
+                    <li>
+                        Se deberá adjuntar a la factura la siguiente documentación:
+                        <ul>
+                            <li>Guías de Remisión: Remitente sellado por almacén.</li>
+                            <li>Orden de compra.</li>
+                            <li>En caso de servicio, adjuntar informe con firma y sello.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        La fecha de vencimiento de los comprobantes de pago se computará desde la fecha de recepción
+                        de los comprobantes en el correo 
+                        <t t-if="o.company_id.name == 'INDOMIN S.A.C.'">
+                            <strong>facturacion@indomin.net</strong>
+                        </t>
+                        <t t-elif="o.company_id.name == 'MECAPARTS S.A.C.'">
+                            <strong>facturacion@mecaparts-int.com</strong>
+                        </t>
+                        <t t-else="">
+                            <strong>facturacion@indomin.net</strong>
+                        </t>.
+                    </li>
+                    <li>
+                        Cualquier consulta referente a dicho comunicado llamar al siguiente celular: 
+                        <strong>920996867</strong>.
+                    </li>
+                </ul>
+            </div>
+        </xpath>
+        <xpath expr="//table[1]/tbody/t/tr/t[3]" position="replace">
+            <t t-if="line.display_type == 'line_note'">
+                <t t-if="o.view_notes">
+                    <td colspan="99" id="note">
+                        <span t-field="line.name" />
+                    </td>
+                </t>
+                <t t-else="">
+                    <td colspan="99" id="note">
+
+                    </td>
+                </t>
+            </t>
+        </xpath>
+    </template>
+</odoo>

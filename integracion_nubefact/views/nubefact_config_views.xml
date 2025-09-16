@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="nubefact_config_view" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.nubefact</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='api_integration']" position="after">
+                    
+                    <!-- Nubefact Ruta -->
+                    <div class="col-12 col-lg-6 o_setting_box" id="nubefact_ruta_setting">
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Ruta Nubefact</span>
+                            <div class="content-group">
+                                <div class="text-muted mb8">
+                                    Ingrese la URL de la API de Nubefact.
+                                </div>
+                                <field name="nubefact_ruta" style="margin-left:8px;"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nubefact Token -->
+                    <div class="col-12 col-lg-6 o_setting_box" id="nubefact_token_setting">
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Token Nubefact</span>
+                            <div class="content-group">
+                                <div class="text-muted mb8">
+                                    Ingrese el token generado en Nubefact.
+                                </div>
+                                <field name="nubefact_token" password="True" style="margin-left:8px;"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botón Probar Conexión -->
+                    <div class="col-12 col-lg-6 o_setting_box" id="nubefact_test_connection">
+                        <div class="o_setting_right_pane">
+                            <button name="test_connection" type="object" string="Probar Conexión" class="btn btn-primary" style="margin-top: 8px;"/>
+                        </div>
+                    </div>
+
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

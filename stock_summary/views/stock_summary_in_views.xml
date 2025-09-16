@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_stock_summary_in_tree" model="ir.ui.view">
+        <field name="name">stock.summary.in</field>
+        <field name="model">stock.summary.in</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="assigned_location_ids" invisible="1"/>
+                <field name="date_done" optional="hide"/>
+                <field name="reference"/>
+                <field name="product"/>
+                <field name="product_default_code"/>
+                <field name="product_id" invisible="1"/>
+                <field name="location"/>
+                <field name="location_id" invisible="1"/>
+                <field name="location_dest"/>
+                <field name="location_dest_id" invisible="1"/>
+                <field name="product_uom_qty"/>
+                <field name="product_uom" invisible="1"/>
+                <field name="state" widget='badge' decoration-success="state == 'done'" decoration-info="state not in ('done', 'cancel')"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_stock_summary_in_search" model="ir.ui.view">
+        <field name="name">stock.summary.in.search</field>
+        <field name="model">stock.summary.in</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="reference"/>
+                <field name="product"/>
+                <field name="location" string="Location origin"/>
+                <field name="location_dest" string="Location destiny"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_stock_summary_in_action" model="ir.actions.act_window">
+        <field name="name">Stock Summary In</field>
+        <field name="res_model">stock.summary.in</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+</odoo>

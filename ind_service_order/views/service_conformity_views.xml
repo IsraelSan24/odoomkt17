@@ -1,0 +1,113 @@
+<odoo>
+    <record id="action_service_conformity" model="ir.actions.act_window">
+        <field name="name">Conformidad del Servicio</field>
+        <field name="res_model">service.conformity</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_conformity_service_tree" model="ir.ui.view">
+        <field name="name">conformity.service.tree</field>
+        <field name="model">service.conformity</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/> 
+                <field name="application_date"/>
+                <field name="requested_by"/>
+                
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_conformity_service_form" model="ir.ui.view">
+        <field name="name">conformity.service.form</field>
+        <field name="model">service.conformity</field>
+        <field name="arch" type="xml">
+            <form string="Conformidad del Servicio">
+                <header>
+                   <button name="toggle_edit_mode"
+                           string="Regresar al borrador"
+                           type="object"
+                           class="btn-primary"
+                           invisible="state == ('draft')"/>
+                   
+                   <button name="action_confirm" 
+                           string="Solicitar" 
+                           state='draft'
+                           type="object" 
+                           class="btn-primary"
+                           invisible="state not in ('draft')"/>
+                    
+                   <button name="action_approved" 
+                           string="Aprobar" 
+                           type="object" 
+                           class="btn-primary"
+                           invisible="state not in ('confirmed')"/>
+                   
+                   <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,approved"/>          
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" readonly="1"/>
+                            <field name="service_order_id" readonly="service_order_id != False"/>
+                            <field name="application_date" invisible="state in ('draft')"/>
+                            <field name="approval_date" invisible="state in ('draft', 'confirmed')"/>
+                        </group>
+                         
+                        <group>
+                            <field name="requested_by" readonly="1"/>
+                            <field name="department" readonly="1"/>
+                            <field name="job_title" readonly="1"/>
+                            <field name="email" readonly="1"/>
+                        </group> 
+                    </group>
+                    <group>
+                        <group string="Datos del Servicio">
+                            
+                            <field name="create_date_ot"/>
+                            <field name="approval_date_ot"/>
+                            <field name="warehouse_delivery_date"/>
+                            <field name="total_cost"/>
+                        </group>
+                        <group>
+                            
+                            <div>
+                                <h3 style="margin-bottom: 10px;">Lista de Órdenes de Compra</h3>
+                                <field name="purchase_order_line_ids" widget="many2many" mode="tree">       
+                                    <tree>
+                                       <field name="order_id" string="Número OC" class="wrap-text"/>
+                                       <field name="name" string="Descripción OC" class="wrap-text"/>
+                                       <field name="partner_id" string="Proveedor" class="wrap-text"/>     
+                                    </tree>
+                                </field>
+                            </div>
+                            
+                        </group>
+
+                        <group>
+                            <div>
+                                <h3 style="margin-bottom: 10px;">Lista de Recojos</h3>
+                                <field name="pickup_order_ids" widget="many2many" mode="tree">       
+                                    <tree>
+                                       <field name="purchase_order_id" string="Número OC" class="wrap-text"/>
+                                       <field name="datetime_recogido" string="Fecha Recojo" class="wrap-text"/>
+                                    </tree>
+                                </field>
+                            </div>
+                        </group>
+                    </group>
+                    <group string="Evaluación del Servicio">
+                        <field name="quality_service"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="activity_ids" widget="mail_activity" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+                
+            </form>
+        </field>
+    </record>
+</odoo>

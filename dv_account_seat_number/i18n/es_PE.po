@@ -1,0 +1,74 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dv_account_seat_number
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210414\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-06 15:24+0000\n"
+"PO-Revision-Date: 2021-12-06 15:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: dv_account_seat_number
+#: model:ir.model.fields,field_description:dv_account_seat_number.field_account_journal__display_name
+#: model:ir.model.fields,field_description:dv_account_seat_number.field_account_journal_group__display_name
+#: model:ir.model.fields,field_description:dv_account_seat_number.field_account_move__display_name
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: dv_account_seat_number
+#: model_terms:ir.ui.view,arch_db:dv_account_seat_number.account_journal_group_view_form
+msgid "Entry sequence"
+msgstr "Secuencia de entrada"
+
+#. module: dv_account_seat_number
+#: model:ir.model.fields,field_description:dv_account_seat_number.field_account_journal__id
+#: model:ir.model.fields,field_description:dv_account_seat_number.field_account_journal_group__id
+#: model:ir.model.fields,field_description:dv_account_seat_number.field_account_move__id
+msgid "ID"
+msgstr "ID"
+
+#. module: dv_account_seat_number
+#: model:ir.model.fields,field_description:dv_account_seat_number.field_account_journal____last_update
+#: model:ir.model.fields,field_description:dv_account_seat_number.field_account_journal_group____last_update
+#: model:ir.model.fields,field_description:dv_account_seat_number.field_account_move____last_update
+msgid "Last Modified on"
+msgstr "Ultima Modificación en"
+
+#. module: dv_account_seat_number
+#: model:ir.model.fields,field_description:dv_account_seat_number.field_account_journal_group__sequence_number_next
+msgid "Next number"
+msgstr "Número siguiente"
+
+#. module: dv_account_seat_number
+#: model:ir.model.fields,field_description:dv_account_seat_number.field_account_bank_statement_line__seat_number
+#: model:ir.model.fields,field_description:dv_account_seat_number.field_account_move__seat_number
+#: model:ir.model.fields,field_description:dv_account_seat_number.field_account_payment__seat_number
+msgid "Seat Number"
+msgstr "Número de asiento"
+
+#. module: dv_account_seat_number
+#: model_terms:ir.ui.view,arch_db:dv_account_seat_number.account_journal_group_view_form
+msgid "Seat number"
+msgstr "Número de asiento"
+
+#. module: dv_account_seat_number
+#: model_terms:ir.ui.view,arch_db:dv_account_seat_number.account_journal_group_view_form
+msgid "Set seat number"
+msgstr "Establecer número de asiento"
+
+#. module: dv_account_seat_number
+#: model:ir.model.fields,help:dv_account_seat_number.field_account_journal_group__sequence_number_next
+msgid "The next seat number will be used for the next invoice."
+msgstr "El siguiente número de asiento se utilizará para la próxima factura."
+
+#. module: dv_account_seat_number
+#: model:ir.model.fields,help:dv_account_seat_number.field_account_journal_group__sequence_id
+msgid "This field contains the information related to the numbering of the journal entries of this journal."
+msgstr "Este campo contiene la información relacionada con la numeración de las entradas de diario de esta revista."

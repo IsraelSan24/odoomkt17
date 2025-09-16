@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="drawdown_table_menu" name="Tabla de Detracciones" action="drawdown_tax_table_action" parent="account.menu_finance_configuration"/>
+</odoo>

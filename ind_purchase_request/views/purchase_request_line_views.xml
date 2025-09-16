@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="ind_view_purchase_request_line_tree" model="ir.ui.view">
+        <field name="name">purchase.request.view.tree.inherit.ind_purchase_request</field>
+        <field name="model">purchase.request.line</field>
+        <field name="inherit_id" ref="purchase_request.purchase_request_line_tree" />
+        <field name="arch" type="xml">
+            <!-- Agregar Campos a la vista tree -->
+            <xpath expr="//tree//field[@name='estimated_cost']" position="after">
+                <field name="costo_promedio" widget="monetary" optional="hide"
+                    groups="ind_purchase_request.group_purchase_request_manager_costo_promedio" />
+                <field name="approved_by" optional="show" />
+                <field name="date_approved" optional="show" />
+                <field
+                    name="request_type"
+                    optional="show"
+                    widget="badge"
+                    decoration-success="request_type == 'programmed'"
+                    decoration-warning="request_type == 'non_programmed'"
+                    decoration-danger="request_type == 'consumable'"
+                />
+                <field
+                    name="order_status"
+                    optional="show"
+                    widget="badge"
+                    decoration-success="order_status == 'almacen'"
+                    decoration-warning="order_status == 'pago'"
+                    decoration-info="order_status == 'transporte'"
+                    decoration-muted="order_status == 'proveedor'"
+                    decoration-danger="order_status == 'en_aprobacion'"
+                />
+            </xpath>
+            <!-- Hacer algunos campos opcionales en la vista -->
+            <xpath expr="//tree//field[@name='estimated_cost']" position="attributes">
+                <attribute name="optional">hide</attribute>
+            </xpath>
+            <xpath expr="//tree//field[@name='name']" position="attributes">
+                <attribute name="optional">hide</attribute>
+            </xpath>
+            <xpath expr="//field[@name='assigned_to']" position="attributes">
+                <attribute name="optional">
+                    show
+                </attribute>
+            </xpath>
+            <xpath expr="//field[@name='company_id']" position="attributes">
+                <attribute name="optional">
+                    show
+                </attribute>
+            </xpath>
+<!-- 
+            <xpath expr="//field[@name='analytic_distribution']" position="replace">
+                <field
+                    name="analytic_distribution"
+                    widget="location_analytic_distribution"
+                    groups="analytic.group_analytic_accounting"
+                    options="{'product_field': 'product_id', 'business_domain': 'purchase_order'}"
+                />
+            </xpath> -->
+
+        </field>
+    </record>
+
+    <record id="ind_view_purchase_request_line_form" model="ir.ui.view">
+        <field name="name">purchase.request.line.view.form.inherit.ind_purchase_request</field>
+        <field name="model">purchase.request.line</field>
+        <field name="inherit_id" ref="purchase_request.purchase_request_line_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button
+                    name="button_to_cancel_line"
+                    string="Cancelar RFQ"
+                    invisible="request_state == 'rejected'"
+                    type="object"
+                    groups="purchase_request.group_purchase_request_manager"
+                />
+            </xpath>
+            <!-- Agregar campos a la vista -->
+            <xpath expr="//group[@name='info']" position="inside">
+                <field name="approved_by" optional="show" />
+                <field name="date_approved" optional="show" />
+                <field name="request_type" optional="show" />
+                <field name="costo_promedio" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="ind_purchase_request_line_search" model="ir.ui.view">
+        <field name="name">purchase.request.line.view.search.inherit.ind_purchase.request</field>
+        <field name="model">purchase.request.line</field>
+        <field name="inherit_id" ref="purchase_request.purchase_request_line_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='my_requests']" position="after">
+                <filter
+                    name="approved_by_me"
+                    domain="[('approved_by','=', uid)]"
+                    help="Aprobados por mi"
+                />
+            </xpath>
+            <xpath expr="//filter[@name='assigned_to']" position="after">
+                <filter
+                    name="approved_by"
+                    string="Aprobado por"
+                    domain="[]"
+                    context="{'group_by':'approved_by'}"
+                />
+            </xpath>
+            <xpath expr="//filter[@name='request_status']" position="after">
+                <filter
+                    name="request_type"
+                    string="Tipo de RFQ"
+                    domain="[]"
+                    context="{'group_by':'request_type'}"
+                />
+            </xpath>
+            <xpath expr="//filter[@name='request']" position="after">
+                <filter
+                    name="date_approved"
+                    string="Fecha de Aprobación"
+                    domain="[]"
+                    context="{'group_by':'date_approved'}"
+                />
+            </xpath>
+            <xpath expr="//filter[@name='request']" position="after">
+                <filter
+                    name="order_status"
+                    string="Estado de Pedido"
+                    domain="[]"
+                    context="{'group_by':'order_status'}"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_purchase_request_line_reprobar" model="ir.actions.server">
+        <field name="name">Cancelar Lineas RFQ</field>
+        <field name="model_id" ref="purchase_request.model_purchase_request_line"/>
+        <field name="binding_model_id" ref="purchase_request.model_purchase_request_line"/>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+            action = records.action_reject_multiple_lines()
+        </field>
+    </record>
+
+</odoo>
