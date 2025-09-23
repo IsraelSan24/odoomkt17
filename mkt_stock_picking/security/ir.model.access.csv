@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_create,perm_write,perm_unlink,perm_read
+access_stock_picking_referral_guide_user_id,access_stock_picking_referral_guide_user,model_stock_picking,base.group_user,1,1,1,1
+access_pe_department_referral_guide_user_id,access_pe_department_referral_guide_user,model_pe_department,base.group_user,0,0,0,1
+access_pe_province_referral_guide_user_id,access_pe_province_referral_guide_user,model_pe_province,base.group_user,0,0,0,1
+access_pe_district_referral_guide_user_id,access_pe_district_referral_guide_user,model_pe_district,base.group_user,0,0,0,1

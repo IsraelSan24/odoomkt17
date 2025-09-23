@@ -1,0 +1,17 @@
+﻿ATRIBUTO;VALOR;TIPO DE DATO;REQUISITO;LONGITUD
+documento_tipo;"1 = DNI - DOC. NACIONAL DE IDENTIDAD
+4 = CARNET DE EXTRANJERÍA
+7 = PASAPORTE
+A = CÉDULA DIPLOMÁTICA DE IDENTIDAD
+0 = NO DOMICILIADO, SIN RUC (EXPORTACIÓN)
+Para GRE Remitente: sólo cuando 'tipo_de_transporte' es ""02"".";Integer;Condicional;1 exacto
+documento_numero;"Ejemplo: Número de DNI, Etc.
+Para GRE Remitente: sólo cuando 'tipo_de_transporte' es ""02"".";String;Condicional;1 hasta 15
+nombre;"Es obligatorio Si el tipo de transporte es PRIVADO
+Para GRE Remitente: sólo cuando 'tipo_de_transporte' es ""02"".";String;Condicional;Hasta 250
+apellidos;"Es obligatorio Si el tipo de transporte es PRIVADO
+Para GRE Remitente: sólo cuando 'tipo_de_transporte' es ""02"".";String;Condicional;Hasta 250
+numero_licencia;"Es obligatorio Si el tipo de transporte es PRIVADO
+Para GRE Remitente: sólo cuando 'tipo_de_transporte' es ""02"".";String;Condicional;9 hasta 10
+
+Maximo 2 conductores

@@ -1,0 +1,1835 @@
+id,code,name,province_id/id
+pe_district_010101,010101,CHACHAPOYAS,pe_province_0101
+pe_district_010102,010102,ASUNCION,pe_province_0101
+pe_district_010103,010103,BALSAS,pe_province_0101
+pe_district_010104,010104,CHETO,pe_province_0101
+pe_district_010105,010105,CHILIQUIN,pe_province_0101
+pe_district_010106,010106,CHUQUIBAMBA,pe_province_0101
+pe_district_010107,010107,GRANADA,pe_province_0101
+pe_district_010108,010108,HUANCAS,pe_province_0101
+pe_district_010109,010109,LA JALCA,pe_province_0101
+pe_district_010110,010110,LEIMEBAMBA,pe_province_0101
+pe_district_010111,010111,LEVANTO,pe_province_0101
+pe_district_010112,010112,MAGDALENA,pe_province_0101
+pe_district_010113,010113,MARISCAL CASTILLA,pe_province_0101
+pe_district_010114,010114,MOLINOPAMPA,pe_province_0101
+pe_district_010115,010115,MONTEVIDEO,pe_province_0101
+pe_district_010116,010116,OLLEROS,pe_province_0101
+pe_district_010117,010117,QUINJALCA,pe_province_0101
+pe_district_010118,010118,SAN FRANCISCO DE DAGUAS,pe_province_0101
+pe_district_010119,010119,SAN ISIDRO DE MAINO,pe_province_0101
+pe_district_010120,010120,SOLOCO,pe_province_0101
+pe_district_010121,010121,SONCHE,pe_province_0101
+pe_district_010201,010201,BAGUA,pe_province_0102
+pe_district_010202,010202,ARAMANGO,pe_province_0102
+pe_district_010203,010203,COPALLIN,pe_province_0102
+pe_district_010204,010204,EL PARCO,pe_province_0102
+pe_district_010205,010205,IMAZA,pe_province_0102
+pe_district_010206,010206,LA PECA,pe_province_0102
+pe_district_010301,010301,JUMBILLA,pe_province_0103
+pe_district_010302,010302,CHISQUILLA,pe_province_0103
+pe_district_010303,010303,CHURUJA,pe_province_0103
+pe_district_010304,010304,COROSHA,pe_province_0103
+pe_district_010305,010305,CUISPES,pe_province_0103
+pe_district_010306,010306,FLORIDA,pe_province_0103
+pe_district_010307,010307,JAZAN,pe_province_0103
+pe_district_010308,010308,RECTA,pe_province_0103
+pe_district_010309,010309,SAN CARLOS,pe_province_0103
+pe_district_010310,010310,SHIPASBAMBA,pe_province_0103
+pe_district_010311,010311,VALERA,pe_province_0103
+pe_district_010312,010312,YAMBRASBAMBA,pe_province_0103
+pe_district_010401,010401,NIEVA,pe_province_0104
+pe_district_010402,010402,EL CENEPA,pe_province_0104
+pe_district_010403,010403,RIO SANTIAGO,pe_province_0104
+pe_district_010501,010501,LAMUD,pe_province_0105
+pe_district_010502,010502,CAMPORREDONDO,pe_province_0105
+pe_district_010503,010503,COCABAMBA,pe_province_0105
+pe_district_010504,010504,COLCAMAR,pe_province_0105
+pe_district_010505,010505,CONILA,pe_province_0105
+pe_district_010506,010506,INGUILPATA,pe_province_0105
+pe_district_010507,010507,LONGUITA,pe_province_0105
+pe_district_010508,010508,LONYA CHICO,pe_province_0105
+pe_district_010509,010509,LUYA,pe_province_0105
+pe_district_010510,010510,LUYA VIEJO,pe_province_0105
+pe_district_010511,010511,MARIA,pe_province_0105
+pe_district_010512,010512,OCALLI,pe_province_0105
+pe_district_010513,010513,OCUMAL,pe_province_0105
+pe_district_010514,010514,PISUQUIA,pe_province_0105
+pe_district_010515,010515,PROVIDENCIA,pe_province_0105
+pe_district_010516,010516,SAN CRISTOBAL,pe_province_0105
+pe_district_010517,010517,SAN FRANCISCO DEL YESO,pe_province_0105
+pe_district_010518,010518,SAN JERONIMO,pe_province_0105
+pe_district_010519,010519,SAN JUAN DE LOPECANCHA,pe_province_0105
+pe_district_010520,010520,SANTA CATALINA,pe_province_0105
+pe_district_010521,010521,SANTO TOMAS,pe_province_0105
+pe_district_010522,010522,TINGO,pe_province_0105
+pe_district_010523,010523,TRITA,pe_province_0105
+pe_district_010601,010601,SAN NICOLAS,pe_province_0106
+pe_district_010602,010602,CHIRIMOTO,pe_province_0106
+pe_district_010603,010603,COCHAMAL,pe_province_0106
+pe_district_010604,010604,HUAMBO,pe_province_0106
+pe_district_010605,010605,LIMABAMBA,pe_province_0106
+pe_district_010606,010606,LONGAR,pe_province_0106
+pe_district_010607,010607,MARISCAL BENAVIDES,pe_province_0106
+pe_district_010608,010608,MILPUC,pe_province_0106
+pe_district_010609,010609,OMIA,pe_province_0106
+pe_district_010610,010610,SANTA ROSA,pe_province_0106
+pe_district_010611,010611,TOTORA,pe_province_0106
+pe_district_010612,010612,VISTA ALEGRE,pe_province_0106
+pe_district_010701,010701,BAGUA GRANDE,pe_province_0107
+pe_district_010702,010702,CAJARURO,pe_province_0107
+pe_district_010703,010703,CUMBA,pe_province_0107
+pe_district_010704,010704,EL MILAGRO,pe_province_0107
+pe_district_010705,010705,JAMALCA,pe_province_0107
+pe_district_010706,010706,LONYA GRANDE,pe_province_0107
+pe_district_010707,010707,YAMON,pe_province_0107
+pe_district_020101,020101,HUARAZ,pe_province_0201
+pe_district_020102,020102,COCHABAMBA,pe_province_0201
+pe_district_020103,020103,COLCABAMBA,pe_province_0201
+pe_district_020104,020104,HUANCHAY,pe_province_0201
+pe_district_020105,020105,INDEPENDENCIA,pe_province_0201
+pe_district_020106,020106,JANGAS,pe_province_0201
+pe_district_020107,020107,LA LIBERTAD,pe_province_0201
+pe_district_020108,020108,OLLEROS,pe_province_0201
+pe_district_020109,020109,PAMPAS,pe_province_0201
+pe_district_020110,020110,PARIACOTO,pe_province_0201
+pe_district_020111,020111,PIRA,pe_province_0201
+pe_district_020112,020112,TARICA,pe_province_0201
+pe_district_020201,020201,AIJA,pe_province_0202
+pe_district_020202,020202,CORIS,pe_province_0202
+pe_district_020203,020203,HUACLLAN,pe_province_0202
+pe_district_020204,020204,LA MERCED,pe_province_0202
+pe_district_020205,020205,SUCCHA,pe_province_0202
+pe_district_020301,020301,LLAMELLIN,pe_province_0203
+pe_district_020302,020302,ACZO,pe_province_0203
+pe_district_020303,020303,CHACCHO,pe_province_0203
+pe_district_020304,020304,CHINGAS,pe_province_0203
+pe_district_020305,020305,MIRGAS,pe_province_0203
+pe_district_020306,020306,SAN JUAN DE RONTOY,pe_province_0203
+pe_district_020401,020401,CHACAS,pe_province_0204
+pe_district_020402,020402,ACOCHACA,pe_province_0204
+pe_district_020501,020501,CHIQUIAN,pe_province_0205
+pe_district_020502,020502,ABELARDO PARDO LEZAMETA,pe_province_0205
+pe_district_020503,020503,ANTONIO RAYMONDI,pe_province_0205
+pe_district_020504,020504,AQUIA,pe_province_0205
+pe_district_020505,020505,CAJACAY,pe_province_0205
+pe_district_020506,020506,CANIS,pe_province_0205
+pe_district_020507,020507,COLQUIOC,pe_province_0205
+pe_district_020508,020508,HUALLANCA,pe_province_0205
+pe_district_020509,020509,HUASTA,pe_province_0205
+pe_district_020510,020510,HUAYLLACAYAN,pe_province_0205
+pe_district_020511,020511,LA PRIMAVERA,pe_province_0205
+pe_district_020512,020512,MANGAS,pe_province_0205
+pe_district_020513,020513,PACLLON,pe_province_0205
+pe_district_020514,020514,SAN MIGUEL DE CORPANQUI,pe_province_0205
+pe_district_020515,020515,TICLLOS,pe_province_0205
+pe_district_020601,020601,CARHUAZ,pe_province_0206
+pe_district_020602,020602,ACOPAMPA,pe_province_0206
+pe_district_020603,020603,AMASHCA,pe_province_0206
+pe_district_020604,020604,ANTA,pe_province_0206
+pe_district_020605,020605,ATAQUERO,pe_province_0206
+pe_district_020606,020606,MARCARA,pe_province_0206
+pe_district_020607,020607,PARIAHUANCA,pe_province_0206
+pe_district_020608,020608,SAN MIGUEL DE ACO,pe_province_0206
+pe_district_020609,020609,SHILLA,pe_province_0206
+pe_district_020610,020610,TINCO,pe_province_0206
+pe_district_020611,020611,YUNGAR,pe_province_0206
+pe_district_020701,020701,SAN LUIS,pe_province_0207
+pe_district_020702,020702,SAN NICOLAS,pe_province_0207
+pe_district_020703,020703,YAUYA,pe_province_0207
+pe_district_020801,020801,CASMA,pe_province_0208
+pe_district_020802,020802,BUENA VISTA ALTA,pe_province_0208
+pe_district_020803,020803,COMANDANTE NOEL,pe_province_0208
+pe_district_020804,020804,YAUTAN,pe_province_0208
+pe_district_020901,020901,CORONGO,pe_province_0209
+pe_district_020902,020902,ACO,pe_province_0209
+pe_district_020903,020903,BAMBAS,pe_province_0209
+pe_district_020904,020904,CUSCA,pe_province_0209
+pe_district_020905,020905,LA PAMPA,pe_province_0209
+pe_district_020906,020906,YANAC,pe_province_0209
+pe_district_020907,020907,YUPAN,pe_province_0209
+pe_district_021001,021001,HUARI,pe_province_0210
+pe_district_021002,021002,ANRA,pe_province_0210
+pe_district_021003,021003,CAJAY,pe_province_0210
+pe_district_021004,021004,CHAVIN DE HUANTAR,pe_province_0210
+pe_district_021005,021005,HUACACHI,pe_province_0210
+pe_district_021006,021006,HUACCHIS,pe_province_0210
+pe_district_021007,021007,HUACHIS,pe_province_0210
+pe_district_021008,021008,HUANTAR,pe_province_0210
+pe_district_021009,021009,MASIN,pe_province_0210
+pe_district_021010,021010,PAUCAS,pe_province_0210
+pe_district_021011,021011,PONTO,pe_province_0210
+pe_district_021012,021012,RAHUAPAMPA,pe_province_0210
+pe_district_021013,021013,RAPAYAN,pe_province_0210
+pe_district_021014,021014,SAN MARCOS,pe_province_0210
+pe_district_021015,021015,SAN PEDRO DE CHANA,pe_province_0210
+pe_district_021016,021016,UCO,pe_province_0210
+pe_district_021101,021101,HUARMEY,pe_province_0211
+pe_district_021102,021102,COCHAPETI,pe_province_0211
+pe_district_021103,021103,CULEBRAS,pe_province_0211
+pe_district_021104,021104,HUAYAN,pe_province_0211
+pe_district_021105,021105,MALVAS,pe_province_0211
+pe_district_021201,021201,CARAZ,pe_province_0212
+pe_district_021202,021202,HUALLANCA,pe_province_0212
+pe_district_021203,021203,HUATA,pe_province_0212
+pe_district_021204,021204,HUAYLAS,pe_province_0212
+pe_district_021205,021205,MATO,pe_province_0212
+pe_district_021206,021206,PAMPAROMAS,pe_province_0212
+pe_district_021207,021207,PUEBLO LIBRE  / 1,pe_province_0212
+pe_district_021208,021208,SANTA CRUZ,pe_province_0212
+pe_district_021209,021209,SANTO TORIBIO,pe_province_0212
+pe_district_021210,021210,YURACMARCA,pe_province_0212
+pe_district_021301,021301,PISCOBAMBA,pe_province_0213
+pe_district_021302,021302,CASCA,pe_province_0213
+pe_district_021303,021303,ELEAZAR GUZMAN BARRON,pe_province_0213
+pe_district_021304,021304,FIDEL OLIVAS ESCUDERO,pe_province_0213
+pe_district_021305,021305,LLAMA,pe_province_0213
+pe_district_021306,021306,LLUMPA,pe_province_0213
+pe_district_021307,021307,LUCMA,pe_province_0213
+pe_district_021308,021308,MUSGA,pe_province_0213
+pe_district_021401,021401,OCROS,pe_province_0214
+pe_district_021402,021402,ACAS,pe_province_0214
+pe_district_021403,021403,CAJAMARQUILLA,pe_province_0214
+pe_district_021404,021404,CARHUAPAMPA,pe_province_0214
+pe_district_021405,021405,COCHAS,pe_province_0214
+pe_district_021406,021406,CONGAS,pe_province_0214
+pe_district_021407,021407,LLIPA,pe_province_0214
+pe_district_021408,021408,SAN CRISTOBAL DE RAJAN,pe_province_0214
+pe_district_021409,021409,SAN PEDRO,pe_province_0214
+pe_district_021410,021410,SANTIAGO DE CHILCAS,pe_province_0214
+pe_district_021501,021501,CABANA,pe_province_0215
+pe_district_021502,021502,BOLOGNESI,pe_province_0215
+pe_district_021503,021503,CONCHUCOS,pe_province_0215
+pe_district_021504,021504,HUACASCHUQUE,pe_province_0215
+pe_district_021505,021505,HUANDOVAL,pe_province_0215
+pe_district_021506,021506,LACABAMBA,pe_province_0215
+pe_district_021507,021507,LLAPO,pe_province_0215
+pe_district_021508,021508,PALLASCA,pe_province_0215
+pe_district_021509,021509,PAMPAS,pe_province_0215
+pe_district_021510,021510,SANTA ROSA,pe_province_0215
+pe_district_021511,021511,TAUCA,pe_province_0215
+pe_district_021601,021601,POMABAMBA,pe_province_0216
+pe_district_021602,021602,HUAYLLAN,pe_province_0216
+pe_district_021603,021603,PAROBAMBA,pe_province_0216
+pe_district_021604,021604,QUINUABAMBA,pe_province_0216
+pe_district_021701,021701,RECUAY,pe_province_0217
+pe_district_021702,021702,CATAC,pe_province_0217
+pe_district_021703,021703,COTAPARACO,pe_province_0217
+pe_district_021704,021704,HUAYLLAPAMPA,pe_province_0217
+pe_district_021705,021705,LLACLLIN,pe_province_0217
+pe_district_021706,021706,MARCA,pe_province_0217
+pe_district_021707,021707,PAMPAS CHICO,pe_province_0217
+pe_district_021708,021708,PARARIN,pe_province_0217
+pe_district_021709,021709,TAPACOCHA,pe_province_0217
+pe_district_021710,021710,TICAPAMPA,pe_province_0217
+pe_district_021801,021801,CHIMBOTE,pe_province_0218
+pe_district_021802,021802,CACERES DEL PERU,pe_province_0218
+pe_district_021803,021803,COISHCO,pe_province_0218
+pe_district_021804,021804,MACATE,pe_province_0218
+pe_district_021805,021805,MORO,pe_province_0218
+pe_district_021806,021806,NEPEÑA,pe_province_0218
+pe_district_021807,021807,SAMANCO,pe_province_0218
+pe_district_021808,021808,SANTA,pe_province_0218
+pe_district_021809,021809,NUEVO CHIMBOTE,pe_province_0218
+pe_district_021901,021901,SIHUAS,pe_province_0219
+pe_district_021902,021902,ACOBAMBA,pe_province_0219
+pe_district_021903,021903,ALFONSO UGARTE,pe_province_0219
+pe_district_021904,021904,CASHAPAMPA,pe_province_0219
+pe_district_021905,021905,CHINGALPO,pe_province_0219
+pe_district_021906,021906,HUAYLLABAMBA,pe_province_0219
+pe_district_021907,021907,QUICHES,pe_province_0219
+pe_district_021908,021908,RAGASH,pe_province_0219
+pe_district_021909,021909,SAN JUAN,pe_province_0219
+pe_district_021910,021910,SICSIBAMBA,pe_province_0219
+pe_district_022001,022001,YUNGAY,pe_province_0220
+pe_district_022002,022002,CASCAPARA,pe_province_0220
+pe_district_022003,022003,MANCOS,pe_province_0220
+pe_district_022004,022004,MATACOTO,pe_province_0220
+pe_district_022005,022005,QUILLO,pe_province_0220
+pe_district_022006,022006,RANRAHIRCA,pe_province_0220
+pe_district_022007,022007,SHUPLUY,pe_province_0220
+pe_district_022008,022008,YANAMA,pe_province_0220
+pe_district_030101,030101,ABANCAY,pe_province_0301
+pe_district_030102,030102,CHACOCHE,pe_province_0301
+pe_district_030103,030103,CIRCA,pe_province_0301
+pe_district_030104,030104,CURAHUASI,pe_province_0301
+pe_district_030105,030105,HUANIPACA,pe_province_0301
+pe_district_030106,030106,LAMBRAMA,pe_province_0301
+pe_district_030107,030107,PICHIRHUA,pe_province_0301
+pe_district_030108,030108,SAN PEDRO DE CACHORA,pe_province_0301
+pe_district_030109,030109,TAMBURCO,pe_province_0301
+pe_district_030201,030201,ANDAHUAYLAS,pe_province_0302
+pe_district_030202,030202,ANDARAPA,pe_province_0302
+pe_district_030203,030203,CHIARA,pe_province_0302
+pe_district_030204,030204,HUANCARAMA,pe_province_0302
+pe_district_030205,030205,HUANCARAY,pe_province_0302
+pe_district_030206,030206,HUAYANA,pe_province_0302
+pe_district_030207,030207,KISHUARA,pe_province_0302
+pe_district_030208,030208,PACOBAMBA,pe_province_0302
+pe_district_030209,030209,PACUCHA,pe_province_0302
+pe_district_030210,030210,PAMPACHIRI,pe_province_0302
+pe_district_030211,030211,POMACOCHA,pe_province_0302
+pe_district_030212,030212,SAN ANTONIO DE CACHI,pe_province_0302
+pe_district_030213,030213,SAN JERONIMO,pe_province_0302
+pe_district_030214,030214,SAN MIGUEL DE CHACCRAMPA,pe_province_0302
+pe_district_030215,030215,SANTA MARIA DE CHICMO,pe_province_0302
+pe_district_030216,030216,TALAVERA,pe_province_0302
+pe_district_030217,030217,TUMAY HUARACA,pe_province_0302
+pe_district_030218,030218,TURPO,pe_province_0302
+pe_district_030219,030219,KAQUIABAMBA,pe_province_0302
+pe_district_030301,030301,ANTABAMBA,pe_province_0303
+pe_district_030302,030302,EL ORO,pe_province_0303
+pe_district_030303,030303,HUAQUIRCA,pe_province_0303
+pe_district_030304,030304,JUAN ESPINOZA MEDRANO,pe_province_0303
+pe_district_030305,030305,OROPESA,pe_province_0303
+pe_district_030306,030306,PACHACONAS,pe_province_0303
+pe_district_030307,030307,SABAINO,pe_province_0303
+pe_district_030401,030401,CHALHUANCA,pe_province_0304
+pe_district_030402,030402,CAPAYA,pe_province_0304
+pe_district_030403,030403,CARAYBAMBA,pe_province_0304
+pe_district_030404,030404,CHAPIMARCA,pe_province_0304
+pe_district_030405,030405,COLCABAMBA,pe_province_0304
+pe_district_030406,030406,COTARUSE,pe_province_0304
+pe_district_030407,030407,HUAYLLO,pe_province_0304
+pe_district_030408,030408,JUSTO APU SAHUARAURA,pe_province_0304
+pe_district_030409,030409,LUCRE,pe_province_0304
+pe_district_030410,030410,POCOHUANCA,pe_province_0304
+pe_district_030411,030411,SAN JUAN DE CHACÑA,pe_province_0304
+pe_district_030412,030412,SAÑAYCA,pe_province_0304
+pe_district_030413,030413,SORAYA,pe_province_0304
+pe_district_030414,030414,TAPAIRIHUA,pe_province_0304
+pe_district_030415,030415,TINTAY,pe_province_0304
+pe_district_030416,030416,TORAYA,pe_province_0304
+pe_district_030417,030417,YANACA,pe_province_0304
+pe_district_030501,030501,TAMBOBAMBA,pe_province_0305
+pe_district_030502,030502,COTABAMBAS,pe_province_0305
+pe_district_030503,030503,COYLLURQUI,pe_province_0305
+pe_district_030504,030504,HAQUIRA,pe_province_0305
+pe_district_030505,030505,MARA,pe_province_0305
+pe_district_030506,030506,CHALLHUAHUACHO,pe_province_0305
+pe_district_030601,030601,CHINCHEROS,pe_province_0306
+pe_district_030602,030602,ANCO-HUALLO,pe_province_0306
+pe_district_030603,030603,COCHARCAS,pe_province_0306
+pe_district_030604,030604,HUACCANA,pe_province_0306
+pe_district_030605,030605,OCOBAMBA,pe_province_0306
+pe_district_030606,030606,ONGOY,pe_province_0306
+pe_district_030607,030607,URANMARCA,pe_province_0306
+pe_district_030608,030608,RANRACANCHA,pe_province_0306
+pe_district_030701,030701,CHUQUIBAMBILLA,pe_province_0307
+pe_district_030702,030702,CURPAHUASI,pe_province_0307
+pe_district_030703,030703,GAMARRA,pe_province_0307
+pe_district_030704,030704,HUAYLLATI,pe_province_0307
+pe_district_030705,030705,MAMARA,pe_province_0307
+pe_district_030706,030706,MICAELA BASTIDAS,pe_province_0307
+pe_district_030707,030707,PATAYPAMPA,pe_province_0307
+pe_district_030708,030708,PROGRESO,pe_province_0307
+pe_district_030709,030709,SAN ANTONIO,pe_province_0307
+pe_district_030710,030710,SANTA ROSA,pe_province_0307
+pe_district_030711,030711,TURPAY,pe_province_0307
+pe_district_030712,030712,VILCABAMBA,pe_province_0307
+pe_district_030713,030713,VIRUNDO,pe_province_0307
+pe_district_030714,030714,CURASCO,pe_province_0307
+pe_district_040101,040101,AREQUIPA,pe_province_0401
+pe_district_040102,040102,ALTO SELVA ALEGRE,pe_province_0401
+pe_district_040103,040103,CAYMA,pe_province_0401
+pe_district_040104,040104,CERRO COLORADO,pe_province_0401
+pe_district_040105,040105,CHARACATO,pe_province_0401
+pe_district_040106,040106,CHIGUATA,pe_province_0401
+pe_district_040107,040107,JACOBO HUNTER,pe_province_0401
+pe_district_040108,040108,LA JOYA,pe_province_0401
+pe_district_040109,040109,MARIANO MELGAR,pe_province_0401
+pe_district_040110,040110,MIRAFLORES,pe_province_0401
+pe_district_040111,040111,MOLLEBAYA,pe_province_0401
+pe_district_040112,040112,PAUCARPATA,pe_province_0401
+pe_district_040113,040113,POCSI,pe_province_0401
+pe_district_040114,040114,POLOBAYA,pe_province_0401
+pe_district_040115,040115,QUEQUEÑA,pe_province_0401
+pe_district_040116,040116,SABANDIA,pe_province_0401
+pe_district_040117,040117,SACHACA,pe_province_0401
+pe_district_040118,040118,SAN JUAN DE SIGUAS /1,pe_province_0401
+pe_district_040119,040119,SAN JUAN DE TARUCANI,pe_province_0401
+pe_district_040120,040120,SANTA ISABEL DE SIGUAS,pe_province_0401
+pe_district_040121,040121,SANTA RITA DE SIGUAS,pe_province_0401
+pe_district_040122,040122,SOCABAYA,pe_province_0401
+pe_district_040123,040123,TIABAYA,pe_province_0401
+pe_district_040124,040124,UCHUMAYO,pe_province_0401
+pe_district_040125,040125,VITOR,pe_province_0401
+pe_district_040126,040126,YANAHUARA,pe_province_0401
+pe_district_040127,040127,YARABAMBA,pe_province_0401
+pe_district_040128,040128,YURA,pe_province_0401
+pe_district_040129,040129,JOSE LUIS BUSTAMANTE Y RIVERO,pe_province_0401
+pe_district_040201,040201,CAMANA,pe_province_0402
+pe_district_040202,040202,JOSE MARIA QUIMPER,pe_province_0402
+pe_district_040203,040203,MARIANO NICOLAS VALCARCEL,pe_province_0402
+pe_district_040204,040204,MARISCAL CACERES,pe_province_0402
+pe_district_040205,040205,NICOLAS DE PIEROLA,pe_province_0402
+pe_district_040206,040206,OCOÑA,pe_province_0402
+pe_district_040207,040207,QUILCA,pe_province_0402
+pe_district_040208,040208,SAMUEL PASTOR,pe_province_0402
+pe_district_040301,040301,CARAVELI,pe_province_0403
+pe_district_040302,040302,ACARI,pe_province_0403
+pe_district_040303,040303,ATICO,pe_province_0403
+pe_district_040304,040304,ATIQUIPA,pe_province_0403
+pe_district_040305,040305,BELLA UNION,pe_province_0403
+pe_district_040306,040306,CAHUACHO,pe_province_0403
+pe_district_040307,040307,CHALA,pe_province_0403
+pe_district_040308,040308,CHAPARRA,pe_province_0403
+pe_district_040309,040309,HUANUHUANU,pe_province_0403
+pe_district_040310,040310,JAQUI,pe_province_0403
+pe_district_040311,040311,LOMAS,pe_province_0403
+pe_district_040312,040312,QUICACHA,pe_province_0403
+pe_district_040313,040313,YAUCA,pe_province_0403
+pe_district_040401,040401,APLAO,pe_province_0404
+pe_district_040402,040402,ANDAGUA,pe_province_0404
+pe_district_040403,040403,AYO,pe_province_0404
+pe_district_040404,040404,CHACHAS,pe_province_0404
+pe_district_040405,040405,CHILCAYMARCA,pe_province_0404
+pe_district_040406,040406,CHOCO,pe_province_0404
+pe_district_040407,040407,HUANCARQUI,pe_province_0404
+pe_district_040408,040408,MACHAGUAY,pe_province_0404
+pe_district_040409,040409,ORCOPAMPA,pe_province_0404
+pe_district_040410,040410,PAMPACOLCA,pe_province_0404
+pe_district_040411,040411,TIPAN,pe_province_0404
+pe_district_040412,040412,UÑON,pe_province_0404
+pe_district_040413,040413,URACA,pe_province_0404
+pe_district_040414,040414,VIRACO,pe_province_0404
+pe_district_040501,040501,CHIVAY,pe_province_0405
+pe_district_040502,040502,ACHOMA,pe_province_0405
+pe_district_040503,040503,CABANACONDE,pe_province_0405
+pe_district_040504,040504,CALLALLI,pe_province_0405
+pe_district_040505,040505,CAYLLOMA,pe_province_0405
+pe_district_040506,040506,COPORAQUE,pe_province_0405
+pe_district_040507,040507,HUAMBO,pe_province_0405
+pe_district_040508,040508,HUANCA,pe_province_0405
+pe_district_040509,040509,ICHUPAMPA,pe_province_0405
+pe_district_040510,040510,LARI,pe_province_0405
+pe_district_040511,040511,LLUTA,pe_province_0405
+pe_district_040512,040512,MACA,pe_province_0405
+pe_district_040513,040513,MADRIGAL,pe_province_0405
+pe_district_040514,040514,SAN ANTONIO DE CHUCA  2/,pe_province_0405
+pe_district_040515,040515,SIBAYO,pe_province_0405
+pe_district_040516,040516,TAPAY,pe_province_0405
+pe_district_040517,040517,TISCO,pe_province_0405
+pe_district_040518,040518,TUTI,pe_province_0405
+pe_district_040519,040519,YANQUE,pe_province_0405
+pe_district_040520,040520,MAJES,pe_province_0405
+pe_district_040601,040601,CHUQUIBAMBA,pe_province_0406
+pe_district_040602,040602,ANDARAY,pe_province_0406
+pe_district_040603,040603,CAYARANI,pe_province_0406
+pe_district_040604,040604,CHICHAS,pe_province_0406
+pe_district_040605,040605,IRAY,pe_province_0406
+pe_district_040606,040606,RIO GRANDE,pe_province_0406
+pe_district_040607,040607,SALAMANCA,pe_province_0406
+pe_district_040608,040608,YANAQUIHUA,pe_province_0406
+pe_district_040701,040701,MOLLENDO,pe_province_0407
+pe_district_040702,040702,COCACHACRA,pe_province_0407
+pe_district_040703,040703,DEAN VALDIVIA,pe_province_0407
+pe_district_040704,040704,ISLAY,pe_province_0407
+pe_district_040705,040705,MEJIA,pe_province_0407
+pe_district_040706,040706,PUNTA DE BOMBON,pe_province_0407
+pe_district_040801,040801,COTAHUASI,pe_province_0408
+pe_district_040802,040802,ALCA,pe_province_0408
+pe_district_040803,040803,CHARCANA,pe_province_0408
+pe_district_040804,040804,HUAYNACOTAS,pe_province_0408
+pe_district_040805,040805,PAMPAMARCA,pe_province_0408
+pe_district_040806,040806,PUYCA,pe_province_0408
+pe_district_040807,040807,QUECHUALLA,pe_province_0408
+pe_district_040808,040808,SAYLA,pe_province_0408
+pe_district_040809,040809,TAURIA,pe_province_0408
+pe_district_040810,040810,TOMEPAMPA,pe_province_0408
+pe_district_040811,040811,TORO,pe_province_0408
+pe_district_050101,050101,AYACUCHO,pe_province_0501
+pe_district_050102,050102,ACOCRO,pe_province_0501
+pe_district_050103,050103,ACOS VINCHOS,pe_province_0501
+pe_district_050104,050104,CARMEN ALTO,pe_province_0501
+pe_district_050105,050105,CHIARA,pe_province_0501
+pe_district_050106,050106,OCROS,pe_province_0501
+pe_district_050107,050107,PACAYCASA,pe_province_0501
+pe_district_050108,050108,QUINUA,pe_province_0501
+pe_district_050109,050109,SAN JOSE DE TICLLAS,pe_province_0501
+pe_district_050110,050110,SAN JUAN BAUTISTA,pe_province_0501
+pe_district_050111,050111,SANTIAGO DE PISCHA,pe_province_0501
+pe_district_050112,050112,SOCOS,pe_province_0501
+pe_district_050113,050113,TAMBILLO,pe_province_0501
+pe_district_050114,050114,VINCHOS,pe_province_0501
+pe_district_050115,050115,JESUS NAZARENO,pe_province_0501
+pe_district_050201,050201,CANGALLO,pe_province_0502
+pe_district_050202,050202,CHUSCHI,pe_province_0502
+pe_district_050203,050203,LOS MOROCHUCOS,pe_province_0502
+pe_district_050204,050204,MARIA PARADO DE BELLIDO,pe_province_0502
+pe_district_050205,050205,PARAS,pe_province_0502
+pe_district_050206,050206,TOTOS,pe_province_0502
+pe_district_050301,050301,SANCOS,pe_province_0503
+pe_district_050302,050302,CARAPO,pe_province_0503
+pe_district_050303,050303,SACSAMARCA,pe_province_0503
+pe_district_050304,050304,SANTIAGO DE LUCANAMARCA,pe_province_0503
+pe_district_050401,050401,HUANTA,pe_province_0504
+pe_district_050402,050402,AYAHUANCO,pe_province_0504
+pe_district_050403,050403,HUAMANGUILLA,pe_province_0504
+pe_district_050404,050404,IGUAIN,pe_province_0504
+pe_district_050405,050405,LURICOCHA,pe_province_0504
+pe_district_050406,050406,SANTILLANA,pe_province_0504
+pe_district_050407,050407,SIVIA,pe_province_0504
+pe_district_050408,050408,LLOCHEGUA,pe_province_0504
+pe_district_050501,050501,SAN MIGUEL,pe_province_0505
+pe_district_050502,050502,ANCO,pe_province_0505
+pe_district_050503,050503,AYNA,pe_province_0505
+pe_district_050504,050504,CHILCAS,pe_province_0505
+pe_district_050505,050505,CHUNGUI,pe_province_0505
+pe_district_050506,050506,LUIS CARRANZA,pe_province_0505
+pe_district_050507,050507,SANTA ROSA,pe_province_0505
+pe_district_050508,050508,TAMBO,pe_province_0505
+pe_district_050601,050601,PUQUIO,pe_province_0506
+pe_district_050602,050602,AUCARA,pe_province_0506
+pe_district_050603,050603,CABANA,pe_province_0506
+pe_district_050604,050604,CARMEN SALCEDO,pe_province_0506
+pe_district_050605,050605,CHAVIÑA,pe_province_0506
+pe_district_050606,050606,CHIPAO,pe_province_0506
+pe_district_050607,050607,HUAC-HUAS,pe_province_0506
+pe_district_050608,050608,LARAMATE,pe_province_0506
+pe_district_050609,050609,LEONCIO PRADO,pe_province_0506
+pe_district_050610,050610,LLAUTA,pe_province_0506
+pe_district_050611,050611,LUCANAS,pe_province_0506
+pe_district_050612,050612,OCAÑA,pe_province_0506
+pe_district_050613,050613,OTOCA,pe_province_0506
+pe_district_050614,050614,SAISA,pe_province_0506
+pe_district_050615,050615,SAN CRISTOBAL,pe_province_0506
+pe_district_050616,050616,SAN JUAN,pe_province_0506
+pe_district_050617,050617,SAN PEDRO,pe_province_0506
+pe_district_050618,050618,SAN PEDRO DE PALCO,pe_province_0506
+pe_district_050619,050619,SANCOS,pe_province_0506
+pe_district_050620,050620,SANTA ANA DE HUAYCAHUACHO,pe_province_0506
+pe_district_050621,050621,SANTA LUCIA,pe_province_0506
+pe_district_050701,050701,CORACORA,pe_province_0507
+pe_district_050702,050702,CHUMPI,pe_province_0507
+pe_district_050703,050703,CORONEL CASTAÑEDA,pe_province_0507
+pe_district_050704,050704,PACAPAUSA,pe_province_0507
+pe_district_050705,050705,PULLO,pe_province_0507
+pe_district_050706,050706,PUYUSCA,pe_province_0507
+pe_district_050707,050707,SAN FRANCISCO DE RAVACAYCO,pe_province_0507
+pe_district_050708,050708,UPAHUACHO,pe_province_0507
+pe_district_050801,050801,PAUSA,pe_province_0508
+pe_district_050802,050802,COLTA,pe_province_0508
+pe_district_050803,050803,CORCULLA,pe_province_0508
+pe_district_050804,050804,LAMPA,pe_province_0508
+pe_district_050805,050805,MARCABAMBA,pe_province_0508
+pe_district_050806,050806,OYOLO,pe_province_0508
+pe_district_050807,050807,PARARCA,pe_province_0508
+pe_district_050808,050808,SAN JAVIER DE ALPABAMBA,pe_province_0508
+pe_district_050809,050809,SAN JOSE DE USHUA,pe_province_0508
+pe_district_050810,050810,SARA SARA,pe_province_0508
+pe_district_050901,050901,QUEROBAMBA,pe_province_0509
+pe_district_050902,050902,BELEN,pe_province_0509
+pe_district_050903,050903,CHALCOS,pe_province_0509
+pe_district_050904,050904,CHILCAYOC,pe_province_0509
+pe_district_050905,050905,HUACAÑA,pe_province_0509
+pe_district_050906,050906,MORCOLLA,pe_province_0509
+pe_district_050907,050907,PAICO,pe_province_0509
+pe_district_050908,050908,SAN PEDRO DE LARCAY,pe_province_0509
+pe_district_050909,050909,SAN SALVADOR DE QUIJE,pe_province_0509
+pe_district_050910,050910,SANTIAGO DE PAUCARAY,pe_province_0509
+pe_district_050911,050911,SORAS,pe_province_0509
+pe_district_051001,051001,HUANCAPI,pe_province_0510
+pe_district_051002,051002,ALCAMENCA,pe_province_0510
+pe_district_051003,051003,APONGO,pe_province_0510
+pe_district_051004,051004,ASQUIPATA,pe_province_0510
+pe_district_051005,051005,CANARIA,pe_province_0510
+pe_district_051006,051006,CAYARA,pe_province_0510
+pe_district_051007,051007,COLCA,pe_province_0510
+pe_district_051008,051008,HUAMANQUIQUIA,pe_province_0510
+pe_district_051009,051009,HUANCARAYLLA,pe_province_0510
+pe_district_051010,051010,HUAYA,pe_province_0510
+pe_district_051011,051011,SARHUA,pe_province_0510
+pe_district_051012,051012,VILCANCHOS,pe_province_0510
+pe_district_051101,051101,VILCAS HUAMAN,pe_province_0511
+pe_district_051102,051102,ACCOMARCA,pe_province_0511
+pe_district_051103,051103,CARHUANCA,pe_province_0511
+pe_district_051104,051104,CONCEPCION,pe_province_0511
+pe_district_051105,051105,HUAMBALPA,pe_province_0511
+pe_district_051106,051106,INDEPENDENCIA /1,pe_province_0511
+pe_district_051107,051107,SAURAMA,pe_province_0511
+pe_district_051108,051108,VISCHONGO,pe_province_0511
+pe_district_060101,060101,CAJAMARCA,pe_province_0601
+pe_district_060102,060102,ASUNCION,pe_province_0601
+pe_district_060103,060103,CHETILLA,pe_province_0601
+pe_district_060104,060104,COSPAN,pe_province_0601
+pe_district_060105,060105,ENCAÑADA,pe_province_0601
+pe_district_060106,060106,JESUS,pe_province_0601
+pe_district_060107,060107,LLACANORA,pe_province_0601
+pe_district_060108,060108,LOS BAÑOS DEL INCA,pe_province_0601
+pe_district_060109,060109,MAGDALENA,pe_province_0601
+pe_district_060110,060110,MATARA,pe_province_0601
+pe_district_060111,060111,NAMORA,pe_province_0601
+pe_district_060112,060112,SAN JUAN,pe_province_0601
+pe_district_060201,060201,CAJABAMBA,pe_province_0602
+pe_district_060202,060202,CACHACHI,pe_province_0602
+pe_district_060203,060203,CONDEBAMBA,pe_province_0602
+pe_district_060204,060204,SITACOCHA,pe_province_0602
+pe_district_060301,060301,CELENDIN,pe_province_0603
+pe_district_060302,060302,CHUMUCH,pe_province_0603
+pe_district_060303,060303,CORTEGANA,pe_province_0603
+pe_district_060304,060304,HUASMIN,pe_province_0603
+pe_district_060305,060305,JORGE CHAVEZ,pe_province_0603
+pe_district_060306,060306,JOSE GALVEZ,pe_province_0603
+pe_district_060307,060307,MIGUEL IGLESIAS,pe_province_0603
+pe_district_060308,060308,OXAMARCA,pe_province_0603
+pe_district_060309,060309,SOROCHUCO,pe_province_0603
+pe_district_060310,060310,SUCRE,pe_province_0603
+pe_district_060311,060311,UTCO,pe_province_0603
+pe_district_060312,060312,LA LIBERTAD DE PALLAN,pe_province_0603
+pe_district_060401,060401,CHOTA,pe_province_0604
+pe_district_060402,060402,ANGUIA,pe_province_0604
+pe_district_060403,060403,CHADIN,pe_province_0604
+pe_district_060404,060404,CHIGUIRIP,pe_province_0604
+pe_district_060405,060405,CHIMBAN,pe_province_0604
+pe_district_060406,060406,CHOROPAMPA,pe_province_0604
+pe_district_060407,060407,COCHABAMBA,pe_province_0604
+pe_district_060408,060408,CONCHAN,pe_province_0604
+pe_district_060409,060409,HUAMBOS,pe_province_0604
+pe_district_060410,060410,LAJAS,pe_province_0604
+pe_district_060411,060411,LLAMA,pe_province_0604
+pe_district_060412,060412,MIRACOSTA,pe_province_0604
+pe_district_060413,060413,PACCHA,pe_province_0604
+pe_district_060414,060414,PION,pe_province_0604
+pe_district_060415,060415,QUEROCOTO,pe_province_0604
+pe_district_060416,060416,SAN JUAN DE LICUPIS,pe_province_0604
+pe_district_060417,060417,TACABAMBA,pe_province_0604
+pe_district_060418,060418,TOCMOCHE,pe_province_0604
+pe_district_060419,060419,CHALAMARCA,pe_province_0604
+pe_district_060501,060501,CONTUMAZA,pe_province_0605
+pe_district_060502,060502,CHILETE,pe_province_0605
+pe_district_060503,060503,CUPISNIQUE,pe_province_0605
+pe_district_060504,060504,GUZMANGO,pe_province_0605
+pe_district_060505,060505,SAN BENITO,pe_province_0605
+pe_district_060506,060506,SANTA CRUZ DE TOLED,pe_province_0605
+pe_district_060507,060507,TANTARICA,pe_province_0605
+pe_district_060508,060508,YONAN,pe_province_0605
+pe_district_060601,060601,CUTERVO,pe_province_0606
+pe_district_060602,060602,CALLAYUC,pe_province_0606
+pe_district_060603,060603,CHOROS,pe_province_0606
+pe_district_060604,060604,CUJILLO,pe_province_0606
+pe_district_060605,060605,LA RAMADA,pe_province_0606
+pe_district_060606,060606,PIMPINGOS,pe_province_0606
+pe_district_060607,060607,QUEROCOTILLO,pe_province_0606
+pe_district_060608,060608,SAN ANDRES DE CUTERVO,pe_province_0606
+pe_district_060609,060609,SAN JUAN DE CUTERVO,pe_province_0606
+pe_district_060610,060610,SAN LUIS DE LUCMA,pe_province_0606
+pe_district_060611,060611,SANTA CRUZ,pe_province_0606
+pe_district_060612,060612,SANTO DOMINGO DE LA CAPILLA,pe_province_0606
+pe_district_060613,060613,SANTO TOMAS,pe_province_0606
+pe_district_060614,060614,SOCOTA,pe_province_0606
+pe_district_060615,060615,TORIBIO CASANOVA,pe_province_0606
+pe_district_060701,060701,BAMBAMARCA,pe_province_0607
+pe_district_060702,060702,CHUGUR,pe_province_0607
+pe_district_060703,060703,HUALGAYOC,pe_province_0607
+pe_district_060801,060801,JAEN,pe_province_0608
+pe_district_060802,060802,BELLAVISTA,pe_province_0608
+pe_district_060803,060803,CHONTALI,pe_province_0608
+pe_district_060804,060804,COLASAY,pe_province_0608
+pe_district_060805,060805,HUABAL,pe_province_0608
+pe_district_060806,060806,LAS PIRIAS,pe_province_0608
+pe_district_060807,060807,POMAHUACA,pe_province_0608
+pe_district_060808,060808,PUCARA,pe_province_0608
+pe_district_060809,060809,SALLIQUE,pe_province_0608
+pe_district_060810,060810,SAN FELIPE,pe_province_0608
+pe_district_060811,060811,SAN JOSE DEL ALTO,pe_province_0608
+pe_district_060812,060812,SANTA ROSA,pe_province_0608
+pe_district_060901,060901,SAN IGNACIO,pe_province_0609
+pe_district_060902,060902,CHIRINOS,pe_province_0609
+pe_district_060903,060903,HUARANGO,pe_province_0609
+pe_district_060904,060904,LA COIPA,pe_province_0609
+pe_district_060905,060905,NAMBALLE,pe_province_0609
+pe_district_060906,060906,SAN JOSE DE LOURDES,pe_province_0609
+pe_district_060907,060907,TABACONAS,pe_province_0609
+pe_district_061001,061001,PEDRO GALVEZ,pe_province_0610
+pe_district_061002,061002,CHANCAY,pe_province_0610
+pe_district_061003,061003,EDUARDO VILLANUEVA,pe_province_0610
+pe_district_061004,061004,GREGORIO PITA,pe_province_0610
+pe_district_061005,061005,ICHOCAN,pe_province_0610
+pe_district_061006,061006,JOSE MANUEL QUIROZ,pe_province_0610
+pe_district_061007,061007,JOSE SABOGAL,pe_province_0610
+pe_district_061101,061101,SAN MIGUEL,pe_province_0611
+pe_district_061102,061102,BOLIVAR,pe_province_0611
+pe_district_061103,061103,CALQUIS,pe_province_0611
+pe_district_061104,061104,CATILLUC,pe_province_0611
+pe_district_061105,061105,EL PRADO,pe_province_0611
+pe_district_061106,061106,LA FLORIDA,pe_province_0611
+pe_district_061107,061107,LLAPA,pe_province_0611
+pe_district_061108,061108,NANCHOC,pe_province_0611
+pe_district_061109,061109,NIEPOS,pe_province_0611
+pe_district_061110,061110,SAN GREGORIO,pe_province_0611
+pe_district_061111,061111,SAN SILVESTRE DE COCHAN,pe_province_0611
+pe_district_061112,061112,TONGOD,pe_province_0611
+pe_district_061113,061113,UNION AGUA BLANCA,pe_province_0611
+pe_district_061201,061201,SAN PABLO,pe_province_0612
+pe_district_061202,061202,SAN BERNARDINO,pe_province_0612
+pe_district_061203,061203,SAN LUIS,pe_province_0612
+pe_district_061204,061204,TUMBADEN,pe_province_0612
+pe_district_061301,061301,SANTA CRUZ,pe_province_0613
+pe_district_061302,061302,ANDABAMBA,pe_province_0613
+pe_district_061303,061303,CATACHE,pe_province_0613
+pe_district_061304,061304,CHANCAYBAÑOS,pe_province_0613
+pe_district_061305,061305,LA ESPERANZA,pe_province_0613
+pe_district_061306,061306,NINABAMBA,pe_province_0613
+pe_district_061307,061307,PULAN,pe_province_0613
+pe_district_061308,061308,SAUCEPAMPA,pe_province_0613
+pe_district_061309,061309,SEXI,pe_province_0613
+pe_district_061310,061310,UTICYACU,pe_province_0613
+pe_district_061311,061311,YAUYUCAN,pe_province_0613
+pe_district_070101,070101,CALLAO,pe_province_0701
+pe_district_070102,070102,BELLAVISTA,pe_province_0701
+pe_district_070103,070103,CARMEN DE LA LEGUA REYNOSO,pe_province_0701
+pe_district_070104,070104,LA PERLA,pe_province_0701
+pe_district_070105,070105,LA PUNTA,pe_province_0701
+pe_district_070106,070106,VENTANILLA,pe_province_0701
+pe_district_080101,080101,CUSCO,pe_province_0801
+pe_district_080102,080102,CCORCA,pe_province_0801
+pe_district_080103,080103,POROY,pe_province_0801
+pe_district_080104,080104,SAN JERONIMO,pe_province_0801
+pe_district_080105,080105,SAN SEBASTIAN,pe_province_0801
+pe_district_080106,080106,SANTIAGO,pe_province_0801
+pe_district_080107,080107,SAYLLA,pe_province_0801
+pe_district_080108,080108,WANCHAQ,pe_province_0801
+pe_district_080201,080201,ACOMAYO,pe_province_0802
+pe_district_080202,080202,ACOPIA,pe_province_0802
+pe_district_080203,080203,ACOS,pe_province_0802
+pe_district_080204,080204,MOSOC LLACTA,pe_province_0802
+pe_district_080205,080205,POMACANCHI,pe_province_0802
+pe_district_080206,080206,RONDOCAN,pe_province_0802
+pe_district_080207,080207,SANGARARA,pe_province_0802
+pe_district_080301,080301,ANTA,pe_province_0803
+pe_district_080302,080302,ANCAHUASI,pe_province_0803
+pe_district_080303,080303,CACHIMAYO,pe_province_0803
+pe_district_080304,080304,CHINCHAYPUJIO,pe_province_0803
+pe_district_080305,080305,HUAROCONDO,pe_province_0803
+pe_district_080306,080306,LIMATAMBO,pe_province_0803
+pe_district_080307,080307,MOLLEPATA,pe_province_0803
+pe_district_080308,080308,PUCYURA,pe_province_0803
+pe_district_080309,080309,ZURITE,pe_province_0803
+pe_district_080401,080401,CALCA,pe_province_0804
+pe_district_080402,080402,COYA,pe_province_0804
+pe_district_080403,080403,LAMAY,pe_province_0804
+pe_district_080404,080404,LARES,pe_province_0804
+pe_district_080405,080405,PISAC,pe_province_0804
+pe_district_080406,080406,SAN SALVADOR,pe_province_0804
+pe_district_080407,080407,TARAY,pe_province_0804
+pe_district_080408,080408,YANATILE,pe_province_0804
+pe_district_080501,080501,YANAOCA,pe_province_0805
+pe_district_080502,080502,CHECCA,pe_province_0805
+pe_district_080503,080503,KUNTURKANKI,pe_province_0805
+pe_district_080504,080504,LANGUI,pe_province_0805
+pe_district_080505,080505,LAYO,pe_province_0805
+pe_district_080506,080506,PAMPAMARCA,pe_province_0805
+pe_district_080507,080507,QUEHUE,pe_province_0805
+pe_district_080508,080508,TUPAC AMARU,pe_province_0805
+pe_district_080601,080601,SICUANI,pe_province_0806
+pe_district_080602,080602,CHECACUPE,pe_province_0806
+pe_district_080603,080603,COMBAPATA,pe_province_0806
+pe_district_080604,080604,MARANGANI,pe_province_0806
+pe_district_080605,080605,PITUMARCA,pe_province_0806
+pe_district_080606,080606,SAN PABLO,pe_province_0806
+pe_district_080607,080607,SAN PEDRO,pe_province_0806
+pe_district_080608,080608,TINTA,pe_province_0806
+pe_district_080701,080701,SANTO TOMAS,pe_province_0807
+pe_district_080702,080702,CAPACMARCA,pe_province_0807
+pe_district_080703,080703,CHAMACA,pe_province_0807
+pe_district_080704,080704,COLQUEMARCA,pe_province_0807
+pe_district_080705,080705,LIVITACA,pe_province_0807
+pe_district_080706,080706,LLUSCO,pe_province_0807
+pe_district_080707,080707,QUIÑOTA,pe_province_0807
+pe_district_080708,080708,VELILLE,pe_province_0807
+pe_district_080801,080801,ESPINAR,pe_province_0808
+pe_district_080802,080802,CONDOROMA,pe_province_0808
+pe_district_080803,080803,COPORAQUE,pe_province_0808
+pe_district_080804,080804,OCORURO,pe_province_0808
+pe_district_080805,080805,PALLPATA,pe_province_0808
+pe_district_080806,080806,PICHIGUA,pe_province_0808
+pe_district_080807,080807,SUYCKUTAMBO 3/,pe_province_0808
+pe_district_080808,080808,ALTO PICHIGUA,pe_province_0808
+pe_district_080901,080901,SANTA ANA,pe_province_0809
+pe_district_080902,080902,ECHARATE,pe_province_0809
+pe_district_080903,080903,HUAYOPATA /1,pe_province_0809
+pe_district_080904,080904,MARANURA,pe_province_0809
+pe_district_080905,080905,OCOBAMBA  /2,pe_province_0809
+pe_district_080906,080906,QUELLOUNO,pe_province_0809
+pe_district_080907,080907,KIMBIRI,pe_province_0809
+pe_district_080908,080908,SANTA TERESA,pe_province_0809
+pe_district_080909,080909,VILCABAMBA,pe_province_0809
+pe_district_080910,080910,PICHARI,pe_province_0809
+pe_district_081001,081001,PARURO,pe_province_0810
+pe_district_081002,081002,ACCHA,pe_province_0810
+pe_district_081003,081003,CCAPI,pe_province_0810
+pe_district_081004,081004,COLCHA,pe_province_0810
+pe_district_081005,081005,HUANOQUITE,pe_province_0810
+pe_district_081006,081006,OMACHA,pe_province_0810
+pe_district_081007,081007,PACCARITAMBO,pe_province_0810
+pe_district_081008,081008,PILLPINTO,pe_province_0810
+pe_district_081009,081009,YAURISQUE,pe_province_0810
+pe_district_081101,081101,PAUCARTAMBO,pe_province_0811
+pe_district_081102,081102,CAICAY,pe_province_0811
+pe_district_081103,081103,CHALLABAMBA,pe_province_0811
+pe_district_081104,081104,COLQUEPATA,pe_province_0811
+pe_district_081105,081105,HUANCARANI,pe_province_0811
+pe_district_081106,081106,KOSÑIPATA,pe_province_0811
+pe_district_081201,081201,URCOS,pe_province_0812
+pe_district_081202,081202,ANDAHUAYLILLAS,pe_province_0812
+pe_district_081203,081203,CAMANTI,pe_province_0812
+pe_district_081204,081204,CCARHUAYO,pe_province_0812
+pe_district_081205,081205,CCATCA,pe_province_0812
+pe_district_081206,081206,CUSIPATA,pe_province_0812
+pe_district_081207,081207,HUARO,pe_province_0812
+pe_district_081208,081208,LUCRE,pe_province_0812
+pe_district_081209,081209,MARCAPATA,pe_province_0812
+pe_district_081210,081210,OCONGATE,pe_province_0812
+pe_district_081211,081211,OROPESA,pe_province_0812
+pe_district_081212,081212,QUIQUIJANA,pe_province_0812
+pe_district_081301,081301,URUBAMBA,pe_province_0813
+pe_district_081302,081302,CHINCHERO,pe_province_0813
+pe_district_081303,081303,HUAYLLABAMBA,pe_province_0813
+pe_district_081304,081304,MACHUPICCHU,pe_province_0813
+pe_district_081305,081305,MARAS,pe_province_0813
+pe_district_081306,081306,OLLANTAYTAMBO,pe_province_0813
+pe_district_081307,081307,YUCAY,pe_province_0813
+pe_district_090101,090101,HUANCAVELICA,pe_province_0901
+pe_district_090102,090102,ACOBAMBILLA,pe_province_0901
+pe_district_090103,090103,ACORIA,pe_province_0901
+pe_district_090104,090104,CONAYCA,pe_province_0901
+pe_district_090105,090105,CUENCA,pe_province_0901
+pe_district_090106,090106,HUACHOCOLPA,pe_province_0901
+pe_district_090107,090107,HUAYLLAHUARA,pe_province_0901
+pe_district_090108,090108,IZCUCHACA,pe_province_0901
+pe_district_090109,090109,LARIA,pe_province_0901
+pe_district_090110,090110,MANTA,pe_province_0901
+pe_district_090111,090111,MARISCAL CACERES,pe_province_0901
+pe_district_090112,090112,MOYA,pe_province_0901
+pe_district_090113,090113,NUEVO OCCORO,pe_province_0901
+pe_district_090114,090114,PALCA,pe_province_0901
+pe_district_090115,090115,PILCHACA,pe_province_0901
+pe_district_090116,090116,VILCA,pe_province_0901
+pe_district_090117,090117,YAULI,pe_province_0901
+pe_district_090118,090118,ASCENSION,pe_province_0901
+pe_district_090119,090119,HUANDO,pe_province_0901
+pe_district_090201,090201,ACOBAMBA,pe_province_0902
+pe_district_090202,090202,ANDABAMBA,pe_province_0902
+pe_district_090203,090203,ANTA,pe_province_0902
+pe_district_090204,090204,CAJA,pe_province_0902
+pe_district_090205,090205,MARCAS,pe_province_0902
+pe_district_090206,090206,PAUCARA,pe_province_0902
+pe_district_090207,090207,POMACOCHA,pe_province_0902
+pe_district_090208,090208,ROSARIO,pe_province_0902
+pe_district_090301,090301,LIRCAY,pe_province_0903
+pe_district_090302,090302,ANCHONGA,pe_province_0903
+pe_district_090303,090303,CALLANMARCA,pe_province_0903
+pe_district_090304,090304,CCOCHACCASA,pe_province_0903
+pe_district_090305,090305,CHINCHO,pe_province_0903
+pe_district_090306,090306,CONGALLA,pe_province_0903
+pe_district_090307,090307,HUANCA-HUANCA,pe_province_0903
+pe_district_090308,090308,HUAYLLAY GRANDE,pe_province_0903
+pe_district_090309,090309,JULCAMARCA,pe_province_0903
+pe_district_090310,090310,SAN ANTONIO DE ANTAPARCO,pe_province_0903
+pe_district_090311,090311,SANTO TOMAS DE PATA,pe_province_0903
+pe_district_090312,090312,SECCLLA,pe_province_0903
+pe_district_090401,090401,CASTROVIRREYNA,pe_province_0904
+pe_district_090402,090402,ARMA,pe_province_0904
+pe_district_090403,090403,AURAHUA,pe_province_0904
+pe_district_090404,090404,CAPILLAS,pe_province_0904
+pe_district_090405,090405,CHUPAMARCA,pe_province_0904
+pe_district_090406,090406,COCAS,pe_province_0904
+pe_district_090407,090407,HUACHOS,pe_province_0904
+pe_district_090408,090408,HUAMATAMBO,pe_province_0904
+pe_district_090409,090409,MOLLEPAMPA,pe_province_0904
+pe_district_090410,090410,SAN JUAN,pe_province_0904
+pe_district_090411,090411,SANTA ANA,pe_province_0904
+pe_district_090412,090412,TANTARA,pe_province_0904
+pe_district_090413,090413,TICRAPO,pe_province_0904
+pe_district_090501,090501,CHURCAMPA,pe_province_0905
+pe_district_090502,090502,ANCO,pe_province_0905
+pe_district_090503,090503,CHINCHIHUASI,pe_province_0905
+pe_district_090504,090504,EL CARMEN,pe_province_0905
+pe_district_090505,090505,LA MERCED,pe_province_0905
+pe_district_090506,090506,LOCROJA,pe_province_0905
+pe_district_090507,090507,PAUCARBAMBA,pe_province_0905
+pe_district_090508,090508,SAN MIGUEL DE MAYOCC,pe_province_0905
+pe_district_090509,090509,SAN PEDRO DE CORIS,pe_province_0905
+pe_district_090510,090510,PACHAMARCA,pe_province_0905
+pe_district_090601,090601,HUAYTARA,pe_province_0906
+pe_district_090602,090602,AYAVI,pe_province_0906
+pe_district_090603,090603,CORDOVA,pe_province_0906
+pe_district_090604,090604,HUAYACUNDO ARMA,pe_province_0906
+pe_district_090605,090605,LARAMARCA,pe_province_0906
+pe_district_090606,090606,OCOYO,pe_province_0906
+pe_district_090607,090607,PILPICHACA,pe_province_0906
+pe_district_090608,090608,QUERCO,pe_province_0906
+pe_district_090609,090609,QUITO-ARMA,pe_province_0906
+pe_district_090610,090610,SAN ANTONIO DE CUSICANCHA,pe_province_0906
+pe_district_090611,090611,SAN FRANCISCO DE SANGAYAICO,pe_province_0906
+pe_district_090612,090612,SAN ISIDRO,pe_province_0906
+pe_district_090613,090613,SANTIAGO DE CHOCORVOS,pe_province_0906
+pe_district_090614,090614,SANTIAGO DE QUIRAHUARA,pe_province_0906
+pe_district_090615,090615,SANTO DOMINGO DE CAPILLAS,pe_province_0906
+pe_district_090616,090616,TAMBO,pe_province_0906
+pe_district_090701,090701,PAMPAS,pe_province_0907
+pe_district_090702,090702,ACOSTAMBO,pe_province_0907
+pe_district_090703,090703,ACRAQUIA,pe_province_0907
+pe_district_090704,090704,AHUAYCHA,pe_province_0907
+pe_district_090705,090705,COLCABAMBA,pe_province_0907
+pe_district_090706,090706,DANIEL HERNANDEZ,pe_province_0907
+pe_district_090707,090707,HUACHOCOLPA,pe_province_0907
+pe_district_090709,090709,HUARIBAMBA,pe_province_0907
+pe_district_090710,090710,ÑAHUIMPUQUIO,pe_province_0907
+pe_district_090711,090711,PAZOS,pe_province_0907
+pe_district_090713,090713,QUISHUAR,pe_province_0907
+pe_district_090714,090714,SALCABAMBA,pe_province_0907
+pe_district_090715,090715,SALCAHUASI,pe_province_0907
+pe_district_090716,090716,SAN MARCOS DE ROCCHAC,pe_province_0907
+pe_district_090717,090717,SURCUBAMBA,pe_province_0907
+pe_district_090718,090718,TINTAY PUNCU,pe_province_0907
+pe_district_100101,100101,HUANUCO,pe_province_1001
+pe_district_100102,100102,AMARILIS,pe_province_1001
+pe_district_100103,100103,CHINCHAO,pe_province_1001
+pe_district_100104,100104,CHURUBAMBA,pe_province_1001
+pe_district_100105,100105,MARGOS,pe_province_1001
+pe_district_100106,100106,QUISQUI,pe_province_1001
+pe_district_100107,100107,SAN FRANCISCO DE CAYRAN,pe_province_1001
+pe_district_100108,100108,SAN PEDRO DE CHAULAN,pe_province_1001
+pe_district_100109,100109,SANTA MARIA DEL VALLE,pe_province_1001
+pe_district_100110,100110,YARUMAYO,pe_province_1001
+pe_district_100111,100111,PILLCO MARCA,pe_province_1001
+pe_district_100201,100201,AMBO,pe_province_1002
+pe_district_100202,100202,CAYNA,pe_province_1002
+pe_district_100203,100203,COLPAS,pe_province_1002
+pe_district_100204,100204,CONCHAMARCA,pe_province_1002
+pe_district_100205,100205,HUACAR,pe_province_1002
+pe_district_100206,100206,SAN FRANCISCO,pe_province_1002
+pe_district_100207,100207,SAN RAFAEL,pe_province_1002
+pe_district_100208,100208,TOMAY KICHWA,pe_province_1002
+pe_district_100301,100301,LA UNION,pe_province_1003
+pe_district_100307,100307,CHUQUIS,pe_province_1003
+pe_district_100311,100311,MARIAS,pe_province_1003
+pe_district_100313,100313,PACHAS,pe_province_1003
+pe_district_100316,100316,QUIVILLA,pe_province_1003
+pe_district_100317,100317,RIPAN,pe_province_1003
+pe_district_100321,100321,SHUNQUI,pe_province_1003
+pe_district_100322,100322,SILLAPATA,pe_province_1003
+pe_district_100323,100323,YANAS,pe_province_1003
+pe_district_100401,100401,HUACAYBAMBA,pe_province_1004
+pe_district_100402,100402,CANCHABAMBA,pe_province_1004
+pe_district_100403,100403,COCHABAMBA,pe_province_1004
+pe_district_100404,100404,PINRA,pe_province_1004
+pe_district_100501,100501,LLATA,pe_province_1005
+pe_district_100502,100502,ARANCAY,pe_province_1005
+pe_district_100503,100503,CHAVIN DE PARIARCA,pe_province_1005
+pe_district_100504,100504,JACAS GRANDE,pe_province_1005
+pe_district_100505,100505,JIRCAN,pe_province_1005
+pe_district_100506,100506,MIRAFLORES,pe_province_1005
+pe_district_100507,100507,MONZON,pe_province_1005
+pe_district_100508,100508,PUNCHAO,pe_province_1005
+pe_district_100509,100509,PUÑOS,pe_province_1005
+pe_district_100510,100510,SINGA,pe_province_1005
+pe_district_100511,100511,TANTAMAYO,pe_province_1005
+pe_district_100601,100601,RUPA-RUPA,pe_province_1006
+pe_district_100602,100602,DANIEL ALOMIA ROBLES,pe_province_1006
+pe_district_100603,100603,HERMILIO VALDIZAN,pe_province_1006
+pe_district_100604,100604,JOSE CRESPO Y CASTILLO,pe_province_1006
+pe_district_100605,100605,LUYANDO 1/,pe_province_1006
+pe_district_100606,100606,MARIANO DAMASO BERAUN,pe_province_1006
+pe_district_100701,100701,HUACRACHUCO,pe_province_1007
+pe_district_100702,100702,CHOLON,pe_province_1007
+pe_district_100703,100703,SAN BUENAVENTURA,pe_province_1007
+pe_district_100801,100801,PANAO,pe_province_1008
+pe_district_100802,100802,CHAGLLA,pe_province_1008
+pe_district_100803,100803,MOLINO,pe_province_1008
+pe_district_100804,100804,UMARI,pe_province_1008
+pe_district_100901,100901,PUERTO INCA,pe_province_1009
+pe_district_100902,100902,CODO DEL POZUZO,pe_province_1009
+pe_district_100903,100903,HONORIA,pe_province_1009
+pe_district_100904,100904,TOURNAVISTA,pe_province_1009
+pe_district_100905,100905,YUYAPICHIS,pe_province_1009
+pe_district_101001,101001,JESUS,pe_province_1010
+pe_district_101002,101002,BAÑOS,pe_province_1010
+pe_district_101003,101003,JIVIA,pe_province_1010
+pe_district_101004,101004,QUEROPALCA,pe_province_1010
+pe_district_101005,101005,RONDOS,pe_province_1010
+pe_district_101006,101006,SAN FRANCISCO DE ASIS,pe_province_1010
+pe_district_101007,101007,SAN MIGUEL DE CAURI,pe_province_1010
+pe_district_101101,101101,CHAVINILLO,pe_province_1011
+pe_district_101102,101102,CAHUAC,pe_province_1011
+pe_district_101103,101103,CHACABAMBA,pe_province_1011
+pe_district_101104,101104,APARICIO POMARES,pe_province_1011
+pe_district_101105,101105,JACAS CHICO,pe_province_1011
+pe_district_101106,101106,OBAS,pe_province_1011
+pe_district_101107,101107,PAMPAMARCA,pe_province_1011
+pe_district_101108,101108,CHORAS,pe_province_1011
+pe_district_110101,110101,ICA,pe_province_1101
+pe_district_110102,110102,LA TINGUIÑA,pe_province_1101
+pe_district_110103,110103,LOS AQUIJES,pe_province_1101
+pe_district_110104,110104,OCUCAJE,pe_province_1101
+pe_district_110105,110105,PACHACUTEC,pe_province_1101
+pe_district_110106,110106,PARCONA,pe_province_1101
+pe_district_110107,110107,PUEBLO NUEVO,pe_province_1101
+pe_district_110108,110108,SALAS,pe_province_1101
+pe_district_110109,110109,SAN JOSE DE LOS MOLINOS,pe_province_1101
+pe_district_110110,110110,SAN JUAN BAUTISTA,pe_province_1101
+pe_district_110111,110111,SANTIAGO,pe_province_1101
+pe_district_110112,110112,SUBTANJALLA,pe_province_1101
+pe_district_110113,110113,TATE,pe_province_1101
+pe_district_110114,110114,YAUCA DEL ROSARIO  1/,pe_province_1101
+pe_district_110201,110201,CHINCHA ALTA,pe_province_1102
+pe_district_110202,110202,ALTO LARAN,pe_province_1102
+pe_district_110203,110203,CHAVIN,pe_province_1102
+pe_district_110204,110204,CHINCHA BAJA,pe_province_1102
+pe_district_110205,110205,EL CARMEN,pe_province_1102
+pe_district_110206,110206,GROCIO PRADO,pe_province_1102
+pe_district_110207,110207,PUEBLO NUEVO,pe_province_1102
+pe_district_110208,110208,SAN JUAN DE YANAC,pe_province_1102
+pe_district_110209,110209,SAN PEDRO DE HUACARPANA,pe_province_1102
+pe_district_110210,110210,SUNAMPE,pe_province_1102
+pe_district_110211,110211,TAMBO DE MORA,pe_province_1102
+pe_district_110301,110301,NAZCA,pe_province_1103
+pe_district_110302,110302,CHANGUILLO,pe_province_1103
+pe_district_110303,110303,EL INGENIO,pe_province_1103
+pe_district_110304,110304,MARCONA,pe_province_1103
+pe_district_110305,110305,VISTA ALEGRE,pe_province_1103
+pe_district_110401,110401,PALPA,pe_province_1104
+pe_district_110402,110402,LLIPATA,pe_province_1104
+pe_district_110403,110403,RIO GRANDE,pe_province_1104
+pe_district_110404,110404,SANTA CRUZ,pe_province_1104
+pe_district_110405,110405,TIBILLO,pe_province_1104
+pe_district_110501,110501,PISCO,pe_province_1105
+pe_district_110502,110502,HUANCANO,pe_province_1105
+pe_district_110503,110503,HUMAY,pe_province_1105
+pe_district_110504,110504,INDEPENDENCIA,pe_province_1105
+pe_district_110505,110505,PARACAS,pe_province_1105
+pe_district_110506,110506,SAN ANDRES,pe_province_1105
+pe_district_110507,110507,SAN CLEMENTE,pe_province_1105
+pe_district_110508,110508,TUPAC AMARU INCA,pe_province_1105
+pe_district_120101,120101,HUANCAYO,pe_province_1201
+pe_district_120104,120104,CARHUACALLANGA,pe_province_1201
+pe_district_120105,120105,CHACAPAMPA,pe_province_1201
+pe_district_120106,120106,CHICCHE,pe_province_1201
+pe_district_120107,120107,CHILCA,pe_province_1201
+pe_district_120108,120108,CHONGOS ALTO,pe_province_1201
+pe_district_120111,120111,CHUPURO,pe_province_1201
+pe_district_120112,120112,COLCA,pe_province_1201
+pe_district_120113,120113,CULLHUAS,pe_province_1201
+pe_district_120114,120114,EL TAMBO,pe_province_1201
+pe_district_120116,120116,HUACRAPUQUIO,pe_province_1201
+pe_district_120117,120117,HUALHUAS,pe_province_1201
+pe_district_120119,120119,HUANCAN,pe_province_1201
+pe_district_120120,120120,HUASICANCHA,pe_province_1201
+pe_district_120121,120121,HUAYUCACHI,pe_province_1201
+pe_district_120122,120122,INGENIO,pe_province_1201
+pe_district_120124,120124,PARIAHUANCA   1/,pe_province_1201
+pe_district_120125,120125,PILCOMAYO,pe_province_1201
+pe_district_120126,120126,PUCARA,pe_province_1201
+pe_district_120127,120127,QUICHUAY,pe_province_1201
+pe_district_120128,120128,QUILCAS,pe_province_1201
+pe_district_120129,120129,SAN AGUSTIN,pe_province_1201
+pe_district_120130,120130,SAN JERONIMO DE TUNAN,pe_province_1201
+pe_district_120132,120132,SAÑO,pe_province_1201
+pe_district_120133,120133,SAPALLANGA,pe_province_1201
+pe_district_120134,120134,SICAYA,pe_province_1201
+pe_district_120135,120135,SANTO DOMINGO DE ACOBAMBA,pe_province_1201
+pe_district_120136,120136,VIQUES,pe_province_1201
+pe_district_120201,120201,CONCEPCION,pe_province_1202
+pe_district_120202,120202,ACO,pe_province_1202
+pe_district_120203,120203,ANDAMARCA,pe_province_1202
+pe_district_120204,120204,CHAMBARA,pe_province_1202
+pe_district_120205,120205,COCHAS,pe_province_1202
+pe_district_120206,120206,COMAS,pe_province_1202
+pe_district_120207,120207,HEROINAS TOLEDO,pe_province_1202
+pe_district_120208,120208,MANZANARES,pe_province_1202
+pe_district_120209,120209,MARISCAL CASTILLA,pe_province_1202
+pe_district_120210,120210,MATAHUASI,pe_province_1202
+pe_district_120211,120211,MITO,pe_province_1202
+pe_district_120212,120212,NUEVE DE JULIO,pe_province_1202
+pe_district_120213,120213,ORCOTUNA,pe_province_1202
+pe_district_120214,120214,SAN JOSE DE QUERO,pe_province_1202
+pe_district_120215,120215,SANTA ROSA DE OCOPA,pe_province_1202
+pe_district_120301,120301,CHANCHAMAYO,pe_province_1203
+pe_district_120302,120302,PERENE,pe_province_1203
+pe_district_120303,120303,PICHANAQUI,pe_province_1203
+pe_district_120304,120304,SAN LUIS DE SHUARO,pe_province_1203
+pe_district_120305,120305,SAN RAMON,pe_province_1203
+pe_district_120306,120306,VITOC,pe_province_1203
+pe_district_120401,120401,JAUJA,pe_province_1204
+pe_district_120402,120402,ACOLLA,pe_province_1204
+pe_district_120403,120403,APATA,pe_province_1204
+pe_district_120404,120404,ATAURA,pe_province_1204
+pe_district_120405,120405,CANCHAYLLO,pe_province_1204
+pe_district_120406,120406,CURICACA,pe_province_1204
+pe_district_120407,120407,EL MANTARO,pe_province_1204
+pe_district_120408,120408,HUAMALI,pe_province_1204
+pe_district_120409,120409,HUARIPAMPA,pe_province_1204
+pe_district_120410,120410,HUERTAS,pe_province_1204
+pe_district_120411,120411,JANJAILLO,pe_province_1204
+pe_district_120412,120412,JULCAN,pe_province_1204
+pe_district_120413,120413,LEONOR ORDOÑEZ,pe_province_1204
+pe_district_120414,120414,LLOCLLAPAMPA,pe_province_1204
+pe_district_120415,120415,MARCO,pe_province_1204
+pe_district_120416,120416,MASMA,pe_province_1204
+pe_district_120417,120417,MASMA CHICCHE,pe_province_1204
+pe_district_120418,120418,MOLINOS,pe_province_1204
+pe_district_120419,120419,MONOBAMBA,pe_province_1204
+pe_district_120420,120420,MUQUI,pe_province_1204
+pe_district_120421,120421,MUQUIYAUYO,pe_province_1204
+pe_district_120422,120422,PACA,pe_province_1204
+pe_district_120423,120423,PACCHA,pe_province_1204
+pe_district_120424,120424,PANCAN,pe_province_1204
+pe_district_120425,120425,PARCO,pe_province_1204
+pe_district_120426,120426,POMACANCHA,pe_province_1204
+pe_district_120427,120427,RICRAN,pe_province_1204
+pe_district_120428,120428,SAN LORENZO,pe_province_1204
+pe_district_120429,120429,SAN PEDRO DE CHUNAN,pe_province_1204
+pe_district_120430,120430,SAUSA,pe_province_1204
+pe_district_120431,120431,SINCOS,pe_province_1204
+pe_district_120432,120432,TUNAN MARCA,pe_province_1204
+pe_district_120433,120433,YAULI,pe_province_1204
+pe_district_120434,120434,YAUYOS,pe_province_1204
+pe_district_120501,120501,JUNIN,pe_province_1205
+pe_district_120502,120502,CARHUAMAYO,pe_province_1205
+pe_district_120503,120503,ONDORES,pe_province_1205
+pe_district_120504,120504,ULCUMAYO,pe_province_1205
+pe_district_120601,120601,SATIPO,pe_province_1206
+pe_district_120602,120602,COVIRIALI,pe_province_1206
+pe_district_120603,120603,LLAYLLA,pe_province_1206
+pe_district_120604,120604,MAZAMARI,pe_province_1206
+pe_district_120605,120605,PAMPA HERMOSA,pe_province_1206
+pe_district_120606,120606,PANGOA,pe_province_1206
+pe_district_120607,120607,RIO NEGRO,pe_province_1206
+pe_district_120608,120608,RIO TAMBO,pe_province_1206
+pe_district_120701,120701,TARMA,pe_province_1207
+pe_district_120702,120702,ACOBAMBA,pe_province_1207
+pe_district_120703,120703,HUARICOLCA,pe_province_1207
+pe_district_120704,120704,HUASAHUASI,pe_province_1207
+pe_district_120705,120705,LA UNION,pe_province_1207
+pe_district_120706,120706,PALCA,pe_province_1207
+pe_district_120707,120707,PALCAMAYO,pe_province_1207
+pe_district_120708,120708,SAN PEDRO DE CAJAS,pe_province_1207
+pe_district_120709,120709,TAPO,pe_province_1207
+pe_district_120801,120801,LA OROYA,pe_province_1208
+pe_district_120802,120802,CHACAPALPA,pe_province_1208
+pe_district_120803,120803,HUAY-HUAY,pe_province_1208
+pe_district_120804,120804,MARCAPOMACOCHA,pe_province_1208
+pe_district_120805,120805,MOROCOCHA,pe_province_1208
+pe_district_120806,120806,PACCHA,pe_province_1208
+pe_district_120807,120807,SANTA BARBARA DE CARHUACAYAN,pe_province_1208
+pe_district_120808,120808,SANTA ROSA DE SACCO,pe_province_1208
+pe_district_120809,120809,SUITUCANCHA,pe_province_1208
+pe_district_120810,120810,YAULI,pe_province_1208
+pe_district_120901,120901,CHUPACA,pe_province_1209
+pe_district_120902,120902,AHUAC,pe_province_1209
+pe_district_120903,120903,CHONGOS BAJO,pe_province_1209
+pe_district_120904,120904,HUACHAC,pe_province_1209
+pe_district_120905,120905,HUAMANCACA CHICO,pe_province_1209
+pe_district_120906,120906,SAN JUAN DE ISCOS,pe_province_1209
+pe_district_120907,120907,SAN JUAN DE JARPA,pe_province_1209
+pe_district_120908,120908,TRES DE DICIEMBRE,pe_province_1209
+pe_district_120909,120909,YANACANCHA,pe_province_1209
+pe_district_130101,130101,TRUJILLO,pe_province_1301
+pe_district_130102,130102,EL PORVENIR,pe_province_1301
+pe_district_130103,130103,FLORENCIA DE MORA,pe_province_1301
+pe_district_130104,130104,HUANCHACO,pe_province_1301
+pe_district_130105,130105,LA ESPERANZA,pe_province_1301
+pe_district_130106,130106,LAREDO,pe_province_1301
+pe_district_130107,130107,MOCHE,pe_province_1301
+pe_district_130108,130108,POROTO,pe_province_1301
+pe_district_130109,130109,SALAVERRY,pe_province_1301
+pe_district_130110,130110,SIMBAL,pe_province_1301
+pe_district_130111,130111,VICTOR LARCO HERRERA,pe_province_1301
+pe_district_130201,130201,ASCOPE,pe_province_1302
+pe_district_130202,130202,CHICAMA,pe_province_1302
+pe_district_130203,130203,CHOCOPE,pe_province_1302
+pe_district_130204,130204,MAGDALENA DE CAO,pe_province_1302
+pe_district_130205,130205,PAIJAN,pe_province_1302
+pe_district_130206,130206,RAZURI,pe_province_1302
+pe_district_130207,130207,SANTIAGO DE CAO,pe_province_1302
+pe_district_130208,130208,CASA GRANDE,pe_province_1302
+pe_district_130301,130301,BOLIVAR,pe_province_1303
+pe_district_130302,130302,BAMBAMARCA,pe_province_1303
+pe_district_130303,130303,CONDORMARCA /1,pe_province_1303
+pe_district_130304,130304,LONGOTEA,pe_province_1303
+pe_district_130305,130305,UCHUMARCA,pe_province_1303
+pe_district_130306,130306,UCUNCHA,pe_province_1303
+pe_district_130401,130401,CHEPEN,pe_province_1304
+pe_district_130402,130402,PACANGA,pe_province_1304
+pe_district_130403,130403,PUEBLO NUEVO,pe_province_1304
+pe_district_130501,130501,JULCAN,pe_province_1305
+pe_district_130502,130502,CALAMARCA,pe_province_1305
+pe_district_130503,130503,CARABAMBA,pe_province_1305
+pe_district_130504,130504,HUASO,pe_province_1305
+pe_district_130601,130601,OTUZCO,pe_province_1306
+pe_district_130602,130602,AGALLPAMPA,pe_province_1306
+pe_district_130604,130604,CHARAT,pe_province_1306
+pe_district_130605,130605,HUARANCHAL,pe_province_1306
+pe_district_130606,130606,LA CUESTA,pe_province_1306
+pe_district_130608,130608,MACHE,pe_province_1306
+pe_district_130610,130610,PARANDAY,pe_province_1306
+pe_district_130611,130611,SALPO,pe_province_1306
+pe_district_130613,130613,SINSICAP,pe_province_1306
+pe_district_130614,130614,USQUIL,pe_province_1306
+pe_district_130701,130701,SAN PEDRO DE LLOC,pe_province_1307
+pe_district_130702,130702,GUADALUPE,pe_province_1307
+pe_district_130703,130703,JEQUETEPEQUE,pe_province_1307
+pe_district_130704,130704,PACASMAYO,pe_province_1307
+pe_district_130705,130705,SAN JOSE,pe_province_1307
+pe_district_130801,130801,TAYABAMBA,pe_province_1308
+pe_district_130802,130802,BULDIBUYO,pe_province_1308
+pe_district_130803,130803,CHILLIA,pe_province_1308
+pe_district_130804,130804,HUANCASPATA,pe_province_1308
+pe_district_130805,130805,HUAYLILLAS,pe_province_1308
+pe_district_130806,130806,HUAYO,pe_province_1308
+pe_district_130807,130807,ONGON,pe_province_1308
+pe_district_130808,130808,PARCOY,pe_province_1308
+pe_district_130809,130809,PATAZ,pe_province_1308
+pe_district_130810,130810,PIAS,pe_province_1308
+pe_district_130811,130811,SANTIAGO DE CHALLAS,pe_province_1308
+pe_district_130812,130812,TAURIJA,pe_province_1308
+pe_district_130813,130813,URPAY,pe_province_1308
+pe_district_130901,130901,HUAMACHUCO,pe_province_1309
+pe_district_130902,130902,CHUGAY,pe_province_1309
+pe_district_130903,130903,COCHORCO,pe_province_1309
+pe_district_130904,130904,CURGOS,pe_province_1309
+pe_district_130905,130905,MARCABAL,pe_province_1309
+pe_district_130906,130906,SANAGORAN,pe_province_1309
+pe_district_130907,130907,SARIN,pe_province_1309
+pe_district_130908,130908,SARTIMBAMBA,pe_province_1309
+pe_district_131001,131001,SANTIAGO DE CHUCO,pe_province_1310
+pe_district_131002,131002,ANGASMARCA,pe_province_1310
+pe_district_131003,131003,CACHICADAN,pe_province_1310
+pe_district_131004,131004,MOLLEBAMBA,pe_province_1310
+pe_district_131005,131005,MOLLEPATA,pe_province_1310
+pe_district_131006,131006,QUIRUVILCA,pe_province_1310
+pe_district_131007,131007,SANTA CRUZ DE CHUCA,pe_province_1310
+pe_district_131008,131008,SITABAMBA,pe_province_1310
+pe_district_131101,131101,CASCAS,pe_province_1311
+pe_district_131102,131102,LUCMA,pe_province_1311
+pe_district_131103,131103,COMPIN,pe_province_1311
+pe_district_131104,131104,SAYAPULLO,pe_province_1311
+pe_district_131201,131201,VIRU,pe_province_1312
+pe_district_131202,131202,CHAO,pe_province_1312
+pe_district_131203,131203,GUADALUPITO,pe_province_1312
+pe_district_140101,140101,CHICLAYO,pe_province_1401
+pe_district_140102,140102,CHONGOYAPE,pe_province_1401
+pe_district_140103,140103,ETEN,pe_province_1401
+pe_district_140104,140104,ETEN PUERTO,pe_province_1401
+pe_district_140105,140105,JOSE LEONARDO ORTIZ,pe_province_1401
+pe_district_140106,140106,LA VICTORIA,pe_province_1401
+pe_district_140107,140107,LAGUNAS,pe_province_1401
+pe_district_140108,140108,MONSEFU,pe_province_1401
+pe_district_140109,140109,NUEVA ARICA,pe_province_1401
+pe_district_140110,140110,OYOTUN,pe_province_1401
+pe_district_140111,140111,PICSI,pe_province_1401
+pe_district_140112,140112,PIMENTEL,pe_province_1401
+pe_district_140113,140113,REQUE,pe_province_1401
+pe_district_140114,140114,SANTA ROSA,pe_province_1401
+pe_district_140115,140115,SAÑA,pe_province_1401
+pe_district_140116,140116,CAYALTI,pe_province_1401
+pe_district_140117,140117,PATAPO,pe_province_1401
+pe_district_140118,140118,POMALCA,pe_province_1401
+pe_district_140119,140119,PUCALA,pe_province_1401
+pe_district_140120,140120,TUMAN,pe_province_1401
+pe_district_140201,140201,FERREÑAFE,pe_province_1402
+pe_district_140202,140202,CAÑARIS,pe_province_1402
+pe_district_140203,140203,INCAHUASI,pe_province_1402
+pe_district_140204,140204,MANUEL ANTONIO MESONES MURO,pe_province_1402
+pe_district_140205,140205,PITIPO,pe_province_1402
+pe_district_140206,140206,PUEBLO NUEVO,pe_province_1402
+pe_district_140301,140301,LAMBAYEQUE,pe_province_1403
+pe_district_140302,140302,CHOCHOPE,pe_province_1403
+pe_district_140303,140303,ILLIMO,pe_province_1403
+pe_district_140304,140304,JAYANCA,pe_province_1403
+pe_district_140305,140305,MOCHUMI,pe_province_1403
+pe_district_140306,140306,MORROPE,pe_province_1403
+pe_district_140307,140307,MOTUPE,pe_province_1403
+pe_district_140308,140308,OLMOS,pe_province_1403
+pe_district_140309,140309,PACORA,pe_province_1403
+pe_district_140310,140310,SALAS,pe_province_1403
+pe_district_140311,140311,SAN JOSE,pe_province_1403
+pe_district_140312,140312,TUCUME,pe_province_1403
+pe_district_150101,150101,LIMA,pe_province_1501
+pe_district_150102,150102,ANCON,pe_province_1501
+pe_district_150103,150103,ATE,pe_province_1501
+pe_district_150104,150104,BARRANCO,pe_province_1501
+pe_district_150105,150105,BREÑA,pe_province_1501
+pe_district_150106,150106,CARABAYLLO,pe_province_1501
+pe_district_150107,150107,CHACLACAYO,pe_province_1501
+pe_district_150108,150108,CHORRILLOS,pe_province_1501
+pe_district_150109,150109,CIENEGUILLA,pe_province_1501
+pe_district_150110,150110,COMAS,pe_province_1501
+pe_district_150111,150111,EL AGUSTINO,pe_province_1501
+pe_district_150112,150112,INDEPENDENCIA,pe_province_1501
+pe_district_150113,150113,JESUS MARIA,pe_province_1501
+pe_district_150114,150114,LA MOLINA,pe_province_1501
+pe_district_150115,150115,LA VICTORIA,pe_province_1501
+pe_district_150116,150116,LINCE,pe_province_1501
+pe_district_150117,150117,LOS OLIVOS,pe_province_1501
+pe_district_150118,150118,LURIGANCHO,pe_province_1501
+pe_district_150119,150119,LURIN,pe_province_1501
+pe_district_150120,150120,MAGDALENA DEL MAR,pe_province_1501
+pe_district_150121,150121,PUEBLO LIBRE,pe_province_1501
+pe_district_150122,150122,MIRAFLORES,pe_province_1501
+pe_district_150123,150123,PACHACAMAC,pe_province_1501
+pe_district_150124,150124,PUCUSANA,pe_province_1501
+pe_district_150125,150125,PUENTE PIEDRA,pe_province_1501
+pe_district_150126,150126,PUNTA HERMOSA,pe_province_1501
+pe_district_150127,150127,PUNTA NEGRA,pe_province_1501
+pe_district_150128,150128,RIMAC,pe_province_1501
+pe_district_150129,150129,SAN BARTOLO,pe_province_1501
+pe_district_150130,150130,SAN BORJA,pe_province_1501
+pe_district_150131,150131,SAN ISIDRO,pe_province_1501
+pe_district_150132,150132,SAN JUAN DE LURIGANCHO,pe_province_1501
+pe_district_150133,150133,SAN JUAN DE MIRAFLORES,pe_province_1501
+pe_district_150134,150134,SAN LUIS,pe_province_1501
+pe_district_150135,150135,SAN MARTIN DE PORRES,pe_province_1501
+pe_district_150136,150136,SAN MIGUEL,pe_province_1501
+pe_district_150137,150137,SANTA ANITA,pe_province_1501
+pe_district_150138,150138,SANTA MARIA DEL MAR,pe_province_1501
+pe_district_150139,150139,SANTA ROSA,pe_province_1501
+pe_district_150140,150140,SANTIAGO DE SURCO,pe_province_1501
+pe_district_150141,150141,SURQUILLO,pe_province_1501
+pe_district_150142,150142,VILLA EL SALVADOR,pe_province_1501
+pe_district_150143,150143,VILLA MARIA DEL TRIUNFO,pe_province_1501
+pe_district_150201,150201,BARRANCA,pe_province_1502
+pe_district_150202,150202,PARAMONGA,pe_province_1502
+pe_district_150203,150203,PATIVILCA,pe_province_1502
+pe_district_150204,150204,SUPE,pe_province_1502
+pe_district_150205,150205,SUPE PUERTO,pe_province_1502
+pe_district_150301,150301,CAJATAMBO,pe_province_1503
+pe_district_150302,150302,COPA,pe_province_1503
+pe_district_150303,150303,GORGOR,pe_province_1503
+pe_district_150304,150304,HUANCAPON,pe_province_1503
+pe_district_150305,150305,MANAS,pe_province_1503
+pe_district_150401,150401,CANTA,pe_province_1504
+pe_district_150402,150402,ARAHUAY,pe_province_1504
+pe_district_150403,150403,HUAMANTANGA,pe_province_1504
+pe_district_150404,150404,HUAROS,pe_province_1504
+pe_district_150405,150405,LACHAQUI,pe_province_1504
+pe_district_150406,150406,SAN BUENAVENTURA,pe_province_1504
+pe_district_150407,150407,SANTA ROSA DE QUIVES,pe_province_1504
+pe_district_150501,150501,SAN VICENTE DE CAÑETE,pe_province_1505
+pe_district_150502,150502,ASIA,pe_province_1505
+pe_district_150503,150503,CALANGO,pe_province_1505
+pe_district_150504,150504,CERRO AZUL,pe_province_1505
+pe_district_150505,150505,CHILCA,pe_province_1505
+pe_district_150506,150506,COAYLLO,pe_province_1505
+pe_district_150507,150507,IMPERIAL,pe_province_1505
+pe_district_150508,150508,LUNAHUANA,pe_province_1505
+pe_district_150509,150509,MALA,pe_province_1505
+pe_district_150510,150510,NUEVO IMPERIAL,pe_province_1505
+pe_district_150511,150511,PACARAN,pe_province_1505
+pe_district_150512,150512,QUILMANA,pe_province_1505
+pe_district_150513,150513,SAN ANTONIO,pe_province_1505
+pe_district_150514,150514,SAN LUIS,pe_province_1505
+pe_district_150515,150515,SANTA CRUZ DE FLORES,pe_province_1505
+pe_district_150516,150516,ZUÑIGA,pe_province_1505
+pe_district_150601,150601,HUARAL,pe_province_1506
+pe_district_150602,150602,ATAVILLOS ALTO,pe_province_1506
+pe_district_150603,150603,ATAVILLOS BAJO,pe_province_1506
+pe_district_150604,150604,AUCALLAMA,pe_province_1506
+pe_district_150605,150605,CHANCAY,pe_province_1506
+pe_district_150606,150606,IHUARI,pe_province_1506
+pe_district_150607,150607,LAMPIAN,pe_province_1506
+pe_district_150608,150608,PACARAOS,pe_province_1506
+pe_district_150609,150609,SAN MIGUEL DE ACOS,pe_province_1506
+pe_district_150610,150610,SANTA CRUZ DE ANDAMARCA,pe_province_1506
+pe_district_150611,150611,SUMBILCA,pe_province_1506
+pe_district_150612,150612,VEINTISIETE DE NOVIEMBRE,pe_province_1506
+pe_district_150701,150701,MATUCANA,pe_province_1507
+pe_district_150702,150702,ANTIOQUIA,pe_province_1507
+pe_district_150703,150703,CALLAHUANCA,pe_province_1507
+pe_district_150704,150704,CARAMPOMA,pe_province_1507
+pe_district_150705,150705,CHICLA,pe_province_1507
+pe_district_150706,150706,CUENCA,pe_province_1507
+pe_district_150707,150707,HUACHUPAMPA,pe_province_1507
+pe_district_150708,150708,HUANZA,pe_province_1507
+pe_district_150709,150709,HUAROCHIRI,pe_province_1507
+pe_district_150710,150710,LAHUAYTAMBO,pe_province_1507
+pe_district_150711,150711,LANGA,pe_province_1507
+pe_district_150712,150712,LARAOS,pe_province_1507
+pe_district_150713,150713,MARIATANA,pe_province_1507
+pe_district_150714,150714,RICARDO PALMA,pe_province_1507
+pe_district_150715,150715,SAN ANDRES DE TUPICOCHA,pe_province_1507
+pe_district_150716,150716,SAN ANTONIO,pe_province_1507
+pe_district_150717,150717,SAN BARTOLOME,pe_province_1507
+pe_district_150718,150718,SAN DAMIAN,pe_province_1507
+pe_district_150719,150719,SAN JUAN DE IRIS,pe_province_1507
+pe_district_150720,150720,SAN JUAN DE TANTARANCHE,pe_province_1507
+pe_district_150721,150721,SAN LORENZO DE QUINTI,pe_province_1507
+pe_district_150722,150722,SAN MATEO,pe_province_1507
+pe_district_150723,150723,SAN MATEO DE OTAO,pe_province_1507
+pe_district_150724,150724,SAN PEDRO DE CASTA,pe_province_1507
+pe_district_150725,150725,SAN PEDRO DE HUANCAYRE,pe_province_1507
+pe_district_150726,150726,SANGALLAYA,pe_province_1507
+pe_district_150727,150727,SANTA CRUZ DE COCACHACRA,pe_province_1507
+pe_district_150728,150728,SANTA EULALIA,pe_province_1507
+pe_district_150729,150729,SANTIAGO DE ANCHUCAYA,pe_province_1507
+pe_district_150730,150730,SANTIAGO DE TUNA,pe_province_1507
+pe_district_150731,150731,SANTO DOMINGO DE LOS OLLEROS,pe_province_1507
+pe_district_150732,150732,SURCO,pe_province_1507
+pe_district_150801,150801,HUACHO,pe_province_1508
+pe_district_150802,150802,AMBAR,pe_province_1508
+pe_district_150803,150803,CALETA DE CARQUIN,pe_province_1508
+pe_district_150804,150804,CHECRAS,pe_province_1508
+pe_district_150805,150805,HUALMAY,pe_province_1508
+pe_district_150806,150806,HUAURA,pe_province_1508
+pe_district_150807,150807,LEONCIO PRADO,pe_province_1508
+pe_district_150808,150808,PACCHO,pe_province_1508
+pe_district_150809,150809,SANTA LEONOR,pe_province_1508
+pe_district_150810,150810,SANTA MARIA,pe_province_1508
+pe_district_150811,150811,SAYAN,pe_province_1508
+pe_district_150812,150812,VEGUETA,pe_province_1508
+pe_district_150901,150901,OYON,pe_province_1509
+pe_district_150902,150902,ANDAJES,pe_province_1509
+pe_district_150903,150903,CAUJUL,pe_province_1509
+pe_district_150904,150904,COCHAMARCA,pe_province_1509
+pe_district_150905,150905,NAVAN,pe_province_1509
+pe_district_150906,150906,PACHANGARA,pe_province_1509
+pe_district_151001,151001,YAUYOS,pe_province_1510
+pe_district_151002,151002,ALIS,pe_province_1510
+pe_district_151003,151003,ALLAUCA,pe_province_1510
+pe_district_151004,151004,AYAVIRI,pe_province_1510
+pe_district_151005,151005,AZANGARO,pe_province_1510
+pe_district_151006,151006,CACRA,pe_province_1510
+pe_district_151007,151007,CARANIA,pe_province_1510
+pe_district_151008,151008,CATAHUASI,pe_province_1510
+pe_district_151009,151009,CHOCOS,pe_province_1510
+pe_district_151010,151010,COCHAS,pe_province_1510
+pe_district_151011,151011,COLONIA,pe_province_1510
+pe_district_151012,151012,HONGOS,pe_province_1510
+pe_district_151013,151013,HUAMPARA,pe_province_1510
+pe_district_151014,151014,HUANCAYA,pe_province_1510
+pe_district_151015,151015,HUANGASCAR,pe_province_1510
+pe_district_151016,151016,HUANTAN,pe_province_1510
+pe_district_151017,151017,HUAÑEC,pe_province_1510
+pe_district_151018,151018,LARAOS,pe_province_1510
+pe_district_151019,151019,LINCHA,pe_province_1510
+pe_district_151020,151020,MADEAN,pe_province_1510
+pe_district_151021,151021,MIRAFLORES,pe_province_1510
+pe_district_151022,151022,OMAS,pe_province_1510
+pe_district_151023,151023,PUTINZA,pe_province_1510
+pe_district_151024,151024,QUINCHES,pe_province_1510
+pe_district_151025,151025,QUINOCAY,pe_province_1510
+pe_district_151026,151026,SAN JOAQUIN,pe_province_1510
+pe_district_151027,151027,SAN PEDRO DE PILAS,pe_province_1510
+pe_district_151028,151028,TANTA,pe_province_1510
+pe_district_151029,151029,TAURIPAMPA,pe_province_1510
+pe_district_151030,151030,TOMAS,pe_province_1510
+pe_district_151031,151031,TUPE,pe_province_1510
+pe_district_151032,151032,VIÑAC,pe_province_1510
+pe_district_151033,151033,VITIS,pe_province_1510
+pe_district_160101,160101,IQUITOS,pe_province_1601
+pe_district_160102,160102,ALTO NANAY,pe_province_1601
+pe_district_160103,160103,FERNANDO LORES,pe_province_1601
+pe_district_160104,160104,INDIANA,pe_province_1601
+pe_district_160105,160105,LAS AMAZONAS,pe_province_1601
+pe_district_160106,160106,MAZAN,pe_province_1601
+pe_district_160107,160107,NAPO,pe_province_1601
+pe_district_160108,160108,PUNCHANA,pe_province_1601
+pe_district_160109,160109,PUTUMAYO,pe_province_1601
+pe_district_160110,160110,TORRES CAUSANA,pe_province_1601
+pe_district_160112,160112,BELEN,pe_province_1601
+pe_district_160113,160113,SAN JUAN BAUTISTA,pe_province_1601
+pe_district_160114,160114,TENIENTE MANUEL CLAVERO,pe_province_1601
+pe_district_160201,160201,YURIMAGUAS,pe_province_1602
+pe_district_160202,160202,BALSAPUERTO,pe_province_1602
+pe_district_160205,160205,JEBEROS,pe_province_1602
+pe_district_160206,160206,LAGUNAS,pe_province_1602
+pe_district_160210,160210,SANTA CRUZ,pe_province_1602
+pe_district_160211,160211,TENIENTE CESAR LOPEZ ROJAS,pe_province_1602
+pe_district_160301,160301,NAUTA,pe_province_1603
+pe_district_160302,160302,PARINARI,pe_province_1603
+pe_district_160303,160303,TIGRE,pe_province_1603
+pe_district_160304,160304,TROMPETEROS,pe_province_1603
+pe_district_160305,160305,URARINAS,pe_province_1603
+pe_district_160401,160401,RAMON CASTILLA,pe_province_1604
+pe_district_160402,160402,PEBAS,pe_province_1604
+pe_district_160403,160403,YAVARI  /1,pe_province_1604
+pe_district_160404,160404,SAN PABLO,pe_province_1604
+pe_district_160501,160501,REQUENA,pe_province_1605
+pe_district_160502,160502,ALTO TAPICHE,pe_province_1605
+pe_district_160503,160503,CAPELO,pe_province_1605
+pe_district_160504,160504,EMILIO SAN MARTIN,pe_province_1605
+pe_district_160505,160505,MAQUIA,pe_province_1605
+pe_district_160506,160506,PUINAHUA,pe_province_1605
+pe_district_160507,160507,SAQUENA,pe_province_1605
+pe_district_160508,160508,SOPLIN,pe_province_1605
+pe_district_160509,160509,TAPICHE,pe_province_1605
+pe_district_160510,160510,JENARO HERRERA,pe_province_1605
+pe_district_160511,160511,YAQUERANA,pe_province_1605
+pe_district_160601,160601,CONTAMANA,pe_province_1606
+pe_district_160602,160602,INAHUAYA,pe_province_1606
+pe_district_160603,160603,PADRE MARQUEZ,pe_province_1606
+pe_district_160604,160604,PAMPA HERMOSA,pe_province_1606
+pe_district_160605,160605,SARAYACU,pe_province_1606
+pe_district_160606,160606,VARGAS GUERRA,pe_province_1606
+pe_district_160701,160701,BARRANCA,pe_province_1607
+pe_district_160702,160702,CAHUAPANAS,pe_province_1607
+pe_district_160703,160703,MANSERICHE,pe_province_1607
+pe_district_160704,160704,MORONA,pe_province_1607
+pe_district_160705,160705,PASTAZA,pe_province_1607
+pe_district_160706,160706,ANDOAS,pe_province_1607
+pe_district_170101,170101,TAMBOPATA,pe_province_1701
+pe_district_170102,170102,INAMBARI,pe_province_1701
+pe_district_170103,170103,LAS PIEDRAS,pe_province_1701
+pe_district_170104,170104,LABERINTO,pe_province_1701
+pe_district_170201,170201,MANU,pe_province_1702
+pe_district_170202,170202,FITZCARRALD,pe_province_1702
+pe_district_170203,170203,MADRE DE DIOS,pe_province_1702
+pe_district_170204,170204,HUEPETUHE,pe_province_1702
+pe_district_170301,170301,IÑAPARI,pe_province_1703
+pe_district_170302,170302,IBERIA,pe_province_1703
+pe_district_170303,170303,TAHUAMANU,pe_province_1703
+pe_district_180101,180101,MOQUEGUA,pe_province_1801
+pe_district_180102,180102,CARUMAS,pe_province_1801
+pe_district_180103,180103,CUCHUMBAYA,pe_province_1801
+pe_district_180104,180104,SAMEGUA,pe_province_1801
+pe_district_180105,180105,SAN CRISTOBAL,pe_province_1801
+pe_district_180106,180106,TORATA,pe_province_1801
+pe_district_180201,180201,OMATE,pe_province_1802
+pe_district_180202,180202,CHOJATA,pe_province_1802
+pe_district_180203,180203,COALAQUE,pe_province_1802
+pe_district_180204,180204,ICHUÑA,pe_province_1802
+pe_district_180205,180205,LA CAPILLA,pe_province_1802
+pe_district_180206,180206,LLOQUE,pe_province_1802
+pe_district_180207,180207,MATALAQUE,pe_province_1802
+pe_district_180208,180208,PUQUINA,pe_province_1802
+pe_district_180209,180209,QUINISTAQUILLAS,pe_province_1802
+pe_district_180210,180210,UBINAS,pe_province_1802
+pe_district_180211,180211,YUNGA,pe_province_1802
+pe_district_180301,180301,ILO,pe_province_1803
+pe_district_180302,180302,EL ALGARROBAL,pe_province_1803
+pe_district_180303,180303,PACOCHA,pe_province_1803
+pe_district_190101,190101,CHAUPIMARCA,pe_province_1901
+pe_district_190102,190102,HUACHON,pe_province_1901
+pe_district_190103,190103,HUARIACA,pe_province_1901
+pe_district_190104,190104,HUAYLLAY,pe_province_1901
+pe_district_190105,190105,NINACACA,pe_province_1901
+pe_district_190106,190106,PALLANCHACRA,pe_province_1901
+pe_district_190107,190107,PAUCARTAMBO,pe_province_1901
+pe_district_190108,190108,SAN FRANCISCO DE ASIS DE YARUSYACAN,pe_province_1901
+pe_district_190109,190109,SIMON BOLIVAR,pe_province_1901
+pe_district_190110,190110,TICLACAYAN,pe_province_1901
+pe_district_190111,190111,TINYAHUARCO,pe_province_1901
+pe_district_190112,190112,VICCO,pe_province_1901
+pe_district_190113,190113,YANACANCHA,pe_province_1901
+pe_district_190201,190201,YANAHUANCA,pe_province_1902
+pe_district_190202,190202,CHACAYAN,pe_province_1902
+pe_district_190203,190203,GOYLLARISQUIZGA,pe_province_1902
+pe_district_190204,190204,PAUCAR,pe_province_1902
+pe_district_190205,190205,SAN PEDRO DE PILLAO,pe_province_1902
+pe_district_190206,190206,SANTA ANA DE TUSI,pe_province_1902
+pe_district_190207,190207,TAPUC,pe_province_1902
+pe_district_190208,190208,VILCABAMBA,pe_province_1902
+pe_district_190301,190301,OXAPAMPA,pe_province_1903
+pe_district_190302,190302,CHONTABAMBA,pe_province_1903
+pe_district_190303,190303,HUANCABAMBA,pe_province_1903
+pe_district_190304,190304,PALCAZU,pe_province_1903
+pe_district_190305,190305,POZUZO,pe_province_1903
+pe_district_190306,190306,PUERTO BERMUDEZ,pe_province_1903
+pe_district_190307,190307,VILLA RICA,pe_province_1903
+pe_district_200101,200101,PIURA,pe_province_2001
+pe_district_200104,200104,CASTILLA,pe_province_2001
+pe_district_200105,200105,CATACAOS,pe_province_2001
+pe_district_200107,200107,CURA MORI,pe_province_2001
+pe_district_200108,200108,EL TALLAN,pe_province_2001
+pe_district_200109,200109,LA ARENA,pe_province_2001
+pe_district_200110,200110,LA UNION,pe_province_2001
+pe_district_200111,200111,LAS LOMAS,pe_province_2001
+pe_district_200114,200114,TAMBO GRANDE,pe_province_2001
+pe_district_200201,200201,AYABACA,pe_province_2002
+pe_district_200202,200202,FRIAS,pe_province_2002
+pe_district_200203,200203,JILILI,pe_province_2002
+pe_district_200204,200204,LAGUNAS,pe_province_2002
+pe_district_200205,200205,MONTERO,pe_province_2002
+pe_district_200206,200206,PACAIPAMPA,pe_province_2002
+pe_district_200207,200207,PAIMAS,pe_province_2002
+pe_district_200208,200208,SAPILLICA,pe_province_2002
+pe_district_200209,200209,SICCHEZ,pe_province_2002
+pe_district_200210,200210,SUYO,pe_province_2002
+pe_district_200301,200301,HUANCABAMBA,pe_province_2003
+pe_district_200302,200302,CANCHAQUE,pe_province_2003
+pe_district_200303,200303,EL CARMEN DE LA FRONTERA,pe_province_2003
+pe_district_200304,200304,HUARMACA,pe_province_2003
+pe_district_200305,200305,LALAQUIZ,pe_province_2003
+pe_district_200306,200306,SAN MIGUEL DE EL FAIQUE,pe_province_2003
+pe_district_200307,200307,SONDOR,pe_province_2003
+pe_district_200308,200308,SONDORILLO,pe_province_2003
+pe_district_200401,200401,CHULUCANAS,pe_province_2004
+pe_district_200402,200402,BUENOS AIRES,pe_province_2004
+pe_district_200403,200403,CHALACO,pe_province_2004
+pe_district_200404,200404,LA MATANZA,pe_province_2004
+pe_district_200405,200405,MORROPON,pe_province_2004
+pe_district_200406,200406,SALITRAL,pe_province_2004
+pe_district_200407,200407,SAN JUAN DE BIGOTE,pe_province_2004
+pe_district_200408,200408,SANTA CATALINA DE MOSSA,pe_province_2004
+pe_district_200409,200409,SANTO DOMINGO,pe_province_2004
+pe_district_200410,200410,YAMANGO,pe_province_2004
+pe_district_200501,200501,PAITA,pe_province_2005
+pe_district_200502,200502,AMOTAPE,pe_province_2005
+pe_district_200503,200503,ARENAL,pe_province_2005
+pe_district_200504,200504,COLAN,pe_province_2005
+pe_district_200505,200505,LA HUACA,pe_province_2005
+pe_district_200506,200506,TAMARINDO,pe_province_2005
+pe_district_200507,200507,VICHAYAL,pe_province_2005
+pe_district_200601,200601,SULLANA,pe_province_2006
+pe_district_200602,200602,BELLAVISTA,pe_province_2006
+pe_district_200603,200603,IGNACIO ESCUDERO,pe_province_2006
+pe_district_200604,200604,LANCONES,pe_province_2006
+pe_district_200605,200605,MARCAVELICA,pe_province_2006
+pe_district_200606,200606,MIGUEL CHECA,pe_province_2006
+pe_district_200607,200607,QUERECOTILLO,pe_province_2006
+pe_district_200608,200608,SALITRAL,pe_province_2006
+pe_district_200701,200701,PARIÑAS,pe_province_2007
+pe_district_200702,200702,EL ALTO,pe_province_2007
+pe_district_200703,200703,LA BREA,pe_province_2007
+pe_district_200704,200704,LOBITOS,pe_province_2007
+pe_district_200705,200705,LOS ORGANOS,pe_province_2007
+pe_district_200706,200706,MANCORA,pe_province_2007
+pe_district_200801,200801,SECHURA,pe_province_2008
+pe_district_200802,200802,BELLAVISTA DE LA UNION,pe_province_2008
+pe_district_200803,200803,BERNAL,pe_province_2008
+pe_district_200804,200804,CRISTO NOS VALGA,pe_province_2008
+pe_district_200805,200805,VICE,pe_province_2008
+pe_district_200806,200806,RINCONADA LLICUAR,pe_province_2008
+pe_district_210101,210101,PUNO,pe_province_2101
+pe_district_210102,210102,ACORA,pe_province_2101
+pe_district_210103,210103,AMANTANI,pe_province_2101
+pe_district_210104,210104,ATUNCOLLA,pe_province_2101
+pe_district_210105,210105,CAPACHICA,pe_province_2101
+pe_district_210106,210106,CHUCUITO,pe_province_2101
+pe_district_210107,210107,COATA,pe_province_2101
+pe_district_210108,210108,HUATA,pe_province_2101
+pe_district_210109,210109,MAÑAZO,pe_province_2101
+pe_district_210110,210110,PAUCARCOLLA,pe_province_2101
+pe_district_210111,210111,PICHACANI,pe_province_2101
+pe_district_210112,210112,PLATERIA,pe_province_2101
+pe_district_210113,210113,SAN ANTONIO  /1,pe_province_2101
+pe_district_210114,210114,TIQUILLACA,pe_province_2101
+pe_district_210115,210115,VILQUE,pe_province_2101
+pe_district_210201,210201,AZANGARO,pe_province_2102
+pe_district_210202,210202,ACHAYA,pe_province_2102
+pe_district_210203,210203,ARAPA,pe_province_2102
+pe_district_210204,210204,ASILLO,pe_province_2102
+pe_district_210205,210205,CAMINACA,pe_province_2102
+pe_district_210206,210206,CHUPA,pe_province_2102
+pe_district_210207,210207,JOSE DOMINGO CHOQUEHUANCA,pe_province_2102
+pe_district_210208,210208,MUÑANI,pe_province_2102
+pe_district_210209,210209,POTONI,pe_province_2102
+pe_district_210210,210210,SAMAN,pe_province_2102
+pe_district_210211,210211,SAN ANTON,pe_province_2102
+pe_district_210212,210212,SAN JOSE,pe_province_2102
+pe_district_210213,210213,SAN JUAN DE SALINAS,pe_province_2102
+pe_district_210214,210214,SANTIAGO DE PUPUJA,pe_province_2102
+pe_district_210215,210215,TIRAPATA,pe_province_2102
+pe_district_210301,210301,MACUSANI,pe_province_2103
+pe_district_210302,210302,AJOYANI,pe_province_2103
+pe_district_210303,210303,AYAPATA,pe_province_2103
+pe_district_210304,210304,COASA,pe_province_2103
+pe_district_210305,210305,CORANI,pe_province_2103
+pe_district_210306,210306,CRUCERO,pe_province_2103
+pe_district_210307,210307,ITUATA   2/,pe_province_2103
+pe_district_210308,210308,OLLACHEA,pe_province_2103
+pe_district_210309,210309,SAN GABAN,pe_province_2103
+pe_district_210310,210310,USICAYOS,pe_province_2103
+pe_district_210401,210401,JULI,pe_province_2104
+pe_district_210402,210402,DESAGUADERO,pe_province_2104
+pe_district_210403,210403,HUACULLANI,pe_province_2104
+pe_district_210404,210404,KELLUYO,pe_province_2104
+pe_district_210405,210405,PISACOMA,pe_province_2104
+pe_district_210406,210406,POMATA,pe_province_2104
+pe_district_210407,210407,ZEPITA,pe_province_2104
+pe_district_210501,210501,ILAVE,pe_province_2105
+pe_district_210502,210502,CAPAZO,pe_province_2105
+pe_district_210503,210503,PILCUYO,pe_province_2105
+pe_district_210504,210504,SANTA ROSA,pe_province_2105
+pe_district_210505,210505,CONDURIRI,pe_province_2105
+pe_district_210601,210601,HUANCANE,pe_province_2106
+pe_district_210602,210602,COJATA,pe_province_2106
+pe_district_210603,210603,HUATASANI,pe_province_2106
+pe_district_210604,210604,INCHUPALLA,pe_province_2106
+pe_district_210605,210605,PUSI,pe_province_2106
+pe_district_210606,210606,ROSASPATA,pe_province_2106
+pe_district_210607,210607,TARACO,pe_province_2106
+pe_district_210608,210608,VILQUE CHICO,pe_province_2106
+pe_district_210701,210701,LAMPA,pe_province_2107
+pe_district_210702,210702,CABANILLA,pe_province_2107
+pe_district_210703,210703,CALAPUJA,pe_province_2107
+pe_district_210704,210704,NICASIO,pe_province_2107
+pe_district_210705,210705,OCUVIRI,pe_province_2107
+pe_district_210706,210706,PALCA,pe_province_2107
+pe_district_210707,210707,PARATIA,pe_province_2107
+pe_district_210708,210708,PUCARA,pe_province_2107
+pe_district_210709,210709,SANTA LUCIA,pe_province_2107
+pe_district_210710,210710,VILAVILA,pe_province_2107
+pe_district_210801,210801,AYAVIRI,pe_province_2108
+pe_district_210802,210802,ANTAUTA,pe_province_2108
+pe_district_210803,210803,CUPI,pe_province_2108
+pe_district_210804,210804,LLALLI,pe_province_2108
+pe_district_210805,210805,MACARI,pe_province_2108
+pe_district_210806,210806,NUÑOA,pe_province_2108
+pe_district_210807,210807,ORURILLO,pe_province_2108
+pe_district_210808,210808,SANTA ROSA,pe_province_2108
+pe_district_210809,210809,UMACHIRI,pe_province_2108
+pe_district_210901,210901,MOHO,pe_province_2109
+pe_district_210902,210902,CONIMA,pe_province_2109
+pe_district_210903,210903,HUAYRAPATA,pe_province_2109
+pe_district_210904,210904,TILALI,pe_province_2109
+pe_district_211001,211001,PUTINA,pe_province_2110
+pe_district_211002,211002,ANANEA,pe_province_2110
+pe_district_211003,211003,PEDRO VILCA APAZA,pe_province_2110
+pe_district_211004,211004,QUILCAPUNCU,pe_province_2110
+pe_district_211005,211005,SINA,pe_province_2110
+pe_district_211101,211101,JULIACA,pe_province_2111
+pe_district_211102,211102,CABANA,pe_province_2111
+pe_district_211103,211103,CABANILLAS,pe_province_2111
+pe_district_211104,211104,CARACOTO,pe_province_2111
+pe_district_211201,211201,SANDIA,pe_province_2112
+pe_district_211202,211202,CUYOCUYO,pe_province_2112
+pe_district_211203,211203,LIMBANI,pe_province_2112
+pe_district_211204,211204,PATAMBUCO,pe_province_2112
+pe_district_211205,211205,PHARA,pe_province_2112
+pe_district_211206,211206,QUIACA,pe_province_2112
+pe_district_211207,211207,SAN JUAN DEL ORO,pe_province_2112
+pe_district_211208,211208,YANAHUAYA,pe_province_2112
+pe_district_211209,211209,ALTO INAMBARI,pe_province_2112
+pe_district_211210,211210,SAN PEDRO DE PUTINA PUNCO,pe_province_2112
+pe_district_211301,211301,YUNGUYO,pe_province_2113
+pe_district_211302,211302,ANAPIA,pe_province_2113
+pe_district_211303,211303,COPANI,pe_province_2113
+pe_district_211304,211304,CUTURAPI,pe_province_2113
+pe_district_211305,211305,OLLARAYA,pe_province_2113
+pe_district_211306,211306,TINICACHI,pe_province_2113
+pe_district_211307,211307,UNICACHI,pe_province_2113
+pe_district_220101,220101,MOYOBAMBA,pe_province_2201
+pe_district_220102,220102,CALZADA,pe_province_2201
+pe_district_220103,220103,HABANA,pe_province_2201
+pe_district_220104,220104,JEPELACIO,pe_province_2201
+pe_district_220105,220105,SORITOR,pe_province_2201
+pe_district_220106,220106,YANTALO,pe_province_2201
+pe_district_220201,220201,BELLAVISTA,pe_province_2202
+pe_district_220202,220202,ALTO BIAVO,pe_province_2202
+pe_district_220203,220203,BAJO BIAVO,pe_province_2202
+pe_district_220204,220204,HUALLAGA,pe_province_2202
+pe_district_220205,220205,SAN PABLO,pe_province_2202
+pe_district_220206,220206,SAN RAFAEL,pe_province_2202
+pe_district_220301,220301,SAN JOSE DE SISA,pe_province_2203
+pe_district_220302,220302,AGUA BLANCA,pe_province_2203
+pe_district_220303,220303,SAN MARTIN,pe_province_2203
+pe_district_220304,220304,SANTA ROSA,pe_province_2203
+pe_district_220305,220305,SHATOJA,pe_province_2203
+pe_district_220401,220401,SAPOSOA,pe_province_2204
+pe_district_220402,220402,ALTO SAPOSOA,pe_province_2204
+pe_district_220403,220403,EL ESLABON,pe_province_2204
+pe_district_220404,220404,PISCOYACU,pe_province_2204
+pe_district_220405,220405,SACANCHE,pe_province_2204
+pe_district_220406,220406,TINGO DE SAPOSOA,pe_province_2204
+pe_district_220501,220501,LAMAS,pe_province_2205
+pe_district_220502,220502,ALONSO DE ALVARADO,pe_province_2205
+pe_district_220503,220503,BARRANQUITA,pe_province_2205
+pe_district_220504,220504,CAYNARACHI   1/,pe_province_2205
+pe_district_220505,220505,CUÑUMBUQUI,pe_province_2205
+pe_district_220506,220506,PINTO RECODO,pe_province_2205
+pe_district_220507,220507,RUMISAPA,pe_province_2205
+pe_district_220508,220508,SAN ROQUE DE CUMBAZA,pe_province_2205
+pe_district_220509,220509,SHANAO,pe_province_2205
+pe_district_220510,220510,TABALOSOS,pe_province_2205
+pe_district_220511,220511,ZAPATERO,pe_province_2205
+pe_district_220601,220601,JUANJUI,pe_province_2206
+pe_district_220602,220602,CAMPANILLA,pe_province_2206
+pe_district_220603,220603,HUICUNGO,pe_province_2206
+pe_district_220604,220604,PACHIZA,pe_province_2206
+pe_district_220605,220605,PAJARILLO,pe_province_2206
+pe_district_220701,220701,PICOTA,pe_province_2207
+pe_district_220702,220702,BUENOS AIRES,pe_province_2207
+pe_district_220703,220703,CASPISAPA,pe_province_2207
+pe_district_220704,220704,PILLUANA,pe_province_2207
+pe_district_220705,220705,PUCACACA,pe_province_2207
+pe_district_220706,220706,SAN CRISTOBAL,pe_province_2207
+pe_district_220707,220707,SAN HILARION,pe_province_2207
+pe_district_220708,220708,SHAMBOYACU,pe_province_2207
+pe_district_220709,220709,TINGO DE PONASA,pe_province_2207
+pe_district_220710,220710,TRES UNIDOS,pe_province_2207
+pe_district_220801,220801,RIOJA,pe_province_2208
+pe_district_220802,220802,AWAJUN,pe_province_2208
+pe_district_220803,220803,ELIAS SOPLIN VARGAS,pe_province_2208
+pe_district_220804,220804,NUEVA CAJAMARCA,pe_province_2208
+pe_district_220805,220805,PARDO MIGUEL,pe_province_2208
+pe_district_220806,220806,POSIC,pe_province_2208
+pe_district_220807,220807,SAN FERNANDO,pe_province_2208
+pe_district_220808,220808,YORONGOS,pe_province_2208
+pe_district_220809,220809,YURACYACU,pe_province_2208
+pe_district_220901,220901,TARAPOTO,pe_province_2209
+pe_district_220902,220902,ALBERTO LEVEAU,pe_province_2209
+pe_district_220903,220903,CACATACHI,pe_province_2209
+pe_district_220904,220904,CHAZUTA,pe_province_2209
+pe_district_220905,220905,CHIPURANA,pe_province_2209
+pe_district_220906,220906,EL PORVENIR,pe_province_2209
+pe_district_220907,220907,HUIMBAYOC,pe_province_2209
+pe_district_220908,220908,JUAN GUERRA,pe_province_2209
+pe_district_220909,220909,LA BANDA DE SHILCAYO,pe_province_2209
+pe_district_220910,220910,MORALES,pe_province_2209
+pe_district_220911,220911,PAPAPLAYA,pe_province_2209
+pe_district_220912,220912,SAN ANTONIO,pe_province_2209
+pe_district_220913,220913,SAUCE,pe_province_2209
+pe_district_220914,220914,SHAPAJA,pe_province_2209
+pe_district_221001,221001,TOCACHE,pe_province_2210
+pe_district_221002,221002,NUEVO PROGRESO,pe_province_2210
+pe_district_221003,221003,POLVORA,pe_province_2210
+pe_district_221004,221004,SHUNTE  2/,pe_province_2210
+pe_district_221005,221005,UCHIZA,pe_province_2210
+pe_district_230101,230101,TACNA,pe_province_2301
+pe_district_230102,230102,ALTO DE LA ALIANZA,pe_province_2301
+pe_district_230103,230103,CALANA,pe_province_2301
+pe_district_230104,230104,CIUDAD NUEVA,pe_province_2301
+pe_district_230105,230105,INCLAN,pe_province_2301
+pe_district_230106,230106,PACHIA,pe_province_2301
+pe_district_230107,230107,PALCA,pe_province_2301
+pe_district_230108,230108,POCOLLAY,pe_province_2301
+pe_district_230109,230109,SAMA,pe_province_2301
+pe_district_230110,230110,CORONEL GREGORIO ALBARRACIN LANCHIPA,pe_province_2301
+pe_district_230201,230201,CANDARAVE,pe_province_2302
+pe_district_230202,230202,CAIRANI,pe_province_2302
+pe_district_230203,230203,CAMILACA,pe_province_2302
+pe_district_230204,230204,CURIBAYA,pe_province_2302
+pe_district_230205,230205,HUANUARA,pe_province_2302
+pe_district_230206,230206,QUILAHUANI,pe_province_2302
+pe_district_230301,230301,LOCUMBA,pe_province_2303
+pe_district_230302,230302,ILABAYA,pe_province_2303
+pe_district_230303,230303,ITE,pe_province_2303
+pe_district_230401,230401,TARATA,pe_province_2304
+pe_district_230402,230402,HEROES ALBARRACIN,pe_province_2304
+pe_district_230403,230403,ESTIQUE,pe_province_2304
+pe_district_230404,230404,ESTIQUE-PAMPA,pe_province_2304
+pe_district_230405,230405,SITAJARA,pe_province_2304
+pe_district_230406,230406,SUSAPAYA,pe_province_2304
+pe_district_230407,230407,TARUCACHI,pe_province_2304
+pe_district_230408,230408,TICACO,pe_province_2304
+pe_district_240101,240101,TUMBES,pe_province_2401
+pe_district_240102,240102,CORRALES,pe_province_2401
+pe_district_240103,240103,LA CRUZ,pe_province_2401
+pe_district_240104,240104,PAMPAS DE HOSPITAL,pe_province_2401
+pe_district_240105,240105,SAN JACINTO,pe_province_2401
+pe_district_240106,240106,SAN JUAN DE LA VIRGEN,pe_province_2401
+pe_district_240201,240201,ZORRITOS,pe_province_2402
+pe_district_240202,240202,CASITAS,pe_province_2402
+pe_district_240203,240203,CANOAS DE PUNTA SAL,pe_province_2402
+pe_district_240301,240301,ZARUMILLA,pe_province_2403
+pe_district_240302,240302,AGUAS VERDES,pe_province_2403
+pe_district_240303,240303,MATAPALO,pe_province_2403
+pe_district_240304,240304,PAPAYAL,pe_province_2403
+pe_district_250101,250101,CALLERIA,pe_province_2501
+pe_district_250102,250102,CAMPOVERDE,pe_province_2501
+pe_district_250103,250103,IPARIA,pe_province_2501
+pe_district_250104,250104,MASISEA,pe_province_2501
+pe_district_250105,250105,YARINACOCHA,pe_province_2501
+pe_district_250106,250106,NUEVA REQUENA,pe_province_2501
+pe_district_250107,250107,MANANTAY,pe_province_2501
+pe_district_250201,250201,RAYMONDI,pe_province_2502
+pe_district_250202,250202,SEPAHUA,pe_province_2502
+pe_district_250203,250203,TAHUANIA,pe_province_2502
+pe_district_250204,250204,YURUA,pe_province_2502
+pe_district_250301,250301,PADRE ABAD,pe_province_2503
+pe_district_250302,250302,IRAZOLA,pe_province_2503
+pe_district_250303,250303,CURIMANA,pe_province_2503
+pe_district_250401,250401,PURUS,pe_province_2504

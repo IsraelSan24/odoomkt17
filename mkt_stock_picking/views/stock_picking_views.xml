@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Form View Inheritance -->
+    <record id="view_picking_form_inherit_guia" model="ir.ui.view">
+        <field name="name">stock.picking.form.inherit.guia</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Guía de Remisión" invisible="is_outgoing == False" readonly="gre_aceptada_por_sunat == True">
+                <field name="is_outgoing" invisible='true' />
+                <field name="gre_aceptada_por_sunat" invisible='true' />
+                    <button name="action_send_request"
+                    string="Enviar a Nubefact"
+                    type="object"
+                    class="oe_highlight" invisible="state != 'done'"/>
+                    <group>
+                        <group string="Información General">
+                            <field name="gre_operacion" readonly='true'/>
+                            <field name="gre_tipo_de_comprobante" readonly='true'/>
+                            <field name="gre_serie" readonly='true'/>
+                            <field name="gre_numero" readonly='true'/>
+                            <field name="gre_doc_name" readonly='true'/>
+
+                        </group>
+                        <group string="Remitente">
+                            <field name="company_id" />
+                            <field name="gre_cliente_tipo_de_documento" readonly='true'/>
+                            <field name="gre_cliente_numero_de_documento"/>
+                            <field name="gre_cliente_denominacion"/>
+                            <field name="gre_cliente_direccion"/>
+                            <!-- <field name="cliente_email"/>
+                            <field name="cliente_email_1"/>
+                            <field name="cliente_email_2"/> -->
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Fechas">
+                            <field name="gre_fecha_de_emision"/>
+                            <field name="gre_fecha_de_inicio_de_traslado"/>
+                            <!-- <field name="observaciones"/> -->
+                        </group>
+                        <!-- <group string="Motivo de Traslado">
+                            <field name="motivo_de_traslado"/>
+                            <field name="motivo_de_traslado_otros_descripcion" modifiers="{'invisible': [('motivo_de_traslado', '!=', '13')]}"/>
+                            <field name="documento_relacionado_codigo" modifiers="{'invisible': [('motivo_de_traslado', 'not in', ['08', '09'])]}"/>
+                        </group> -->
+                        <group string="Peso y Bultos">
+                            <field name="gre_peso_bruto_total"/>
+                            <field name="gre_peso_bruto_unidad_de_medida"/>
+                            <!-- <field name="numero_de_bultos" modifiers="{'invisible': [('tipo_de_comprobante', '!=', '7')]}"/> -->
+                        </group>
+                        <!-- <group string="Transporte">
+                            <field name="tipo_de_transporte" modifiers="{'invisible': [('tipo_de_comprobante', '!=', '7')]}"/>
+                        </group> -->
+                    </group>
+                    <!-- <group string="Transportista" modifiers="{'invisible': [('tipo_de_transporte', '!=', '01')]}">
+                        <field name="transportista_documento_tipo"/>
+                        <field name="transportista_documento_numero"/>
+                        <field name="transportista_denominacion"/>
+                    </group> -->
+                    <group string="Vehículo">
+                        <field name="gre_transportista_placa_numero"/>
+                        <!-- <field name="tuc_vehiculo_principal" modifiers="{'invisible': [('tipo_de_comprobante', '!=', '8')]}"/> -->
+                    </group>
+                    <group string="Conductor">
+                        <field name="gre_driver_employee_id"/>
+                        <group>
+                            <field name="gre_conductor_documento_tipo"/>
+                            <field name="gre_conductor_documento_numero"/>
+                            <field name="gre_conductor_denominacion"/>
+                        </group>
+                        <group>
+                            <field name="gre_conductor_nombre"/>
+                            <field name="gre_conductor_apellidos"/>
+                            <field name="gre_conductor_numero_licencia"/>
+                        </group>
+                    </group>
+                    <group string="Destinatario" modifiers="{'invisible': [('gre_tipo_de_comprobante', '!=', '8')]}">
+                        <field name="gre_destinatario_documento_tipo"/>
+                        <field name="gre_destinatario_documento_numero"/>
+                        <field name="gre_destinatario_denominacion"/>
+                    </group>
+                    <!-- <group string="Indicadores SUNAT">
+                        <field name="mtc"/>
+                        <field name="sunat_envio_indicador"/>
+                    </group> -->
+                    <!-- <group string="Subcontratador" modifiers="{'invisible': [('sunat_envio_indicador', '!=', '02')]}">
+                        <field name="subcontratador_documento_tipo"/>
+                        <field name="subcontratador_documento_numero"/>
+                        <field name="subcontratador_denominacion"/>
+                    </group> -->
+                    <!-- <group string="Pagador Servicio" modifiers="{'invisible': [('sunat_envio_indicador', '!=', '03')]}">
+                        <field name="pagador_servicio_documento_tipo_identidad"/>
+                        <field name="pagador_servicio_documento_numero_identidad"/>
+                        <field name="pagador_servicio_denominacion"/>
+                    </group> -->
+                    <group>
+                        <group string="Punto de Partida">
+                            <field name="gre_punto_de_partida_ubigeo"/>
+                            <field name="gre_punto_de_partida_direccion"/>
+                            <!-- <field name="punto_de_partida_codigo_establecimiento_sunat" modifiers="{'invisible': [('motivo_de_traslado', 'not in', ['04', '18'])]}"/> -->
+                        </group>
+                        <group string="Punto de Llegada">
+                            <field name="gre_punto_de_llegada_ubigeo"/>
+                            <field name="gre_punto_de_llegada_direccion"/>
+                            <!-- <field name="punto_de_llegada_codigo_establecimiento_sunat" modifiers="{'invisible': [('motivo_de_traslado', 'not in', ['04', '18'])]}"/> -->
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Opciones Adicionales">
+                            <field name="gre_enviar_automaticamente_al_cliente"/>
+                            <!-- <field name="formato_de_pdf"/> -->
+                        </group>
+                    </group>
+                    <group string="FACTURA">
+                        <field name="gre_account_move_ids" mode="tree">
+                            <tree>
+                                <field name="l10n_pe_in_edi_serie" />
+                                <field name="l10n_pe_in_edi_number" />
+                            </tree>
+                        </field>
+                    </group>
+
+                    <field name="state" invisible="true" />
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Add buttons to header -->
+    <record id="view_picking_form_header_buttons" model="ir.ui.view">
+        <field name="name">stock.picking.form.header.buttons</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <!-- <button name="action_print_pdf" string="Imprimir Guía" type="object" attrs="{'invisible': [('gre_aceptada_por_sunat', '=', False)]}" /> -->
+                <button name="action_print_pdf" string="Imprimir Guía" type="object" invisible="is_outgoing == False"/>
+                <!-- <button name="action_open_url" string="Link de Guía" type="object" attrs="{'invisible': [('gre_aceptada_por_sunat', '=', False)]}" /> -->
+                <button name="action_open_url" string="Link de Guía" type="object" invisible="is_outgoing == False"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

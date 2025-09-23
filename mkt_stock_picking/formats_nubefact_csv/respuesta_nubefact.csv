@@ -1,0 +1,25 @@
+﻿ESTRUCTURAS DE JSON DE RESPUESTA DE NUBEFACT PARA FACTURAS, BOLETAS Y NOTAS; ;;
+ATRIBUTO;VALOR;TIPO DE DATO;
+tipo_de_comprobante;"Tipo de COMPROBANTE que se generó:
+7 = GUÍA REMISIÓN REMITENTE
+8 = GUÍA REMISIÓN TRANSPORTISTA";Integer;
+serie;Serie de documento generado.;String;
+numero;Número de documento generado.;Integer;
+enlace;"ENLACE único asignado por NUBEFACT.
+Para ver el PDF puedes agregar la extensión .pdf, ejemplo: https://www.nubefact.com/guia/xxxxxxxx.pdf https://www.pse.pe/guia/xxxxxxxx.pdf
+Sólo si la Guía fue aceptada por la SUNAT, caso contrario no recibirás la respuesta.";String;
+aceptada_por_sunat;"false = FALSO (En minúsculas)
+true = VERDADERO (En minúsculas)";Boolean;
+sunat_description;Cuando hay errores en la SUNAT se describirá el error;String;
+sunat_note;Cuando hay errores en la SUNAT se describirá el error;String;
+sunat_responsecode;Cuando hay errores en la SUNAT se describirá el error;String;
+sunat_soap_error;Otros errores que imposibilitan el envío a la SUNAT;String;
+pdf_zip_base64;"Contenido del archivo xml zipeado en base64 que puedes almacenar de ser necesario. (Se debe activar esta opción desde “Configuración principal” en NUBEFACT).
+Sólo si la Guía fue aceptada por la SUNAT, caso contrario no recibirás la respuesta.";Text;
+xml_zip_base64;"Contenido del archivo pdf zipeado en base64 que puedes almacenar de ser necesario. (Se debe activar esta opción desde “Configuración principal” en NUBEFACT).
+Sólo si la Guía fue aceptada por la SUNAT, caso contrario no recibirás la respuesta.";Text;
+cdr_zip_base64;"Contenido del archivo cdr de sunat zipeado en base64 que puedes almacenar de ser necesario. (Se debe activar esta opción desde “Configuración principal” en NUBEFACT).
+Sólo si la Guía fue aceptada por la SUNAT, caso contrario no recibirás la respuesta.";Text;
+cadena_para_codigo_qr;Si tienes tu propia representación impresa, debes generar un QR con este dato.;Text;
+enlace_del_pdf;Recibirás el link completo del PDF ya generado: https://www.nubefact.com/guia/xxxxxxxx.pdf Sólo si la Guía fue aceptada por la SUNAT, caso contrario no recibirás la respuesta.;Text;
+enlace_del_xml;Recibirás el link completo del XML ya generado: https://www.nubefact.com/guia/xxxxxxxx.xml Sólo si la Guía fue aceptada por la SUNAT, caso contrario no recibirás la respuesta.;Text;
