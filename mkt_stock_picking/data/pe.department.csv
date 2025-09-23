@@ -1,0 +1,26 @@
+id,code,name
+pe_department_01,01,AMAZONAS
+pe_department_02,02,ANCASH
+pe_department_03,03,APURIMAC
+pe_department_04,04,AREQUIPA
+pe_department_05,05,AYACUCHO
+pe_department_06,06,CAJAMARCA
+pe_department_07,07,PROV. CONST. DEL CALLAO
+pe_department_08,08,CUSCO
+pe_department_09,09,HUANCAVELICA
+pe_department_10,10,HUANUCO
+pe_department_11,11,ICA
+pe_department_12,12,JUNIN
+pe_department_13,13,LA LIBERTAD
+pe_department_14,14,LAMBAYEQUE
+pe_department_15,15,LIMA
+pe_department_16,16,LORETO
+pe_department_17,17,MADRE DE DIOS
+pe_department_18,18,MOQUEGUA
+pe_department_19,19,PASCO
+pe_department_20,20,PIURA
+pe_department_21,21,PUNO
+pe_department_22,22,SAN MARTIN
+pe_department_23,23,TACNA
+pe_department_24,24,TUMBES
+pe_department_25,25,UCAYALI

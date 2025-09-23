@@ -1,0 +1,196 @@
+id,code,name,department_id/id
+pe_province_0101,0101,CHACHAPOYAS,pe_department_01
+pe_province_0102,0102,BAGUA,pe_department_01
+pe_province_0103,0103,BONGARA,pe_department_01
+pe_province_0104,0104,CONDORCANQUI,pe_department_01
+pe_province_0105,0105,LUYA,pe_department_01
+pe_province_0106,0106,RODRIGUEZ DE MENDOZA,pe_department_01
+pe_province_0107,0107,UTCUBAMBA,pe_department_01
+pe_province_0201,0201,HUARAZ,pe_department_02
+pe_province_0202,0202,AIJA,pe_department_02
+pe_province_0203,0203,ANTONIO RAYMONDI,pe_department_02
+pe_province_0204,0204,ASUNCION,pe_department_02
+pe_province_0205,0205,BOLOGNESI,pe_department_02
+pe_province_0206,0206,CARHUAZ,pe_department_02
+pe_province_0207,0207,CARLOS FERMIN FITZCARRALD,pe_department_02
+pe_province_0208,0208,CASMA,pe_department_02
+pe_province_0209,0209,CORONGO,pe_department_02
+pe_province_0210,0210,HUARI,pe_department_02
+pe_province_0211,0211,HUARMEY,pe_department_02
+pe_province_0212,0212,HUAYLAS,pe_department_02
+pe_province_0213,0213,MARISCAL LUZURIAGA,pe_department_02
+pe_province_0214,0214,OCROS,pe_department_02
+pe_province_0215,0215,PALLASCA,pe_department_02
+pe_province_0216,0216,POMABAMBA,pe_department_02
+pe_province_0217,0217,RECUAY,pe_department_02
+pe_province_0218,0218,SANTA,pe_department_02
+pe_province_0219,0219,SIHUAS,pe_department_02
+pe_province_0220,0220,YUNGAY,pe_department_02
+pe_province_0301,0301,ABANCAY,pe_department_03
+pe_province_0302,0302,ANDAHUAYLAS,pe_department_03
+pe_province_0303,0303,ANTABAMBA,pe_department_03
+pe_province_0304,0304,AYMARAES,pe_department_03
+pe_province_0305,0305,COTABAMBAS,pe_department_03
+pe_province_0306,0306,CHINCHEROS,pe_department_03
+pe_province_0307,0307,GRAU,pe_department_03
+pe_province_0401,0401,AREQUIPA,pe_department_04
+pe_province_0402,0402,CAMANA,pe_department_04
+pe_province_0403,0403,CARAVELI,pe_department_04
+pe_province_0404,0404,CASTILLA,pe_department_04
+pe_province_0405,0405,CAYLLOMA,pe_department_04
+pe_province_0406,0406,CONDESUYOS,pe_department_04
+pe_province_0407,0407,ISLAY,pe_department_04
+pe_province_0408,0408,LA UNION,pe_department_04
+pe_province_0501,0501,HUAMANGA,pe_department_05
+pe_province_0502,0502,CANGALLO,pe_department_05
+pe_province_0503,0503,HUANCA SANCOS,pe_department_05
+pe_province_0504,0504,HUANTA,pe_department_05
+pe_province_0505,0505,LA MAR,pe_department_05
+pe_province_0506,0506,LUCANAS,pe_department_05
+pe_province_0507,0507,PARINACOCHAS,pe_department_05
+pe_province_0508,0508,PAUCAR DEL SARA SARA,pe_department_05
+pe_province_0509,0509,SUCRE,pe_department_05
+pe_province_0510,0510,VICTOR FAJARDO,pe_department_05
+pe_province_0511,0511,VILCAS HUAMAN,pe_department_05
+pe_province_0601,0601,CAJAMARCA,pe_department_06
+pe_province_0602,0602,CAJABAMBA,pe_department_06
+pe_province_0603,0603,CELENDIN,pe_department_06
+pe_province_0604,0604,CHOTA,pe_department_06
+pe_province_0605,0605,CONTUMAZA,pe_department_06
+pe_province_0606,0606,CUTERVO,pe_department_06
+pe_province_0607,0607,HUALGAYOC,pe_department_06
+pe_province_0608,0608,JAEN,pe_department_06
+pe_province_0609,0609,SAN IGNACIO,pe_department_06
+pe_province_0610,0610,SAN MARCOS,pe_department_06
+pe_province_0611,0611,SAN MIGUEL,pe_department_06
+pe_province_0612,0612,SAN PABLO,pe_department_06
+pe_province_0613,0613,SANTA CRUZ,pe_department_06
+pe_province_0701,0701,PROV. CONST. DEL CALLAO,pe_department_07
+pe_province_0801,0801,CUSCO,pe_department_08
+pe_province_0802,0802,ACOMAYO,pe_department_08
+pe_province_0803,0803,ANTA,pe_department_08
+pe_province_0804,0804,CALCA,pe_department_08
+pe_province_0805,0805,CANAS,pe_department_08
+pe_province_0806,0806,CANCHIS,pe_department_08
+pe_province_0807,0807,CHUMBIVILCAS,pe_department_08
+pe_province_0808,0808,ESPINAR,pe_department_08
+pe_province_0809,0809,LA CONVENCION,pe_department_08
+pe_province_0810,0810,PARURO,pe_department_08
+pe_province_0811,0811,PAUCARTAMBO,pe_department_08
+pe_province_0812,0812,QUISPICANCHI,pe_department_08
+pe_province_0813,0813,URUBAMBA,pe_department_08
+pe_province_0901,0901,HUANCAVELICA,pe_department_09
+pe_province_0902,0902,ACOBAMBA,pe_department_09
+pe_province_0903,0903,ANGARAES,pe_department_09
+pe_province_0904,0904,CASTROVIRREYNA,pe_department_09
+pe_province_0905,0905,CHURCAMPA,pe_department_09
+pe_province_0906,0906,HUAYTARA,pe_department_09
+pe_province_0907,0907,TAYACAJA,pe_department_09
+pe_province_1001,1001,HUANUCO,pe_department_10
+pe_province_1002,1002,AMBO,pe_department_10
+pe_province_1003,1003,DOS DE MAYO,pe_department_10
+pe_province_1004,1004,HUACAYBAMBA,pe_department_10
+pe_province_1005,1005,HUAMALIES,pe_department_10
+pe_province_1006,1006,LEONCIO PRADO,pe_department_10
+pe_province_1007,1007,MARAÑON,pe_department_10
+pe_province_1008,1008,PACHITEA,pe_department_10
+pe_province_1009,1009,PUERTO INCA,pe_department_10
+pe_province_1010,1010,LAURICOCHA,pe_department_10
+pe_province_1011,1011,YAROWILCA,pe_department_10
+pe_province_1101,1101,ICA,pe_department_11
+pe_province_1102,1102,CHINCHA,pe_department_11
+pe_province_1103,1103,NAZCA,pe_department_11
+pe_province_1104,1104,PALPA,pe_department_11
+pe_province_1105,1105,PISCO,pe_department_11
+pe_province_1201,1201,HUANCAYO,pe_department_12
+pe_province_1202,1202,CONCEPCION,pe_department_12
+pe_province_1203,1203,CHANCHAMAYO,pe_department_12
+pe_province_1204,1204,JAUJA,pe_department_12
+pe_province_1205,1205,JUNIN,pe_department_12
+pe_province_1206,1206,SATIPO,pe_department_12
+pe_province_1207,1207,TARMA,pe_department_12
+pe_province_1208,1208,YAULI,pe_department_12
+pe_province_1209,1209,CHUPACA,pe_department_12
+pe_province_1301,1301,TRUJILLO,pe_department_13
+pe_province_1302,1302,ASCOPE,pe_department_13
+pe_province_1303,1303,BOLIVAR,pe_department_13
+pe_province_1304,1304,CHEPEN,pe_department_13
+pe_province_1305,1305,JULCAN,pe_department_13
+pe_province_1306,1306,OTUZCO,pe_department_13
+pe_province_1307,1307,PACASMAYO,pe_department_13
+pe_province_1308,1308,PATAZ,pe_department_13
+pe_province_1309,1309,SANCHEZ CARRION,pe_department_13
+pe_province_1310,1310,SANTIAGO DE CHUCO,pe_department_13
+pe_province_1311,1311,GRAN CHIMU,pe_department_13
+pe_province_1312,1312,VIRU,pe_department_13
+pe_province_1401,1401,CHICLAYO,pe_department_14
+pe_province_1402,1402,FERREÑAFE,pe_department_14
+pe_province_1403,1403,LAMBAYEQUE,pe_department_14
+pe_province_1501,1501,LIMA,pe_department_15
+pe_province_1502,1502,BARRANCA,pe_department_15
+pe_province_1503,1503,CAJATAMBO,pe_department_15
+pe_province_1504,1504,CANTA,pe_department_15
+pe_province_1505,1505,CAÑETE,pe_department_15
+pe_province_1506,1506,HUARAL,pe_department_15
+pe_province_1507,1507,HUAROCHIRI,pe_department_15
+pe_province_1508,1508,HUAURA,pe_department_15
+pe_province_1509,1509,OYON,pe_department_15
+pe_province_1510,1510,YAUYOS,pe_department_15
+pe_province_1601,1601,MAYNAS,pe_department_16
+pe_province_1602,1602,ALTO AMAZONAS,pe_department_16
+pe_province_1603,1603,LORETO,pe_department_16
+pe_province_1604,1604,MARISCAL RAMON CASTILLA,pe_department_16
+pe_province_1605,1605,REQUENA,pe_department_16
+pe_province_1606,1606,UCAYALI,pe_department_16
+pe_province_1607,1607,DATEM DEL MARAÑON,pe_department_16
+pe_province_1701,1701,TAMBOPATA,pe_department_17
+pe_province_1702,1702,MANU,pe_department_17
+pe_province_1703,1703,TAHUAMANU,pe_department_17
+pe_province_1801,1801,MARISCAL NIETO,pe_department_18
+pe_province_1802,1802,GENERAL SANCHEZ CERRO,pe_department_18
+pe_province_1803,1803,ILO,pe_department_18
+pe_province_1901,1901,PASCO,pe_department_19
+pe_province_1902,1902,DANIEL ALCIDES CARRION,pe_department_19
+pe_province_1903,1903,OXAPAMPA,pe_department_19
+pe_province_2001,2001,PIURA,pe_department_20
+pe_province_2002,2002,AYABACA,pe_department_20
+pe_province_2003,2003,HUANCABAMBA,pe_department_20
+pe_province_2004,2004,MORROPON,pe_department_20
+pe_province_2005,2005,PAITA,pe_department_20
+pe_province_2006,2006,SULLANA,pe_department_20
+pe_province_2007,2007,TALARA,pe_department_20
+pe_province_2008,2008,SECHURA,pe_department_20
+pe_province_2101,2101,PUNO,pe_department_21
+pe_province_2102,2102,AZANGARO,pe_department_21
+pe_province_2103,2103,CARABAYA,pe_department_21
+pe_province_2104,2104,CHUCUITO,pe_department_21
+pe_province_2105,2105,EL COLLAO,pe_department_21
+pe_province_2106,2106,HUANCANE,pe_department_21
+pe_province_2107,2107,LAMPA,pe_department_21
+pe_province_2108,2108,MELGAR,pe_department_21
+pe_province_2109,2109,MOHO,pe_department_21
+pe_province_2110,2110,SAN ANTONIO DE PUTINA,pe_department_21
+pe_province_2111,2111,SAN ROMAN,pe_department_21
+pe_province_2112,2112,SANDIA,pe_department_21
+pe_province_2113,2113,YUNGUYO,pe_department_21
+pe_province_2201,2201,MOYOBAMBA,pe_department_22
+pe_province_2202,2202,BELLAVISTA,pe_department_22
+pe_province_2203,2203,EL DORADO,pe_department_22
+pe_province_2204,2204,HUALLAGA,pe_department_22
+pe_province_2205,2205,LAMAS,pe_department_22
+pe_province_2206,2206,MARISCAL CACERES,pe_department_22
+pe_province_2207,2207,PICOTA,pe_department_22
+pe_province_2208,2208,RIOJA,pe_department_22
+pe_province_2209,2209,SAN MARTIN,pe_department_22
+pe_province_2210,2210,TOCACHE,pe_department_22
+pe_province_2301,2301,TACNA,pe_department_23
+pe_province_2302,2302,CANDARAVE,pe_department_23
+pe_province_2303,2303,JORGE BASADRE,pe_department_23
+pe_province_2304,2304,TARATA,pe_department_23
+pe_province_2401,2401,TUMBES,pe_department_24
+pe_province_2402,2402,CONTRALMIRANTE VILLAR,pe_department_24
+pe_province_2403,2403,ZARUMILLA,pe_department_24
+pe_province_2501,2501,CORONEL PORTILLO,pe_department_25
+pe_province_2502,2502,ATALAYA,pe_department_25
+pe_province_2503,2503,PADRE ABAD,pe_department_25
+pe_province_2504,2504,PURUS,pe_department_25
