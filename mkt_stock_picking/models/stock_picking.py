@@ -510,10 +510,12 @@ class StockPicking(models.Model):
             }
 
             _logger.info(f"PAYLOAD\n\t{json.dumps(payload)}\n\n")
-            TOKEN = "9041133662e4484d848c12236ad94465acbf03a12c484b59a641f8a23b0d8475"
+
+            ruta = self.env['ir.config_parameter'].sudo().get_param('nubefact.ruta')
+            token = self.env['ir.config_parameter'].sudo().get_param('nubefact.token')
 
             headers = {
-                "Authorization": f"Token token={TOKEN}",
+                "Authorization": f"Token token={token}",
                 "Content-Type": "application/json"
             }
             
@@ -542,7 +544,7 @@ class StockPicking(models.Model):
 
             try:
                 response = requests.post(
-                    'https://api.nubefact.com/api/v1/beb1b69c-8ffd-4a6d-b38c-d2d3bcfd1d0b',
+                    ruta,
                     headers=headers,
                     data=json.dumps(payload),
                     timeout=10
