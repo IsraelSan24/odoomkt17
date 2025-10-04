@@ -8,5 +8,12 @@
 #
 #######################################################################################
 
-from . import models
-from .hooks import post_init_hook
+from . import edi_supplier
+from . import edi_shop
+from . import res_company
+from . import res_config_settings
+from . import edi_request_document_type
+from . import edi_request
+from . import res_currency
+from . import res_partner
+from . import uom_uom

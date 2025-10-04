@@ -1,91 +1,90 @@
-# -*- coding: utf-8 -*-
-###############################################################################
-#    Hooks compatibles Odoo 15/16 y 17/18
-###############################################################################
-import logging
-from os.path import join, dirname, realpath
+#######################################################################################
+#
+#    Copyright (C) 2019-TODAY OPeru.
+#    Author      :  Grupo Odoo S.A.C. (<http://www.operu.pe>)
+#
+#    This program is copyright property of the author mentioned above.
+#    You can`t redistribute it and/or modify it.
+#
+#######################################################################################
 
-from odoo import api, SUPERUSER_ID
+from os.path import dirname, join, realpath
 
-_logger = logging.getLogger(__name__)
+from odoo import SUPERUSER_ID, api
 
 
-# --- Helpers -----------------------------------------------------------------
-def _load_catalog_03_data(cr):
-    csv_path = join(dirname(realpath(__file__)), "data", "l10n_pe_edi.catalog.03.csv")
-    with open(csv_path, "rb") as csv_file:
-        # saltar cabecera
-        csv_file.readline()
-        cr.copy_expert(
-            """COPY l10n_pe_edi_catalog_03 (code, name, active)
-               FROM STDIN WITH DELIMITER '|'""",
-            csv_file,
-        )
-    # xml_ids
-    cr.execute(
+def _load_catalog_03_data(env):
+    csv_path = join(
+        dirname(realpath(__file__)),
+        "data",
+        "l10n_pe_edi.catalog.03.csv",
+    )
+    csv_file = open(csv_path, "rb")
+    # Reading the header
+    csv_file.readline()
+    env.cr.copy_expert(
+        """
+        COPY l10n_pe_edi_catalog_03 (code, name, active)
+        FROM STDIN WITH DELIMITER '|'
+        """,
+        csv_file,
+    )
+    # Creating xml_ids
+    env.cr.execute(
         """
         INSERT INTO ir_model_data (name, res_id, module, model, noupdate)
         SELECT concat('l10n_pe_edi_cat03_', code), id, 'l10n_pe_edi_catalog',
-               'l10n_pe_edi.catalog.03', 't'
+            'l10n_pe_edi.catalog.03', 't'
         FROM l10n_pe_edi_catalog_03
         """
     )
 
 
-def _load_catalog_25_data(cr):
-    csv_path = join(dirname(realpath(__file__)), "data", "l10n_pe_edi.catalog.25.csv")
-    with open(csv_path, "rb") as csv_file:
-        # saltar cabecera
-        csv_file.readline()
-        cr.copy_expert(
-            """COPY l10n_pe_edi_catalog_25 (code, name, active)
-               FROM STDIN WITH DELIMITER '|'""",
-            csv_file,
-        )
-    # xml_ids
-    cr.execute(
+def _compute_catalog_03_complete_name(env):
+    records = env["l10n_pe_edi.catalog.03"].search([])
+    records._compute_complete_name()
+
+
+def _load_catalog_25_data(env):
+    csv_path = join(
+        dirname(realpath(__file__)),
+        "data",
+        "l10n_pe_edi.catalog.25.csv",
+    )
+    csv_file = open(csv_path, "rb")
+    # Reading the header
+    csv_file.readline()
+    env.cr.copy_expert(
+        """
+        COPY l10n_pe_edi_catalog_25 (code, name, active)
+        FROM STDIN WITH DELIMITER '|'
+        """,
+        csv_file,
+    )
+    # Creating xml_ids
+    env.cr.execute(
         """
         INSERT INTO ir_model_data (name, res_id, module, model, noupdate)
         SELECT concat('l10n_pe_edi_cat25_', code), id, 'l10n_pe_edi_catalog',
-               'l10n_pe_edi.catalog.25', 't'
+            'l10n_pe_edi.catalog.25', 't'
         FROM l10n_pe_edi_catalog_25
         """
     )
 
-
-# --- Hooks (compatibles) -----------------------------------------------------
-def post_init_hook(cr_or_env, registry=None):
-    """
-    Odoo 15/16: firma (cr, registry)
-    Odoo 17/18: firma (env)
-    """
-    if hasattr(cr_or_env, "cr"):           # 17/18
-        env = cr_or_env
-    else:                                   # 15/16
-        cr = cr_or_env
-        env = api.Environment(cr, SUPERUSER_ID, {})
-
-    cr = env.cr
-    _logger.info("l10n_pe_edi_catalog: cargando catálogos 03 y 25 (post_init_hook)")
-    _load_catalog_03_data(cr)
-    _load_catalog_25_data(cr)
-    _logger.info("l10n_pe_edi_catalog: catálogos cargados correctamente.")
+def _compute_catalog_25_complete_name(env):
+    records = env["l10n_pe_edi.catalog.25"].search([])
+    records._compute_complete_name()
 
 
-def uninstall_hook(cr_or_env, registry=None):
-    """
-    Odoo 15/16: firma (cr, registry)
-    Odoo 17/18: firma (env)
-    """
-    if hasattr(cr_or_env, "cr"):           # 17/18
-        env = cr_or_env
-    else:                                   # 15/16
-        cr = cr_or_env
-        env = api.Environment(cr, SUPERUSER_ID, {})
+def post_init_hook(env):
+    _load_catalog_03_data(env)
+    _compute_catalog_03_complete_name(env)
+    _load_catalog_25_data(env)
+    _compute_catalog_25_complete_name(env)
 
-    cr = env.cr
-    _logger.warning("l10n_pe_edi_catalog: limpiando catálogos (uninstall_hook)")
-    cr.execute("DELETE FROM l10n_pe_edi_catalog_03;")
-    cr.execute("DELETE FROM ir_model_data WHERE model = 'l10n_pe_edi.catalog.03';")
-    cr.execute("DELETE FROM l10n_pe_edi_catalog_25;")
-    cr.execute("DELETE FROM ir_model_data WHERE model = 'l10n_pe_edi.catalog.25';")
+
+def uninstall_hook(env):
+    env.cr.execute("DELETE FROM l10n_pe_edi_catalog_03;")
+    env.cr.execute("DELETE FROM ir_model_data WHERE model='l10n_pe_edi.catalog.03';")
+    env.cr.execute("DELETE FROM l10n_pe_edi_catalog_25;")
+    env.cr.execute("DELETE FROM ir_model_data WHERE model='l10n_pe_edi.catalog.25';")

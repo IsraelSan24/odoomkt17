@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<odoo>	
-	<!-- Tabla 25 - Convenios para evitar la doble tributación -->	
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<!-- Tabla 25 - Convenios para evitar la doble tributación -->
 	<record id="view_table_25_tree" model="ir.ui.view">
 		<field name="name">Tabla 25 - Convenios para evitar la doble tributación</field>
 		<field name="model">l10n_pe_edi.table.25</field>
 		<field name="arch" type="xml">
 			<tree string="Convenios para evitar la doble tributación">
-				<field name="code"/>
-				<field name="name"/>
-				<field name="active"/>
+				<field name="code" />
+				<field name="name" />
+				<field name="active" />
 			</tree>
 		</field>
 	</record>
@@ -19,12 +19,12 @@
 			<form string="Convenios para evitar la doble tributación">
 				<group>
 					<group>
-						<field name="code"/>
-						<field name="name"/>
-						<field name="active"/>
+						<field name="code" />
+						<field name="name" />
+						<field name="active" />
 					</group>
 				</group>
-			</form>	
+			</form>
 		</field>
 	</record>
 	<record model="ir.actions.act_window" id="action_table_25">
@@ -33,15 +33,15 @@
 		<field name="view_mode">tree,form</field>
 	</record>
 
-	<!-- Tabla 27 - Tipo de Vinculacion economica -->	
+	<!-- Tabla 27 - Tipo de Vinculacion economica -->
 	<record id="view_table_27_tree" model="ir.ui.view">
 		<field name="name">Tabla 27 - Tipo de Vinculacion economica</field>
 		<field name="model">l10n_pe_edi.table.27</field>
 		<field name="arch" type="xml">
 			<tree string="Tipo de Vinculacion economica">
-				<field name="code"/>
-				<field name="name"/>
-				<field name="active"/>
+				<field name="code" />
+				<field name="name" />
+				<field name="active" />
 			</tree>
 		</field>
 	</record>
@@ -52,12 +52,12 @@
 			<form string="Tipo de Vinculacion economica">
 				<group>
 					<group>
-						<field name="code"/>
-						<field name="name"/>
-						<field name="active"/>
+						<field name="code" />
+						<field name="name" />
+						<field name="active" />
 					</group>
 				</group>
-			</form>	
+			</form>
 		</field>
 	</record>
 	<record model="ir.actions.act_window" id="action_table_27">
@@ -66,15 +66,15 @@
 		<field name="view_mode">tree,form</field>
 	</record>
 
-	<!-- Tabla 30 - Clasificación de lo Bienes y Servicios adquiridos -->	
+	<!-- Tabla 30 - Clasificación de lo Bienes y Servicios adquiridos -->
 	<record id="view_table_30_tree" model="ir.ui.view">
 		<field name="name">Tabla 30 - Clasificación de lo Bienes y Servicios adquiridos</field>
 		<field name="model">l10n_pe_edi.table.30</field>
 		<field name="arch" type="xml">
 			<tree string="Clasificación de lo Bienes y Servicios adquiridos">
-				<field name="code"/>
-				<field name="name"/>
-				<field name="active"/>
+				<field name="code" />
+				<field name="name" />
+				<field name="active" />
 			</tree>
 		</field>
 	</record>
@@ -85,12 +85,12 @@
 			<form string="Clasificación de lo Bienes y Servicios adquiridos">
 				<group>
 					<group>
-						<field name="code"/>
-						<field name="name"/>
-						<field name="active"/>
+						<field name="code" />
+						<field name="name" />
+						<field name="active" />
 					</group>
 				</group>
-			</form>	
+			</form>
 		</field>
 	</record>
 	<record model="ir.actions.act_window" id="action_table_30">
@@ -99,15 +99,15 @@
 		<field name="view_mode">tree,form</field>
 	</record>
 
-	<!-- Tabla 31 - Tipo de renta -->	
+	<!-- Tabla 31 - Tipo de renta -->
 	<record id="view_table_31_tree" model="ir.ui.view">
 		<field name="name">Tabla 31 - Tipo de renta</field>
 		<field name="model">l10n_pe_edi.table.31</field>
 		<field name="arch" type="xml">
 			<tree string="Tipo de renta">
-				<field name="code"/>
-				<field name="name"/>
-				<field name="active"/>
+				<field name="code" />
+				<field name="name" />
+				<field name="active" />
 			</tree>
 		</field>
 	</record>
@@ -118,12 +118,12 @@
 			<form string="Tipo de renta">
 				<group>
 					<group>
-						<field name="code"/>
-						<field name="name"/>
-						<field name="active"/>
+						<field name="code" />
+						<field name="name" />
+						<field name="active" />
 					</group>
 				</group>
-			</form>	
+			</form>
 		</field>
 	</record>
 	<record model="ir.actions.act_window" id="action_table_31">
@@ -134,48 +134,56 @@
 
 	<!-- Tabla 32 - Modalidad del servicio prestado por el sujeto no domiciliado -->
 	<record id="view_table_32_tree" model="ir.ui.view">
-		<field name="name">Tabla 32 - Modalidad del servicio prestado por el sujeto no domiciliado</field>
+		<field
+            name="name"
+        >Tabla 32 - Modalidad del servicio prestado por el sujeto no domiciliado</field>
 		<field name="model">l10n_pe_edi.table.32</field>
 		<field name="arch" type="xml">
 			<tree string="Modalidad del servicio prestado por el sujeto no domiciliado">
-				<field name="code"/>
-				<field name="name"/>
-				<field name="active"/>
+				<field name="code" />
+				<field name="name" />
+				<field name="active" />
 			</tree>
 		</field>
 	</record>
 	<record id="view_table_32_form" model="ir.ui.view">
-		<field name="name">Tabla 32 - Modalidad del servicio prestado por el sujeto no domiciliado</field>
+		<field
+            name="name"
+        >Tabla 32 - Modalidad del servicio prestado por el sujeto no domiciliado</field>
 		<field name="model">l10n_pe_edi.table.32</field>
 		<field name="arch" type="xml">
 			<form string="Modalidad del servicio prestado por el sujeto no domiciliado">
 				<group>
 					<group>
-						<field name="code"/>
-						<field name="name"/>
-						<field name="active"/>
+						<field name="code" />
+						<field name="name" />
+						<field name="active" />
 					</group>
 				</group>
-			</form>	
+			</form>
 		</field>
 	</record>
 	<record model="ir.actions.act_window" id="action_table_32">
-		<field name="name">Tabla 32 - Modalidad del servicio prestado por el sujeto no domiciliado</field>
+		<field
+            name="name"
+        >Tabla 32 - Modalidad del servicio prestado por el sujeto no domiciliado</field>
 		<field name="res_model">l10n_pe_edi.table.32</field>
 		<field name="view_mode">tree,form</field>
 	</record>
 
-	<!-- Tabla 33 - Exoneraciones de operaciones de no domiciliados (ART. 19 DE LA LEY DEL IMPUESTO A LA RENTA) -->	
+	<!-- Tabla 33 - Exoneraciones de operaciones de no domiciliados (ART. 19 DE LA LEY DEL IMPUESTO A LA RENTA) -->
 	<record id="view_table_33_tree" model="ir.ui.view">
 		<field name="name">
 			Tabla 33 - Exoneraciones de operaciones de no domiciliados (ART. 19 DE LA LEY DEL IMPUESTO A LA RENTA)
 		</field>
 		<field name="model">l10n_pe_edi.table.33</field>
 		<field name="arch" type="xml">
-			<tree string="Exoneraciones de operaciones de no domiciliados (ART. 19 DE LA LEY DEL IMPUESTO A LA RENTA)">
-				<field name="code"/>
-				<field name="name"/>
-				<field name="active"/>
+			<tree
+                string="Exoneraciones de operaciones de no domiciliados (ART. 19 DE LA LEY DEL IMPUESTO A LA RENTA)"
+            >
+				<field name="code" />
+				<field name="name" />
+				<field name="active" />
 			</tree>
 		</field>
 	</record>
@@ -185,15 +193,17 @@
 		</field>
 		<field name="model">l10n_pe_edi.table.33</field>
 		<field name="arch" type="xml">
-			<form string="Exoneraciones de operaciones de no domiciliados (ART. 19 DE LA LEY DEL IMPUESTO A LA RENTA)">
+			<form
+                string="Exoneraciones de operaciones de no domiciliados (ART. 19 DE LA LEY DEL IMPUESTO A LA RENTA)"
+            >
 				<group>
 					<group>
-						<field name="code"/>
-						<field name="name"/>
-						<field name="active"/>
+						<field name="code" />
+						<field name="name" />
+						<field name="active" />
 					</group>
 				</group>
-			</form>	
+			</form>
 		</field>
 	</record>
 	<record model="ir.actions.act_window" id="action_table_33">
@@ -204,7 +214,7 @@
 		<field name="view_mode">tree,form</field>
 	</record>
 
-	<!-- Tabla 35 - Paises -->	
+	<!-- Tabla 35 - Paises -->
 	<record id="view_table_35_tree" model="ir.ui.view">
 		<field name="name">
 			Tabla 35 - Paises
@@ -212,9 +222,9 @@
 		<field name="model">l10n_pe_edi.table.35</field>
 		<field name="arch" type="xml">
 			<tree string="Paises">
-				<field name="code"/>
-				<field name="name"/>
-				<field name="active"/>
+				<field name="code" />
+				<field name="name" />
+				<field name="active" />
 			</tree>
 		</field>
 	</record>
@@ -227,12 +237,12 @@
 			<form string="Paises">
 				<group>
 					<group>
-						<field name="code"/>
-						<field name="name"/>
-						<field name="active"/>
+						<field name="code" />
+						<field name="name" />
+						<field name="active" />
 					</group>
 				</group>
-			</form>	
+			</form>
 		</field>
 	</record>
 	<record model="ir.actions.act_window" id="action_table_35">
