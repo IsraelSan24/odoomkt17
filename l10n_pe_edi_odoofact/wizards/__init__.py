@@ -8,14 +8,9 @@
 #
 #######################################################################################
 
-from . import catalog
-from . import account_journal
-from . import res_company
-from . import res_config_settings
-from . import res_partner
-from . import edi_picking_number
-from . import edi_dues
-from . import product_template
-from . import account_move
-from . import account_move_line
-from . import sale_order_line
+from . import account_invoice_send
+from . import account_move_reversal
+from . import account_debit_note
+from . import l10n_pe_edi_move_cancel
+from . import sale_make_invoice_advance
+from . import l10n_pe_edi_stock_picking_massive

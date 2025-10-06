@@ -87,12 +87,6 @@
                                             <t t-esc="partner.name" />
                                         </span>
                                     </t>
-
-                                    <t t-if="partner.street">
-                                        <span style="font-weight: normal;" colspan="2" class="text-left">
-                                            <span><t t-esc="partner.street" /></span>
-                                        </span>
-                                    </t>
                                 </div>
                             </div>                        
                         </t>
@@ -137,14 +131,14 @@
 
                     <br/>
                     <div id="product_header">
-                        <div class="row top-dashed" style="border-top:1px dashed black; border-bottom:1px dashed black;font-size: small; font-weight: bold;white-space: nowrap;">
+                        <div class="row top-dashed" style="font-size: 5px; border-top:1px dashed black; border-bottom:1px dashed black;font-size: small; font-weight: bold">
                             <div class="col-2">
                                 QTY.
                             </div>
                             <div class="col-5">
                                 DESCRIPTION
                             </div>
-                            <div class="col-2" style="text-align:right;">
+                            <div class="col-2" style="text-align:center;">
                                 P.U.
                             </div>
                             <div class="col-3" style="text-align:right;">
@@ -154,22 +148,21 @@
                     </div>
                     <div id="products_list">
                         <t t-foreach="o.invoice_line_ids" t-as="line">
-                            <t t-if="not line.display_type" name="account_invoice_line_accountable">
-                                <div class="row top-dashed" style="font-size: small;">
-                                    <div class="col-2" style="white-space: nowrap;">
-                                        <t t-esc="line.quantity"/>
-                                    </div>
-                                    <div class="col-5" style="font-family: 'Francois One', sans-serif;">
-                                        <t t-esc="line.product_id.name"/>
-                                    </div>
-                                    <div class="col-2" style="text-align:right;white-space: nowrap;">
-                                        <t t-esc="line.price_unit" t-options='{"widget": "float", "precision": 2}'/>
-                                    </div>
-                                    <div class="col-3" style="text-align:right;white-space: nowrap;">
-                                        <t t-esc="line.price_subtotal" t-options='{"widget": "float", "precision": 2}'/>
-                                    </div>
+                            <div class="row top-dashed" style="font-size: 5px; font-size: small;">
+                                <div class="col-2" style="padding-left:1px; padding-right:1px">
+                                    <t t-esc="line.quantity"/>
                                 </div>
-                            </t>
+                                <div class="col-5" style="padding-left:1px; padding-right:1px,line-height: 5px; font-family: 'Francois One', sans-serif;">
+                                     <t t-esc="line.product_id.name"/>
+                                </div>
+                                <div class="col-2 text-right" style="padding-left:1px; padding-right:1px;text-align:right;">
+                                    <t t-esc="line.price_unit" t-options='{"widget": "float", "precision": 2}'/>
+                                </div>
+                                <div class="col-3 text-right" style="padding-left:1px; padding-right:1px;text-align:right;">
+                                    
+                                    <t t-esc="line.price_subtotal" t-options='{"widget": "float", "precision": 2}'/>
+                                </div>
+                            </div>
                         </t>
                     </div>
                     <br/>
@@ -272,22 +265,38 @@
                         </div>
 
                         <br/>
+
+                        <div class="row" t-if="o.l10n_pe_edi_origin_move_id">
+                            <div class="col-4" style="font-size: 6px; font-size: small;">
+                                <strong>DOCUMENT RELATED:</strong>
+                            </div>
+                            <div class="col-8" style="font-size: 6px; font-size: small;">
+                                <span 
+                                    t-esc="o.l10n_pe_edi_origin_move_id.l10n_latam_document_type_id.name" 
+                                    style="text-transform: uppercase;"
+                                /> - <span t-esc="o.l10n_pe_edi_origin_move_id.name" />
+                            </div>
+                        </div>
+
+                        <br/>
                         
-                        <t t-set="payments_vals" t-value="o.sudo()._get_reconciled_info_JSON_values()"/>
+                        <t t-set="payments_vals" t-value="o.sudo().invoice_payments_widget and o.sudo().invoice_payments_widget['content'] or []"/>
                         <t t-if="payments_vals">
-                            <div class="row" style="font-size: small">
+                            <div class="row" style="padding-left:-2px; padding-right:1px; font-size: small">
                                <strong>PAYMENT TYPE:</strong>
                             </div>
                             <br/>
                             <t t-foreach="payments_vals" t-as="payment_vals">
-                                <div class="row" style="font-size: 6px; font-size: small; border-top:1px dashed black;">
-                                    <div class="col-8">
-                                        <t t-esc="payment_vals['journal_name']" />
+                                <t t-if="payment_vals['is_exchange'] == 0">
+                                    <div class="row" style="font-size: 6px; font-size: small; border-top:1px dashed black;">
+                                        <div class="col-8" style="padding-left:1px; padding-right:1px">
+                                            <t t-esc="payment_vals['journal_name']" />
+                                        </div>
+                                        <div class="col-4 text-right" style="padding-left:1px; padding-right:1px;text-align: right;">
+                                            <span t-esc="payment_vals['amount']" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                        </div>
                                     </div>
-                                    <div class="col-4" style="text-align: right;">
-                                        <span t-esc="payment_vals['amount']" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
-                                    </div>
-                                </div>
+                                </t>
                             </t>
                         </t>
                         <br/>
@@ -320,7 +329,9 @@
                         </div>
                         <div id="qr_code" class="text-center">
                             <div class="inm-qr" style="text-align:center;">                
-                                <img t-att-src="'/report/barcode/QR/%s|%s|%s|%s|%s|%s|%s|%s|%s|'%(o.company_id.vat,o.l10n_latam_document_type_id.code,o.l10n_pe_edi_serie,o.l10n_pe_edi_number,o.l10n_pe_edi_amount_igv,o.amount_total,o.invoice_date,o.partner_id.l10n_latam_identification_type_id.l10n_pe_vat_code,o.partner_id.vat)" class="img-fluid img-thumbnail rounded mx-auto d-block" style="width:100px;height:100px;"/>
+                                <img
+                                    t-att-src="'/report/barcode/?barcode_type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', o._get_qr_code(), 100, 100)"
+                                />
                             </div>
                         </div>
                         <br />

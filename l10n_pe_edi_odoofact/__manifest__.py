@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-###############################################################################
+#######################################################################################
 #
 #    Copyright (C) 2019-TODAY OPeru.
 #    Author      :  Grupo Odoo S.A.C. (<http://www.operu.pe>)
@@ -7,70 +6,65 @@
 #    This program is copyright property of the author mentioned above.
 #    You can`t redistribute it and/or modify it.
 #
-###############################################################################
+#######################################################################################
 
 {
-    'name': 'Factura Electronica - Peru',
-    'version': '15.0.5',
-    'author': 'OPeru',
-    'category': 'Accounting',
-    'summary': 'Factura electronica Peru con PSE/OSE Nubefact',
-    'description': '''
-    EDI Peruvian Localization
-    Allow the user to generate the EDI document for Peruvian invoicing with PSE/OSE Nubefact.
-    ''',
-    'depends': [
-        'account',
-        'sale',
-        'base',
-        'web',
-        'uom',
-        'account_debit_note',
-        'l10n_pe', 
-        'l10n_latam_base', 
-        'l10n_latam_invoice_document',
-        'l10n_pe_edi_catalog'
+    "name": "Facturacion Electronica",
+    "version": "1.0",
+    "author": "OPeru",
+    "category": "Accounting & Finance",
+    "summary": "Modulo para Facturacion Electronica.",
+    "license": "LGPL-3",
+    "contributors": [
+        "Soporte OPeru <soporte@operu.pe>",
     ],
-    'data': [
-        'wizard/account_move_reversal_view.xml',
-        'wizard/account_debit_note_view.xml',
-        'wizard/l10n_pe_edi_move_cancel_view.xml',
-        'views/l10n_pe_edi_picking_number_view.xml',
-        'views/res_company_views.xml',
-        'views/account_views.xml',
-        'views/account_tax_views.xml',
-        'views/account_move_views.xml',
-        'views/product_views.xml',
-        'views/edi_request_view.xml',
-        'views/edi_shop_views.xml',
-        'views/report_menu_view.xml',
-        'views/uom_uom_views.xml',
-        'views/catalog_views.xml',
-        'data/l10n_latam_identification_type_data.xml',
-        'data/account_tax_data.xml',
-        'data/currency_data.xml',
-        'data/ir_cron_data.xml',
-        'data/l10n_pe_edi_data.xml',
-        'data/mail_template_data.xml',
-        'data/uom_data.xml',
-        'template/send_invoice_report_email_template.xml',
-        'views/res_config_settings_views.xml',
-        'views/report_invoice.xml',
-        'security/ir.model.access.csv',
-        'security/edi_security.xml',       
+    "website": "http://www.operu.pe/facturacion-electronica",
+    "live_test_url": "https://www.operu.pe/r/manual_facturacion_electronica",
+    "depends": [
+        "account",
+        "l10n_pe",
+        "l10n_pe_edi_base",
+        "l10n_latam_invoice_document",
+        "account_debit_note",
+        "sale",
+    ],
+    "data": [
+        "security/ir.model.access.csv",
+        # "data/account_tax_data.xml",
+        "data/l10n_latam_identification_type_data.xml",
+        "data/l10n_latam_document_type_data.xml",
+        "data/mail_template_data.xml",
+        "wizards/account_move_reversal_views.xml",
+        "wizards/account_debit_note_views.xml",
+        "wizards/l10n_pe_edi_move_cancel_views.xml",
+        'wizards/l10n_pe_edi_stock_picking_massive_views.xml',
+        "views/account_journal_views.xml",
+        "views/product_template_views.xml",
+        "views/partner_views.xml",
+        "views/account_move_views.xml",
+        "views/report_invoice.xml",
+        "views/res_config_settings_views.xml",
+        "views/sale_order_views.xml",
+        "views/account_portal_templates_views.xml",
         "report/reports_format_ticket.xml",
         "report/report_ticket.xml",
     ],
     "assets": {
-        "web.report_assets_common": ["l10n_pe_edi_odoofact/static/src/css/style.css"]
+        "web.report_assets_pdf": [
+            "l10n_pe_edi_odoofact/static/src/css/style.css"
+        ]
     },
-    'installable': True,
-    'images': ['static/description/banner.png'],
-    'live_test_url': 'http://www.operu.pe/manuales',
-    'license': 'OPL-1',
-    'support': 'modulos@operu.pe',
-    'sequence': 1,
-    'post_init_hook': '_l10n_pe_edi_odoofact_init',
+    "external_dependencies": {
+        "python": [
+            "json",
+            "logging",
+            "base64",
+            "requests",
+            "num2words",
+        ],
+    },
+    "installable": True,
+    "images": ["static/description/banner.png"],
+    "auto_install": False,
+    "post_init_hook": "post_init_hook",
 }
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

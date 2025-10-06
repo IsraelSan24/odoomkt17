@@ -11,13 +11,18 @@
 from odoo import fields, models
 
 
-class ProductTemplate(models.Model):
-    _inherit = "product.template"
+class EdiDues(models.Model):
+    _name = "l10n_pe_edi.dues"
+    _description = "Dues"
 
-    l10n_pe_edi_product_code_id = fields.Many2one(
-        comodel_name="l10n_pe_edi.catalog.25",
-        string="Product code SUNAT",
+    move_id = fields.Many2one(
+        comodel_name="account.move",
+        string="Move",
+        required=True,
+        readonly=True,
+        ondelete="cascade",
     )
-    l10n_pe_edi_detraction_type_id = fields.Many2one(
-        comodel_name="l10n_pe_edi.catalog.54", string="Detraction Type", copy=False
-    )
+    currency_id = fields.Many2one(related="move_id.currency_id")
+    dues_number = fields.Integer()
+    paid_date = fields.Date()
+    amount = fields.Monetary(currency_field="currency_id")

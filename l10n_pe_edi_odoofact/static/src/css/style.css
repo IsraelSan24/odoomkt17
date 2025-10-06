@@ -1,12 +1,15 @@
-.table-sm th, .table-sm td {
+/* .table-sm th,
+.table-sm td {
     padding: 0.1rem 0.5rem;
 }
+
 .card-body {
     padding: 0.5rem;
 }
+
 .card-header {
     padding: 0.5rem;
-}
+} */
 
 /* ESTILOS PARA ETIQUETA ANULADO EN FACTURAS */
 .col-3 {
@@ -35,7 +38,7 @@
     position: absolute;
     padding: 7px 0;
     left: 45px;
-    top: 20px;
+    top: 25px;
     width: 140px;
     background-color: rgba(255, 0, 0, 0.5);
     color: #FFFFFF;

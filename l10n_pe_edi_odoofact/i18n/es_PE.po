@@ -20,12 +20,12 @@ msgstr ""
 #: code:addons/l10n_pe_edi_odoofact/models/account_move.py:0
 #, python-format
 msgid "%(words)s WITH %(amount)02d/100 %(currency_label)s"
-msgstr ""
+msgstr "%(words)s CON %(amount)02d/100 %(currency_label)s"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid ", visit"
-msgstr ""
+msgstr ", visitar"
 
 #. module: l10n_pe_edi_odoofact
 #: model:account.tax,name:l10n_pe_edi_odoofact.sale_tax_icbper
@@ -76,12 +76,12 @@ msgstr ""
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.portal_invoice_template_inherit
 msgid "<i class=\"fa fa-print\"/> Download XML"
-msgstr ""
+msgstr "<i class=\"fa fa-print\"/> Descargar XML"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.view_move_form
 msgid "<span class=\"o_stat_text\">EDI Request</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Solicitud EDI</span>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.l10n_pe_edi_move_cancel_view_form
@@ -89,21 +89,23 @@ msgid ""
 "<span class=\"text-danger\">The invoice will be sent to SUNAT and canceled. "
 "After pressing the button there is no backward movement.</span>"
 msgstr ""
+"<span class=\"text-danger\">La factura será enviada a la SUNAT y cancelada. "
+"Después de presionar el botón no hay movimiento hacia atrás.</span>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "<span style=\"font-weight: bold;\">CURRENCY:</span>"
-msgstr ""
+msgstr "<span style=\"font-weight: bold;\">MONEDA:</span>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "<span style=\"font-weight: bold;\">DATE DUE:</span>"
-msgstr ""
+msgstr "<span style=\"font-weight: bold;\">FECHA VENC.:</span>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "<span style=\"font-weight: bold;\">DATE INVOICE:</span>"
-msgstr ""
+msgstr "<span style=\"font-weight: bold;\">FECHA FACTURA:</span>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
@@ -118,17 +120,17 @@ msgstr ""
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<span>CODE</span>"
-msgstr ""
+msgstr "<span>CÓDIGO</span>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<span>DESCRIPTION</span>"
-msgstr ""
+msgstr "<span>DESCRIPCIÓN</span>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<span>FREE TRANSFER</span>"
-msgstr ""
+msgstr "<span>TRANSFERENCIA GRATUITA</span>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
@@ -138,7 +140,7 @@ msgstr ""
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<span>QTY</span>"
-msgstr ""
+msgstr "<span>CANT</span>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
@@ -148,7 +150,7 @@ msgstr ""
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<span>UoM</span>"
-msgstr ""
+msgstr "<span>UdM</span>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
@@ -163,77 +165,77 @@ msgstr ""
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<strong>ADDRESS</strong>"
-msgstr ""
+msgstr "<strong>DIRECCIÓN</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "<strong>AMOUNT IN LETTERS:</strong>"
-msgstr ""
+msgstr "<strong>IMPORTE EN LETRAS:</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<strong>AMOUNT IN WORDS</strong>"
-msgstr ""
+msgstr "<strong>MONTO EN LETRAS</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<strong>CURRENCY</strong>"
-msgstr ""
+msgstr "<strong>MONEDA</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.view_move_form
 msgid "<strong>Cancellation is in progress</strong>"
-msgstr ""
+msgstr "<strong>Cancelación esta en progreso</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<strong>DENOMINATION</strong>"
-msgstr ""
+msgstr "<strong>DENOMINACIÓN</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<strong>DETRACTION</strong>"
-msgstr ""
+msgstr "<strong>DETRACCIÓN</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<strong>DISCOUNT</strong>"
-msgstr ""
+msgstr "<strong>DESCUENTO</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "<strong>DOCUMENT RELATED:</strong>"
-msgstr ""
+msgstr "<strong>DOCUMENTO RELACIONADO:</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<strong>DOCUMENT RELATED</strong>"
-msgstr ""
+msgstr "<strong>DOCUMENTO RELACIONADO</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<strong>DUE DATE</strong>"
-msgstr ""
+msgstr "<strong>FECHA DE VENCIMIENTO</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "<strong>DUES:</strong>"
-msgstr ""
+msgstr "<strong>CUOTAS:</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<strong>DUES</strong>"
-msgstr ""
+msgstr "<strong>CUOTAS</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<strong>EXONERATED</strong>"
-msgstr ""
+msgstr "<strong>EXONERADO</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<strong>FREE</strong>"
-msgstr ""
+msgstr "<strong>GRATUITO</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
@@ -248,58 +250,60 @@ msgstr ""
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "<strong>INFORM:</strong>"
-msgstr ""
+msgstr "<strong>INFORMAR A:</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<strong>INVOICE DATE</strong>"
-msgstr ""
+msgstr "<strong>FECHA DE FACTURA</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "<strong>METHOD OF PAYMENT:</strong>"
-msgstr ""
+msgstr "<strong>METODO DE PAGO:</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<strong>METHOD OF PAYMENT</strong>"
-msgstr ""
+msgstr "<strong>FORMA DE PAGO</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<strong>NATIONAL BANK ACC. N°</strong>"
-msgstr ""
+msgstr "<strong>BANCO DE LA NACIÓN CTA. N°</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<strong>OBSERVATIONS</strong>"
-msgstr ""
+msgstr "<strong>OBSERVACIONES</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid ""
 "<strong>OPERATION SUBJECT TO THE TAX OBLIGATIONS PAYMENT SYSTEM</strong>"
 msgstr ""
+"<strong>OPERACIÓN SUJETA AL SISTEMA DE PAGO DE OBLIGACIONES "
+"TRIBUTARIAS</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<strong>PAYMENT TERMS</strong>"
-msgstr ""
+msgstr "<strong>TERMINOS DE PAGO</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "<strong>PAYMENT TYPE:</strong>"
-msgstr ""
+msgstr "<strong>TIPO DE PAGO:</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<strong>PURCHASE/SERVICE ORDER</strong>"
-msgstr ""
+msgstr "<strong>ORDEN DE COMPRA/SERVICIO</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<strong>RETENTION</strong>"
-msgstr ""
+msgstr "<strong>RETENCIÓN</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
@@ -309,12 +313,12 @@ msgstr ""
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<strong>TYPE OF SALE</strong>"
-msgstr ""
+msgstr "<strong>TIPO DE VENTA</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "<strong>UNAFFECTED</strong>"
-msgstr ""
+msgstr "<strong>INAFECTO</strong>"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.view_move_form
@@ -322,65 +326,67 @@ msgid ""
 "<strong>WARNING:</strong>\n"
 "                    Verify the total of the dues if it matches the total of the invoice, discounting the retention or detraction applied"
 msgstr ""
+"<strong>ADVERTENCIA:</strong>\n"
+"                    Verificar el total de las cuotas si coincide con el total de la factura, descontando la retención o detracción aplicada"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "AMOUNT"
-msgstr ""
+msgstr "IMPORTE"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "AMOUNT EXONERATED"
-msgstr ""
+msgstr "IMPORTE EXONERADO"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "AMOUNT IGV"
-msgstr ""
+msgstr "IMPORTE IGV"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "AMOUNT TO PAY"
-msgstr ""
+msgstr "IMPORTE A PAGAR"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "AMOUNT UNAFFECTED"
-msgstr ""
+msgstr "IMPORTE INAFECTO"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_sunat_accepted
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_sunat_accepted
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_sunat_accepted
 msgid "Accepted by SUNAT"
-msgstr ""
+msgstr "Aceptado por SUNAT"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model,name:l10n_pe_edi_odoofact.model_account_move_reversal
 msgid "Account Move Reversal"
-msgstr ""
+msgstr "Revocación de movimiento en cuenta"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model,name:l10n_pe_edi_odoofact.model_account_move_send
 msgid "Account Move Send"
-msgstr ""
+msgstr "Enviar movimiento de cuenta"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__activate_einvoice_ticket
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__activate_einvoice_ticket
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__activate_einvoice_ticket
 msgid "Activate Einvoice Ticket"
-msgstr ""
+msgstr "Activar Ticket E-Factura"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.res_config_settings_view_form_account
 msgid "Activate Electronic Ticket"
-msgstr ""
+msgstr "Activar Ticket Electrónico"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.res_config_settings_view_form_account
 msgid "Activation"
-msgstr ""
+msgstr "Activación"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.res_config_settings_view_form_account
@@ -390,57 +396,57 @@ msgstr ""
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.view_stock_picking_wizard
 msgid "Add"
-msgstr ""
+msgstr "Agregar"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model,name:l10n_pe_edi_odoofact.model_account_debit_note
 msgid "Add Debit Note wizard"
-msgstr ""
+msgstr "Wizard para agregar Nota de Débito"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.view_move_form
 msgid "Add Pickings"
-msgstr ""
+msgstr "Agregar Guías"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.view_move_form
 msgid "Additional Move Information"
-msgstr ""
+msgstr "Información adicional"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move_line__l10n_pe_edi_advance_number
 msgid "Advance Number"
-msgstr ""
+msgstr "Anticipo Número"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move_line__l10n_pe_edi_advance_serie
 msgid "Advance Serie"
-msgstr ""
+msgstr "Anticipo Serie"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_dues__amount
 msgid "Amount"
-msgstr ""
+msgstr "Importe"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "Amount Due"
-msgstr ""
+msgstr "Importe Adeudado"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move_line__l10n_pe_edi_amount_discount
 msgid "Amount discount before taxes"
-msgstr ""
+msgstr "Monto descontado antes de impuestos"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_debit_note__available_journal_ids
 msgid "Available Journal"
-msgstr ""
+msgstr "Diario Disponible"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "BASE AMOUNT"
-msgstr ""
+msgstr "BASE IMPONIBLE"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields.selection,name:l10n_pe_edi_odoofact.selection__l10n_latam_document_type__type_of__2
@@ -452,64 +458,64 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_amount_base
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_amount_base
 msgid "Base Amount"
-msgstr ""
+msgstr "Base Imponible"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields.selection,name:l10n_pe_edi_odoofact.selection__l10n_pe_edi_picking_number__type__2
 msgid "CARRIER REFERRAL GUIDE"
-msgstr ""
+msgstr "GUÍA DE REMISIÓN TRANSPORTISTA"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "CLIENT"
-msgstr ""
+msgstr "CLIENTE"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.l10n_pe_edi_move_cancel_view_form
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.view_stock_picking_wizard
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.actions.act_window,name:l10n_pe_edi_odoofact.l10n_pe_edi_move_cancel_action
 msgid "Cancel Invoices"
-msgstr ""
+msgstr "Cancelar Facturas"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_cancel_reason
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_cancel_reason
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_cancel_reason
 msgid "Cancel Reason"
-msgstr ""
+msgstr "Razón de cancelación"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.l10n_pe_edi_move_cancel_view_form
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.view_move_form
 msgid "Cancel in SUNAT"
-msgstr ""
+msgstr "Anular en SUNAT"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.l10n_pe_edi_move_cancel_view_form
 msgid "Cancel the invoice in SUNAT."
-msgstr ""
+msgstr "Cancelar la factura en SUNAT"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "Canceled"
-msgstr ""
+msgstr "Anulado"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.view_move_form
 msgid "Canceled by SUNAT"
-msgstr ""
+msgstr "Cancelado por SUNAT"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_sunat_canceled_progress
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_sunat_canceled_progress
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_sunat_canceled_progress
 msgid "Cancellation is in progress"
-msgstr ""
+msgstr "Cancelación esta en progreso"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,help:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_reversal_type_id
@@ -517,7 +523,7 @@ msgstr ""
 #: model:ir.model.fields,help:l10n_pe_edi_odoofact.field_account_move_reversal__l10n_pe_edi_reversal_type_id
 #: model:ir.model.fields,help:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_reversal_type_id
 msgid "Catalog 09: Types of Credit note"
-msgstr ""
+msgstr "Catálogo 09: Tipo de Nota de Crédito"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,help:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_debit_type_id
@@ -525,48 +531,48 @@ msgstr ""
 #: model:ir.model.fields,help:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_debit_type_id
 #: model:ir.model.fields,help:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_debit_type_id
 msgid "Catalog 10: Types of Debit note"
-msgstr ""
+msgstr "Catálogo 10: Tipo de Nota de Débito"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.view_invoice_tree
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.view_move_form
 msgid "Check Status in SUNAT"
-msgstr ""
+msgstr "Verificar en SUNAT"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,help:l10n_pe_edi_odoofact.field_account_journal__l10n_pe_edi_contingency
 msgid "Check this for contingency invoices"
-msgstr ""
+msgstr "Dar check para facturas de contingencia"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.res_config_settings_view_form_account
 msgid "Choose the period to send e-documents"
-msgstr ""
+msgstr "Elija el período para enviar documentos electrónicos"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model,name:l10n_pe_edi_odoofact.model_res_company
 msgid "Companies"
-msgstr ""
+msgstr "Empresas"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model,name:l10n_pe_edi_odoofact.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Ajustes de configuración"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.res_config_settings_view_form_account
 msgid "Configure Shops and Tokens"
-msgstr ""
+msgstr "Configurar Tiendas y Tokens"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model,name:l10n_pe_edi_odoofact.model_res_partner
 msgid "Contact"
-msgstr ""
+msgstr "Contacto"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_journal__l10n_pe_edi_contingency
 msgid "Contingency"
-msgstr ""
+msgstr "Contingencia"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_dues__create_uid
@@ -574,7 +580,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_picking_number__create_uid
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_stock_picking_massive__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Creado por"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_dues__create_date
@@ -582,7 +588,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_picking_number__create_date
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_stock_picking_massive__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Creado el"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_reversal_type_id
@@ -590,12 +596,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move_reversal__l10n_pe_edi_reversal_type_id
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_reversal_type_id
 msgid "Credit note type"
-msgstr ""
+msgstr "Tipo de Nota de Crédito"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_dues__currency_id
 msgid "Currency"
-msgstr ""
+msgstr "Moneda"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
@@ -605,11 +611,13 @@ msgid ""
 "Currency '%(code)s, %(name)s' is not available for Electronic invoice. "
 "Contact to the Administrator."
 msgstr ""
+"Moneda '%(code)s, %(name)s' no está disponible para Factura Electrónica. "
+"Contactar con el Administrador."
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "DESCRIPCIÓN"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
@@ -617,7 +625,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_pe_edi_odoofact.selection__account_move__l10n_pe_edi_odoofact_operation_type__33
 #, python-format
 msgid "DETRACTION - CARGO TRANSPORTATION SERVICES"
-msgstr ""
+msgstr "DETRACCIÓN - SERVICIOS DE TRANSPORTE DE CARGA"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
@@ -625,7 +633,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_pe_edi_odoofact.selection__account_move__l10n_pe_edi_odoofact_operation_type__31
 #, python-format
 msgid "DETRACTION - HYDROBIOLOGICAL RESOURCES"
-msgstr ""
+msgstr "DETRACCIÓN - RECURSOS HIDROBIOLÓGICOS"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
@@ -633,12 +641,12 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_pe_edi_odoofact.selection__account_move__l10n_pe_edi_odoofact_operation_type__32
 #, python-format
 msgid "DETRACTION - PASSENGER TRANSPORTATION SERVICES"
-msgstr ""
+msgstr "DETRACCIÓN - SERVICIOS DE TRANSPORTE DE PASAJEROS"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "DISCOUNT"
-msgstr ""
+msgstr "DESCUENTO"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
@@ -648,12 +656,12 @@ msgstr ""
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.res_config_settings_view_form_account
 msgid "Data to configure for detraction"
-msgstr ""
+msgstr "Datos a configurar para la detracción"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.res_config_settings_view_form_account
 msgid "Data to configure for retention"
-msgstr ""
+msgstr "Datos a configurar para la retención"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_debit_type_id
@@ -661,7 +669,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_debit_type_id
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_debit_type_id
 msgid "Debit note type"
-msgstr ""
+msgstr "Tipo de Nota de Débito"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,help:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_odoofact_operation_type
@@ -671,11 +679,13 @@ msgid ""
 "Default 1, the others are for very special types of operations, do not "
 "hesitate to consult with us for more information"
 msgstr ""
+"Por defecto 1, las demás son para operaciones especiales, no dude en "
+"consultar con el administrador para más información"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.res_config_settings_view_form_account
 msgid "Detraction"
-msgstr ""
+msgstr "Detracción"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_detraction_payment_type_id
@@ -685,7 +695,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_res_config_settings__l10n_pe_edi_detraction_payment_type_id
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.res_config_settings_view_form_account
 msgid "Detraction Payment Type"
-msgstr ""
+msgstr "Medio de Pago Detracción"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_detraction_type_id
@@ -694,14 +704,14 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_product_product__l10n_pe_edi_detraction_type_id
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_product_template__l10n_pe_edi_detraction_type_id
 msgid "Detraction Type"
-msgstr ""
+msgstr "Tipo de Detracción"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
 #: code:addons/l10n_pe_edi_odoofact/models/account_move.py:0
 #, python-format
 msgid "Detraction is mandatory for amounts greater than S/. %s"
-msgstr ""
+msgstr "La detracción es obligatoria para montos mayores a S/. %s"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_dues__display_name
@@ -709,18 +719,18 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_picking_number__display_name
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_stock_picking_massive__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nombre a Mostrar"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_journal__l10n_latam_document_type_id
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_latam_document_type__type_of
 msgid "Document Type"
-msgstr ""
+msgstr "Tipo de Documento"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.portal_invoice_template_inherit
 msgid "Download XML"
-msgstr ""
+msgstr "Descargar XML"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model,name:l10n_pe_edi_odoofact.model_l10n_pe_edi_dues
@@ -729,19 +739,19 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_dues_ids
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.view_move_form
 msgid "Dues"
-msgstr ""
+msgstr "Cuotas"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_dues__dues_number
 msgid "Dues Number"
-msgstr ""
+msgstr "Número de Cuota"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
 #: code:addons/l10n_pe_edi_odoofact/models/account_move.py:0
 #, python-format
 msgid "EDI Request"
-msgstr ""
+msgstr "Solicitud EDI"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
@@ -749,41 +759,41 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_pe_edi_odoofact.selection__account_move__l10n_pe_edi_odoofact_operation_type__2
 #, python-format
 msgid "EXPORTATION"
-msgstr ""
+msgstr "EXPORTACIÓN"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_res_config_settings__module_l10n_pe_edi_odoofact_pro
 msgid "Electronic Inviocing Pro"
-msgstr ""
+msgstr "Facturación Electrónica PRO"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_res_config_settings__module_l10n_pe_edi_odoofact_sale
 msgid "Electronic Inviocing Sale"
-msgstr ""
+msgstr "Facturación Electrónica Venta"
 
 #. module: l10n_pe_edi_odoofact
 #: model:mail.template,name:l10n_pe_edi_odoofact.email_template_edi_invoice
 msgid "Electronic Invoice: Send by email"
-msgstr ""
+msgstr "Comprobante electrónico: Enviar por email"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.actions.report,name:l10n_pe_edi_odoofact.account_einvoice_report_ticket
 msgid "Electronic Ticket"
-msgstr ""
+msgstr "Ticket Electrónico"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_exchange_rate
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_exchange_rate
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_exchange_rate
 msgid "Exchange Rate"
-msgstr ""
+msgstr "Tipo de Cambio"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_amount_exonerated
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_amount_exonerated
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_amount_exonerated
 msgid "Exonerated Amount"
-msgstr ""
+msgstr "Importe Exonerado"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields.selection,name:l10n_pe_edi_odoofact.selection__l10n_latam_document_type__type_of__1
@@ -793,7 +803,7 @@ msgstr ""
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "FREE AMOUNT"
-msgstr ""
+msgstr "IMPORTE GRATUITO"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.res_config_settings_view_form_account
@@ -804,31 +814,31 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move_line__l10n_pe_edi_free_product
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_sale_order_line__l10n_pe_edi_is_free_product
 msgid "Free"
-msgstr ""
+msgstr "Gratuito"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_amount_free
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_amount_free
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_amount_free
 msgid "Free Amount"
-msgstr ""
+msgstr "Importe Gratuito"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move_line__l10n_pe_edi_amount_free
 msgid "Free amount"
-msgstr ""
+msgstr "Importe Gratuito"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "GLOBAL DISCOUNT"
-msgstr ""
+msgstr "DESCUENTO GLOBAL"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_global_discount
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_global_discount
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_global_discount
 msgid "Global Discount Amount"
-msgstr ""
+msgstr "Importe de Descuento Global"
 
 #. module: l10n_pe_edi_odoofact
 #: model:account.tax,description:l10n_pe_edi_odoofact.sale_tax_icbper
@@ -840,12 +850,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_amount_icbper
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_amount_icbper
 msgid "ICBPER Amount"
-msgstr ""
+msgstr "Importe ICBPER"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move_line__l10n_pe_edi_icbper_amount
 msgid "ICBPER amount"
-msgstr ""
+msgstr "Importe ICBPER"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_dues__id
@@ -860,12 +870,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_amount_igv
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_amount_igv
 msgid "IGV Amount"
-msgstr ""
+msgstr "Importe IGV"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move_line__l10n_pe_edi_igv_amount
 msgid "IGV amount"
-msgstr ""
+msgstr "Importe IGV"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
@@ -873,7 +883,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_pe_edi_odoofact.selection__account_move__l10n_pe_edi_odoofact_operation_type__1
 #, python-format
 msgid "INTERNAL SALE"
-msgstr ""
+msgstr "VENTA INTERNA"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
@@ -881,12 +891,14 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_pe_edi_odoofact.selection__account_move__l10n_pe_edi_odoofact_operation_type__4
 #, python-format
 msgid "INTERNAL SALE - ADVANCES"
-msgstr ""
+msgstr "VENTA INTERNA - ANTICIPOS"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,help:l10n_pe_edi_odoofact.field_account_debit_note__journal_id
 msgid "If empty, uses the journal of the journal entry to be debited."
 msgstr ""
+"Si está vacío, se utiliza el asiento contable del diario para realizar el "
+"cargo."
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.res_config_settings_view_form_account
@@ -896,14 +908,14 @@ msgstr ""
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_stock_picking_massive__invoice_id
 msgid "Invoice"
-msgstr ""
+msgstr "Factura"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
 #: code:addons/l10n_pe_edi_odoofact/models/account_move.py:0
 #, python-format
 msgid "Invoice with detraction, the type of operation must be detraction."
-msgstr ""
+msgstr "Factura con detracción, el tipo de operación debe ser detracción."
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_is_einvoice
@@ -911,28 +923,28 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_is_einvoice
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_is_einvoice
 msgid "Is E-invoice"
-msgstr ""
+msgstr "Es E-Factura"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,help:l10n_pe_edi_odoofact.field_account_move_line__l10n_pe_edi_free_product
 #: model:ir.model.fields,help:l10n_pe_edi_odoofact.field_sale_order_line__l10n_pe_edi_is_free_product
 msgid "Is free product?"
-msgstr ""
+msgstr "Es producto gratuito?"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model,name:l10n_pe_edi_odoofact.model_account_journal
 msgid "Journal"
-msgstr ""
+msgstr "Diario"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model,name:l10n_pe_edi_odoofact.model_account_move
 msgid "Journal Entry"
-msgstr ""
+msgstr "Asiento contable"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model,name:l10n_pe_edi_odoofact.model_account_move_line
 msgid "Journal Item"
-msgstr ""
+msgstr "Apunte contable"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_dues__write_uid
@@ -940,7 +952,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_picking_number__write_uid
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_stock_picking_massive__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Última actualización por"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_dues__write_date
@@ -948,12 +960,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_picking_number__write_date
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_stock_picking_massive__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Última actualización el"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model,name:l10n_pe_edi_odoofact.model_l10n_latam_document_type
 msgid "Latam Document Type"
-msgstr ""
+msgstr "Tipo de Documento Latam"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
@@ -965,20 +977,20 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_res_config_settings__l10n_pe_edi_min_amount_detraction
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.res_config_settings_view_form_account
 msgid "Min Amount for Detraction"
-msgstr ""
+msgstr "Importe minimo para Detracción"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_res_company__l10n_pe_edi_min_amount_retention
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_res_config_settings__l10n_pe_edi_min_amount_retention
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.res_config_settings_view_form_account
 msgid "Min Amount for Retention"
-msgstr ""
+msgstr "Importe minimo para Retención"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_dues__move_id
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_picking_number__invoice_id
 msgid "Move"
-msgstr ""
+msgstr "Movimiento"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
@@ -986,7 +998,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_pe_edi_odoofact.selection__account_move__l10n_pe_edi_odoofact_operation_type__29
 #, python-format
 msgid "NON-DOMICILED SALES THAT DO NOT QUALIFY AS EXPORTS"
-msgstr ""
+msgstr "VENTAS NO DOMICILIADAS QUE NO CALIFICAN COMO EXPORTACIONES"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields.selection,name:l10n_pe_edi_odoofact.selection__l10n_latam_document_type__type_of__3
@@ -1013,7 +1025,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_res_config_settings__l10n_pe_edi_detraction_bank_account_id
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.res_config_settings_view_form_account
 msgid "National bank Account"
-msgstr ""
+msgstr "Cuenta del Banco de la Nación"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.res_config_settings_view_form_account
@@ -1025,12 +1037,12 @@ msgstr ""
 #: code:addons/l10n_pe_edi_odoofact/models/account_move.py:0
 #, python-format
 msgid "Null document"
-msgstr ""
+msgstr "Documento Nulo"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_picking_number__name
 msgid "Number"
-msgstr ""
+msgstr "Número"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
@@ -1038,12 +1050,12 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_pe_edi_odoofact.selection__account_move__l10n_pe_edi_odoofact_operation_type__30
 #, python-format
 msgid "OPERATION SUBJECT TO DETRACTION"
-msgstr ""
+msgstr "OPERACIÓN SUJETA A DETRACCIÓN"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "OPERATION SUBJECT TO I.G.V. RETENTION RATE"
-msgstr ""
+msgstr "OPERACIÓN SUJETA A I.G.V. TASA DE RETENCIÓN"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
@@ -1051,19 +1063,19 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_pe_edi_odoofact.selection__account_move__l10n_pe_edi_odoofact_operation_type__34
 #, python-format
 msgid "OPERATION SUBJECT TO PERCEPTION"
-msgstr ""
+msgstr "OPERACIÓN SUJETA A LA PERCEPCIÓN"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "ORDER"
-msgstr ""
+msgstr "ORDEN"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_origin_move_id
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_origin_move_id
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_origin_move_id
 msgid "Origin Move"
-msgstr ""
+msgstr "Movimiento Origen"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
@@ -1073,7 +1085,7 @@ msgstr ""
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "PAID DATE"
-msgstr ""
+msgstr "FECHA DE PAGO"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.view_invoice_tree
@@ -1085,29 +1097,29 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_request_id
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_request_id
 msgid "PSE/OSE request"
-msgstr ""
+msgstr "Solicitud PSE/OSE"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_dues__paid_date
 msgid "Paid Date"
-msgstr ""
+msgstr "Fecha de Pago"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "Paid on"
-msgstr ""
+msgstr "Pagado el"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_res_config_settings__l10n_pe_edi_company_partner_id
 msgid "Partner"
-msgstr ""
+msgstr "Contacto"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_igv_percent
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_igv_percent
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_igv_percent
 msgid "Percentage IGV"
-msgstr ""
+msgstr "Porcentaje IGV"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,help:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_cancel_reason
@@ -1117,71 +1129,73 @@ msgid ""
 "Peru: Reason given by the user for cancelling this move, structure of voided"
 " summary: sac:VoidReasonDescription."
 msgstr ""
+"Razón dada por el usuario para cancelar esta factura, estructura para el "
+"resumen de cancelación: sac:VoidReasonDescription"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.res_config_settings_view_form_account
 msgid "Peruvian Electronic Invoicing"
-msgstr ""
+msgstr "Facturación Electrónica Peruana"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move_line__l10n_pe_edi_price_unit_included
 msgid "Price unit IGV included"
-msgstr ""
+msgstr "Precio unitario incluido IGV"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move_line__l10n_pe_edi_price_unit_excluded
 msgid "Price unit excluded"
-msgstr ""
+msgstr "Precio unitario excluido"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,help:l10n_pe_edi_odoofact.field_account_move_line__l10n_pe_edi_price_unit_included
 msgid "Price unit with IGV included"
-msgstr ""
+msgstr "Precio unitario con IGV incluido"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,help:l10n_pe_edi_odoofact.field_account_move_line__l10n_pe_edi_price_unit_excluded
 msgid "Price unit without taxes"
-msgstr ""
+msgstr "Precio unitario sin impuestos"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_res_company__activate_einvoice_ticket
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_res_config_settings__activate_einvoice_ticket
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.view_move_form
 msgid "Print Electronic Ticket"
-msgstr ""
+msgstr "Imprimir Ticket Electrónico"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "Printed representation of"
-msgstr ""
+msgstr "Impreso en representación de"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "Printed representation of the"
-msgstr ""
+msgstr "Representación impresa de la"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model,name:l10n_pe_edi_odoofact.model_product_template
 msgid "Product"
-msgstr ""
+msgstr "Producto"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_product_product__l10n_pe_edi_product_code_id
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_product_template__l10n_pe_edi_product_code_id
 msgid "Product code SUNAT"
-msgstr ""
+msgstr "Código de producto SUNAT"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_service_order
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_service_order
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_service_order
 msgid "Purchase/Service Order"
-msgstr ""
+msgstr "Orden de Compra/Servicio"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "QTY."
-msgstr ""
+msgstr "CANT."
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
@@ -1196,7 +1210,7 @@ msgstr ""
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_move_cancel__description
 msgid "Reason"
-msgstr ""
+msgstr "Razón"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model,name:l10n_pe_edi_odoofact.model_l10n_pe_edi_picking_number
@@ -1205,12 +1219,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_picking_number_ids
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.view_move_form
 msgid "Reference Guides"
-msgstr ""
+msgstr "Guías de Remisión"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_stock_picking_massive__picking_ids
 msgid "Referral Guides"
-msgstr ""
+msgstr "Guías de Remisión"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.res_config_settings_view_form_account
@@ -1222,12 +1236,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_response
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_response
 msgid "Response"
-msgstr ""
+msgstr "Respuesta"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.res_config_settings_view_form_account
 msgid "Retention"
-msgstr ""
+msgstr "Retención"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_retention_type_id
@@ -1236,7 +1250,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_res_partner__l10n_pe_edi_retention_type_id
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_res_users__l10n_pe_edi_retention_type_id
 msgid "Retention Type"
-msgstr ""
+msgstr "Tipo de Retención"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
@@ -1246,11 +1260,13 @@ msgid ""
 "Retention and Detraction cannot be applied at the same time since they are "
 "completely different operations."
 msgstr ""
+"La retención y la detracción no se pueden aplicar al mismo tiempo ya que son"
+" operaciones completamente diferentes."
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields.selection,name:l10n_pe_edi_odoofact.selection__l10n_pe_edi_picking_number__type__1
 msgid "SENDER REFERRAL GUIDE"
-msgstr ""
+msgstr "GUÍA DE REMISIÓN REMITENTE"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
@@ -1268,65 +1284,65 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_is_sale_credit
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_is_sale_credit
 msgid "Sale on Credit"
-msgstr ""
+msgstr "Venta al Crédito"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model,name:l10n_pe_edi_odoofact.model_sale_advance_payment_inv
 msgid "Sales Advance Payment Invoice"
-msgstr ""
+msgstr "Factura de anticipo de ventas"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model,name:l10n_pe_edi_odoofact.model_sale_order_line
 msgid "Sales Order Line"
-msgstr ""
+msgstr "Línea de la orden de venta"
 
 #. module: l10n_pe_edi_odoofact
 #: model:l10n_latam.identification.type,description:l10n_pe_edi_odoofact.it_OTR
 msgid "Sales less than S/.700.00 and others"
-msgstr ""
+msgstr "Ventas menores a S/.700.00 y otros"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.view_stock_picking_wizard
 msgid "Select Referral Guides"
-msgstr ""
+msgstr "Seleccionar Guías de Remisión"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.res_config_settings_view_form_account
 msgid "Select your PSE / OSE provider"
-msgstr ""
+msgstr "Seleccione su proveedor PSE/OSE"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.res_config_settings_view_form_account
 msgid "Send e-documents automatically"
-msgstr ""
+msgstr "Enviar documentos electrónicos automáticamente"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model,name:l10n_pe_edi_odoofact.model_l10n_pe_edi_move_cancel
 msgid "Send invoice cancel"
-msgstr ""
+msgstr "Enviar factura para cancelar"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.view_invoice_tree
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.view_move_form
 msgid "Send to SUNAT"
-msgstr ""
+msgstr "Enviar SUNAT"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_ose_accepted
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_ose_accepted
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_ose_accepted
 msgid "Sent to PSE/OSE"
-msgstr ""
+msgstr "Enviar PSE/OSE"
 
 #. module: l10n_pe_edi_odoofact
 #: model:mail.template,description:l10n_pe_edi_odoofact.email_template_edi_invoice
 msgid "Sent to customers with their electronic invoices in attachment"
-msgstr ""
+msgstr "Enviado a los clientes con sus facturas electrónicas adjuntas"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "Served by"
-msgstr ""
+msgstr "Atendido por"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
@@ -1337,12 +1353,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_shop_id
 #, python-format
 msgid "Shop"
-msgstr ""
+msgstr "Tienda"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,help:l10n_pe_edi_odoofact.field_l10n_pe_edi_picking_number__name
 msgid "Sintaxt serial TXXX-XXXX or 0XXX-XXXX"
-msgstr ""
+msgstr "Sintaxis de serie TXXX-XXXX o 0XXX-XXXX"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model,name:l10n_pe_edi_odoofact.model_l10n_pe_edi_stock_picking_massive
@@ -1357,28 +1373,28 @@ msgstr ""
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move_line__l10n_pe_edi_tax_type
 msgid "Tax Type"
-msgstr ""
+msgstr "Tipo de impuesto"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
 #: code:addons/l10n_pe_edi_odoofact/models/account_move.py:0
 #, python-format
 msgid "The Transaction Type must be entered"
-msgstr ""
+msgstr "Se debe ingresar el tipo de transacción"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
 #: code:addons/l10n_pe_edi_odoofact/models/account_move.py:0
 #, python-format
 msgid "The code of document type for the odoofact must be entered"
-msgstr ""
+msgstr "Se debe ingresar el código de tipo de documento para odoofact"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
 #: code:addons/l10n_pe_edi_odoofact/models/account_move.py:0
 #, python-format
 msgid "The detraction can only be applied to invoices."
-msgstr ""
+msgstr "La detracción solo se puede aplicar a las facturas."
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
@@ -1388,6 +1404,8 @@ msgid ""
 "The document includes advances, you must enter the document related to the "
 "advance on the corresponding line"
 msgstr ""
+"El documento incluye anticipos, debe ingresar el documento relacionado con "
+"el anticipo en la línea correspondiente"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
@@ -1397,13 +1415,15 @@ msgid ""
 "The document includes advances, you must use the transaction type 'INTERNAL "
 "SALE - ADVANCES'"
 msgstr ""
+"El documento incluye anticipos, debe utilizar el tipo de transacción 'VENTA "
+"INTERNA - ANTICIPOS'"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
 #: code:addons/l10n_pe_edi_odoofact/models/account_move.py:0
 #, python-format
 msgid "The document number of the partner must be entered"
-msgstr ""
+msgstr "Se debe ingresar el número de documento del cliente"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
@@ -1414,27 +1434,29 @@ msgid ""
 "create one with the type of identity document '-' and the document number "
 "'00000000'"
 msgstr ""
+"Se debe ingresar el cliente, si la venta no tiene un cliente, debe crear uno"
+" con el tipo de documento '-' y el número de documento '00000000'"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
 #: code:addons/l10n_pe_edi_odoofact/models/account_move.py:0
 #, python-format
 msgid "The retention can only be applied for amounts greater than S/. %s"
-msgstr ""
+msgstr "La retención sólo podrá aplicarse por montos mayores a S/. %s"
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
 #: code:addons/l10n_pe_edi_odoofact/models/account_move.py:0
 #, python-format
 msgid "The retention can only be applied to invoices."
-msgstr ""
+msgstr "La retención solo se puede aplicar a las facturas."
 
 #. module: l10n_pe_edi_odoofact
 #. odoo-python
 #: code:addons/l10n_pe_edi_odoofact/models/account_move.py:0
 #, python-format
 msgid "The type of identity document of the partner must be entered"
-msgstr ""
+msgstr "Se debe ingresar el tipo de documento del cliente"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.view_move_form
@@ -1446,59 +1468,59 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_amount_advance
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_amount_advance
 msgid "Total Advance Amount"
-msgstr ""
+msgstr "Importe de Anticipo Total"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_total_detraction
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_total_detraction
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_total_detraction
 msgid "Total Detraction"
-msgstr ""
+msgstr "Detracción Total"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_total_detraction_signed
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_total_detraction_signed
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_total_detraction_signed
 msgid "Total Detraction Signed"
-msgstr ""
+msgstr "Detracción Total"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_amount_discount
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_amount_discount
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_amount_discount
 msgid "Total Discount Amount"
-msgstr ""
+msgstr "Importe de Descuento Total"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_total_retention
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_total_retention
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_total_retention
 msgid "Total Retention"
-msgstr ""
+msgstr "Retención Total"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_odoofact_operation_type
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_odoofact_operation_type
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_odoofact_operation_type
 msgid "Transaction type"
-msgstr ""
+msgstr "Tipo de Transacción"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_l10n_pe_edi_picking_number__type
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_bank_statement_line__l10n_pe_edi_amount_unaffected
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_move__l10n_pe_edi_amount_unaffected
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_payment__l10n_pe_edi_amount_unaffected
 msgid "Unaffected Amount"
-msgstr ""
+msgstr "Importe Inafecto"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,field_description:l10n_pe_edi_odoofact.field_account_debit_note__journal_id
 msgid "Use Specific Journal"
-msgstr ""
+msgstr "Utilizar diario específico"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,help:l10n_pe_edi_odoofact.field_l10n_latam_document_type__type_of
@@ -1509,6 +1531,11 @@ msgid ""
 "3 = NOTA DE CREDITO\n"
 "4 = NOTA DE DEBITO"
 msgstr ""
+"Usado por Odoofact\n"
+"1 = FACTURA\n"
+"2 = BOLETA\n"
+"3 = NOTA DE CREDITO\n"
+"4 = NOTA DE DEBITO"
 
 #. module: l10n_pe_edi_odoofact
 #: model:l10n_latam.identification.type,name:l10n_pe_edi_odoofact.it_OTR
@@ -1521,22 +1548,22 @@ msgstr ""
 #: model:ir.actions.act_window,name:l10n_pe_edi_odoofact.action_stock_picking_wizard
 #, python-format
 msgid "View Guides"
-msgstr ""
+msgstr "Ver Guías"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_ticket_document
 msgid "Visit"
-msgstr ""
+msgstr "Visitar"
 
 #. module: l10n_pe_edi_odoofact
 #: model:ir.model.fields,help:l10n_pe_edi_odoofact.field_account_move_line__l10n_pe_edi_amount_free
 msgid "amount calculated if the line id for free product"
-msgstr ""
+msgstr "Importe calculado si la linea es para producto gratuito"
 
 #. module: l10n_pe_edi_odoofact
 #: model_terms:ir.ui.view,arch_db:l10n_pe_edi_odoofact.report_invoice_document
 msgid "using"
-msgstr ""
+msgstr "usando"
 
 #. module: l10n_pe_edi_odoofact
 #: model:mail.template,subject:l10n_pe_edi_odoofact.email_template_edi_invoice

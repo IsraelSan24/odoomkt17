@@ -23,6 +23,7 @@
         "l10n_pe_edi_catalog",
         "mail",
         "uom",
+        "stock",
     ],
     "data": [
         "security/ir.model.access.csv",

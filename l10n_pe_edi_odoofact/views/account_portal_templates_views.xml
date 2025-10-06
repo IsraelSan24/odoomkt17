@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <template id="portal_invoice_template_inherit" inherit_id="account.portal_invoice_page">
+      <xpath expr="//div[hasclass('flex-column')]/div" position="inside">
+            <div class="d-flex gap-1 flex-lg-column flex-xl-row mt-2">
+              <div class="flex-grow-1">
+                <a class="btn btn-secondary o_print_btn o_portal_invoice_print d-block" 
+                  t-if="invoice.company_id.country_code == 'PE'"
+                  t-att-href="invoice.l10n_pe_edi_request_id.link_xml"
+                  id="download_xml" 
+                  title="Download XML"
+                  target="_blank">
+                  <i class="fa fa-print"/> Download XML</a>
+              </div>
+            </div>
+      </xpath>
+   </template>
+</odoo>

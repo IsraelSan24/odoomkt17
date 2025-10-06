@@ -51,3 +51,8 @@ class ResConfigSettings(models.TransientModel):
     module_l10n_pe_edi_picking = fields.Boolean(string="Electronic Remission Guide")
     module_odoope_ruc_validation = fields.Boolean(string="Data Validator - (PE)")
     module_l10n_pe_currency = fields.Boolean(string="Exchange Rate of the Day - (PE)")
+
+    stock_move_sms_validation = fields.Boolean(
+        string="Validate transfers via SMS",
+        config_parameter='stock_move_sms_validation',
+    )
