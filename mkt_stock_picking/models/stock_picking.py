@@ -31,9 +31,9 @@ class StockPicking(models.Model):
          ('0', 'NO DOMICILIADO')], 
          string='Tipo de Documento del Remitente', default='6')
 
-    gre_cliente_numero_de_documento = fields.Char(string='Número de Documento del Remitente', related='company_id.partner_id.vat', store=True, required=False, size=15) # Para transportistas: Remitente | Para remitentes: Destinatario
-    gre_cliente_denominacion = fields.Char(string='Denominación del Remitente', related='company_id.partner_id.name', store=True, required=False, size=100)
-    gre_cliente_direccion = fields.Char(string='Dirección del Remitente', related='company_id.partner_id.street', store=True, required=False, size=100)
+    gre_cliente_numero_de_documento = fields.Char(string='Número de Documento del Remitente', related='partner_id.vat', store=True, required=False, size=15) # Para transportistas: Remitente | Para remitentes: Destinatario
+    gre_cliente_denominacion = fields.Char(string='Denominación del Remitente', related='partner_id.name', store=True, required=False, size=100)
+    gre_cliente_direccion = fields.Char(string='Dirección del Remitente', related='partner_id.street', store=True, required=False, size=100)
 
     gre_fecha_de_emision = fields.Date(string='Fecha de Emisión', default=lambda self: self.scheduled_date)
     gre_fecha_de_inicio_de_traslado = fields.Date(string='Fecha de Inicio de Traslado', default=lambda self: self.scheduled_date)
@@ -45,10 +45,12 @@ class StockPicking(models.Model):
          ('TNE', 'Toneladas')], 
          string='Unidad de Medida Peso')
     
-    gre_punto_de_partida_ubigeo = fields.Char(string='Ubigeo Punto de Partida', size=6, default='070102')
-    gre_punto_de_partida_direccion = fields.Char(string='Dirección Punto de Partida', related='company_id.partner_id.street', store=True, size=150)
+    gre_punto_de_partida_ubigeo = fields.Char(string='Ubigeo Punto de Partida', size=6, compute="_compute_ubigeo_partida", store=True, readonly=False)
+    gre_punto_de_partida_ubigeo
+    gre_punto_de_partida_direccion = fields.Char(string='Dirección Punto de Partida', related='partner_id.street', store=True, size=150)
 
-    gre_punto_de_llegada_ubigeo = fields.Char(string='Ubigeo Punto de Llegada', size=6)
+
+    gre_punto_de_llegada_ubigeo = fields.Char(string='Ubigeo Punto de Llegada', size=6, compute="_compute_ubigeo_llegada", store=True, readonly=False)
     gre_punto_de_llegada_direccion = fields.Char(string='Dirección Punto de Llegada', size=150)
 
     gre_transportista_placa_numero = fields.Char(string='Placa Número Transportista', size=8)
@@ -183,6 +185,36 @@ class StockPicking(models.Model):
             numero = str(rec.gre_numero).zfill(8) if rec.gre_numero else ''
             rec.gre_doc_name = f"{serie}-{numero}" if (serie and numero) else ''
 
+    @api.depends('partner_id')
+    def _compute_ubigeo_llegada(self):
+        for rec in self:
+            if (rec.partner_id.state_id and rec.partner_id.city_id and rec.partner_id.l10n_pe_district):
+                department = rec.env['pe.department'].search([("name" , "=", rec.partner_id.state_id.name.upper())], limit=1) 
+                province = rec.env['pe.province'].search([("name" , "=", rec.partner_id.city_id.name.upper()), ("department_id", "=", department.id)], limit=1) 
+                district = rec.env['pe.district'].search([("name" , "=", rec.partner_id.l10n_pe_district.name.upper()), ("department_id", "=", department.id), ("province_id", "=", province.id)], limit=1) 
+                
+                if district:
+                    rec.gre_punto_de_llegada_ubigeo = district.code
+                    
+                else:
+                    rec.gre_punto_de_llegada_ubigeo = ''
+            
+    
+    @api.depends('partner_id')
+    def _compute_ubigeo_partida(self):
+        for rec in self:
+            if (rec.partner_id.state_id and rec.partner_id.city_id and rec.partner_id.l10n_pe_district):
+                department = rec.env['pe.department'].search([("name" , "=", rec.partner_id.state_id.name.upper())], limit=1) 
+                province = rec.env['pe.province'].search([("name" , "=", rec.partner_id.city_id.name.upper()), ("department_id", "=", department.id)], limit=1) 
+                district = rec.env['pe.district'].search([("name" , "=", rec.partner_id.l10n_pe_district.name.upper()), ("department_id", "=", department.id), ("province_id", "=", province.id)], limit=1) 
+                
+                if district:
+                    rec.gre_punto_de_partida_ubigeo = district.code
+                    
+                else:
+                    rec.gre_punto_de_partida_ubigeo = ''
+
+            
     @api.model
     def create(self, vals):
         _logger.info(f"\n\n\n\n --------------- {vals.get('gre_serie')}, {vals.get('gre_numero')}  --------------- \n\n\n\n")
@@ -395,7 +427,7 @@ class StockPicking(models.Model):
             ## Check existencia de serie y número de documento (factura)
             if self.gre_account_move_ids:
                 for account_move in self.gre_account_move_ids:
-                    if not account_move.l10n_pe_in_edi_serie or not account_move.l10n_pe_in_edi_number:
+                    if account_move.sequence_number == 0:
                         raise UserError("La serie y el número deben existir para todas las facturas")
 
             ## Check existencia de items
@@ -465,18 +497,13 @@ class StockPicking(models.Model):
                  for move  in self.move_ids_without_package
             ]
             documentos_relacionados = [
-                {"tipo": '01',
-                 "serie": account_move.l10n_pe_in_edi_serie,
-                 "numero": account_move.l10n_pe_in_edi_number
+                {"tipo": account_move.l10n_latam_document_type_id.code,
+                 "serie": account_move.l10n_latam_document_type_id.doc_code_prefix + "001",
+                 "numero": account_move.sequence_number
                  } 
                  for account_move in self.gre_account_move_ids
             ]
-            documentos_relacionados = [
-                {"tipo": '01',
-                 "serie": "F001",
-                 "numero": "9"
-                 } 
-            ]
+
             payload = {
                 "operacion": self.gre_operacion,
                 "tipo_de_comprobante": int(self.gre_tipo_de_comprobante),
@@ -511,36 +538,18 @@ class StockPicking(models.Model):
 
             _logger.info(f"PAYLOAD\n\t{json.dumps(payload)}\n\n")
 
-            ruta = self.env['ir.config_parameter'].sudo().get_param('nubefact.ruta')
-            token = self.env['ir.config_parameter'].sudo().get_param('nubefact.token')
+            ruta = self.env['l10n_pe_edi.shop'].sudo().search([("partner_id", "=", self.company_id.partner_id.id)], limit=1).l10n_pe_edi_ose_url
+            token = self.env['l10n_pe_edi.shop'].sudo().search([("partner_id", "=", self.company_id.partner_id.id)], limit=1).l10n_pe_edi_ose_token
+
+            if not ruta:
+                raise UserError(f"No se encontró la URL nubefact para {self.company_id.partner_id.name}.")
+            if not token: 
+                raise UserError(f"No se encontró el token nubefact para {self.company_id.partner_id.name}.")
 
             headers = {
                 "Authorization": f"Token token={token}",
                 "Content-Type": "application/json"
             }
-            
-            # Consultar guía
-            # try:
-            #     response = requests.post(
-            #         'https://api.nubefact.com/api/v1/beb1b69c-8ffd-4a6d-b38c-d2d3bcfd1d0b',
-            #         headers=headers,
-            #         data=json.dumps({
-            #             "operacion": "consultar_guia",
-            #             "tipo_de_comprobante": 8,
-            #             "serie": "VVV1",
-            #             "numero": "4"
-            #             }
-            #         ),
-            #         timeout=10
-            #     )
-            #     response.raise_for_status()
-            #     _logger.info(f"\n\n\n\n{response.text}\n\n\n\n")
-                
-            # except Exception as e:
-
-            #     _logger.info("\nError: ", response.text)
-            #     _logger.info(f"\nError:  {str(e)}\n")
-
 
             try:
                 response = requests.post(
@@ -557,8 +566,22 @@ class StockPicking(models.Model):
                 rec.gre_pdf_zip_base64 = rec.gre_respuesta['pdf_zip_base64'] or False
                 
                 respuesta_string = json.dumps(rec.gre_respuesta, ensure_ascii=False, indent=2)
+
+
                 _logger.info(f"\n\n\n\n{respuesta_string}\n\n\n\n")
+                if rec.gre_aceptada_por_sunat:
+                    return {
+                        'effect': {
+                            'fadeout': 'slow',
+                            'message': '¡Guía aceptada por SUNAT!',
+                            'type': 'rainbow_man',
+                        }
+                    }
                 
+                # else:
+                #     self.env.user.notify_warning(message="Guía no fue aceptada por SUNAT!")
+
+
             except Exception as e:
                 rec.gre_respuesta_error4 = response.json()
                 _logger.info("\nError: ", response.text)
@@ -586,6 +609,41 @@ class StockPicking(models.Model):
             'url': url,
             'target': 'new',
         }
+    
 
+    def action_consult_gre(self):
+        self.ensure_one()
+        token = self.env['l10n_pe_edi.shop'].sudo().search([("partner_id", "=", self.company_id.partner_id.id)], limit=1).l10n_pe_edi_ose_token
+        ruta = self.env['l10n_pe_edi.shop'].sudo().search([("partner_id", "=", self.company_id.partner_id.id)], limit=1).l10n_pe_edi_ose_url
+
+        headers = {
+            "Authorization": f"Token token={token}",
+            "Content-Type": "application/json"
+        }
+
+        # Consultar guía
+        try:
+            response = requests.post(
+                ruta,
+                headers=headers,
+                data=json.dumps({
+                    "operacion": "consultar_guia",
+                    "tipo_de_comprobante": 8,
+                    "serie": "VVV1",
+                    "numero": self.gre_numero
+                    }
+                ),
+                timeout=10
+            )
+            response.raise_for_status()
+            _logger.info(f"\n\n\n\n{response.text}\n\n\n\n")
+
+            self.gre_enlace = response.json()['enlace'] or False
+            self.gre_pdf_zip_base64 = response.json()['pdf_zip_base64'] or False
+            
+        except Exception as e:
+
+            _logger.info("\nError: ", response.text)
+            _logger.info(f"\nError:  {str(e)}\n")
                 
             

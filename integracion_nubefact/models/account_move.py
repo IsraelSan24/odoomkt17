@@ -127,6 +127,9 @@ class AccountMove(models.Model):
             "formato_de_pdf": "A4",
             "items": items,
         }
+
+        # _logger.info(f"\n\n{data}\n\n")
+
         return data
 
     def action_enviar_nubefact(self):
