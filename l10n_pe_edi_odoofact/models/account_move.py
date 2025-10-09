@@ -809,7 +809,7 @@ class AccountMove(models.Model):
         values = {
             "operacion": "generar_comprobante",
             "tipo_de_comprobante": self.l10n_latam_document_type_id.type_of,
-            "serie": str(self.sequence_prefix)[0:4],
+            "serie": str(self.sequence_prefix)[0:4].strip() + '001',
             "numero": self.sequence_number,
             "sunat_transaction": int(self.l10n_pe_edi_odoofact_operation_type),
             "cliente_tipo_de_documento": commercial_doc_type.l10n_pe_vat_code,
@@ -896,6 +896,7 @@ class AccountMove(models.Model):
                 "detraccion_porcentaje": self.l10n_pe_edi_detraction_type_id and self.l10n_pe_edi_detraction_type_id.rate or "",
                 "medio_de_pago_detraccion": self.l10n_pe_edi_detraction_type_id and self.l10n_pe_edi_detraction_payment_type_id and int(self.l10n_pe_edi_detraction_payment_type_id.code_of) or "",
             })
+        _logger.info(f"\n\n{values}\n\n")
         return values
 
     def _get_lines_values_generar_odoofact(self):

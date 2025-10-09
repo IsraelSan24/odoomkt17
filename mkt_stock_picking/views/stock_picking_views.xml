@@ -14,17 +14,21 @@
                     string="Enviar a Nubefact"
                     type="object"
                     class="oe_highlight" invisible="state != 'done'"/>
+                    <button name="action_consult_gre"
+                    string="Consulta GRE"
+                    type="object"
+                    class="btn-secondary me-2" invisible="state != 'done'"/>
                     <group>
                         <group string="Información General">
                             <field name="gre_operacion" readonly='true'/>
                             <field name="gre_tipo_de_comprobante" readonly='true'/>
                             <field name="gre_serie" readonly='true'/>
-                            <field name="gre_numero" readonly='true'/>
+                            <field name="gre_numero"/>
+                            <!-- <field name="gre_numero" readonly='true'/> -->
                             <field name="gre_doc_name" readonly='true'/>
 
                         </group>
                         <group string="Remitente">
-                            <field name="company_id" />
                             <field name="gre_cliente_tipo_de_documento" readonly='true'/>
                             <field name="gre_cliente_numero_de_documento"/>
                             <field name="gre_cliente_denominacion"/>
@@ -114,10 +118,9 @@
                         </group>
                     </group>
                     <group string="FACTURA">
-                        <field name="gre_account_move_ids" mode="tree">
+                        <field name="gre_account_move_ids" mode="tree" domain="[('state', '=', 'posted')]">
                             <tree>
-                                <field name="l10n_pe_in_edi_serie" />
-                                <field name="l10n_pe_in_edi_number" />
+                                <field name="name" />
                             </tree>
                         </field>
                     </group>
