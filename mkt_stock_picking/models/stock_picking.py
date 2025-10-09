@@ -31,9 +31,10 @@ class StockPicking(models.Model):
          ('0', 'NO DOMICILIADO')], 
          string='Tipo de Documento del Remitente', default='6')
 
-    gre_cliente_numero_de_documento = fields.Char(string='Número de Documento del Remitente', related='partner_id.vat', store=True, required=False, size=15) # Para transportistas: Remitente | Para remitentes: Destinatario
-    gre_cliente_denominacion = fields.Char(string='Denominación del Remitente', related='partner_id.name', store=True, required=False, size=100)
-    gre_cliente_direccion = fields.Char(string='Dirección del Remitente', related='partner_id.street', store=True, required=False, size=100)
+    gre_cliente_id = fields.Many2one("res.partner", string="Remitente")
+    gre_cliente_numero_de_documento = fields.Char(string='Número de Documento del Remitente', size=15) # Para transportistas: Remitente | Para remitentes: Destinatario
+    gre_cliente_denominacion = fields.Char(string='Denominación del Remitente', size=100)
+    gre_cliente_direccion = fields.Char(string='Dirección del Remitente', size=100)
 
     gre_fecha_de_emision = fields.Date(string='Fecha de Emisión', default=lambda self: self.scheduled_date)
     gre_fecha_de_inicio_de_traslado = fields.Date(string='Fecha de Inicio de Traslado', default=lambda self: self.scheduled_date)
@@ -46,12 +47,16 @@ class StockPicking(models.Model):
          string='Unidad de Medida Peso')
     
     gre_punto_de_partida_ubigeo = fields.Char(string='Ubigeo Punto de Partida', size=6, compute="_compute_ubigeo_partida", store=True, readonly=False)
-    gre_punto_de_partida_ubigeo
-    gre_punto_de_partida_direccion = fields.Char(string='Dirección Punto de Partida', related='partner_id.street', store=True, size=150)
-
+    gre_punto_de_partida_direccion = fields.Char(string='Dirección Punto de Partida', size=150)
+    gre_punto_de_partida_departamento = fields.Many2one("pe.department", default=lambda self: self.env['pe.department'].search([('code', '=', '15')], limit=1))
+    gre_punto_de_partida_provincia = fields.Many2one("pe.province", default=lambda self: self.env['pe.province'].search([('code', '=', '1501')], limit=1))
+    gre_punto_de_partida_distrito = fields.Many2one("pe.district")
 
     gre_punto_de_llegada_ubigeo = fields.Char(string='Ubigeo Punto de Llegada', size=6, compute="_compute_ubigeo_llegada", store=True, readonly=False)
     gre_punto_de_llegada_direccion = fields.Char(string='Dirección Punto de Llegada', size=150)
+    gre_punto_de_llegada_departamento = fields.Many2one("pe.department", default=lambda self: self.env['pe.department'].search([('code', '=', '15')], limit=1))
+    gre_punto_de_llegada_provincia = fields.Many2one("pe.province", default=lambda self: self.env['pe.province'].search([('code', '=', '1501')], limit=1))
+    gre_punto_de_llegada_distrito = fields.Many2one("pe.district")
 
     gre_transportista_placa_numero = fields.Char(string='Placa Número Transportista', size=8)
 
@@ -184,36 +189,23 @@ class StockPicking(models.Model):
             serie = rec.gre_serie or ''
             numero = str(rec.gre_numero).zfill(8) if rec.gre_numero else ''
             rec.gre_doc_name = f"{serie}-{numero}" if (serie and numero) else ''
-
-    @api.depends('partner_id')
-    def _compute_ubigeo_llegada(self):
-        for rec in self:
-            if (rec.partner_id.state_id and rec.partner_id.city_id and rec.partner_id.l10n_pe_district):
-                department = rec.env['pe.department'].search([("name" , "=", rec.partner_id.state_id.name.upper())], limit=1) 
-                province = rec.env['pe.province'].search([("name" , "=", rec.partner_id.city_id.name.upper()), ("department_id", "=", department.id)], limit=1) 
-                district = rec.env['pe.district'].search([("name" , "=", rec.partner_id.l10n_pe_district.name.upper()), ("department_id", "=", department.id), ("province_id", "=", province.id)], limit=1) 
-                
-                if district:
-                    rec.gre_punto_de_llegada_ubigeo = district.code
-                    
-                else:
-                    rec.gre_punto_de_llegada_ubigeo = ''
-            
     
-    @api.depends('partner_id')
+    @api.depends('gre_punto_de_partida_distrito')
     def _compute_ubigeo_partida(self):
         for rec in self:
-            if (rec.partner_id.state_id and rec.partner_id.city_id and rec.partner_id.l10n_pe_district):
-                department = rec.env['pe.department'].search([("name" , "=", rec.partner_id.state_id.name.upper())], limit=1) 
-                province = rec.env['pe.province'].search([("name" , "=", rec.partner_id.city_id.name.upper()), ("department_id", "=", department.id)], limit=1) 
-                district = rec.env['pe.district'].search([("name" , "=", rec.partner_id.l10n_pe_district.name.upper()), ("department_id", "=", department.id), ("province_id", "=", province.id)], limit=1) 
-                
-                if district:
-                    rec.gre_punto_de_partida_ubigeo = district.code
-                    
-                else:
-                    rec.gre_punto_de_partida_ubigeo = ''
+            if (rec.gre_punto_de_partida_departamento and rec.gre_punto_de_partida_provincia and rec.gre_punto_de_partida_distrito):
+                rec.gre_punto_de_partida_ubigeo = rec.gre_punto_de_partida_distrito.code
+            else:
+                rec.gre_punto_de_partida_ubigeo = ''
 
+    @api.depends('gre_punto_de_llegada_distrito')
+    def _compute_ubigeo_llegada(self):
+        for rec in self:
+            if (rec.gre_punto_de_llegada_departamento and rec.gre_punto_de_llegada_provincia and rec.gre_punto_de_llegada_distrito):
+                rec.gre_punto_de_llegada_ubigeo = rec.gre_punto_de_llegada_distrito.code
+            else:
+                rec.gre_punto_de_llegada_ubigeo = ''
+            
             
     @api.model
     def create(self, vals):
@@ -234,6 +226,44 @@ class StockPicking(models.Model):
         
         return super().create(vals)
 
+    @api.onchange('gre_punto_de_partida_departamento')
+    def _onchange_gre_punto_de_partida_departamento(self):
+        if self.gre_punto_de_partida_departamento:
+            self.gre_punto_de_partida_provincia = False
+            self.gre_punto_de_partida_distrito = False
+
+    @api.onchange('gre_punto_de_llegada_departamento')
+    def _onchange_gre_punto_de_llegada_departamento(self):
+        if self.gre_punto_de_llegada_departamento:
+            self.gre_punto_de_llegada_provincia = False
+            self.gre_punto_de_llegada_distrito = False
+
+    @api.onchange('gre_punto_de_partida_provincia')
+    def _onchange_gre_punto_de_partida_provincia(self):
+        if self.gre_punto_de_partida_provincia:
+            self.gre_punto_de_partida_distrito = False
+
+    @api.onchange('gre_punto_de_llegada_provincia')
+    def _onchange_gre_punto_de_llegada_provincia(self):
+        if self.gre_punto_de_llegada_provincia:
+            self.gre_punto_de_llegada_distrito = False
+
+
+    @api.onchange('gre_cliente_id')
+    def _onchange_gre_cliente_id(self):
+        label_to_value = {label: value for value, label in self._fields['gre_cliente_tipo_de_documento'].selection}
+
+        if self.gre_cliente_id:
+
+            tipo_doc_name = self.gre_cliente_id.l10n_latam_identification_type_id.name
+            tipo_doc_value = label_to_value.get(tipo_doc_name)
+
+            self.gre_cliente_tipo_de_documento = tipo_doc_value or False
+            self.gre_cliente_numero_de_documento = self.gre_cliente_id.vat
+            self.gre_cliente_denominacion = self.gre_cliente_id.name
+            self.gre_cliente_direccion = self.gre_cliente_id.street
+
+
     @api.onchange('picking_type_id')
     def _onchange_picking_type_for_outgoing(self):
         if self.picking_type_id:
@@ -248,7 +278,6 @@ class StockPicking(models.Model):
             self.gre_destinatario_documento_numero = self.partner_id.vat
             self.gre_destinatario_denominacion = self.partner_id.name
             self.gre_punto_de_llegada_direccion = self.partner_id.street
-            self.gre_punto_de_llegada_ubigeo = self.partner_id.zip
             
     @api.onchange('gre_driver_employee_id')
     def _onchange_driver_employee_id(self):
@@ -387,10 +416,16 @@ class StockPicking(models.Model):
                 "gre_peso_bruto_total": self._fields["gre_peso_bruto_total"].string,
                 "gre_peso_bruto_unidad_de_medida": self._fields["gre_peso_bruto_unidad_de_medida"].string,
 
-                "gre_punto_de_partida_ubigeo": self._fields["gre_punto_de_partida_ubigeo"].string,
+                # "gre_punto_de_partida_ubigeo": self._fields["gre_punto_de_partida_ubigeo"].string,
+                "gre_punto_de_partida_departamento": self._fields["gre_punto_de_partida_departamento"].string,
+                "gre_punto_de_partida_provincia": self._fields["gre_punto_de_partida_provincia"].string,
+                "gre_punto_de_partida_distrito": self._fields["gre_punto_de_partida_distrito"].string,
                 "gre_punto_de_partida_direccion": self._fields["gre_punto_de_partida_direccion"].string,
 
-                "gre_punto_de_llegada_ubigeo": self._fields["gre_punto_de_llegada_ubigeo"].string,
+                # "gre_punto_de_llegada_ubigeo": self._fields["gre_punto_de_llegada_ubigeo"].string,
+                "gre_punto_de_llegada_departamento": self._fields["gre_punto_de_llegada_departamento"].string,
+                "gre_punto_de_llegada_provincia": self._fields["gre_punto_de_llegada_provincia"].string,
+                "gre_punto_de_llegada_distritogi": self._fields["gre_punto_de_llegada_distritogi"].string,
                 "gre_punto_de_llegada_direccion": self._fields["gre_punto_de_llegada_direccion"].string,
 
                 "gre_transportista_placa_numero": self._fields["gre_transportista_placa_numero"].string,
@@ -533,7 +568,8 @@ class StockPicking(models.Model):
                 "punto_de_llegada_direccion": self.gre_punto_de_llegada_direccion,
                 "enviar_automaticamente_al_cliente": str(self.gre_enviar_automaticamente_al_cliente).lower(),
                 "items": items,
-                "documento_relacionado": documentos_relacionados
+                "documento_relacionado": documentos_relacionados,
+                # "mtc": "15123078CNG"
             }
 
             _logger.info(f"PAYLOAD\n\t{json.dumps(payload)}\n\n")
