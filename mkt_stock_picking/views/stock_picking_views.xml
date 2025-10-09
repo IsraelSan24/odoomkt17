@@ -7,7 +7,7 @@
         <field name="inherit_id" ref="stock.view_picking_form"/>
         <field name="arch" type="xml">
             <xpath expr="//notebook" position="inside">
-                <page string="Guía de Remisión" invisible="is_outgoing == False" readonly="gre_aceptada_por_sunat == True">
+                <page string="Guía de Remisión Transportista" invisible="is_outgoing == False" readonly="gre_aceptada_por_sunat == True">
                 <field name="is_outgoing" invisible='true' />
                 <field name="gre_aceptada_por_sunat" invisible='true' />
                     <button name="action_send_request"
@@ -29,7 +29,8 @@
 
                         </group>
                         <group string="Remitente">
-                            <field name="gre_cliente_tipo_de_documento" readonly='true'/>
+                            <field name="gre_cliente_id" />
+                            <field name="gre_cliente_tipo_de_documento"/>
                             <field name="gre_cliente_numero_de_documento"/>
                             <field name="gre_cliente_denominacion"/>
                             <field name="gre_cliente_direccion"/>
@@ -101,12 +102,48 @@
                     </group> -->
                     <group>
                         <group string="Punto de Partida">
-                            <field name="gre_punto_de_partida_ubigeo"/>
+                            <field name="gre_punto_de_partida_departamento" 
+                                    string="Departamento" 
+                                    placeholder="Departamento" 
+                                    style="width:100%" 
+                                    options="{'no_create': True, 'no_edit': True}"/>
+                            <field name="gre_punto_de_partida_provincia" 
+                                    string="Provincia" 
+                                    placeholder="Provincia" 
+                                    style="width:100%" 
+                                    domain="[('department_id', '=', gre_punto_de_partida_departamento)]"
+                                    options="{'no_create': True, 'no_edit': True}" />
+                            <field name="gre_punto_de_partida_distrito" 
+                                    string="Distrito" 
+                                    placeholder="Distrito" 
+                                    style="width:100%" 
+                                    domain="[('province_id', '=', gre_punto_de_partida_provincia)]"
+                                    options="{'no_create': True, 'no_edit': True}"/>
+
+                            <field name="gre_punto_de_partida_ubigeo" string="Ubigeo" invisible="True"/>
                             <field name="gre_punto_de_partida_direccion"/>
                             <!-- <field name="punto_de_partida_codigo_establecimiento_sunat" modifiers="{'invisible': [('motivo_de_traslado', 'not in', ['04', '18'])]}"/> -->
                         </group>
                         <group string="Punto de Llegada">
-                            <field name="gre_punto_de_llegada_ubigeo"/>
+                            <field name="gre_punto_de_llegada_departamento" 
+                                    string="Departamento" 
+                                    placeholder="Departamento" 
+                                    style="width:100%" 
+                                    options="{'no_create': True, 'no_edit': True}"/>
+                            <field name="gre_punto_de_llegada_provincia" 
+                                    string="Provincia" 
+                                    placeholder="Provincia" 
+                                    style="width:100%" 
+                                    domain="[('department_id', '=', gre_punto_de_llegada_departamento)]"
+                                    options="{'no_create': True, 'no_edit': True}" />
+                            <field name="gre_punto_de_llegada_distrito" 
+                                    string="Distrito" 
+                                    placeholder="Distrito" 
+                                    style="width:100%" 
+                                    domain="[('province_id', '=', gre_punto_de_llegada_provincia)]"
+                                    options="{'no_create': True, 'no_edit': True}"/>
+
+                            <field name="gre_punto_de_llegada_ubigeo" string="Ubigeo" invisible="True"/>
                             <field name="gre_punto_de_llegada_direccion"/>
                             <!-- <field name="punto_de_llegada_codigo_establecimiento_sunat" modifiers="{'invisible': [('motivo_de_traslado', 'not in', ['04', '18'])]}"/> -->
                         </group>
