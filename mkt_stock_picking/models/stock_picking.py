@@ -425,7 +425,7 @@ class StockPicking(models.Model):
                 # "gre_punto_de_llegada_ubigeo": self._fields["gre_punto_de_llegada_ubigeo"].string,
                 "gre_punto_de_llegada_departamento": self._fields["gre_punto_de_llegada_departamento"].string,
                 "gre_punto_de_llegada_provincia": self._fields["gre_punto_de_llegada_provincia"].string,
-                "gre_punto_de_llegada_distritogi": self._fields["gre_punto_de_llegada_distritogi"].string,
+                "gre_punto_de_llegada_distrito": self._fields["gre_punto_de_llegada_distrito"].string,
                 "gre_punto_de_llegada_direccion": self._fields["gre_punto_de_llegada_direccion"].string,
 
                 "gre_transportista_placa_numero": self._fields["gre_transportista_placa_numero"].string,
