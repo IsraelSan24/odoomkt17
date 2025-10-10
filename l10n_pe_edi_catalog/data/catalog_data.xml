@@ -1396,7 +1396,7 @@
         <field name="code">027</field>
         <field name="code_of">25</field>
         <field name="name">Servicio de transporte de carga</field>
-        <field name="rate">0</field>
+        <field name="rate">4</field>
     </record>
     <record id="l10n_pe_edi_cat54_028" model="l10n_pe_edi.catalog.54">
         <field name="code">028</field>
