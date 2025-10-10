@@ -171,7 +171,7 @@ class StockPicking(models.Model):
         ('31', 'Guía de Remisión Transportista')
         ],
         string="Documento/comprobante", default='01')
-    gre_account_move_ids = fields.Many2many(comodel_name='account.move', string='Facturas Asociadas')
+    gre_account_move_ids = fields.Many2many(comodel_name='account.move', relation="gre_account_move_ids",string='Facturas Asociadas')
     
 
     ######### RESPUESTA REQUEST #########

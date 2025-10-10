@@ -56,6 +56,15 @@ class StockPicking(models.Model):
                         })
                         invoice_line_list.append(vals)
                     #  END OVERRIDE
+
+                journal = picking_id.env['account.journal'].search([
+                    ('default_compra', '=', True),
+                    ('company_id', '=', picking_id.company_id.id)
+                ], limit=1)
+
+                if not journal:
+                    raise UserError(_("No se encontró un Diario con 'Compra' activo para la compañía %s") % picking_id.company_id.display_name)
+
                 invoice = picking_id.env['account.move'].create({
                     'move_type': 'in_invoice',
                     'invoice_origin': picking_id.name,
@@ -63,7 +72,7 @@ class StockPicking(models.Model):
                     'narration': picking_id.name,
                     'partner_id': picking_id.partner_id.id,
                     'currency_id': picking_id.purchase_id.currency_id.id,  #OVERRIDE PARA TOMAR LA MONEDA DEL MOVIMIENTO
-                    'journal_id': int(vendor_journal_id),
+                    'journal_id': journal.id,
                     'payment_reference': picking_id.name,
                     'picking_id': picking_id.id,
                     'invoice_line_ids': invoice_line_list,
@@ -203,6 +212,14 @@ class StockPicking(models.Model):
                                     })
                                     bill_line_list.append(vals)
 
+                    journal = picking_id.env['account.journal'].search([
+                        ('default_compra', '=', True),
+                        ('company_id', '=', picking_id.company_id.id)
+                    ], limit=1)
+
+                    if not journal:
+                        raise UserError(_("No se encontró un Diario con 'Compra' activo para la compañía %s") % picking_id.company_id.display_name)
+
                     invoice = self.env['account.move'].create({
                         'move_type': 'in_invoice',
                         'invoice_origin': picking_id.name,
@@ -210,7 +227,7 @@ class StockPicking(models.Model):
                         'narration': picking_id.name,
                         'partner_id': partner_id.id,
                         'currency_id': picking_id.purchase_id.currency_id.id,
-                        'journal_id': int(vendor_journal_id),
+                        'journal_id': journal.id,
                         'payment_reference': picking_id.name,
                         'picking_id': picking_id.id,
                         'invoice_line_ids': bill_line_list,
