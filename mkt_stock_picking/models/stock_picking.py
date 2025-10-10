@@ -171,7 +171,7 @@ class StockPicking(models.Model):
         ('31', 'Guía de Remisión Transportista')
         ],
         string="Documento/comprobante", default='01')
-    gre_account_move_ids = fields.Many2many(comodel_name='account.move', relation="gre_account_move_ids",string='Facturas Asociadas')
+    gre_account_move_id = fields.Many2one(comodel_name='account.move', string='Factura Asociada')
     
 
     ######### RESPUESTA REQUEST #########
@@ -300,8 +300,8 @@ class StockPicking(models.Model):
 
     # @api.constrains('account_move_ids')
     # def _check_serie_numero_existance(self):
-    #     if self.gre_account_move_ids:
-    #         if not self.gre_account_move_ids.l10n_pe_in_edi_serie or not self.gre_account_move_ids.l10n_pe_in_edi_number:
+    #     if self.gre_account_move_id:
+    #         if not self.gre_account_move_id.l10n_pe_in_edi_serie or not self.gre_account_move_id.l10n_pe_in_edi_number:
     #             raise UserError("La serie y el número deben existir para todas las facturas")
             
     # @api.constrains('serie', 'tipo_de_comprobante')
@@ -444,7 +444,7 @@ class StockPicking(models.Model):
 
                 "gre_unidad_de_medida": self._fields["gre_unidad_de_medida"].string,
                 "gre_tipo": self._fields["gre_tipo"].string,
-                "gre_account_move_ids": self._fields["gre_account_move_ids"].string
+                "gre_account_move_id": self._fields["gre_account_move_id"].string
             }
 
             non_completed_fields = []
@@ -460,8 +460,8 @@ class StockPicking(models.Model):
 
 
             ## Check existencia de serie y número de documento (factura)
-            if self.gre_account_move_ids:
-                for account_move in self.gre_account_move_ids:
+            if self.gre_account_move_id:
+                for account_move in self.gre_account_move_id:
                     if account_move.sequence_number == 0:
                         raise UserError("La serie y el número deben existir para todas las facturas")
 
@@ -536,7 +536,7 @@ class StockPicking(models.Model):
                  "serie": account_move.l10n_latam_document_type_id.doc_code_prefix + "001",
                  "numero": account_move.sequence_number
                  } 
-                 for account_move in self.gre_account_move_ids
+                 for account_move in self.gre_account_move_id
             ]
 
             payload = {

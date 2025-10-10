@@ -154,12 +154,8 @@
                             <!-- <field name="formato_de_pdf"/> -->
                         </group>
                     </group>
-                    <group string="FACTURA">
-                        <field name="gre_account_move_ids" mode="tree" domain="[('state', '=', 'posted')]">
-                            <tree>
-                                <field name="name" />
-                            </tree>
-                        </field>
+                    <group string="FACTURA ASOCIADA A LA GUÍA">
+                        <field name="gre_account_move_id" domain="[('state', '=', 'posted')]"/>
                     </group>
 
                     <field name="state" invisible="true" />

@@ -32,7 +32,6 @@
     'website': "https://www.cybrosys.com",
     'depends': ['stock', 'account'],
     'data': [
-        'views/account_move_inherited.xml',
         'views/account_move_views.xml',
         'views/stock_picking_views.xml',
         'views/res_config_settings_views.xml',
