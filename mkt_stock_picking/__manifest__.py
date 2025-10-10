@@ -4,10 +4,11 @@
     'category': 'Inventory',
     'summary': 'Customización para Guía de Remisión NUBEFACT',
     'description': 'Añade campos para generar Guía de Remisión según API NUBEFACT',
-    'depends': ['stock', 'base'],
+    'depends': ['stock', 'base', 'l10n_pe_edi_odoofact'],
     'data': [
         'views/stock_picking_views.xml',
         'views/hr_employee_views.xml',
+        'views/account_move_views.xml',
 
         'security/ir.model.access.csv',
 

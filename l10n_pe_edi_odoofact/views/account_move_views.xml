@@ -221,7 +221,7 @@
                     domain="[('internal_type', 'in', ('invoice', 'credit_note', 'debit_note'))]"
                     readonly="True"
                     force_save="True"
-                    invisible="(move_type not in ('out_invoice', 'out_refund') or l10n_pe_edi_is_einvoice == False)"
+                    invisible="(move_type not in ('out_invoice', 'out_refund') or l10n_pe_edi_is_einvoice == False) or True"
                     required="move_type in ('out_invoice', 'out_refund') and l10n_pe_edi_is_einvoice == True"/>
             </xpath>
             <xpath expr="//field[@name='invoice_line_ids']//tree" position="attributes">
