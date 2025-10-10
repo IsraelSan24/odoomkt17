@@ -1,0 +1,21 @@
+<odoo>
+    <record id="view_account_journal_form_inherit_custom" model="ir.ui.view">
+        <field name="name">account.journal.form.inherit.custom.tab</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+
+            <!-- Localizamos el notebook que contiene las pestañas -->
+            <xpath expr="//sheet/notebook" position="inside">
+                <page string="Configuración Personalizada" name="custom_settings">
+                    <group>
+                        <group>
+                            <field name="default_compra"/>
+                            <field name="default_venta"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
