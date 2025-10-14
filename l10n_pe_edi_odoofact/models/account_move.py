@@ -214,6 +214,11 @@ class AccountMove(models.Model):
         compute="_compute_l10n_pe_edi_tax_totals",
         tracking=True,
     )
+    
+    l10n_pe_edi_observaciones = fields.Text(
+        string="Observations",
+        copy=False,
+    )
 
     # TODO: Por eliminar porque el estandar ya detecta la posición fiscal cuando es extranjero
     # @api.onchange("l10n_pe_edi_odoofact_operation_type")
@@ -845,7 +850,7 @@ class AccountMove(models.Model):
             and abs(self.l10n_pe_edi_total_retention)
             or "",
             "total_impuestos_bolsas": self.l10n_pe_edi_amount_icbper,
-            "observaciones": self.narration or "",
+            "observaciones": self.l10n_pe_edi_observaciones or "",
             "documento_que_se_modifica_tipo": self.l10n_pe_edi_origin_move_id
             and (self.l10n_pe_edi_origin_move_id.name[0] == "F" and 1 or 2)
             or "",
