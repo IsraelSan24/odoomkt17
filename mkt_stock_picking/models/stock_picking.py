@@ -125,8 +125,8 @@ class StockPicking(models.Model):
     # formato_de_pdf = fields.Char(string='Formato de PDF', size=5)
 
     # motivo_de_traslado_otros_descripcion = fields.Char(string='Descripción Otros Motivo', size=70)
-    # tuc_vehiculo_principal = fields.Char(string='TUC Vehículo Principal', size=15)
-    # mtc = fields.Char(string='MTC', size=20)
+    gre_tuc_vehiculo_principal = fields.Char(string='Certificado de Habilitación Vehicular', size=15)
+    gre_mtc = fields.Char(string='Número de Registro MTC', default="15171560CNG", size=20)
 
     # sunat_envio_indicador = fields.Selection(
     #     [('01', 'SUNAT_Envio_IndicadorPagadorFlete_Remitente'), 
@@ -164,15 +164,17 @@ class StockPicking(models.Model):
     # codigo_dam = fields.Char(string='Para traslado exportación o importación.', size=23) 
     
     ########## DOCUMENTO ##########
-    gre_tipo = fields.Selection([
+    gre_tipo_documento = fields.Selection([
         ('01', 'Factura'),
         ('03', 'Boleta de Venta'),
         ('09', 'Guía de Remisión Remitente'),
         ('31', 'Guía de Remisión Transportista')
         ],
-        string="Documento/comprobante", default='01')
+        string="Documento/comprobante")
     gre_account_move_id = fields.Many2one(comodel_name='account.move', string='Factura Asociada')
-    
+    gre_documento_serie = fields.Char(string="Serie del Documento Relacionado", size=4)
+    gre_documento_numero = fields.Integer(string="Número del Documento Relacionado", help="Correlativo, sin ceros a la izquierda.")
+
 
     ######### RESPUESTA REQUEST #########
     gre_respuesta = fields.Json(string="Respuesta de la Solicitud")
@@ -226,6 +228,7 @@ class StockPicking(models.Model):
         
         return super().create(vals)
 
+
     @api.onchange('gre_punto_de_partida_departamento')
     def _onchange_gre_punto_de_partida_departamento(self):
         if self.gre_punto_de_partida_departamento:
@@ -248,7 +251,6 @@ class StockPicking(models.Model):
         if self.gre_punto_de_llegada_provincia:
             self.gre_punto_de_llegada_distrito = False
 
-
     @api.onchange('gre_cliente_id')
     def _onchange_gre_cliente_id(self):
         label_to_value = {label: value for value, label in self._fields['gre_cliente_tipo_de_documento'].selection}
@@ -262,7 +264,6 @@ class StockPicking(models.Model):
             self.gre_cliente_numero_de_documento = self.gre_cliente_id.vat
             self.gre_cliente_denominacion = self.gre_cliente_id.name
             self.gre_cliente_direccion = self.gre_cliente_id.street
-
 
     @api.onchange('picking_type_id')
     def _onchange_picking_type_for_outgoing(self):
@@ -396,13 +397,15 @@ class StockPicking(models.Model):
     #                 raise UserError("Para traslado entre establecimientos, el código de establecimiento SUNAT es obligatorio.")
 
     def action_send_request(self):
+        ruta = self.env['l10n_pe_edi.shop'].sudo().search([("partner_id", "=", self.company_id.partner_id.id)], limit=1).l10n_pe_edi_ose_url
+        token = self.env['l10n_pe_edi.shop'].sudo().search([("partner_id", "=", self.company_id.partner_id.id)], limit=1).l10n_pe_edi_ose_token
         for rec in self:
             ## Existencia de todos los campos necesarios
             fields_strings = {
                 "gre_operacion": self._fields["gre_operacion"].string,
                 "gre_tipo_de_comprobante": self._fields["gre_tipo_de_comprobante"].string,
                 "gre_serie": self._fields["gre_serie"].string,
-                #gre_ "numero": self._fields["numero"].string,
+                "gre_numero": self._fields["gre_numero"].string,
 
                 "gre_cliente_tipo_de_documento": self._fields["gre_cliente_tipo_de_documento"].string,
                 "gre_cliente_numero_de_documento": self._fields["gre_cliente_numero_de_documento"].string,
@@ -443,8 +446,12 @@ class StockPicking(models.Model):
                 "gre_destinatario_denominacion": self._fields["gre_destinatario_denominacion"].string,
 
                 "gre_unidad_de_medida": self._fields["gre_unidad_de_medida"].string,
-                "gre_tipo": self._fields["gre_tipo"].string,
-                "gre_account_move_id": self._fields["gre_account_move_id"].string
+                "gre_tipo_documento": self._fields["gre_tipo_documento"].string,
+                # "gre_account_move_id": self._fields["gre_account_move_id"].string,
+
+                ## Opcionales pero incluidos a pedido
+                "gre_mtc": self._fields["gre_mtc"].string,
+                "gre_tuc_vehiculo_principal": self._fields["gre_tuc_vehiculo_principal"].string,
             }
 
             non_completed_fields = []
@@ -459,21 +466,33 @@ class StockPicking(models.Model):
                 raise ValidationError(error_message)
 
 
-            ## Check existencia de serie y número de documento (factura)
-            if self.gre_account_move_id:
-                for account_move in self.gre_account_move_id:
+            ## Check account_move_id o serie + numero: documento anexo
+            if not (rec.gre_account_move_id) and not (rec.gre_documento_numero and rec.gre_documento_serie):
+                    raise ValidationError("Falta ingresar el documento asociado a la guía.")
+            
+            ## Check existencia de serie y número de documento asociado a la GRET (factura)
+            if rec.gre_account_move_id:
+                for account_move in rec.gre_account_move_id:
                     if account_move.sequence_number == 0:
                         raise UserError("La serie y el número deben existir para todas las facturas")
 
+            ## Check de serie y numero de documento asociado a la GRET (no factura)
+            if rec.gre_documento_serie:
+                if len(rec.gre_documento_serie) != 4:
+                    raise ValidationError("La serie debe contener 4 caracteres exactos.")
+
+            if rec.gre_documento_numero:
+                if rec.gre_documento_numero < 0 or rec.gre_documento_numero > 99999999:
+                    raise ValidationError("El número correlativo del documento no puede se negativo y debe contener como máximo 8 dígitos.")
+
             ## Check existencia de items
-            if self.move_ids_without_package:
+            if rec.move_ids_without_package:
                 for move in self.move_ids_without_package:
                     if not move.description_picking:
                         raise UserError("Todos los ítems deben tener descripciones.")
             else:
                 raise UserError("Debe agregar ítems para generar la GRE.")
                      
-            
             ## Check formato de serie (registro)
             if rec.gre_tipo_de_comprobante and rec.gre_serie:
                 if rec.gre_tipo_de_comprobante == '7' and not rec.gre_serie.startswith('T'):
@@ -522,6 +541,19 @@ class StockPicking(models.Model):
                 if "-" in rec.gre_transportista_placa_numero or (len(rec.gre_transportista_placa_numero) > 8 or len(rec.gre_transportista_placa_numero) < 6):
                     raise ValidationError("El número de placa no debe contener guión (-) y debe tener de 6 a 8 caracteres.") 
 
+            ## Check formato TUCE
+            if rec.gre_tuc_vehiculo_principal:
+                if len(rec.gre_tuc_vehiculo_principal) < 10:
+                    raise ValidationError("El Certificado de Habilitación Vehicular  debe tener de 10 a 15 caracteres.")
+                
+                if not (rec.gre_tuc_vehiculo_principal.isalnum() and rec.gre_tuc_vehiculo_principal.isupper()) :
+                    raise ValidationError("El Certificado de Habilitación Vehicular debe estar en mayúsculas y sin guiones o cualquier otro caracter.")
+
+            ## Check registro MTC 
+            if rec.gre_mtc:
+                if not (rec.gre_mtc.isalnum() and rec.gre_mtc.isupper()):
+                    raise ValidationError("El Registro del MTC debe estar en mayúsculas y sin guiones o cualquier otro caracter.") 
+
 
             items = [
                 {"unidad_de_medida": "NIU",
@@ -529,58 +561,72 @@ class StockPicking(models.Model):
                  "descripcion": move.description_picking,
                  "cantidad": str(move.quantity)
                  }
-                 for move  in self.move_ids_without_package
-            ]
-            documentos_relacionados = [
-                {"tipo": account_move.l10n_latam_document_type_id.code,
-                 "serie": account_move.l10n_latam_document_type_id.doc_code_prefix + "001",
-                 "numero": account_move.sequence_number
-                 } 
-                 for account_move in self.gre_account_move_id
+                 for move  in rec.move_ids_without_package
             ]
 
+
+            documentos_relacionados = []
+
+            if rec.gre_tipo_documento == "01":
+                documentos_relacionados.extend([
+                    {
+                    "tipo": rec.gre_tipo_documento,
+                    "serie": account_move.l10n_latam_document_type_id.doc_code_prefix + "001",
+                    "numero": account_move.sequence_number
+                    } 
+                    for account_move in rec.gre_account_move_id
+                ])
+            
+            else:
+                documentos_relacionados.extend([
+                    {
+                    "tipo": rec.gre_tipo_documento,
+                    "serie": rec.gre_documento_serie,
+                    "numero": str(rec.gre_documento_numero)
+                    }
+                ])
+
             payload = {
-                "operacion": self.gre_operacion,
-                "tipo_de_comprobante": int(self.gre_tipo_de_comprobante),
-                "serie": self.gre_serie,
-                "numero": str(self.gre_numero),
-                "cliente_tipo_de_documento": int(self.gre_cliente_tipo_de_documento),
-                "cliente_numero_de_documento": self.gre_cliente_numero_de_documento,
-                "cliente_denominacion": self.gre_cliente_denominacion,
-                "cliente_direccion": self.gre_cliente_direccion,
-                "fecha_de_emision": self.gre_fecha_de_emision.strftime("%d-%m-%Y"),
-                "peso_bruto_total": str(self.gre_peso_bruto_total),
-                "peso_bruto_unidad_de_medida": self.gre_peso_bruto_unidad_de_medida,
-                "fecha_de_inicio_de_traslado": self.gre_fecha_de_inicio_de_traslado.strftime("%d-%m-%Y"),
-                "transportista_placa_numero": self.gre_transportista_placa_numero.upper(),
-                "conductor_documento_tipo": self.gre_conductor_documento_tipo,
-                "conductor_documento_numero": self.gre_conductor_documento_numero,
-                "conductor_denominacion": self.gre_conductor_denominacion,
-                "conductor_nombre": self.gre_conductor_nombre.upper(),
-                "conductor_apellidos": self.gre_conductor_apellidos.upper(),
-                "conductor_numero_licencia": self.gre_conductor_numero_licencia,
-                "destinatario_documento_tipo": self.gre_destinatario_documento_tipo,
-                "destinatario_documento_numero": self.gre_destinatario_documento_numero,
-                "destinatario_denominacion": self.gre_destinatario_denominacion,
-                "punto_de_partida_ubigeo": self.gre_punto_de_partida_ubigeo,
-                "punto_de_partida_direccion": self.gre_punto_de_partida_direccion,
-                "punto_de_llegada_ubigeo": self.gre_punto_de_llegada_ubigeo,
-                "punto_de_llegada_direccion": self.gre_punto_de_llegada_direccion,
-                "enviar_automaticamente_al_cliente": str(self.gre_enviar_automaticamente_al_cliente).lower(),
+                "operacion": rec.gre_operacion,
+                "tipo_de_comprobante": int(rec.gre_tipo_de_comprobante),
+                "serie": rec.gre_serie,
+                "numero": str(rec.gre_numero),
+                "cliente_tipo_de_documento": int(rec.gre_cliente_tipo_de_documento),
+                "cliente_numero_de_documento": rec.gre_cliente_numero_de_documento,
+                "cliente_denominacion": rec.gre_cliente_denominacion,
+                "cliente_direccion": rec.gre_cliente_direccion,
+                "fecha_de_emision": rec.gre_fecha_de_emision.strftime("%d-%m-%Y"),
+                "peso_bruto_total": str(rec.gre_peso_bruto_total),
+                "peso_bruto_unidad_de_medida": rec.gre_peso_bruto_unidad_de_medida,
+                "fecha_de_inicio_de_traslado": rec.gre_fecha_de_inicio_de_traslado.strftime("%d-%m-%Y"),
+                "transportista_placa_numero": rec.gre_transportista_placa_numero.upper(),
+                "mtc": rec.gre_mtc,
+                "tuc_vehiculo_principal": rec.gre_tuc_vehiculo_principal,
+                "conductor_documento_tipo": rec.gre_conductor_documento_tipo,
+                "conductor_documento_numero": rec.gre_conductor_documento_numero,
+                "conductor_denominacion": rec.gre_conductor_denominacion,
+                "conductor_nombre": rec.gre_conductor_nombre.upper(),
+                "conductor_apellidos": rec.gre_conductor_apellidos.upper(),
+                "conductor_numero_licencia": rec.gre_conductor_numero_licencia,
+                "destinatario_documento_tipo": rec.gre_destinatario_documento_tipo,
+                "destinatario_documento_numero": rec.gre_destinatario_documento_numero,
+                "destinatario_denominacion": rec.gre_destinatario_denominacion,
+                "punto_de_partida_ubigeo": rec.gre_punto_de_partida_ubigeo,
+                "punto_de_partida_direccion": rec.gre_punto_de_partida_direccion,
+                "punto_de_llegada_ubigeo": rec.gre_punto_de_llegada_ubigeo,
+                "punto_de_llegada_direccion": rec.gre_punto_de_llegada_direccion,
+                "enviar_automaticamente_al_cliente": str(rec.gre_enviar_automaticamente_al_cliente).lower(),
                 "items": items,
                 "documento_relacionado": documentos_relacionados,
-                # "mtc": "15123078CNG"
             }
 
             _logger.info(f"PAYLOAD\n\t{json.dumps(payload)}\n\n")
 
-            ruta = self.env['l10n_pe_edi.shop'].sudo().search([("partner_id", "=", self.company_id.partner_id.id)], limit=1).l10n_pe_edi_ose_url
-            token = self.env['l10n_pe_edi.shop'].sudo().search([("partner_id", "=", self.company_id.partner_id.id)], limit=1).l10n_pe_edi_ose_token
 
             if not ruta:
-                raise UserError(f"No se encontró la URL nubefact para {self.company_id.partner_id.name}.")
+                raise UserError(f"No se encontró la URL nubefact para {rec.company_id.partner_id.name}.")
             if not token: 
-                raise UserError(f"No se encontró el token nubefact para {self.company_id.partner_id.name}.")
+                raise UserError(f"No se encontró el token nubefact para {rec.company_id.partner_id.name}.")
 
             headers = {
                 "Authorization": f"Token token={token}",
@@ -646,7 +692,6 @@ class StockPicking(models.Model):
             'target': 'new',
         }
     
-
     def action_consult_gre(self):
         self.ensure_one()
         token = self.env['l10n_pe_edi.shop'].sudo().search([("partner_id", "=", self.company_id.partner_id.id)], limit=1).l10n_pe_edi_ose_token
@@ -682,4 +727,3 @@ class StockPicking(models.Model):
             _logger.info("\nError: ", response.text)
             _logger.info(f"\nError:  {str(e)}\n")
                 
-            
