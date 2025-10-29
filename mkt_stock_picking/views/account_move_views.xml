@@ -4,40 +4,51 @@
   <record id="account_move_form_view_inherited_guia" model="ir.ui.view">
     <field name="name">account.move.view.form.inherit.guia</field>
     <field name="model">account.move</field>
-    <!-- Ajusta el XMLID base si difiere en tu instalación -->
     <field name="inherit_id" ref="l10n_pe_edi_odoofact.view_move_form"/>
     <field name="arch" type="xml">
 
-      <!-- Reemplazamos el grupo para controlar dominio y opciones -->
       <xpath expr="//group[@name='reference_guides_group']" position="replace">
         <group string="Reference Guides" name="reference_guides_group"
                invisible="move_type not in ('out_invoice','out_refund','in_invoice','in_refund')">
 
-          <!--
-            Reglas del dominio:
-            - Misma compañía
-            - gre_doc_name no nulo ni vacío
-            - Si existe gre_account_move_id:
-                * permitir pickings no usados (False)
-                * permitir los usados por ESTA factura (id)
-          -->
           <field name="stock_picking_ids"
                  nolabel="1"
                  colspan="2"
                  readonly="state != 'draft'"
-                 widget="many2many_tags"
+                 widget="many2many"
+                 context="{'tree_view_ref': 'module_name.stock_picking_gre_tree_view'}"
                  domain="[
                     ('company_id','=',company_id),
                     ('gre_doc_name','!=',False),
-                    ('gre_doc_name','not in',['',' ']),
+                    ('gre_doc_name','not in',['',False,' ']),
                     '|',
                         ('gre_account_move_id','=',False),
                         ('gre_account_move_id','=', id)
-                 ]"
-                 options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"/>
+                 ]">
+            <tree>
+              <field name="gre_doc_name"/>
+              <field name="name"/>
+              <field name="partner_id"/>
+              <field name="scheduled_date"/>
+            </tree>
+          </field>
         </group>
       </xpath>
 
+    </field>
+  </record>
+
+  <!-- Vista tree específica para mostrar gre_doc_name en el selector -->
+  <record id="stock_picking_gre_tree_view" model="ir.ui.view">
+    <field name="name">stock.picking.gre.tree</field>
+    <field name="model">stock.picking</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="gre_doc_name" string="Guía de Remisión"/>
+        <field name="name" string="Transferencia"/>
+        <field name="partner_id"/>
+        <field name="scheduled_date"/>
+      </tree>
     </field>
   </record>
 

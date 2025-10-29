@@ -9,7 +9,6 @@ _logger = logging.getLogger(__name__)
 class AccountMove(models.Model):
     _inherit = 'account.move'
 
-    # Many2many para seleccionar guías existentes (sin crear/editar desde la factura)
     stock_picking_ids = fields.Many2many(
         comodel_name='stock.picking',
         relation='account_move_stock_picking_m2m_rel',   # tabla M2M nueva para evitar conflictos
