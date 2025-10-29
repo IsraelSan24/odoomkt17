@@ -23,8 +23,8 @@
                             <field name="gre_operacion" readonly='true'/>
                             <field name="gre_tipo_de_comprobante" readonly='true'/>
                             <field name="gre_serie" readonly='true'/>
-                            <field name="gre_numero"/>
-                            <!-- <field name="gre_numero" readonly='true'/> -->
+                            <!-- <field name="gre_numero"/> -->
+                            <field name="gre_numero" readonly='true'/>
                             <field name="gre_doc_name" readonly='true'/>
 
                         </group>
@@ -66,7 +66,9 @@
                     </group> -->
                     <group string="Vehículo">
                         <field name="gre_transportista_placa_numero"/>
-                        <!-- <field name="tuc_vehiculo_principal" modifiers="{'invisible': [('tipo_de_comprobante', '!=', '8')]}"/> -->
+                        <field name="gre_tuc_vehiculo_principal" modifiers="{'invisible': [('tipo_de_comprobante', '!=', '8')]}"/>
+                        <field name="gre_mtc"/>
+
                     </group>
                     <group string="Conductor">
                         <field name="gre_driver_employee_id"/>
@@ -87,7 +89,6 @@
                         <field name="gre_destinatario_denominacion"/>
                     </group>
                     <!-- <group string="Indicadores SUNAT">
-                        <field name="mtc"/>
                         <field name="sunat_envio_indicador"/>
                     </group> -->
                     <!-- <group string="Subcontratador" modifiers="{'invisible': [('sunat_envio_indicador', '!=', '02')]}">
@@ -154,8 +155,17 @@
                             <!-- <field name="formato_de_pdf"/> -->
                         </group>
                     </group>
-                    <group string="FACTURA ASOCIADA A LA GUÍA">
-                        <field name="gre_account_move_id" domain="[('state', '=', 'posted')]"/>
+                    <group string="COMPROBANTE ASOCIADA A LA GUÍA">
+                        <field name="gre_tipo_documento" string="Tipo de Comprobante"/>
+                        <field name="gre_account_move_id"
+                            domain="[('state','=','posted')]"
+                            invisible="gre_tipo_documento != '01'"/>
+                        <field name="gre_documento_serie"
+                            string="Serie"
+                            invisible="gre_tipo_documento == '01'"/>
+                        <field name="gre_documento_numero"
+                            string="Número"
+                            invisible="gre_tipo_documento == '01'"/>
                     </group>
 
                     <field name="state" invisible="true" />
