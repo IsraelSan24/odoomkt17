@@ -727,3 +727,28 @@ class StockPicking(models.Model):
             _logger.info("\nError: ", response.text)
             _logger.info(f"\nError:  {str(e)}\n")
                 
+
+    @api.model_create_multi
+    def create(self, vals_list):
+        # Normaliza gre_doc_name (quita espacios)
+        for v in vals_list:
+            if 'gre_doc_name' in v and isinstance(v['gre_doc_name'], str):
+                v['gre_doc_name'] = v['gre_doc_name'].strip()
+        return super().create(vals_list)
+
+    def write(self, vals):
+        if 'gre_doc_name' in vals and isinstance(vals['gre_doc_name'], str):
+            vals['gre_doc_name'] = vals['gre_doc_name'].strip()
+        return super().write(vals)
+
+    def name_get(self):
+        """
+        Prioriza gre_doc_name si está no vacío; si no, usa el name del picking.
+        Esto controla la etiqueta que verás en el selector y en el many2many_tags.
+        """
+        res = []
+        for p in self:
+            gname = (p.gre_doc_name or '').strip()
+            name = gname or p.name or _("(Sin nombre)")
+            res.append((p.id, name))
+        return res

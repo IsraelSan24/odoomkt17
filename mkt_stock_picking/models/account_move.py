@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 from odoo import api, fields, models, _
 from odoo.exceptions import ValidationError
+import logging
+
+_logger = logging.getLogger(__name__)
 
 
 class AccountMove(models.Model):
@@ -13,17 +16,45 @@ class AccountMove(models.Model):
         column1='account_move_id',
         column2='stock_picking_id',
         string='Reference Guides',
-        help='Selecciona guías de remisión existentes.',
+        help='Selecciona guías de remisión existentes (con gre_doc_name).',
     )
+
+    @api.onchange('stock_picking_ids')
+    def _onchange_stock_picking_ids_sync_gre(self):
+        """
+        Si existe gre_account_move_id en stock.picking, sincroniza:
+        - Asigna gre_account_move_id = self.id a las guías añadidas.
+        - Limpia gre_account_move_id en las guías removidas (si estaban vinculadas a este move).
+        """
+        Picking = self.env['stock.picking']
+        if 'gre_account_move_id' not in Picking._fields:
+            return
+
+        if not self._origin:
+            # En new records, no hay delta fiable; hacer solo asignación al guardar o confiar en constraint
+            return
+
+        before = self._origin.stock_picking_ids
+        after = self.stock_picking_ids
+
+        removed = before - after
+        added = after - before
+
+        # Limpiar las removidas solo si estaban asociadas a este move
+        if removed:
+            removed.filtered(lambda p: p.gre_account_move_id == self._origin).write({'gre_account_move_id': False})
+        # Asignar las nuevas
+        if added:
+            added.write({'gre_account_move_id': self.id})
 
     @api.constrains('stock_picking_ids')
     def _check_unique_linked_pickings(self):
         """
-        Si tu negocio exige exclusividad (una guía solo puede estar en una factura),
-        valida contra gre_account_move_id cuando ese campo exista en stock.picking.
+        Evita que una guía esté vinculada a otra factura distinta cuando se usa gre_account_move_id.
+        (Doble seguridad además del dominio)
         """
-        picking_has_field = 'gre_account_move_id' in self.env['stock.picking']._fields
-        if not picking_has_field:
+        Picking = self.env['stock.picking']
+        if 'gre_account_move_id' not in Picking._fields:
             return
         for move in self:
             linked_elsewhere = move.stock_picking_ids.filtered(
@@ -34,18 +65,3 @@ class AccountMove(models.Model):
                 raise ValidationError(_(
                     "Las siguientes guías ya están vinculadas a otro comprobante: %s") % names
                 )
-
-
-class StockPicking(models.Model):
-    _inherit = 'stock.picking'
-
-    # Aseguramos que la búsqueda/visualización priorice gre_doc_name
-    gre_doc_name = fields.Char()
-
-    def name_get(self):
-        res = []
-        for p in self:
-            # Prioriza gre_doc_name; de lo contrario usa el name del picking
-            name = p.gre_doc_name or p.name or _("(Sin nombre)")
-            res.append((p.id, name))
-        return res
