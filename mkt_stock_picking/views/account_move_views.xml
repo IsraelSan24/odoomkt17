@@ -13,13 +13,14 @@
                invisible="move_type not in ('out_invoice','out_refund','in_invoice','in_refund')">
 
           <field name="stock_picking_ids"
-                 nolabel="1"
-                 colspan="2"
-                 readonly="state != 'draft'"
-                 widget="many2many_tags"
-                 domain="[('company_id','=',company_id)]"
-                 context="{'default_company_id': company_id}"
-                 options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"/>
+            nolabel="1"
+            colspan="2"
+            readonly="state != 'draft'"
+            widget="many2many_tags"
+            domain="[('company_id','=',company_id),
+                    ('gre_doc_name','!=',False),
+                    ('gre_doc_name','not in', ['', ''])]"
+            options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"/>
 
         </group>
       </xpath>
