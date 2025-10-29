@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
-    <record id="account_move_form_view_inherited_guia" model="ir.ui.view">
-        <field name="name">account.move.view.form.inherit.guia</field>
-        <field name="model">account.move</field>
-        <field name="inherit_id" ref="l10n_pe_edi_odoofact.view_move_form"/>
-        <field name="arch" type="xml">
-            <xpath expr="//group[@name='reference_guides_group']" position="replace">
-                <group string="Reference Guides" name="reference_guides_group" invisible="move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund')">
-                    <field
-                        name="stock_picking_ids"
-                        nolabel="1"
-                        colspan="2"
-                        readonly="state != 'draft'"
-                    >
-                        <tree>
-                            <field name="name" />
-                            <field name="gre_doc_name" />
-                        </tree>
-                    </field>
-                </group>
-            </xpath>
-        </field>
-    </record>
-
-
+  <record id="account_move_form_view_inherited_guia" model="ir.ui.view">
+    <field name="name">account.move.view.form.inherit.guia</field>
+    <field name="model">account.move</field>
+    <!-- hereda tu vista base -->
+    <field name="inherit_id" ref="l10n_pe_edi_odoofact.view_move_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//group[@name='reference_guides_group']" position="replace">
+        <group string="Reference Guides" name="reference_guides_group"
+               invisible="move_type not in ('out_invoice','out_refund','in_invoice','in_refund')">
+          <field name="stock_picking_ids"
+                 nolabel="1"
+                 colspan="2"
+                 readonly="state != 'draft'"
+                 widget="many2many_tags"
+                 options="{'no_create': True, 'no_create_edit': True, 'no_open': True}">
+            <!-- Sin crear ni editar, solo buscar/seleccionar existentes -->
+            <domain>
+              <!-- Muestra de tu misma compañía y que no estén linkeadas a otra factura.
+                   Si necesitas permitir las ya ligadas a este move, esto se valida con la constraint. -->
+              [('company_id','=',company_id)]
+            </domain>
+          </field>
+        </group>
+      </xpath>
+    </field>
+  </record>
 </odoo>
