@@ -963,11 +963,11 @@ class AccountMove(models.Model):
 
     def _get_guides_values_generar_odoofact(self):
         guide_list = []
-        for guide in self.l10n_pe_edi_picking_number_ids:
+        for guide in self.stock_picking_ids:
             guide_list.append(
                 {
-                    "guia_tipo": guide.type or "",
-                    "guia_serie_numero": guide.name or "",
+                    "guia_tipo": guide.gre_tipo_de_comprobante or "",
+                    "guia_serie_numero": guide.gre_doc_name or "",
                 }
             )
         return guide_list
