@@ -214,6 +214,11 @@ class AccountMove(models.Model):
         compute="_compute_l10n_pe_edi_tax_totals",
         tracking=True,
     )
+    
+    l10n_pe_edi_observaciones = fields.Text(
+        string="Observations",
+        copy=False,
+    )
 
     # TODO: Por eliminar porque el estandar ya detecta la posición fiscal cuando es extranjero
     # @api.onchange("l10n_pe_edi_odoofact_operation_type")
@@ -805,7 +810,8 @@ class AccountMove(models.Model):
         commercial_doc_type = commercial.l10n_latam_identification_type_id
         currency = CURRENCY.get(self.currency_id.name, False)
         has_advance_payment = self.l10n_pe_edi_odoofact_operation_type
-        apply_detraction = self.l10n_pe_edi_detraction_type_id and True or False
+        apply_detraction = bool(self.l10n_pe_edi_detraction_type_id)
+
         values = {
             "operacion": "generar_comprobante",
             "tipo_de_comprobante": self.l10n_latam_document_type_id.type_of,
@@ -816,11 +822,9 @@ class AccountMove(models.Model):
             "cliente_numero_de_documento": self.commercial_partner_id.vat,
             "cliente_denominacion": self.commercial_partner_id.name,
             "cliente_direccion": self._get_partner_address_odoofact(self.partner_id),
-            "cliente_email": self.partner_id.email and self.partner_id.email or "",
+            "cliente_email": self.partner_id.email or "",
             "fecha_de_emision": self.invoice_date.strftime("%d-%m-%Y"),
-            "fecha_de_vencimiento": self.invoice_date_due
-            and self.invoice_date_due.strftime("%d-%m-%Y")
-            or "",
+            "fecha_de_vencimiento": self.invoice_date_due and self.invoice_date_due.strftime("%d-%m-%Y") or "",
             "moneda": currency,
             "tipo_de_cambio": self.l10n_pe_edi_exchange_rate,
             "porcentaje_de_igv": self.l10n_pe_edi_igv_percent,
@@ -832,71 +836,56 @@ class AccountMove(models.Model):
             "total_exonerada": self.l10n_pe_edi_amount_exonerated,
             "total_igv": self.l10n_pe_edi_amount_igv,
             "total_gratuita": self.l10n_pe_edi_amount_free,
-            "total_otros_cargos": 0.0,  # ---------
-            "total_isc": 0.0,  # ---------
+            "total_otros_cargos": 0.0,
+            "total_isc": 0.0,
             "total": self.amount_total,
-            "retencion_tipo": self.l10n_pe_edi_retention_type_id
-            and int(self.l10n_pe_edi_retention_type_id.code)
-            or "",
-            "retencion_base_imponible": self.l10n_pe_edi_retention_type_id
-            and abs(self.amount_total)
-            or "",
-            "total_retencion": self.l10n_pe_edi_retention_type_id
-            and abs(self.l10n_pe_edi_total_retention)
-            or "",
+            "retencion_tipo": self.l10n_pe_edi_retention_type_id and int(self.l10n_pe_edi_retention_type_id.code) or "",
+            "retencion_base_imponible": self.l10n_pe_edi_retention_type_id and abs(self.amount_total) or "",
+            "total_retencion": self.l10n_pe_edi_retention_type_id and abs(self.l10n_pe_edi_total_retention) or "",
             "total_impuestos_bolsas": self.l10n_pe_edi_amount_icbper,
-            "observaciones": self.narration or "",
-            "documento_que_se_modifica_tipo": self.l10n_pe_edi_origin_move_id
-            and (self.l10n_pe_edi_origin_move_id.name[0] == "F" and 1 or 2)
-            or "",
-            "documento_que_se_modifica_serie": self.l10n_pe_edi_origin_move_id
-            and str(self.l10n_pe_edi_origin_move_id.sequence_prefix)[0:4]
-            or "",
-            "documento_que_se_modifica_numero": self.l10n_pe_edi_origin_move_id
-            and self.l10n_pe_edi_origin_move_id.sequence_number
-            or "",
-            "tipo_de_nota_de_credito": self.l10n_pe_edi_reversal_type_id
-            and int(self.l10n_pe_edi_reversal_type_id.code_of)
-            or "",
-            "tipo_de_nota_de_debito": self.l10n_pe_edi_debit_type_id
-            and int(self.l10n_pe_edi_debit_type_id.code_of)
-            or "",
-            "enviar_automaticamente_a_la_sunat": "",  # ---------
-            "enviar_automaticamente_al_cliente": self.l10n_pe_edi_shop_id.send_email
-            and "true"
-            or "false",
-            "codigo_unico": "%s|%s|%s-%s"
-            % (
-                "odoo",
-                self.company_id.partner_id.vat,
-                str(self.sequence_prefix)[0:4],
-                str(self.sequence_number),
-            ),
-            "condiciones_de_pago": self.invoice_payment_term_id
-            and self.invoice_payment_term_id.name
-            or "",
-            "medio_de_pago": self.l10n_pe_edi_is_sale_credit
-            and "venta_al_credito"
-            or "contado",
+            "observaciones": self.l10n_pe_edi_observaciones or "",
+            "documento_que_se_modifica_tipo": self.l10n_pe_edi_origin_move_id and (self.l10n_pe_edi_origin_move_id.name[0] == "F" and 1 or 2) or "",
+            "documento_que_se_modifica_serie": self.l10n_pe_edi_origin_move_id and str(self.l10n_pe_edi_origin_move_id.sequence_prefix)[0:4] or "",
+            "documento_que_se_modifica_numero": self.l10n_pe_edi_origin_move_id and self.l10n_pe_edi_origin_move_id.sequence_number or "",
+            "tipo_de_nota_de_credito": self.l10n_pe_edi_reversal_type_id and int(self.l10n_pe_edi_reversal_type_id.code_of) or "",
+            "tipo_de_nota_de_debito": self.l10n_pe_edi_debit_type_id and int(self.l10n_pe_edi_debit_type_id.code_of) or "",
+            "enviar_automaticamente_a_la_sunat": "",
+            "enviar_automaticamente_al_cliente": "true" if self.l10n_pe_edi_shop_id.send_email else "false",
+            "codigo_unico": "%s|%s|%s-%s" % ("odoo", self.company_id.partner_id.vat, str(self.sequence_prefix)[0:4], str(self.sequence_number)),
+            "condiciones_de_pago": self.invoice_payment_term_id and self.invoice_payment_term_id.name or "",
+            "medio_de_pago": self.l10n_pe_edi_is_sale_credit and "venta_al_credito" or "contado",
             "orden_compra_servicio": self.l10n_pe_edi_service_order or "",
-            "detraccion": "true" if has_advance_payment == "4" and apply_detraction == True else (self.l10n_pe_edi_detraction_type_id and "true" or "false"),
-            "generado_por_contingencia": self.journal_id.l10n_pe_edi_contingency
-            and "true"
-            or "false",
+            "detraccion": "true" if has_advance_payment == "4" and apply_detraction else ("true" if self.l10n_pe_edi_detraction_type_id else "false"),
+            "generado_por_contingencia": "true" if self.journal_id.l10n_pe_edi_contingency else "false",
             "items": getattr(self, "_get_lines_values_generar_%s" % (ose_supplier))(),
-            "guias": getattr(self, "_get_guides_values_generar_%s" % (ose_supplier))(),
-            "venta_al_credito": getattr(
-                self, "_get_dues_values_generar_%s" % (ose_supplier)
-            )(),
+            # "guias":  <<-- la incluimos condicionalmente más abajo
+            # "venta_al_credito": <<-- idem
         }
-        if not (has_advance_payment == "4" and apply_detraction == True):
-            values.update({
-                "detraccion_tipo": self.l10n_pe_edi_detraction_type_id and int(self.l10n_pe_edi_detraction_type_id.code_of) or "",
-                "detraccion_total": self.l10n_pe_edi_detraction_type_id and self.l10n_pe_edi_total_detraction_signed or "",
-                "detraccion_porcentaje": self.l10n_pe_edi_detraction_type_id and self.l10n_pe_edi_detraction_type_id.rate or "",
-                "medio_de_pago_detraccion": self.l10n_pe_edi_detraction_type_id and self.l10n_pe_edi_detraction_payment_type_id and int(self.l10n_pe_edi_detraction_payment_type_id.code_of) or "",
-            })
-        _logger.info(f"\n\n{values}\n\n")
+
+        # Detracción: solo agrega detalles si realmente aplica
+        if not (has_advance_payment == "4" and apply_detraction):
+            if self.l10n_pe_edi_detraction_type_id:
+                values.update({
+                    "detraccion_tipo": int(self.l10n_pe_edi_detraction_type_id.code_of),
+                    "detraccion_total": self.l10n_pe_edi_total_detraction_signed,
+                    "detraccion_porcentaje": self.l10n_pe_edi_detraction_type_id.rate,
+                    "medio_de_pago_detraccion": self.l10n_pe_edi_detraction_payment_type_id and int(self.l10n_pe_edi_detraction_payment_type_id.code_of) or "",
+                })
+
+        # === GUIAS (solo si hay válidas) ===
+        guias_vals = self._get_guides_values_generar_odoofact()
+        if guias_vals:
+            values["guias"] = guias_vals
+
+        # === VENTA AL CRÉDITO (cuotas) solo si hay cuotas > 0 ===
+        dues = getattr(self, "_get_dues_values_generar_%s" % (ose_supplier))()
+        if dues:
+            # Asegúrate de que cada cuota tenga monto > 0 y fecha formato AAAA-MM-DD
+            dues = [d for d in dues if float(d.get("monto", 0) or 0) > 0 and d.get("fecha_de_pago")]
+            if dues:
+                values["venta_al_credito"] = dues
+
+        _logger.info("\n\nNubefact payload: %s\n\n", values)
         return values
 
     def _get_lines_values_generar_odoofact(self):
@@ -958,13 +947,25 @@ class AccountMove(models.Model):
 
     def _get_guides_values_generar_odoofact(self):
         guide_list = []
-        for guide in self.l10n_pe_edi_picking_number_ids:
-            guide_list.append(
-                {
-                    "guia_tipo": guide.type or "",
-                    "guia_serie_numero": guide.name or "",
-                }
-            )
+        for guide in self.stock_picking_ids:
+            serie_num = (guide.gre_doc_name or "").strip()
+            tipo = guide.gre_tipo_de_comprobante  # Debe mapear a 1 (Remitente) o 2 (Transportista)
+            if not serie_num or not tipo:
+                continue
+            # Normaliza: sin espacios; deja el guion tal cual venga en gre_doc_name
+            serie_num = serie_num.replace(" ", "")
+            try:
+                tipo_int = int(tipo)
+            except Exception:
+                # Si tu campo es 'remitente'/'transportista' o '01'/'02', mapea aquí
+                mapping = {"remitente": 1, "transportista": 2, "1": 1, "2": 2, 1: 1, 2: 2}
+                tipo_int = mapping.get(str(tipo).lower(), 1)  # por defecto 1
+            # Agrega solo válidos
+            if tipo_int in (1, 2) and "-" in serie_num:
+                guide_list.append({
+                    "guia_tipo": tipo_int,
+                    "guia_serie_numero": serie_num,
+                })
         return guide_list
 
     def _get_dues_values_generar_odoofact(self):

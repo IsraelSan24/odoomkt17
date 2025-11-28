@@ -173,6 +173,11 @@
                     readonly="l10n_pe_edi_detraction_payment_type_id and state != 'draft'"
                     required="l10n_pe_edi_detraction_type_id != False"
                 />
+                <field
+                    name="l10n_pe_edi_observaciones"
+                    placeholder="Observations"
+                    readonly="state != 'draft'"
+                />
             </xpath>
             <xpath expr="//page[@id='other_tab']//field[@name='fiscal_position_id']" position="after">
                 <field name="l10n_pe_edi_retention_type_id"  options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"/>
