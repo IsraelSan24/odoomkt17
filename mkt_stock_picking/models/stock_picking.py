@@ -345,7 +345,11 @@ class StockPicking(models.Model):
                 _logger.info("\nError: ", response.text)
                 _logger.info(f"\nError:  {str(e)}\n")
                 # raise ValidationError(str(e))
-                raise ValidationError(rec.gre_respuesta_error4['errors'])
+                if rec.gre_respuesta_error4.get('errors', False):
+                    raise ValidationError(rec.gre_respuesta_error4.get('errors'))
+                elif rec.gre_respuesta_error4.get('error', False):
+                    raise ValidationError(rec.gre_respuesta_error4.get('error'))
+
 
     def _validate_common_fields(self, rec):
         """Validaciones comunes para ambos tipos de GRE"""
