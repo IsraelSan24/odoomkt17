@@ -7,69 +7,86 @@
         <field name="inherit_id" ref="stock.view_picking_form"/>
         <field name="arch" type="xml">
             <xpath expr="//notebook" position="inside">
-                <page string="Guía de Remisión Transportista" invisible="is_outgoing == False" readonly="gre_aceptada_por_sunat == True">
-                <field name="is_outgoing" invisible='true' />
-                <field name="gre_aceptada_por_sunat" invisible='true' />
+                <page string="Guía de Remisión Electrónica" invisible="is_outgoing == False" readonly="gre_aceptada_por_sunat == True">
+                    <field name="is_outgoing" invisible='true' />
+                    <field name="gre_aceptada_por_sunat" invisible='true' />
+                    
                     <button name="action_send_request"
-                    string="Enviar a Nubefact"
-                    type="object"
-                    class="oe_highlight" invisible="state != 'done'"/>
+                            string="Enviar a Nubefact"
+                            type="object"
+                            class="oe_highlight" 
+                            invisible="state != 'done'"/>
                     <button name="action_consult_gre"
-                    string="Consulta GRE"
-                    type="object"
-                    class="btn-secondary me-2" invisible="state != 'done'"/>
+                            string="Consulta GRE"
+                            type="object"
+                            class="btn-secondary me-2" 
+                            invisible="state != 'done'"/>
+                    
                     <group>
                         <group string="Información General">
                             <field name="gre_operacion" readonly='true'/>
-                            <field name="gre_tipo_de_comprobante" readonly='true'/>
+                            <field name="gre_tipo_de_comprobante"/>
                             <field name="gre_serie" readonly='true'/>
-                            <!-- <field name="gre_numero"/> -->
-                            <field name="gre_numero" readonly='true'/>
+                            <field name="gre_numero" readonly='false'/>
                             <field name="gre_doc_name" readonly='true'/>
-
                         </group>
-                        <group string="Remitente">
-                            <field name="gre_cliente_id" />
+                        
+                        <group string="Cliente">
+                            <field name="gre_cliente_id"/>
                             <field name="gre_cliente_tipo_de_documento"/>
                             <field name="gre_cliente_numero_de_documento"/>
                             <field name="gre_cliente_denominacion"/>
                             <field name="gre_cliente_direccion"/>
-                            <!-- <field name="cliente_email"/>
-                            <field name="cliente_email_1"/>
-                            <field name="cliente_email_2"/> -->
                         </group>
                     </group>
+                    
                     <group>
                         <group string="Fechas">
                             <field name="gre_fecha_de_emision"/>
                             <field name="gre_fecha_de_inicio_de_traslado"/>
-                            <!-- <field name="observaciones"/> -->
                         </group>
-                        <!-- <group string="Motivo de Traslado">
-                            <field name="motivo_de_traslado"/>
-                            <field name="motivo_de_traslado_otros_descripcion" modifiers="{'invisible': [('motivo_de_traslado', '!=', '13')]}"/>
-                            <field name="documento_relacionado_codigo" modifiers="{'invisible': [('motivo_de_traslado', 'not in', ['08', '09'])]}"/>
-                        </group> -->
-                        <group string="Peso y Bultos">
+                        
+                        <group string="Peso">
                             <field name="gre_peso_bruto_total"/>
                             <field name="gre_peso_bruto_unidad_de_medida"/>
-                            <!-- <field name="numero_de_bultos" modifiers="{'invisible': [('tipo_de_comprobante', '!=', '7')]}"/> -->
                         </group>
-                        <!-- <group string="Transporte">
-                            <field name="tipo_de_transporte" modifiers="{'invisible': [('tipo_de_comprobante', '!=', '7')]}"/>
-                        </group> -->
                     </group>
-                    <!-- <group string="Transportista" modifiers="{'invisible': [('tipo_de_transporte', '!=', '01')]}">
-                        <field name="transportista_documento_tipo"/>
-                        <field name="transportista_documento_numero"/>
-                        <field name="transportista_denominacion"/>
-                    </group> -->
+
+                    <!-- CAMPOS ESPECÍFICOS REMITENTE -->
+                    <group string="Datos Remitente" invisible="gre_tipo_de_comprobante != '7'">
+                        <group>
+                            <field name="gre_motivo_de_traslado"/>
+                            <field name="gre_motivo_de_traslado_otros_descripcion" 
+                                   invisible="gre_motivo_de_traslado != '13'"/>
+                            <field name="gre_numero_de_bultos"/>
+                            <field name="gre_tipo_de_transporte"/>
+                        </group>
+                        <group>
+                            <field name="gre_punto_de_partida_codigo_establecimiento_sunat" 
+                                   invisible="gre_motivo_de_traslado not in ['04', '18']"/>
+                            <field name="gre_punto_de_llegada_codigo_establecimiento_sunat" 
+                                   invisible="gre_motivo_de_traslado not in ['04', '18']"/>
+                        </group>
+                    </group>
+
+                    <!-- Transportista (solo para tipo_de_transporte = '01') -->
+                    <group string="Transportista (Transporte Público)" 
+                           invisible="gre_tipo_de_comprobante != '7' or gre_tipo_de_transporte != '01'">
+                        <field name="gre_transportista_documento_tipo"/>
+                        <field name="gre_transportista_documento_numero"/>
+                        <field name="gre_transportista_denominacion"/>
+                    </group>
+
+                    <!-- Vehículo -->
                     <group string="Vehículo">
                         <field name="gre_transportista_placa_numero"/>
-                        <field name="gre_tuc_vehiculo_principal" modifiers="{'invisible': [('tipo_de_comprobante', '!=', '8')]}"/>
-                        <field name="gre_mtc"/>
-
+                        <field name="gre_tuc_vehiculo_principal" 
+                               invisible="gre_tipo_de_comprobante != '8'"/>
+                        <field name="gre_mtc" 
+                               invisible="gre_tipo_de_comprobante != '8'"/>
                     </group>
+
+                    <!-- Conductor -->
                     <group string="Conductor">
                         <field name="gre_driver_employee_id"/>
                         <group>
@@ -83,92 +100,83 @@
                             <field name="gre_conductor_numero_licencia"/>
                         </group>
                     </group>
-                    <group string="Destinatario" modifiers="{'invisible': [('gre_tipo_de_comprobante', '!=', '8')]}">
+
+                    <!-- Destinatario (solo para GRE Transportista) -->
+                    <group string="Destinatario" invisible="gre_tipo_de_comprobante != '8'">
                         <field name="gre_destinatario_documento_tipo"/>
                         <field name="gre_destinatario_documento_numero"/>
                         <field name="gre_destinatario_denominacion"/>
                     </group>
-                    <!-- <group string="Indicadores SUNAT">
-                        <field name="sunat_envio_indicador"/>
-                    </group> -->
-                    <!-- <group string="Subcontratador" modifiers="{'invisible': [('sunat_envio_indicador', '!=', '02')]}">
-                        <field name="subcontratador_documento_tipo"/>
-                        <field name="subcontratador_documento_numero"/>
-                        <field name="subcontratador_denominacion"/>
-                    </group> -->
-                    <!-- <group string="Pagador Servicio" modifiers="{'invisible': [('sunat_envio_indicador', '!=', '03')]}">
-                        <field name="pagador_servicio_documento_tipo_identidad"/>
-                        <field name="pagador_servicio_documento_numero_identidad"/>
-                        <field name="pagador_servicio_denominacion"/>
-                    </group> -->
+
+                    <!-- Puntos de Partida y Llegada -->
                     <group>
                         <group string="Punto de Partida">
                             <field name="gre_punto_de_partida_departamento" 
-                                    string="Departamento" 
-                                    placeholder="Departamento" 
-                                    style="width:100%" 
-                                    options="{'no_create': True, 'no_edit': True}"/>
+                                   string="Departamento" 
+                                   placeholder="Departamento" 
+                                   style="width:100%" 
+                                   options="{'no_create': True, 'no_edit': True}"/>
                             <field name="gre_punto_de_partida_provincia" 
-                                    string="Provincia" 
-                                    placeholder="Provincia" 
-                                    style="width:100%" 
-                                    domain="[('department_id', '=', gre_punto_de_partida_departamento)]"
-                                    options="{'no_create': True, 'no_edit': True}" />
+                                   string="Provincia" 
+                                   placeholder="Provincia" 
+                                   style="width:100%" 
+                                   domain="[('department_id', '=', gre_punto_de_partida_departamento)]"
+                                   options="{'no_create': True, 'no_edit': True}"/>
                             <field name="gre_punto_de_partida_distrito" 
-                                    string="Distrito" 
-                                    placeholder="Distrito" 
-                                    style="width:100%" 
-                                    domain="[('province_id', '=', gre_punto_de_partida_provincia)]"
-                                    options="{'no_create': True, 'no_edit': True}"/>
-
+                                   string="Distrito" 
+                                   placeholder="Distrito" 
+                                   style="width:100%" 
+                                   domain="[('province_id', '=', gre_punto_de_partida_provincia)]"
+                                   options="{'no_create': True, 'no_edit': True}"/>
                             <field name="gre_punto_de_partida_ubigeo" string="Ubigeo" invisible="True"/>
                             <field name="gre_punto_de_partida_direccion"/>
-                            <!-- <field name="punto_de_partida_codigo_establecimiento_sunat" modifiers="{'invisible': [('motivo_de_traslado', 'not in', ['04', '18'])]}"/> -->
                         </group>
+                        
                         <group string="Punto de Llegada">
                             <field name="gre_punto_de_llegada_departamento" 
-                                    string="Departamento" 
-                                    placeholder="Departamento" 
-                                    style="width:100%" 
-                                    options="{'no_create': True, 'no_edit': True}"/>
+                                   string="Departamento" 
+                                   placeholder="Departamento" 
+                                   style="width:100%" 
+                                   options="{'no_create': True, 'no_edit': True}"/>
                             <field name="gre_punto_de_llegada_provincia" 
-                                    string="Provincia" 
-                                    placeholder="Provincia" 
-                                    style="width:100%" 
-                                    domain="[('department_id', '=', gre_punto_de_llegada_departamento)]"
-                                    options="{'no_create': True, 'no_edit': True}" />
+                                   string="Provincia" 
+                                   placeholder="Provincia" 
+                                   style="width:100%" 
+                                   domain="[('department_id', '=', gre_punto_de_llegada_departamento)]"
+                                   options="{'no_create': True, 'no_edit': True}"/>
                             <field name="gre_punto_de_llegada_distrito" 
-                                    string="Distrito" 
-                                    placeholder="Distrito" 
-                                    style="width:100%" 
-                                    domain="[('province_id', '=', gre_punto_de_llegada_provincia)]"
-                                    options="{'no_create': True, 'no_edit': True}"/>
-
+                                   string="Distrito" 
+                                   placeholder="Distrito" 
+                                   style="width:100%" 
+                                   domain="[('province_id', '=', gre_punto_de_llegada_provincia)]"
+                                   options="{'no_create': True, 'no_edit': True}"/>
                             <field name="gre_punto_de_llegada_ubigeo" string="Ubigeo" invisible="True"/>
                             <field name="gre_punto_de_llegada_direccion"/>
-                            <!-- <field name="punto_de_llegada_codigo_establecimiento_sunat" modifiers="{'invisible': [('motivo_de_traslado', 'not in', ['04', '18'])]}"/> -->
                         </group>
                     </group>
+
+                    <!-- Documento Asociado -->
+                    <group string="COMPROBANTE ASOCIADO A LA GUÍA">
+                        <field name="gre_tipo_documento" string="Tipo de Comprobante"/>
+                        <field name="gre_account_move_id"
+                               domain="[('state','=','posted')]"
+                               invisible="gre_tipo_documento != '01'"/>
+                        <field name="gre_documento_serie"
+                               string="Serie"
+                               invisible="gre_tipo_documento == '01'"/>
+                        <field name="gre_documento_numero"
+                               string="Número"
+                               invisible="gre_tipo_documento == '01'"/>
+                    </group>
+
+                    <field name="state" invisible="true"/>
+
+                    <!-- Opciones Adicionales -->
                     <group>
                         <group string="Opciones Adicionales">
                             <field name="gre_enviar_automaticamente_al_cliente"/>
-                            <!-- <field name="formato_de_pdf"/> -->
                         </group>
                     </group>
-                    <group string="COMPROBANTE ASOCIADA A LA GUÍA">
-                        <field name="gre_tipo_documento" string="Tipo de Comprobante"/>
-                        <field name="gre_account_move_id"
-                            domain="[('state','=','posted')]"
-                            invisible="gre_tipo_documento != '01'"/>
-                        <field name="gre_documento_serie"
-                            string="Serie"
-                            invisible="gre_tipo_documento == '01'"/>
-                        <field name="gre_documento_numero"
-                            string="Número"
-                            invisible="gre_tipo_documento == '01'"/>
-                    </group>
-
-                    <field name="state" invisible="true" />
                 </page>
             </xpath>
         </field>
@@ -181,10 +189,14 @@
         <field name="inherit_id" ref="stock.view_picking_form"/>
         <field name="arch" type="xml">
             <xpath expr="//header" position="inside">
-                <!-- <button name="action_print_pdf" string="Imprimir Guía" type="object" attrs="{'invisible': [('gre_aceptada_por_sunat', '=', False)]}" /> -->
-                <button name="action_print_pdf" string="Imprimir Guía" type="object" invisible="is_outgoing == False"/>
-                <!-- <button name="action_open_url" string="Link de Guía" type="object" attrs="{'invisible': [('gre_aceptada_por_sunat', '=', False)]}" /> -->
-                <button name="action_open_url" string="Link de Guía" type="object" invisible="is_outgoing == False"/>
+                <button name="action_print_pdf" 
+                        string="Imprimir Guía" 
+                        type="object" 
+                        invisible="is_outgoing == False"/>
+                <button name="action_open_url" 
+                        string="Link de Guía" 
+                        type="object" 
+                        invisible="is_outgoing == False"/>
             </xpath>
         </field>
     </record>
