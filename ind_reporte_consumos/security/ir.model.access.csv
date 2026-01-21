@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ind_consumption_analysis,access_ind_consumption_analysis,model_ind_consumption_analysis,ind_reporte_consumos.res_group_consumption_report_user,1,1,1,1

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<odoo>
-    <!-- MENU ROOT -->
-    <menuitem id="gallery_root" name="Photo Gallery" groups="mkt_gallery.res_groups_admin" web_icon="mkt_gallery,static/description/icon.png"/>
-
-    <!-- GALLERY -->
-    <menuitem id="gallery_gallery" name="Product Gallery" action="action_view_gallery" parent="gallery_root" sequence="0"/>
-
-</odoo>
