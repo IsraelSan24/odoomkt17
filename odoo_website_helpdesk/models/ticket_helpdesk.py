@@ -170,6 +170,12 @@ class TicketHelpDesk(models.Model):
         li = self.team_id.member_ids.mapped(id)
         return {'domain': {'assigned_user_id': [('id', 'in', li)]}}
 
+    @api.onchange('customer_id')
+    def _onchange_customer_id(self):
+        """Changing the email and phone when selecting the customer"""
+        self.email = self.customer_id.email
+        self.phone = self.customer_id.mobile or self.customer_id.phone
+
     @api.depends('team_id')
     def _compute_team_head_id(self):
         """Compute the team head function"""

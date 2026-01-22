@@ -68,8 +68,8 @@
                         <group>
                             <field name="customer_id"/>
                             <field name="ticket_type_id"/>
-                            <field name="email"/>
-                            <field name="phone"/>
+                            <field name="email" readonly="1"/>
+                            <field name="phone" readonly="1"/>
                             <field name="tags_ids" widget="many2many_tags"/>
                         </group>
                         <group>
