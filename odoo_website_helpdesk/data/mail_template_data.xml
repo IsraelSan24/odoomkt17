@@ -1,24 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <data noupdate="1">
+    <data noupdate="0">
         <!--    Mail Template for notifying customers about the creation of a ticket.-->
         <record id="ticket_created" model="mail.template">
             <field name="name">Create Ticket</field>
             <field name="model_id" ref="odoo_website_helpdesk.model_ticket_helpdesk"/>
             <field name="auto_delete" eval="True"/>
             <field name="email_to">{{object.customer_id.email}}</field>
-            <field name="subject">Ticket Created</field>
+            <field name="subject">Ticket {{object.name}} Registrado: {{object.subject}}</field>
             <field name="body_html" type="html">
                 <p>
-                    Dear
-                    <t t-out="object.customer_id.name"/>
+                    Hola <t t-out="object.customer_id.name"/>,
+                    
+                    <br/><br/>
+
+                    Hemos recibido tu solicitud correctamente. Se ha generado el ticket <t t-out="object.name"/> para darle seguimiento.
+                    
                     <br/>
-                    Your Ticket
-                    <t t-out="object.name"/>
-                    is Created and Assigned. Kindly Wait while we're resolving your Query
+                    
+                    <span style="font-weight: bold;">Detalle de la solicitud:</span> <t t-out="object.description"/>
+                    
+                    <br/>
+                    
+                    Nuestro equipo de soporte lo revisará a la brevedad. Te avisaremos en cuanto tengamos una actualización o si necesitamos más detalles.
+                    
                     <br/>
                     <br/>
-                    Thanks.
+                    <br/>
+                    
+                    Saludos,
+                    
+                    <br/>
+                    
+                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name"/></span>
+
                 </p>
             </field>
         </record>
@@ -29,25 +44,44 @@
                    ref="odoo_website_helpdesk.model_ticket_helpdesk"/>
             <field name="auto_delete" eval="True"/>
             <field name="email_to">{{object.customer_id.email}}</field>
-            <field name="subject">Ticket Closed</field>
+            <field name="subject">¡Resuelto! Ticket {{object.name}} Cerrado</field>
             <field name="body_html" type="html">
                 <p>
-                    Dear
-                    <t t-out="object.customer_id.name"/>
-                    Your Ticket
-                    <t t-out="object.name"/>
-                    Is Closed
+                    Hola <t t-out="object.customer_id.name"/>,
+                    
+                    <br/><br/>
+
+                    Nos alegra informate que tu solicitud <t t-out="object.name"/> ha sido resuelta y el ticket ha sido cerrado.
+                    
                     <br/>
-                    <button class="btn btn-info" role="button"
-                            style="border:1px solid black;background-color:purple;padding-x:20px;padding-y:15px;border-radius:10px; width:120px;">
-                        <a t-attf-href="/rating/{{object.id}}"
-                           style="text-decoration:none;color:white;font-weight:bold;font-size:18px;">
-                            Rate Now
-                        </a>
-                    </button>
+                    
+                    <span style="font-weight: bold;">Califica tu experiencia:</span>
+
+                    <br/>
+
+                    <div style="margin-left: 20px;">
+                        <button class="btn btn-info" role="button"
+                            style="border:1px solid red;background-color:red;padding-x:20px;padding-y:15px;border-radius:10px; width:120px;">
+                            <a t-attf-href="/rating/{{object.id}}"
+                               style="text-decoration:none;color:white;font-weight:bold;font-size:18px;">
+                                Calificar ahora
+                            </a>
+                        </button>
+                    </div>
+                    
+                    <br/>
+                    
+                    Si el problema persiste o necesitas ayuda adicional sobre este mismo tema, puedes responder a este correo para reabrir el caso.
+                    
                     <br/>
                     <br/>
-                    Thanks.
+                    <br/>
+
+                    ¡Gracias por confiar en nosotros!
+
+                    <br/>
+                    
+                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name"/></span>
                 </p>
 
             </field>
@@ -59,18 +93,28 @@
                    ref="odoo_website_helpdesk.model_ticket_helpdesk"/>
             <field name="auto_delete" eval="True"/>
             <field name="email_to">{{object.customer_id.email}}</field>
-            <field name="subject">Ticket Reopened</field>
+            <field name="subject">Ticket Reabierto: {{object.name}}</field>
             <field name="body_html" type="html">
                 <p>
-                    Dear
-                    <t t-out="object.customer_id.name"/>
+                    Hola <t t-out="object.customer_id.name"/>,
+                    
+                    <br/><br/>
+
+                    Te confirmamos que el ticket <t t-out="object.name"/> ha sido reabierto.
+                    
                     <br/>
-                    Your Ticket
-                    <t t-out="object.name"/>
-                    is Reopened
+                    
+                    Vamos a revisar tus nuevos comentarios y retomaremos la gestión lo antes posible.
+                     
                     <br/>
                     <br/>
-                    Thanks.
+                    <br/>
+                    
+                    Atentamente,
+                    
+                    <br/>
+                    
+                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name"/></span>
                 </p>
             </field>
         </record>
@@ -81,42 +125,71 @@
                    ref="odoo_website_helpdesk.model_ticket_helpdesk"/>
             <field name="auto_delete" eval="True"/>
             <field name="email_to">{{object.customer_id.email}}</field>
-            <field name="subject">Ticket Solved</field>
+            <field name="subject">Ticket {{object.name}} Resuelto: {{object.subject}}</field>
             <field name="body_html" type="html">
                 <p>
-                    Dear
-                    <t t-out="object.customer_id.name"/>
+                    Hola <t t-out="object.customer_id.name"/>,
+                    
+                    <br/><br/>
+
+                   Te informamos que hemos finalizado la atención de tu solicitud relacionada con el ticket <t t-out="object.name"/>.
+                    
                     <br/>
-                    i think your Problem is Solved.
-                    Your Ticket
-                    <t t-out="object.name"/>
-                    is Done
+                    <br/>
+                    
+                    Consideramos que el inconveniente ha sido solucionado satisfactoriamente. Si el problema persiste o si tienes alguna duda adicional, por favor responde a este correo para reabrir el caso. De lo contrario, el ticket se cerrará automáticamente en las próximas 24 horas.
+                    
                     <br/>
                     <br/>
-                    Thanks.
+                     
+                    Agradecemos tu paciencia y colaboración.
+                    
+                    <br/>
+                    <br/>
+                    <br/>
+
+                    Saludos,
+                    
+                    <br/>
+                    
+                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name"/></span>
                 </p>
             </field>
         </record>
         <!--    An email template for notifying customers about the cancellation-->
         <!--    of a ticket.-->
         <record id="ticket_canceled" model="mail.template">
-            <field name="name">Cancel Ticket</field>
+            <field name="name">Cancelación de Ticket</field>
             <field name="model_id"
                    ref="odoo_website_helpdesk.model_ticket_helpdesk"/>
             <field name="auto_delete" eval="True"/>
             <field name="email_to">{{object.customer_id.email}}</field>
-            <field name="subject">Ticket Canceled</field>
+            <field name="subject">Cancelación de Ticket {{object.name}}</field>
             <field name="body_html" type="html">
                 <p>
-                    Dear
-                    <t t-out="object.customer_id.name"/>
+                    Hola <t t-out="object.customer_id.name"/>,
+                    
+                    <br/><br/>
+
+                    Te informamos que el ticket <t t-out="object.name"/> ha sido cancelado.
+                    
                     <br/>
-                    Your Ticket
-                    <t t-out="object.name"/>
-                    is Canceled Due to Some Reasons
+                    
+                    <span style="font-weight: bold;">Motivo:</span>
+                    
+                    <br/>
+                    
+                    Si consideras que esto es un error, por favor responde a este correo o crea un nuevo ticket.    
+
                     <br/>
                     <br/>
-                    Thanks.
+                    <br/>
+                    
+                    Saludos,
+                    
+                    <br/>
+                    
+                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name"/></span>
                 </p>
             </field>
         </record>
@@ -152,6 +225,9 @@
                     </p>
                     <br/>
                     <p>Best regards</p>
+                    <br/>
+                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name"/></span>
+
                 </div>
             </field>
         </record>
@@ -184,6 +260,8 @@
                     </p>
                     <br/>
                     <p>Best regards</p>
+                    <br/>
+                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name"/></span>
                 </div>
             </field>
         </record>
@@ -197,16 +275,23 @@
             <field name="model_id"
                    ref="odoo_website_helpdesk.model_ticket_helpdesk"/>
             <field name="body_html" type="html">
-                <div style="margin: 0px; padding: 0px;">
-                    <p>Dear,
-                        <t t-esc="object.customer_id.name"/>
-                    </p>
-                    <p>Ticket [<t t-esc="object.name"/>] successfully assigned to "<t
-                            t-esc="object.assigned_user_id.name"/>".
-                    </p>
+                <p>
+                    Hola <t t-out="object.customer_id.name"/>,
+                    
+                    <br/><br/>
+
+                    Te informamos que tu ticket <t t-out="object.name"/> ha sido asginado a <t t-out="object.assigned_user_id.name"/>, quien sera encargado de gestionar tu solicitud. Pronto se pondrá en contacto contigo para indicar el estado de tu solicitud.
+                    
                     <br/>
-                    <p>Best regards</p>
-                </div>
+                    <br/>
+                    <br/>
+                    
+                    Saludos,
+                    
+                    <br/>
+                    
+                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name"/></span>
+                </p>
             </field>
         </record>
     </data>
