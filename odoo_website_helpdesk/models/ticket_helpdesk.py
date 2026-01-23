@@ -181,19 +181,21 @@ class TicketHelpDesk(models.Model):
         """Compute the team head function"""
         self.team_head_id = self.team_id.team_lead_id.id
 
-    @api.onchange('stage_id')
-    def _onchange_stage_id(self):
-        """Sending mail to the user function"""
-        rec_id = self._origin.id
-        data = self.env['ticket.helpdesk'].search([('id', '=', rec_id)])
-        data.last_update_date = fields.Datetime.now()
-        if self.stage_id.starting_stage:
-            data.start_date = fields.Datetime.now()
-        if self.stage_id.closing_stage or self.stage_id.cancel_stage:
-            data.end_date = fields.Datetime.now()
-        if self.stage_id.template_id:
-            mail_template = self.stage_id.template_id
-            mail_template.send_mail(self._origin.id, force_send=True)
+    # @api.onchange('stage_id')
+    # def _onchange_stage_id(self):
+    #     """Sending mail to the user function"""
+    #     rec_id = self._origin.id
+    #     data = self.env['ticket.helpdesk'].search([('id', '=', rec_id)])
+    #     data.last_update_date = fields.Datetime.now()
+    #     _logger.info(f"Stage changed: {self.stage_id.name}")
+    #     if self.stage_id.starting_stage:
+    #         data.start_date = fields.Datetime.now()
+    #     if self.stage_id.closing_stage or self.stage_id.cancel_stage:
+    #         data.end_date = fields.Datetime.now()
+    #     if self.stage_id.template_id:
+    #         _logger.info(f"Template found: {self.stage_id.template_id.name}")
+    #         mail_template = self.stage_id.template_id
+    #         mail_template.send_mail(self._origin.id, force_send=True)
 
     def assign_to_teamleader(self):
         """Assigning team leader function"""
@@ -260,9 +262,32 @@ class TicketHelpDesk(models.Model):
         return super(TicketHelpDesk, self).create(vals_list)
 
     def write(self, vals):
-        """Write function"""
-        result = super(TicketHelpDesk, self).write(vals)
-        return result
+        # 1. Si se está cambiando el stage_id, preparamos la lógica
+        if 'stage_id' in vals:
+            for rec in self:
+                now = fields.Datetime.now()
+                # Obtenemos el objeto del nuevo stage para validar condiciones
+                stage = self.env['ticket.stage'].browse(vals['stage_id']) # Ajusta el modelo del stage si es necesario
+                
+                # Actualizamos valores directamente en vals para que se guarden en la misma transacción
+                vals['last_update_date'] = now
+                
+                if stage.starting_stage:
+                    vals['start_date'] = now
+                if stage.closing_stage or stage.cancel_stage:
+                    vals['end_date'] = now
+
+        # 2. Ejecutamos el super() para que los cambios se guarden
+        res = super(TicketHelpDesk, self).write(vals)
+
+        # 3. Después de guardar, enviamos el correo (si existe plantilla)
+        if 'stage_id' in vals:
+            for rec in self:
+                if rec.stage_id.template_id:
+                    _logger.info(f"Enviando correo: {rec.stage_id.template_id.name}")
+                    rec.stage_id.template_id.send_mail(rec.id, force_send=True)
+        
+        return res
 
     def action_create_invoice(self):
         """Create Invoice based on the ticket"""

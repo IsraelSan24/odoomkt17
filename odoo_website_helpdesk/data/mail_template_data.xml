@@ -32,7 +32,7 @@
                     
                     <br/>
                     
-                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name"/></span>
+                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name or 'Marketing Alterno S.A.C.'"/></span>
 
                 </p>
             </field>
@@ -55,7 +55,7 @@
                     
                     <br/>
                     
-                    <span style="font-weight: bold;">Califica tu experiencia:</span>
+                    <!-- <span style="font-weight: bold;">Califica tu experiencia:</span>
 
                     <br/>
 
@@ -67,7 +67,7 @@
                                 Calificar ahora
                             </a>
                         </button>
-                    </div>
+                    </div> -->
                     
                     <br/>
                     
@@ -81,7 +81,7 @@
 
                     <br/>
                     
-                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name"/></span>
+                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name or 'Marketing Alterno S.A.C.'"/></span>
                 </p>
 
             </field>
@@ -114,7 +114,7 @@
                     
                     <br/>
                     
-                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name"/></span>
+                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name or 'Marketing Alterno S.A.C.'"/></span>
                 </p>
             </field>
         </record>
@@ -152,7 +152,7 @@
                     
                     <br/>
                     
-                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name"/></span>
+                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name or 'Marketing Alterno S.A.C.'"/></span>
                 </p>
             </field>
         </record>
@@ -189,7 +189,7 @@
                     
                     <br/>
                     
-                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name"/></span>
+                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name or 'Marketing Alterno S.A.C.'"/></span>
                 </p>
             </field>
         </record>
@@ -226,7 +226,7 @@
                     <br/>
                     <p>Best regards</p>
                     <br/>
-                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name"/></span>
+                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name or 'Marketing Alterno S.A.C.'"/></span>
 
                 </div>
             </field>
@@ -261,7 +261,7 @@
                     <br/>
                     <p>Best regards</p>
                     <br/>
-                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name"/></span>
+                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name or 'Marketing Alterno S.A.C.'"/></span>
                 </div>
             </field>
         </record>
@@ -290,7 +290,7 @@
                     
                     <br/>
                     
-                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name"/></span>
+                    <span style="font-weight: bold;">Soporte TI - <t t-out="object.assigned_user_id.company_id.name or object.customer_id.company_id.name or 'Marketing Alterno S.A.C.'"/></span>
                 </p>
             </field>
         </record>
