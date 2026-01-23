@@ -259,6 +259,12 @@ class TicketHelpDesk(models.Model):
             if vals.get('name', _('New')) == _('New'):
                 vals['name'] = self.env['ir.sequence'].next_by_code(
                     'ticket.helpdesk')
+            if vals.get("customer_id"):
+                vals["email"] = self.env['res.partner'].browse(
+                    vals["customer_id"]).email
+                vals["phone"] = self.env['res.partner'].browse(
+                    vals["customer_id"]).phone
+
         return super(TicketHelpDesk, self).create(vals_list)
 
     def write(self, vals):
