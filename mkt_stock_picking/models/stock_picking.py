@@ -127,6 +127,7 @@ class StockPicking(models.Model):
     ## OPTIONAL
     gre_tuc_vehiculo_principal = fields.Char(string='Certificado de Habilitación Vehicular', size=15)
     gre_mtc = fields.Char(string='Número de Registro MTC', default="15171560CNG", size=20)
+    gre_observacion = fields.Char(string='Observación', size=1000)
 
     ###############################################
     ########## ITEMS ##########
@@ -199,7 +200,8 @@ class StockPicking(models.Model):
         
         if not vals.get('gre_numero'):
             _logger.info("\n\n\n\n +++++++++++++++++++++++++ \n\n\n\n")
-            last = self.search([('gre_serie', '=', vals['gre_serie']), ('gre_numero', '!=', False)], order='gre_numero desc', limit=1)
+            # last = self.search([('gre_serie', '=', vals['gre_serie']), ('gre_numero', '!=', False)], order='gre_numero desc', limit=1)
+            last = self.search([('gre_numero', '!=', False)], order='gre_numero desc', limit=1)
             next_num = (last.gre_numero or 0) + 1
             if next_num > 99999999:
                 raise ValidationError("Max limit of digits for this serie has been reached.")
@@ -660,6 +662,9 @@ class StockPicking(models.Model):
 
             if rec.gre_tuc_vehiculo_principal:
                 payload["tuc_vehiculo_principal"] = rec.gre_tuc_vehiculo_principal
+
+        if rec.gre_observacion:
+            payload["observaciones"] = rec.gre_observacion
 
         return payload
 
