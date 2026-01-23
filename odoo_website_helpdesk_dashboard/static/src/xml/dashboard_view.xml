@@ -9,7 +9,7 @@
     <link rel="stylesheet"
           href="/odoo_website_helpdesk_dashboard/static/src/css/dashboard.css"/>
         <div class="row main-section mt-5" t-ref="helpDeskDashboard">
-      <h2 class="section-header" style="font-size: 2em; color:#4a5c9a;">HelpDesk Dashboard</h2>
+      <h2 class="section-header" style="font-size: 2em; color:#4a5c9a;">Dashboard de Mesa de Ayuda</h2>
             <div class="col-sm-6 col-md-3-12 col-md-6 col-lg-3 helpdesk inbox_tickets"
                  t-on-click="tickets_inbox">
             <div class="dashboard_card" data-toggle="collapse">
@@ -19,7 +19,7 @@
                     <i class="fa fa-inbox"/>
                   </div>
                     <div class="stat-content">
-                    <div class="stat-text" style="color:black">New Tickets</div>
+                    <div class="stat-text" style="color:black">Nuevos Tickets</div>
                         <div class="stat-digit" id="inbox_count">
                     </div>
                   </div>
@@ -45,7 +45,7 @@
               </div>
                 <div class="stat-content">
                 <div class="stat-text"
-                     style="color:black">Tickets In Progress</div>
+                     style="color:black">Tickets en Progreso</div>
                     <div class="stat-digit" id="inprogress_count">
                 </div>
               </div>
@@ -70,7 +70,7 @@
                 <i class="fa fa-check"/>
               </div>
                 <div class="stat-content">
-                <div class="stat-text" style="color:black">Done Tickets</div>
+                <div class="stat-text" style="color:black">Tickets Hechos</div>
                     <div class="stat-digit" id="done_count">
                 </div>
               </div>
@@ -95,7 +95,7 @@
                 <i class="fa fa-group" id="team_ico"/>
               </div>
                 <div class="stat-content">
-                <div class="stat-text" style="color:black">HelpDesk Teams</div>
+                <div class="stat-text" style="color:black">Equipos de HelpDesk</div>
                     <div class="stat-digit" id="team_count">
                 </div>
               </div>
@@ -114,10 +114,10 @@
             <div class="dashboard_card"
                  style="display: flex; justify-content: center; align-items: center;">
         <div style="color: black; font-weight: bold; height: 60px; width: 700px; text-align: center;">
-            <span>CUSTOMER SATISFACTION:</span>
+            <span>SATISFACCIÓN DEL CLIENTE:</span>
             <div style="display: flex; justify-content: center; align-items: center;">
                 <span>😃</span>
-                <span>Response Received:</span>
+                <span>Respuesta Recibida:</span>
                 <div style="width: 10px;"></div> <!-- Using width for spacing -->
                 <div class="response"></div>
             </div>
@@ -125,12 +125,12 @@
       </div>
             <div class="row ticket-section">
            <div class="col-12 col-sm-12 col-md-4 ticket_box chart-container card-shadow">
-                <h2 class="tickets_head">Ticket Priority</h2>
+                <h2 class="tickets_head">Prioridad de Tickets</h2>
                <hr/>
                <div class="col-xs-12 text-align">
                   <div class="text-color">
                       <div class="line">
-                      Very low :
+                      Muy Bajo :
                       <div class="very_low_count" widget="progressbar">
                       <div class="progress-value">
                       </div>
@@ -141,7 +141,7 @@
                <div class="col-xs-12 text-align">
       <div class="text-color">
         <div class="line">
-          Low :
+          Bajo :
         <div class="low_count" widget="progressbar">
         <div class="progress-value"></div>
       </div>
@@ -160,7 +160,7 @@
                <div class="col-xs-12 text-align">
               <div class="text-color">
                 <div class="line">
-                High :
+                Alto :
                 <div class="high_count" widget="progressbar">
                 <div class="progress-value"></div>
                   </div>
@@ -170,7 +170,7 @@
                <div class="col-xs-12 text-align">
               <div class="text-color">
                 <div class="line">
-                Very High :
+                Muy Alto :
                 <div class="very_high_count" widget="progressbar">
                 <div class="progress-value"></div>
                   </div>
@@ -180,7 +180,7 @@
         </div>
                 <div class="col-12 col-sm-12 col-md-4">
           <div class="leads_month_pie_div half_chart chart-container card-shadow">
-            <h2>TICKET STATUS</h2>
+            <h2>Estado de Tickets</h2>
               <hr/>
               <div class="graph_canvas">
               <canvas id="ticket_month" width="200" height="120"/>
@@ -189,7 +189,7 @@
         </div>
                 <div class="col-12 col-sm-12 col-md-4">
           <div class="team_ticket_div half_chart chart-container card-shadow">
-            <h2>Team - Tickets Count Ratio</h2>
+            <h2>Equipo - Tickets Ratio</h2>
               <hr/>
               <div class="graph_canvas">
               <canvas class="team_ticket_count"/>
@@ -198,7 +198,7 @@
         </div>
                 <div class="col-100 col-sm-100 col-md-20">
         <div class="leads_month_pie_div half_chart chart-container card-shadow">
-          <h2>ISSUE</h2>
+          <h2>PROBLEMAS</h2>
             <hr/>
             <!-- Add a table to display ticket details -->
             <table class="ticket-table">

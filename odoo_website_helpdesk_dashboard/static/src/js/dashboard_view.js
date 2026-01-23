@@ -6,7 +6,7 @@ import { Component } from "@odoo/owl";
 import { onMounted, useRef } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
 /** Initializes the HelpDeskDashBoard component**/
-class HelpDeskDashBoard extends Component{
+class HelpDeskDashBoard extends Component {
     /**Set up function**/
     setup() {
         super.setup();
@@ -17,7 +17,7 @@ class HelpDeskDashBoard extends Component{
         onMounted(this.onMounted);
     }
     /**Function for onMounted**/
-    onMounted(){
+    onMounted() {
         this.render_dashboards();
         this.render_graphs();
     }
@@ -34,11 +34,11 @@ class HelpDeskDashBoard extends Component{
         jsonrpc('/web/dataset/call_kw/ticket.helpdesk/get_tickets_count', {
             model: "ticket.helpdesk",
             method: "get_tickets_view",
-             args: [],
+            args: [],
             kwargs: {},
         }).then(function (values) {
             var data = {
-                labels: ['New', 'In Progress', 'Solved'],
+                labels: ['Nuevo', 'En Progreso', 'Resuelto'],
                 datasets: [{
                     data: [values.inbox_count, values.progress_count, values.done_count],
                     backgroundColor: [
@@ -94,7 +94,7 @@ class HelpDeskDashBoard extends Component{
         jsonrpc('/web/dataset/call_kw/ticket.helpdesk/get_tickets_count', {
             model: "ticket.helpdesk",
             method: "get_team_ticket_count_pie",
-             args: [],
+            args: [],
             kwargs: {},
         }).then(function (arrays) {
             var data = {
@@ -158,7 +158,7 @@ class HelpDeskDashBoard extends Component{
             method: 'get_tickets_count',
             args: [],
             kwargs: {},
-        }).then(function(result) {
+        }).then(function (result) {
             var inbox_count_span = document.createElement("span");
             inbox_count_span.textContent = result.inbox_count
             self.ref.el.querySelector('#inbox_count').appendChild(inbox_count_span);
@@ -176,7 +176,7 @@ class HelpDeskDashBoard extends Component{
                 low: result.low_count1,
                 normal: result.normal_count1,
                 high: result.high_count1,
-                very_high : result.very_high_count1
+                very_high: result.very_high_count1
             };
             /**Loop through the priorities and create progress bars**/
             for (var priority in priorityCounts) {
@@ -191,7 +191,7 @@ class HelpDeskDashBoard extends Component{
             var tbody = $(".ticket-details");
             var ticket_details = result.ticket_details;
             for (var i = 0; i < ticket_details.length; i++) {
-                 /** Get the current ticket object **/
+                /** Get the current ticket object **/
                 var ticket = ticket_details[i];
                 var row = $("<tr></tr>");
                 /** Assuming you have the Base64-encoded image data in a
@@ -235,7 +235,7 @@ class HelpDeskDashBoard extends Component{
             view_mode: 'tree,form',
             views: [[false, 'list'], [false, 'form']],
             domain: [['stage_id.name', 'in', ['Inbox', 'Draft']]],
-            context: {default_stage_id_name: 'Draft'},
+            context: { default_stage_id_name: 'Draft' },
             target: 'current'
         });
     }
@@ -251,7 +251,7 @@ class HelpDeskDashBoard extends Component{
             view_mode: 'tree,form',
             views: [[false, 'list'], [false, 'form']],
             domain: [['stage_id.name', '=', 'In Progress']],
-            context: {create: false},
+            context: { create: false },
             target: 'current'
         });
     }
@@ -267,7 +267,7 @@ class HelpDeskDashBoard extends Component{
             view_mode: 'tree,form',
             views: [[false, 'list'], [false, 'form']],
             domain: [['stage_id.name', '=', 'Done']],
-            context: {create: false},
+            context: { create: false },
             target: 'current'
         });
     }
